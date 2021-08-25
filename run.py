@@ -16,7 +16,7 @@ suite.addTests(suite_创建运营用户.get_suite())
 if __name__ == '__main__':
     HTMLReport.TestRunner(
         title="EDDID_CDMS项目接口测试",
-        description="嘻嘻嘻嘻嘻嘻嘻嘻",
+        description="甘杰祥的demo",
         report_file_name="index",
         thread_count=1
     ).run(suite)
