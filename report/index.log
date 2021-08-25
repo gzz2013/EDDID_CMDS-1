@@ -1,0 +1,139 @@
+2021-08-12 16:57:09,194   19940     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-12 16:57:09,197   10188     INFO result.py(69) - 开始测试： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+2021-08-12 16:57:09,197   10188    ERROR result.py(175) - 测试产生错误： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\cdms_创建用户.py", line 22, in test_新建用户
+    logging().info("初始化 Session")
+TypeError: 'module' object is not callable
+
+2021-08-12 16:57:09,197   10188    ERROR result.py(175) - 测试产生错误： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\cdms_创建用户.py", line 17, in tearDown
+    logging().info("关闭 Session")
+TypeError: 'module' object is not callable
+
+2021-08-12 16:57:09,198   10188     INFO result.py(90) - 测试结束： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+2021-08-12 16:57:09,198   10188     INFO result.py(91) - 耗时： 0.0009958744049072266
+2021-08-12 16:57:09,198   19940    ERROR test_runner.py(195) - 
+Error	test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+Error	test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+
+2021-08-12 16:57:09,199   19940     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:00.243532
+共计执行用例数量：1
+执行成功用例数量：0
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：1
+
+2021-08-12 16:59:16,021   19524     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-12 16:59:16,023   14512     INFO result.py(69) - 开始测试： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+2021-08-12 16:59:16,023   14512    ERROR result.py(175) - 测试产生错误： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\cdms_创建用户.py", line 23, in test_新建用户
+    logging().info("初始化 Session")
+TypeError: 'module' object is not callable
+
+2021-08-12 16:59:16,023   14512    ERROR result.py(175) - 测试产生错误： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\cdms_创建用户.py", line 18, in tearDown
+    logging().info("关闭 Session")
+TypeError: 'module' object is not callable
+
+2021-08-12 16:59:16,023   14512     INFO result.py(90) - 测试结束： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+2021-08-12 16:59:16,024   14512     INFO result.py(91) - 耗时： 0.0
+2021-08-12 16:59:16,024   19524    ERROR test_runner.py(195) - 
+Error	test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+Error	test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+
+2021-08-12 16:59:16,024   19524     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:00.206948
+共计执行用例数量：1
+执行成功用例数量：0
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：1
+
+2021-08-12 16:59:58,797   17428     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-12 16:59:58,799   17544     INFO result.py(69) - 开始测试： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+2021-08-12 16:59:58,799   17544     INFO cdms_创建用户.py(23) - 初始化 Session
+2021-08-12 16:59:58,841   17544     INFO cdms_创建用户.py(18) - 关闭 Session
+2021-08-12 16:59:58,842   17544  WARNING result.py(190) - 测试未通过： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\cdms_创建用户.py", line 193, in test_新建用户
+    self.assertEqual("0040", r.status_code)
+AssertionError: '0040' != 200
+
+2021-08-12 16:59:58,842   17544     INFO result.py(90) - 测试结束： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+2021-08-12 16:59:58,842   17544     INFO result.py(91) - 耗时： 0.04301738739013672
+2021-08-12 16:59:58,842   17428    ERROR test_runner.py(195) - 
+Fail	test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+
+2021-08-12 16:59:58,843   17428     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:00.240447
+共计执行用例数量：1
+执行成功用例数量：0
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-12 17:00:38,029   18832     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-12 17:00:38,031    2724     INFO result.py(69) - 开始测试： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+2021-08-12 17:00:38,031    2724     INFO cdms_创建用户.py(23) - 初始化 Session
+2021-08-12 17:00:38,082    2724     INFO cdms_创建用户.py(18) - 关闭 Session
+2021-08-12 17:00:38,082    2724     INFO result.py(156) - 测试执行通过： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+2021-08-12 17:00:38,083    2724     INFO result.py(90) - 测试结束： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+2021-08-12 17:00:38,083    2724     INFO result.py(91) - 耗时： 0.05135989189147949
+2021-08-12 17:00:38,083   18832     INFO test_runner.py(193) - 
+Pass	test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+
+2021-08-12 17:00:38,084   18832     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:00.250697
+共计执行用例数量：1
+执行成功用例数量：1
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-13 18:55:53,572   13576     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-13 18:55:53,575    1124     INFO result.py(69) - 开始测试： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+2021-08-13 18:55:53,575    1124     INFO cdms_创建用户.py(23) - 初始化 Session
+2021-08-13 18:55:53,941    1124     INFO cdms_创建用户.py(18) - 关闭 Session
+2021-08-13 18:55:53,941    1124     INFO result.py(156) - 测试执行通过： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+2021-08-13 18:55:53,941    1124     INFO result.py(90) - 测试结束： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+2021-08-13 18:55:53,941    1124     INFO result.py(91) - 耗时： 0.3654184341430664
+2021-08-13 18:55:53,942   13576     INFO test_runner.py(193) - 
+Pass	test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+
+2021-08-13 18:55:53,943   13576     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:00.592779
+共计执行用例数量：1
+执行成功用例数量：1
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-23 17:55:57,267   20268     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-23 17:55:57,284    5936     INFO result.py(69) - 开始测试： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+2021-08-23 17:55:57,284    5936     INFO cdms_创建用户.py(23) - 初始化 Session
+2021-08-23 17:55:57,338    5936     INFO cdms_创建用户.py(18) - 关闭 Session
+2021-08-23 17:55:57,338    5936     INFO result.py(156) - 测试执行通过： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+2021-08-23 17:55:57,338    5936     INFO result.py(90) - 测试结束： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+2021-08-23 17:55:57,338    5936     INFO result.py(91) - 耗时： 0.05353045463562012
+2021-08-23 17:55:57,338   20268     INFO test_runner.py(193) - 
+Pass	test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
+
+2021-08-23 17:55:57,343   20268     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:00.281319
+共计执行用例数量：1
+执行成功用例数量：1
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
