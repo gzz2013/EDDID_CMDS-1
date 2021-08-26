@@ -1,0 +1,255 @@
+2021-08-26 14:31:39,321    5684     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-26 14:31:39,323   16244     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:31:39,323   16244     INFO test_运营用户创建审批.py(23) - 初始化 Session
+2021-08-26 14:31:40,011   16244     INFO test_运营用户创建审批.py(18) - 关闭 Session
+2021-08-26 14:31:40,011   16244     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:31:40,026   16244     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:31:40,026   16244     INFO result.py(91) - 耗时： 0.7031576633453369
+2021-08-26 14:31:40,027   16244     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:31:40,027   16244     INFO test_运营用户创建审批.py(197) - 初始化 Session
+2021-08-26 14:31:40,324   16244     INFO test_运营用户创建审批.py(18) - 关闭 Session
+2021-08-26 14:31:40,324   16244  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 221, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != '错误码:[MAS_01103],客户信息为空。'
+- 操作成功
++ 错误码:[MAS_01103],客户信息为空。
+
+
+2021-08-26 14:31:40,324   16244     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:31:40,324   16244     INFO result.py(91) - 耗时： 0.2972099781036377
+2021-08-26 14:31:40,325    5684     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 14:31:40,325    5684    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 14:31:40,327    5684     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:01.266436
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-26 14:33:51,340   16344     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-26 14:33:51,342   14132     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:33:51,342   14132     INFO test_运营用户创建审批.py(23) - 初始化 Session
+2021-08-26 14:33:51,985   14132     INFO test_运营用户创建审批.py(18) - 关闭 Session
+2021-08-26 14:33:51,999   14132     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:33:51,999   14132     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:33:52,015   14132     INFO result.py(91) - 耗时： 0.6572399139404297
+2021-08-26 14:33:52,015   14132     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:33:52,015   14132     INFO test_运营用户创建审批.py(197) - 初始化 Session
+2021-08-26 14:33:52,313   14132     INFO test_运营用户创建审批.py(18) - 关闭 Session
+2021-08-26 14:33:52,313   14132  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 221, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != '系统繁忙'
+- 操作成功
++ 系统繁忙
+
+
+2021-08-26 14:33:52,314   14132     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:33:52,314   14132     INFO result.py(91) - 耗时： 0.29743528366088867
+2021-08-26 14:33:52,314   16344     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 14:33:52,314   16344    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 14:33:52,315   16344     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:01.251146
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-26 14:52:46,125   21572     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-26 14:52:46,126   11668     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:52:46,126   11668     INFO test_运营用户创建审批.py(23) - 初始化 Session
+2021-08-26 14:52:46,572   11668     INFO test_运营用户创建审批.py(18) - 关闭 Session
+2021-08-26 14:52:46,588   11668     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:52:46,588   11668     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:52:46,603   11668     INFO result.py(91) - 耗时： 0.4617950916290283
+2021-08-26 14:52:46,603   11668     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:52:46,603   11668     INFO test_运营用户创建审批.py(197) - 初始化 Session
+2021-08-26 14:52:46,723   11668     INFO test_运营用户创建审批.py(18) - 关闭 Session
+2021-08-26 14:52:46,724   11668  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 222, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != '错误码:[MAS_01103],客户信息为空。'
+- 操作成功
++ 错误码:[MAS_01103],客户信息为空。
+
+
+2021-08-26 14:52:46,724   11668     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:52:46,724   11668     INFO result.py(91) - 耗时： 0.12102246284484863
+2021-08-26 14:52:46,724   21572     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 14:52:46,724   21572    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 14:52:46,725   21572     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:00.805168
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-26 14:54:22,819   10028     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-26 14:54:22,822   19804     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:54:22,822   19804     INFO test_运营用户创建审批.py(23) - 初始化 Session
+2021-08-26 14:54:23,214   19804     INFO test_运营用户创建审批.py(18) - 关闭 Session
+2021-08-26 14:54:23,230   19804     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:54:23,230   19804     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:54:23,230   19804     INFO result.py(91) - 耗时： 0.4089057445526123
+2021-08-26 14:54:23,245   19804     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:54:23,245   19804     INFO test_运营用户创建审批.py(197) - 初始化 Session
+2021-08-26 14:54:23,336   19804     INFO test_运营用户创建审批.py(209) - applyId为,applyId
+2021-08-26 14:54:23,365   19804     INFO test_运营用户创建审批.py(18) - 关闭 Session
+2021-08-26 14:54:23,366   19804  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 222, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != '错误码:[MAS_01103],客户信息为空。'
+- 操作成功
++ 错误码:[MAS_01103],客户信息为空。
+
+
+2021-08-26 14:54:23,366   19804     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:54:23,366   19804     INFO result.py(91) - 耗时： 0.12095379829406738
+2021-08-26 14:54:23,366   10028     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 14:54:23,366   10028    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 14:54:23,367   10028     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:00.739929
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-26 14:58:13,274   17744     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-26 14:58:13,275    1032     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:58:13,276    1032     INFO test_运营用户创建审批.py(23) - 初始化 Session
+2021-08-26 14:58:13,780    1032     INFO test_运营用户创建审批.py(18) - 关闭 Session
+2021-08-26 14:58:13,780    1032     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:58:13,780    1032     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:58:13,780    1032     INFO result.py(91) - 耗时： 0.5056798458099365
+2021-08-26 14:58:13,796    1032     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:58:13,796    1032     INFO test_运营用户创建审批.py(197) - 初始化 Session
+2021-08-26 14:58:13,887    1032     INFO test_运营用户创建审批.py(209) - 1147393
+2021-08-26 14:58:13,919    1032     INFO test_运营用户创建审批.py(18) - 关闭 Session
+2021-08-26 14:58:13,920    1032  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 222, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != '错误码:[MAS_01103],客户信息为空。'
+- 操作成功
++ 错误码:[MAS_01103],客户信息为空。
+
+
+2021-08-26 14:58:13,920    1032     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:58:13,920    1032     INFO result.py(91) - 耗时： 0.12369275093078613
+2021-08-26 14:58:13,920   17744     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 14:58:13,920   17744    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 14:58:13,921   17744     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:00.853141
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-26 14:59:29,789   15412     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-26 14:59:29,791   10904     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:59:29,792   10904     INFO test_运营用户创建审批.py(23) - 初始化 Session
+2021-08-26 14:59:30,231   10904     INFO test_运营用户创建审批.py(18) - 关闭 Session
+2021-08-26 14:59:30,246   10904     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:59:30,246   10904     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:59:30,261   10904     INFO result.py(91) - 耗时： 0.45381712913513184
+2021-08-26 14:59:30,261   10904     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:59:30,261   10904     INFO test_运营用户创建审批.py(197) - 初始化 Session
+2021-08-26 14:59:30,386   10904     INFO test_运营用户创建审批.py(18) - 关闭 Session
+2021-08-26 14:59:30,386   10904  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 223, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != '错误码:[MAS_01103],客户信息为空。'
+- 操作成功
++ 错误码:[MAS_01103],客户信息为空。
+
+
+2021-08-26 14:59:30,386   10904     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 14:59:30,386   10904     INFO result.py(91) - 耗时： 0.12458038330078125
+2021-08-26 14:59:30,387   15412     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 14:59:30,387   15412    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 14:59:30,388   15412     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:00.801504
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-26 15:01:36,654   11368     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-26 15:01:36,655    3060     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 15:01:36,655    3060     INFO test_运营用户创建审批.py(23) - 初始化 Session
+2021-08-26 15:01:37,166    3060     INFO test_运营用户创建审批.py(18) - 关闭 Session
+2021-08-26 15:01:37,166    3060     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 15:01:37,182    3060     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 15:01:37,198    3060     INFO result.py(91) - 耗时： 0.5268902778625488
+2021-08-26 15:01:37,198    3060     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 15:01:37,198    3060     INFO test_运营用户创建审批.py(197) - 初始化 Session
+2021-08-26 15:01:37,271    3060     INFO test_运营用户创建审批.py(210) - applyId的植为'1147393'
+2021-08-26 15:01:37,299    3060     INFO test_运营用户创建审批.py(18) - 关闭 Session
+2021-08-26 15:01:37,300    3060  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 224, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != '错误码:[MAS_01103],客户信息为空。'
+- 操作成功
++ 错误码:[MAS_01103],客户信息为空。
+
+
+2021-08-26 15:01:37,300    3060     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 15:01:37,300    3060     INFO result.py(91) - 耗时： 0.10209989547729492
+2021-08-26 15:01:37,300   11368     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 15:01:37,300   11368    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 15:01:37,301   11368     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:00.849912
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+

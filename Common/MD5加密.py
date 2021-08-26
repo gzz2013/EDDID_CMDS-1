@@ -20,8 +20,8 @@ def MD5_Encrypt(str):
 
 
 
-if __name__=="__main__":
-    # a=AES_Encrypt(data="91110105MA01QLYL5A")
-    # print(a)
-    b=MD5_Encrypt(str="111111")
-    print(b)
+# if __name__=="__main__":
+#     # a=AES_Encrypt(data="91110105MA01QLYL5A")
+#     # print(a)
+#     b=MD5_Encrypt(str="111111")
+#     print(b)

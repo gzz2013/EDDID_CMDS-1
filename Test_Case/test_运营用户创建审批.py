@@ -1,7 +1,7 @@
 import unittest
 
 import logging
-
+from Common.eddid_data_check import *
 import requests
 from Business.login import cdms_获取token
 import json
@@ -17,7 +17,7 @@ class Test_新建用户(unittest.TestCase):
 
         logging.info("关闭 Session")
 
-    def test_新建用户(self):
+    def test_applyClient用户资料提交(self):
 
         s = self.s
         logging.info("初始化 Session")
@@ -187,6 +187,39 @@ class Test_新建用户(unittest.TestCase):
         r = s.post(url=applyClienturl, headers=headers, json=data)
         print("r:", r.text)
 
+
         self.assertEqual(200, r.status_code)
+        self.assertEqual("操作成功", r.json().get("msg"))
+
+    def test_submitAudit提交审核(self):
+
+        s = self.s
+        logging.info("初始化 Session")
+
+        headers = {
+            "Accept": "application/json, text/javascript, */*; q=0.01",
+            "Connection":"keep-alive",
+            # "Cookie": "GB-SYS-SID-SIT=" + cdms_获取token()
+            "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + cdms_获取token()
+        }
+        print("headers",headers)
+        applyClienturl = "http://sit-cdms.ynm3k.com/api/client/applyClient"
+
+        applyId=cd_clnt_apply_info()[0][0]
+
+        logging.info("applyId的值为({})".format(applyId))
+        # print("applyId",applyId)
+        data = {
+            "applyId":applyId,
+            "clientSource": "CDMS",
+            "workFlowCode": "openClient"
+        }
+        print("data=", data)
+        r = s.post(url=applyClienturl, headers=headers, json=data)
+        print("r:", r.text)
+
+
+        self.assertEqual(200, r.status_code)
+        self.assertEqual("操作成功", r.json().get("msg"))
 
 

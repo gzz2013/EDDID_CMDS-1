@@ -1,5 +1,5 @@
 import requests
-from Common.encry import MD5_Encrypt
+from Common.MD5加密 import MD5_Encrypt
 
 # from Config.config import *
 # from Common.token_写入 import tk_写入

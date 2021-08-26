@@ -241,8 +241,8 @@ tr {
 }
 </style>
     <script language="javascript" type="text/javascript">
-var chartData_cn = [[1, '#1c965b', '通过']];
-var chartData_en = [[1, '#1c965b', 'Passed']];
+var chartData_cn = [[1, '#1c965b', '通过'], [1, '#ff5722', '失败']];
+var chartData_en = [[1, '#1c965b', 'Passed'], [1, '#ff5722', 'Failed']];
 
 function addClass(e, c) {
   if (!isClass(e, c)) {
@@ -653,19 +653,19 @@ goChart(chartData_cn);
     <strong>
       <span class="lang-cn">启动时间：</span>
       <span class="lang-en">Start Time:</span>
-    </strong> 2021-08-26 09:54:40
+    </strong> 2021-08-26 15:01:36
   </p>
   <p class='attribute'>
     <strong>
       <span class="lang-cn">结束时间：</span>
       <span class="lang-en">End Time:</span>
-    </strong> 2021-08-26 09:54:40
+    </strong> 2021-08-26 15:01:37
   </p>
   <p class='attribute'>
     <strong>
       <span class="lang-cn">运行时长：</span>
       <span class="lang-en">Duration:</span>
-    </strong> 0:00:00.412225
+    </strong> 0:00:00.849912
   </p>
   <p class='attribute'>
     <strong>
@@ -673,17 +673,17 @@ goChart(chartData_cn);
       <span class="lang-en">Status:</span>
     </strong>
     <span class="lang-cn">合计：</span>
-    <span class="lang-en">Total:</span>1&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="lang-en">Total:</span>2&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">通过：</span>
     <span class="lang-en">Passed:</span>1&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">失败：</span>
-    <span class="lang-en">Failed:</span>0&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="lang-en">Failed:</span>1&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">错误：</span>
     <span class="lang-en">Error:</span>0&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">跳过：</span>
     <span class="lang-en">Skipped:</span>0&nbsp;&nbsp;&nbsp;&nbsp;
   </p>
-  <p class='description'>ganjiexiang1123ggggg111</p>
+  <p class='description'>如有疑问请联系-ganjiexiang</p>
   </td>
   <td>
     <div height="400" width="600">
@@ -692,7 +692,7 @@ goChart(chartData_cn);
   </td>
 </tr>
 </table>
-</div> <a href='index.log'>
+</div> <a href='EDDID_CDMS项目接口测试.log'>
     <span class="lang-cn">下载日志文件</span>
     <span class="lang-en">Download log file</span>
 </a>
@@ -765,18 +765,18 @@ goChart(chartData_cn);
             <span class="lang-en">View</span>
         </th>
     </tr>
-    <tr class='passClass'>
+    <tr class='failClass'>
     <td>c1</td>
-    <td>Test_Case.cdms_创建用户.Test_新建用户</td>
-    <td>1</td>
+    <td>Test_Case.test_运营用户创建审批.Test_新建用户</td>
+    <td>2</td>
     <td class="passCase">1</td>
-    <td class="failCase">0</td>
+    <td class="failCase">1</td>
     <td class="errorCase">0</td>
     <td class="skipCase">0</td>
-    <td style="text-align:right;">100.00%</td>
+    <td style="text-align:right;">50.00%</td>
     <td>0</td>
     <td>
-        <a href="javascript:showClassDetail('c1',1)">
+        <a href="javascript:showClassDetail('c1',2)">
             <span class="lang-cn">细节</span>
             <span class="lang-en">Detail</span>
         </a>
@@ -785,7 +785,7 @@ goChart(chartData_cn);
 <tr id='pt1.1'>
 <td>pt1.1</td>
     <td class='passCase' colspan='7'>
-        <div class='testcase'>test_新建用户</div>
+        <div class='testcase'>test_applyClient用户资料提交</div>
     </td>
     <td class='passCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
@@ -805,12 +805,55 @@ goChart(chartData_cn);
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.1.1:
-2021-08-26 09:54:40,554   27396     INFO result.py(69) - 开始测试： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
-2021-08-26 09:54:40,555   27396     INFO cdms_创建用户.py(23) - 初始化 Session
-2021-08-26 09:54:40,762   27396     INFO cdms_创建用户.py(18) - 关闭 Session
-2021-08-26 09:54:40,762   27396     INFO result.py(156) - 测试执行通过： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
-2021-08-26 09:54:40,762   27396     INFO result.py(90) - 测试结束： test_新建用户 (Test_Case.cdms_创建用户.Test_新建用户)
-2021-08-26 09:54:40,762   27396     INFO result.py(91) - 耗时： 0.20674824714660645
+2021-08-26 15:01:36,655    3060     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 15:01:36,655    3060     INFO test_运营用户创建审批.py(23) - 初始化 Session
+2021-08-26 15:01:37,166    3060     INFO test_运营用户创建审批.py(18) - 关闭 Session
+2021-08-26 15:01:37,166    3060     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 15:01:37,182    3060     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 15:01:37,198    3060     INFO result.py(91) - 耗时： 0.5268902778625488
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='ft1.2'>
+<td>ft1.2</td>
+    <td class='failCase' colspan='7'>
+        <div class='testcase'>test_submitAudit提交审核</div>
+    </td>
+    <td class='failCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='failCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2.1',1, false)">
+            <span class="lang-cn">失败</span>
+            <span class="lang-en">fail</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_ft1.2.1' name='div_ft1.2.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_ft1.2.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>ft1.2.1:
+2021-08-26 15:01:37,198    3060     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 15:01:37,198    3060     INFO test_运营用户创建审批.py(197) - 初始化 Session
+2021-08-26 15:01:37,271    3060     INFO test_运营用户创建审批.py(210) - applyId的植为'1147393'
+2021-08-26 15:01:37,299    3060     INFO test_运营用户创建审批.py(18) - 关闭 Session
+2021-08-26 15:01:37,300    3060  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 224, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != '错误码:[MAS_01103],客户信息为空。'
+- 操作成功
++ 错误码:[MAS_01103],客户信息为空。
+
+
+2021-08-26 15:01:37,300    3060     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 15:01:37,300    3060     INFO result.py(91) - 耗时： 0.10209989547729492
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -823,12 +866,12 @@ goChart(chartData_cn);
             <span class="lang-cn">合计</span>
             <span class="lang-en">Total</span>
         </td>
-        <td>1</td>
+        <td>2</td>
         <td class="passCase">1</td>
-        <td class="failCase">0</td>
+        <td class="failCase">1</td>
         <td class="errorCase">0</td>
         <td class="skipCase">0</td>
-        <td style="text-align:right;">100.00%</td>
+        <td style="text-align:right;">50.00%</td>
         <td>0</td>
         <td>&nbsp;</td>
     </tr>
