@@ -31,8 +31,7 @@ class Test_新建用户(unittest.TestCase):
         print("headers",headers)
         applyClienturl = "http://sit-cdms.ynm3k.com/api/client/applyClient"
 
-        data = json.dumps(
-            {
+        data = {
                 "infos": [
                     {
                         "title": "mr",
@@ -185,9 +184,7 @@ class Test_新建用户(unittest.TestCase):
                 "agreeToTheTerms": "true",
                 "personalInfoDeclartion": "true"
             }
-        )
-
-        r = s.post(url=applyClienturl, headers=headers, data=data)
+        r = s.post(url=applyClienturl, headers=headers, json=data)
         print("r:", r.text)
 
         self.assertEqual(200, r.status_code)
