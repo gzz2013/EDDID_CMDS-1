@@ -653,19 +653,19 @@ goChart(chartData_cn);
     <strong>
       <span class="lang-cn">启动时间：</span>
       <span class="lang-en">Start Time:</span>
-    </strong> 2021-08-26 15:01:36
+    </strong> 2021-08-26 19:30:05
   </p>
   <p class='attribute'>
     <strong>
       <span class="lang-cn">结束时间：</span>
       <span class="lang-en">End Time:</span>
-    </strong> 2021-08-26 15:01:37
+    </strong> 2021-08-26 19:30:15
   </p>
   <p class='attribute'>
     <strong>
       <span class="lang-cn">运行时长：</span>
       <span class="lang-en">Duration:</span>
-    </strong> 0:00:00.849912
+    </strong> 0:00:10.103935
   </p>
   <p class='attribute'>
     <strong>
@@ -805,12 +805,13 @@ goChart(chartData_cn);
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.1.1:
-2021-08-26 15:01:36,655    3060     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-26 15:01:36,655    3060     INFO test_运营用户创建审批.py(23) - 初始化 Session
-2021-08-26 15:01:37,166    3060     INFO test_运营用户创建审批.py(18) - 关闭 Session
-2021-08-26 15:01:37,166    3060     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-26 15:01:37,182    3060     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-26 15:01:37,198    3060     INFO result.py(91) - 耗时： 0.5268902778625488
+2021-08-26 19:30:05,393    7720     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:30:05,394    7720     INFO test_运营用户创建审批.py(32) - 初始化 Session
+2021-08-26 19:30:05,656    7720     INFO test_运营用户创建审批.py(42) - 接口请求url为：
+2021-08-26 19:30:10,961    7720     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-26 19:30:10,961    7720     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:30:10,961    7720     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:30:10,961    7720     INFO result.py(91) - 耗时： 5.567131519317627
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -839,21 +840,23 @@ goChart(chartData_cn);
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>ft1.2.1:
-2021-08-26 15:01:37,198    3060     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-26 15:01:37,198    3060     INFO test_运营用户创建审批.py(197) - 初始化 Session
-2021-08-26 15:01:37,271    3060     INFO test_运营用户创建审批.py(210) - applyId的植为'1147393'
-2021-08-26 15:01:37,299    3060     INFO test_运营用户创建审批.py(18) - 关闭 Session
-2021-08-26 15:01:37,300    3060  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:30:10,977    7720     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:30:11,155    7720     INFO test_运营用户创建审批.py(215) - 已完成修改WorldCheck的状态为FALSE
+2021-08-26 19:30:15,188    7720     INFO test_运营用户创建审批.py(228) - 接口请求url为：
+2021-08-26 19:30:15,189    7720     INFO test_运营用户创建审批.py(230) - 提交审核获取到的手机号为：11170251838
+2021-08-26 19:30:15,256    7720     INFO test_运营用户创建审批.py(233) - 请求数据库cd_clnt_apply_info查询到applyId的值为：()
+2021-08-26 19:30:15,289    7720     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-26 19:30:15,290    7720  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
 Traceback (most recent call last):
-  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 224, in test_submitAudit提交审核
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 246, in test_submitAudit提交审核
     self.assertEqual("操作成功", r.json().get("msg"))
-AssertionError: '操作成功' != '错误码:[MAS_01103],客户信息为空。'
+AssertionError: '操作成功' != 'JSON invalid format'
 - 操作成功
-+ 错误码:[MAS_01103],客户信息为空。
++ JSON invalid format
 
 
-2021-08-26 15:01:37,300    3060     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-26 15:01:37,300    3060     INFO result.py(91) - 耗时： 0.10209989547729492
+2021-08-26 19:30:15,290    7720     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:30:15,290    7720     INFO result.py(91) - 耗时： 4.312788009643555
 
 </pre>
             <div><ul class='figure_ul'><ul></div>

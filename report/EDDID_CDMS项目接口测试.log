@@ -253,3 +253,500 @@ Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_
 跳过执行用例数量：0
 产生异常用例数量：0
 
+2021-08-26 18:43:19,323   18164     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-26 18:43:19,324   17532     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 18:43:19,378   17532     INFO test_运营用户创建审批.py(30) - 初始化 Session
+2021-08-26 18:43:24,861   17532     INFO test_运营用户创建审批.py(24) - 关闭 Session
+2021-08-26 18:43:24,861   17532     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 18:43:24,877   17532     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 18:43:24,877   17532     INFO result.py(91) - 耗时： 5.553205966949463
+2021-08-26 18:43:24,892   17532     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 18:43:24,892   17532     INFO test_运营用户创建审批.py(207) - 获取手机号
+2021-08-26 18:43:24,892   17532     INFO test_运营用户创建审批.py(24) - 关闭 Session
+2021-08-26 18:43:24,893   17532    ERROR result.py(175) - 测试产生错误： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 208, in test_submitAudit提交审核
+    cd_clnt_apply_info(phone)
+  File "F:\python\EDDID_CDMS\Common\eddid_data_update.py", line 8, in cd_clnt_apply_info
+    sql="update cd_clnt_wc_match set resolution_status='FALSE'  where wc_case_id IN(select id from cd_clnt_wc_case where check_id in(select id from  cd_clnt_check_info where apply_id in (select apply_id from cd_clnt_apply_basisinfo where apply_no in (SELECT apply_no applyno FROM cd_clnt_apply_basisinfo WHERE apply_id =(select apply_id from cd_clnt_apply_info where phone_no='{phone}')))))".format(
+KeyError: 'phone'
+
+2021-08-26 18:43:24,893   17532     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 18:43:24,893   17532     INFO result.py(91) - 耗时： 0.0009686946868896484
+2021-08-26 18:43:24,893   18164     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 18:43:24,893   18164    ERROR test_runner.py(195) - 
+Error	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 18:43:24,894   18164     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:05.776164
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：1
+
+2021-08-26 18:44:11,210   18368     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-26 18:44:11,211    5524     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 18:44:11,212    5524     INFO test_运营用户创建审批.py(30) - 初始化 Session
+2021-08-26 18:44:16,720    5524     INFO test_运营用户创建审批.py(24) - 关闭 Session
+2021-08-26 18:44:16,720    5524     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 18:44:16,720    5524     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 18:44:16,720    5524     INFO result.py(91) - 耗时： 5.508285999298096
+2021-08-26 18:44:16,735    5524     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 18:44:16,735    5524     INFO test_运营用户创建审批.py(207) - 获取手机号
+2021-08-26 18:44:16,882    5524     INFO test_运营用户创建审批.py(209) - 已完成修改WorldCheck的状态为FALSE
+2021-08-26 18:44:21,094    5524     INFO test_运营用户创建审批.py(24) - 关闭 Session
+2021-08-26 18:44:21,094    5524    ERROR result.py(175) - 测试产生错误： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 220, in test_submitAudit提交审核
+    applyId = cd_clnt_apply_info(phone)[0][0]
+TypeError: 'NoneType' object is not subscriptable
+
+2021-08-26 18:44:21,094    5524     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 18:44:21,094    5524     INFO result.py(91) - 耗时： 4.358972787857056
+2021-08-26 18:44:21,094   18368     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 18:44:21,094   18368    ERROR test_runner.py(195) - 
+Error	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 18:44:21,095   18368     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:10.098091
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：1
+
+2021-08-26 18:46:08,644    9104     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-26 18:46:08,645   18540     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 18:46:08,668   18540     INFO test_运营用户创建审批.py(30) - 初始化 Session
+2021-08-26 18:46:14,119   18540     INFO test_运营用户创建审批.py(24) - 关闭 Session
+2021-08-26 18:46:14,134   18540     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 18:46:14,134   18540     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 18:46:14,149   18540     INFO result.py(91) - 耗时： 5.4873127937316895
+2021-08-26 18:46:14,165   18540     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 18:46:14,165   18540     INFO test_运营用户创建审批.py(207) - 获取手机号
+2021-08-26 18:46:14,314   18540     INFO test_运营用户创建审批.py(209) - 已完成修改WorldCheck的状态为FALSE
+2021-08-26 18:46:18,510   18540     INFO test_运营用户创建审批.py(24) - 关闭 Session
+2021-08-26 18:46:18,511   18540    ERROR result.py(175) - 测试产生错误： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 220, in test_submitAudit提交审核
+    applyId = cd_clnt_apply_info(phone)[0][0]
+TypeError: 'NoneType' object is not subscriptable
+
+2021-08-26 18:46:18,511   18540     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 18:46:18,511   18540     INFO result.py(91) - 耗时： 4.3453991413116455
+2021-08-26 18:46:18,511    9104     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 18:46:18,511    9104    ERROR test_runner.py(195) - 
+Error	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 18:46:18,512    9104     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:10.069962
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：1
+
+2021-08-26 18:53:55,948   20008     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-26 18:53:55,950   24984     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 18:53:56,012   24984     INFO test_运营用户创建审批.py(30) - 初始化 Session
+2021-08-26 18:54:01,464   24984     INFO test_运营用户创建审批.py(24) - 关闭 Session
+2021-08-26 18:54:01,479   24984     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 18:54:01,479   24984     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 18:54:01,479   24984     INFO result.py(91) - 耗时： 5.529270172119141
+2021-08-26 18:54:01,494   24984     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 18:54:01,659   24984     INFO test_运营用户创建审批.py(209) - 已完成修改WorldCheck的状态为FALSE
+2021-08-26 18:54:05,740   24984     INFO test_运营用户创建审批.py(220) - 提交审核获取到的手机号为：11808569618
+2021-08-26 18:54:05,874   24984     INFO test_运营用户创建审批.py(223) - applyId的值为：None
+2021-08-26 18:54:05,907   24984     INFO test_运营用户创建审批.py(24) - 关闭 Session
+2021-08-26 18:54:05,908   24984  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 235, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != '错误码:[MAS_01103],客户信息为空。'
+- 操作成功
++ 错误码:[MAS_01103],客户信息为空。
+
+
+2021-08-26 18:54:05,908   24984     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 18:54:05,908   24984     INFO result.py(91) - 耗时： 4.413370847702026
+2021-08-26 18:54:05,908   20008     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 18:54:05,908   20008    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 18:54:05,909   20008     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:10.222977
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-26 19:00:39,506   19872     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-26 19:00:39,508   13204     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:00:39,570   13204     INFO test_运营用户创建审批.py(32) - 初始化 Session
+2021-08-26 19:00:39,725   13204     INFO test_运营用户创建审批.py(41) - 接口请求url为：
+2021-08-26 19:00:44,983   13204     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-26 19:00:44,983   13204     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:00:44,998   13204     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:00:44,998   13204     INFO result.py(91) - 耗时： 5.490333795547485
+2021-08-26 19:00:45,014   13204     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:00:45,193   13204     INFO test_运营用户创建审批.py(213) - 已完成修改WorldCheck的状态为FALSE
+2021-08-26 19:00:49,229   13204     INFO test_运营用户创建审批.py(223) - 接口请求url为：
+2021-08-26 19:00:49,229   13204     INFO test_运营用户创建审批.py(225) - 提交审核获取到的手机号为：10889536996
+2021-08-26 19:00:49,363   13204     INFO test_运营用户创建审批.py(228) - 请求数据库cd_clnt_apply_info查询到applyId的值为：None
+2021-08-26 19:00:49,429   13204     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-26 19:00:49,430   13204  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 240, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != '错误码：[CDMS_04008]，申请单编号为空。'
+- 操作成功
++ 错误码：[CDMS_04008]，申请单编号为空。
+
+
+2021-08-26 19:00:49,430   13204     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:00:49,430   13204     INFO result.py(91) - 耗时： 4.415864944458008
+2021-08-26 19:00:49,430   19872     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 19:00:49,430   19872    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 19:00:49,431   19872     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:10.201155
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-26 19:05:27,026   21156     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-26 19:05:27,028   25660     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:05:27,029   25660     INFO test_运营用户创建审批.py(32) - 初始化 Session
+2021-08-26 19:05:27,258   25660     INFO test_运营用户创建审批.py(41) - 接口请求url为：
+2021-08-26 19:05:32,518   25660     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-26 19:05:32,549   25660     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:05:32,549   25660     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:05:32,549   25660     INFO result.py(91) - 耗时： 5.520256757736206
+2021-08-26 19:05:32,565   25660     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:05:32,715   25660     INFO test_运营用户创建审批.py(213) - 已完成修改WorldCheck的状态为FALSE
+2021-08-26 19:05:36,806   25660     INFO test_运营用户创建审批.py(223) - 接口请求url为：
+2021-08-26 19:05:36,807   25660     INFO test_运营用户创建审批.py(225) - 提交审核获取到的手机号为：10209090034
+2021-08-26 19:05:36,949   25660     INFO test_运营用户创建审批.py(228) - 请求数据库cd_clnt_apply_info查询到applyId的值为：None
+2021-08-26 19:05:36,979   25660     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-26 19:05:36,980   25660  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 240, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != '错误码：[CDMS_04008]，申请单编号为空。'
+- 操作成功
++ 错误码：[CDMS_04008]，申请单编号为空。
+
+
+2021-08-26 19:05:36,980   25660     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:05:36,980   25660     INFO result.py(91) - 耗时： 4.415088176727295
+2021-08-26 19:05:36,980   21156     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 19:05:36,980   21156    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 19:05:36,981   21156     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:10.150191
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-26 19:07:54,089   15632     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-26 19:07:54,090   20676     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:07:54,090   20676     INFO test_运营用户创建审批.py(32) - 初始化 Session
+2021-08-26 19:07:54,297   20676     INFO test_运营用户创建审批.py(41) - 接口请求url为：
+2021-08-26 19:07:59,567   20676     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-26 19:07:59,567   20676     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:07:59,567   20676     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:07:59,567   20676     INFO result.py(91) - 耗时： 5.476747989654541
+2021-08-26 19:07:59,567   20676     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:07:59,712   20676     INFO test_运营用户创建审批.py(213) - 已完成修改WorldCheck的状态为FALSE
+2021-08-26 19:08:03,752   20676     INFO test_运营用户创建审批.py(223) - 接口请求url为：
+2021-08-26 19:08:03,752   20676     INFO test_运营用户创建审批.py(225) - 提交审核获取到的手机号为：19898077267
+2021-08-26 19:08:03,825   20676     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-26 19:08:03,825   20676    ERROR result.py(175) - 测试产生错误： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 226, in test_submitAudit提交审核
+    applyId = cd_clnt_apply_info(phone)
+  File "F:\python\EDDID_CDMS\Common\eddid_data_select.py", line 9, in cd_clnt_apply_info
+    applyid=apply_id[0][0]
+IndexError: tuple index out of range
+
+2021-08-26 19:08:03,826   20676     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:08:03,826   20676     INFO result.py(91) - 耗时： 4.258055210113525
+2021-08-26 19:08:03,826   15632     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 19:08:03,826   15632    ERROR test_runner.py(195) - 
+Error	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 19:08:03,827   15632     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:09.935320
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：1
+
+2021-08-26 19:13:15,391   26276     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-26 19:13:15,393    8064     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:13:15,393    8064     INFO test_运营用户创建审批.py(32) - 初始化 Session
+2021-08-26 19:13:15,600    8064     INFO test_运营用户创建审批.py(41) - 接口请求url为：
+2021-08-26 19:13:20,919    8064     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-26 19:13:20,919    8064     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:13:20,919    8064     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:13:20,934    8064     INFO result.py(91) - 耗时： 5.525180816650391
+2021-08-26 19:13:20,934    8064     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:13:21,111    8064     INFO test_运营用户创建审批.py(213) - 已完成修改WorldCheck的状态为FALSE
+2021-08-26 19:13:25,149    8064     INFO test_运营用户创建审批.py(223) - 接口请求url为：
+2021-08-26 19:13:25,150    8064     INFO test_运营用户创建审批.py(225) - 提交审核获取到的手机号为：16230228812
+2021-08-26 19:13:25,213    8064     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-26 19:13:25,213    8064    ERROR result.py(175) - 测试产生错误： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 226, in test_submitAudit提交审核
+    applyId = cd_clnt_apply_info(phone)
+  File "F:\python\EDDID_CDMS\Common\eddid_data_select.py", line 6, in cd_clnt_apply_info
+    apply_id = SQL_Check.eddid_gfss_sit(database="eddid_gfss_sit",
+IndexError: tuple index out of range
+
+2021-08-26 19:13:25,214    8064     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:13:25,214    8064     INFO result.py(91) - 耗时： 4.280611991882324
+2021-08-26 19:13:25,214   26276     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 19:13:25,214   26276    ERROR test_runner.py(195) - 
+Error	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 19:13:25,215   26276     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:10.014039
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：1
+
+2021-08-26 19:15:56,900   22512     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-26 19:15:56,902   25080     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:15:56,903   25080     INFO test_运营用户创建审批.py(32) - 初始化 Session
+2021-08-26 19:15:57,069   25080     INFO test_运营用户创建审批.py(41) - 接口请求url为：
+2021-08-26 19:16:02,350   25080     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-26 19:16:02,366   25080     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:16:02,381   25080     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:16:02,397   25080     INFO result.py(91) - 耗时： 5.478368759155273
+2021-08-26 19:16:02,414   25080     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:16:02,559   25080     INFO test_运营用户创建审批.py(213) - 已完成修改WorldCheck的状态为FALSE
+2021-08-26 19:16:06,590   25080     INFO test_运营用户创建审批.py(223) - 接口请求url为：
+2021-08-26 19:16:06,590   25080     INFO test_运营用户创建审批.py(225) - 提交审核获取到的手机号为：10959500602
+2021-08-26 19:16:06,654   25080     INFO test_运营用户创建审批.py(228) - 请求数据库cd_clnt_apply_info查询到applyId的值为：()
+2021-08-26 19:16:06,689   25080     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-26 19:16:06,690   25080  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 240, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != 'JSON invalid format'
+- 操作成功
++ JSON invalid format
+
+
+2021-08-26 19:16:06,690   25080     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:16:06,690   25080     INFO result.py(91) - 耗时： 4.276490211486816
+2021-08-26 19:16:06,690   22512     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 19:16:06,690   22512    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 19:16:06,691   22512     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:09.994231
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-26 19:19:48,590    9132     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-26 19:19:48,592   11380     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:19:48,593   11380     INFO test_运营用户创建审批.py(32) - 初始化 Session
+2021-08-26 19:19:48,818   11380     INFO test_运营用户创建审批.py(42) - 接口请求url为：
+2021-08-26 19:19:54,098   11380     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-26 19:19:54,113   11380     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:19:54,113   11380     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:19:54,129   11380     INFO result.py(91) - 耗时： 5.521281719207764
+2021-08-26 19:19:54,145   11380     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:19:54,324   11380     INFO test_运营用户创建审批.py(214) - 已完成修改WorldCheck的状态为FALSE
+2021-08-26 19:19:58,366   11380     INFO test_运营用户创建审批.py(224) - 接口请求url为：
+2021-08-26 19:19:58,367   11380     INFO test_运营用户创建审批.py(226) - 提交审核获取到的手机号为：12394306928
+2021-08-26 19:19:58,427   11380     INFO test_运营用户创建审批.py(229) - 请求数据库cd_clnt_apply_info查询到applyId的值为：()
+2021-08-26 19:19:58,461   11380     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-26 19:19:58,461   11380  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 241, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != 'JSON invalid format'
+- 操作成功
++ JSON invalid format
+
+
+2021-08-26 19:19:58,461   11380     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:19:58,462   11380     INFO result.py(91) - 耗时： 4.3161797523498535
+2021-08-26 19:19:58,462    9132     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 19:19:58,462    9132    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 19:19:58,463    9132     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:10.075537
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-26 19:21:15,280   18196     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-26 19:21:15,282   14448     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:21:15,301   14448     INFO test_运营用户创建审批.py(32) - 初始化 Session
+2021-08-26 19:21:15,518   14448     INFO test_运营用户创建审批.py(42) - 接口请求url为：
+2021-08-26 19:21:20,786   14448     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-26 19:21:20,786   14448     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:21:20,802   14448     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:21:20,818   14448     INFO result.py(91) - 耗时： 5.501280784606934
+2021-08-26 19:21:20,818   14448     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:21:20,971   14448     INFO test_运营用户创建审批.py(214) - 已完成修改WorldCheck的状态为FALSE
+2021-08-26 19:21:25,036   14448     INFO test_运营用户创建审批.py(227) - 接口请求url为：
+2021-08-26 19:21:25,036   14448     INFO test_运营用户创建审批.py(229) - 提交审核获取到的手机号为：19760274508
+2021-08-26 19:21:25,099   14448     INFO test_运营用户创建审批.py(232) - 请求数据库cd_clnt_apply_info查询到applyId的值为：()
+2021-08-26 19:21:25,131   14448     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-26 19:21:25,132   14448  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 244, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != 'JSON invalid format'
+- 操作成功
++ JSON invalid format
+
+
+2021-08-26 19:21:25,132   14448     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:21:25,132   14448     INFO result.py(91) - 耗时： 4.314119577407837
+2021-08-26 19:21:25,132   18196     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 19:21:25,132   18196    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 19:21:25,133   18196     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:10.059543
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-26 19:22:53,342    2708     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-26 19:22:53,343   25552     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:22:53,344   25552     INFO test_运营用户创建审批.py(32) - 初始化 Session
+2021-08-26 19:22:53,620   25552     INFO test_运营用户创建审批.py(42) - 接口请求url为：
+2021-08-26 19:22:58,917   25552     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-26 19:22:58,917   25552     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:22:58,917   25552     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:22:58,932   25552     INFO result.py(91) - 耗时： 5.573084115982056
+2021-08-26 19:22:58,947   25552     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:22:59,093   25552     INFO test_运营用户创建审批.py(214) - 已完成修改WorldCheck的状态为FALSE
+2021-08-26 19:23:03,172   25552     INFO test_运营用户创建审批.py(227) - 接口请求url为：
+2021-08-26 19:23:03,172   25552     INFO test_运营用户创建审批.py(229) - 提交审核获取到的手机号为：11249468368
+2021-08-26 19:23:03,250   25552     INFO test_运营用户创建审批.py(232) - 请求数据库cd_clnt_apply_info查询到applyId的值为：()
+2021-08-26 19:23:03,283   25552     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-26 19:23:03,284   25552  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 244, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != 'JSON invalid format'
+- 操作成功
++ JSON invalid format
+
+
+2021-08-26 19:23:03,284   25552     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:23:03,284   25552     INFO result.py(91) - 耗时： 4.336708307266235
+2021-08-26 19:23:03,284    2708     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 19:23:03,285    2708    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 19:23:03,285    2708     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:10.150800
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-26 19:30:05,391    6160     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-26 19:30:05,393    7720     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:30:05,394    7720     INFO test_运营用户创建审批.py(32) - 初始化 Session
+2021-08-26 19:30:05,656    7720     INFO test_运营用户创建审批.py(42) - 接口请求url为：
+2021-08-26 19:30:10,961    7720     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-26 19:30:10,961    7720     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:30:10,961    7720     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:30:10,961    7720     INFO result.py(91) - 耗时： 5.567131519317627
+2021-08-26 19:30:10,977    7720     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:30:11,155    7720     INFO test_运营用户创建审批.py(215) - 已完成修改WorldCheck的状态为FALSE
+2021-08-26 19:30:15,188    7720     INFO test_运营用户创建审批.py(228) - 接口请求url为：
+2021-08-26 19:30:15,189    7720     INFO test_运营用户创建审批.py(230) - 提交审核获取到的手机号为：11170251838
+2021-08-26 19:30:15,256    7720     INFO test_运营用户创建审批.py(233) - 请求数据库cd_clnt_apply_info查询到applyId的值为：()
+2021-08-26 19:30:15,289    7720     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-26 19:30:15,290    7720  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 246, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != 'JSON invalid format'
+- 操作成功
++ JSON invalid format
+
+
+2021-08-26 19:30:15,290    7720     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-26 19:30:15,290    7720     INFO result.py(91) - 耗时： 4.312788009643555
+2021-08-26 19:30:15,290    6160     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 19:30:15,290    6160    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-26 19:30:15,291    6160     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:10.103935
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
