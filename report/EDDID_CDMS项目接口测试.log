@@ -750,3 +750,672 @@ Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_
 跳过执行用例数量：0
 产生异常用例数量：0
 
+2021-08-27 08:50:02,847   10500     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 08:50:02,850   14800     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 08:50:02,880   14800     INFO test_运营用户创建审批.py(32) - 初始化 Session
+2021-08-27 08:50:03,051   14800     INFO test_运营用户创建审批.py(42) - 接口请求url为：
+2021-08-27 08:50:08,382   14800     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-27 08:50:08,382   14800     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 08:50:08,398   14800     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 08:50:08,398   14800     INFO result.py(91) - 耗时： 5.548180341720581
+2021-08-27 08:50:08,414   14800     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 08:50:08,596   14800     INFO test_运营用户创建审批.py(215) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 08:50:12,689   14800     INFO test_运营用户创建审批.py(228) - 接口请求url为：
+2021-08-27 08:50:12,690   14800     INFO test_运营用户创建审批.py(230) - 提交审核获取到的手机号为：12513509113
+2021-08-27 08:50:12,767   14800     INFO test_运营用户创建审批.py(233) - 请求数据库cd_clnt_apply_info查询到applyId的值为：()
+2021-08-27 08:50:12,792   14800     INFO test_运营用户创建审批.py(25) - 关闭 Session
+2021-08-27 08:50:12,814   14800  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 246, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != 'JSON invalid format'
+- 操作成功
++ JSON invalid format
+
+
+2021-08-27 08:50:12,814   14800     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 08:50:12,814   14800     INFO result.py(91) - 耗时： 4.399883270263672
+2021-08-27 08:50:12,814   10500     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 08:50:12,814   10500    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 08:50:12,815   10500     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:10.181411
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-27 09:11:32,489    5280     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 09:11:32,491   11820     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:11:32,748   11820     INFO test_运营用户创建审批.py(26) - 获取到的token为
+2021-08-27 09:11:32,748   11820     INFO test_运营用户创建审批.py(33) - 初始化 Session
+2021-08-27 09:11:32,779   11820     INFO test_运营用户创建审批.py(43) - 接口请求url为：
+2021-08-27 09:11:38,121   11820     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:11:38,121   11820     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:11:38,137   11820     INFO result.py(91) - 耗时： 5.629961013793945
+2021-08-27 09:11:38,137   11820     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:11:38,163   11820     INFO test_运营用户创建审批.py(26) - 获取到的token为
+2021-08-27 09:11:38,300   11820     INFO test_运营用户创建审批.py(216) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 09:11:42,304   11820     INFO test_运营用户创建审批.py(229) - 接口请求url为：
+2021-08-27 09:11:42,304   11820     INFO test_运营用户创建审批.py(231) - 提交审核获取到的手机号为：19149946102
+2021-08-27 09:11:42,413   11820     INFO test_运营用户创建审批.py(234) - 请求数据库cd_clnt_apply_info查询到applyId的值为：()
+2021-08-27 09:11:42,440   11820  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 247, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != 'JSON invalid format'
+- 操作成功
++ JSON invalid format
+
+
+2021-08-27 09:11:42,440   11820     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:11:42,440   11820     INFO result.py(91) - 耗时： 4.3020713329315186
+2021-08-27 09:11:42,441    5280     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 09:11:42,441    5280    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 09:11:42,442    5280     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:10.149811
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-27 09:17:43,931    7664     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 09:17:43,933   27224     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:17:44,087   27224     INFO test_运营用户创建审批.py(28) - 获取到的token为
+2021-08-27 09:17:44,119   27224     INFO test_运营用户创建审批.py(35) - 初始化 Session
+2021-08-27 09:17:44,167   27224     INFO test_运营用户创建审批.py(45) - 接口请求url为：http://sit-cdms.ynm3k.com/api/client/applyClient
+2021-08-27 09:17:49,560   27224     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:17:49,560   27224     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:17:49,575   27224     INFO result.py(91) - 耗时： 5.626944541931152
+2021-08-27 09:17:49,575   27224     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:17:49,611   27224     INFO test_运营用户创建审批.py(28) - 获取到的token为
+2021-08-27 09:17:49,750   27224     INFO test_运营用户创建审批.py(218) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 09:17:53,762   27224     INFO test_运营用户创建审批.py(231) - 接口请求url为：http://sit-cdms.ynm3k.com/api/client/submitAudit
+2021-08-27 09:17:53,762   27224     INFO test_运营用户创建审批.py(233) - 提交审核获取到的手机号为：16352683968
+2021-08-27 09:17:53,870   27224     INFO test_运营用户创建审批.py(236) - 请求数据库cd_clnt_apply_info查询到applyId的值为：()
+2021-08-27 09:17:53,945   27224  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 249, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != 'JSON invalid format'
+- 操作成功
++ JSON invalid format
+
+
+2021-08-27 09:17:53,945   27224     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:17:53,945   27224     INFO result.py(91) - 耗时： 4.369535207748413
+2021-08-27 09:17:53,945    7664     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 09:17:53,945    7664    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 09:17:53,946    7664     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:10.215198
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-27 09:20:20,380   18668     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 09:20:20,381   26588     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:20:20,381   26588    ERROR result.py(175) - 测试产生错误： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+TypeError: setUp() missing 1 required positional argument: 'cls'
+
+2021-08-27 09:20:20,392   26588     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:20:20,408   26588     INFO result.py(91) - 耗时： 0.011001825332641602
+2021-08-27 09:20:20,424   26588     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:20:20,424   26588    ERROR result.py(175) - 测试产生错误： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+TypeError: setUp() missing 1 required positional argument: 'cls'
+
+2021-08-27 09:20:20,424   26588     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:20:20,424   26588     INFO result.py(91) - 耗时： 0.0
+2021-08-27 09:20:20,424   18668    ERROR test_runner.py(195) - 
+Error	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Error	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 09:20:20,425   18668     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:00.251704
+共计执行用例数量：2
+执行成功用例数量：0
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：2
+
+2021-08-27 09:22:10,392   10476     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 09:22:10,393   10708     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:22:10,653   10708     INFO test_运营用户创建审批.py(28) - 获取到的token为
+2021-08-27 09:22:10,763   10708    ERROR result.py(175) - 测试产生错误： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 31, in test_applyClient用户资料提交
+    eddidhost=self.eddidhost
+AttributeError: 'Test_新建用户' object has no attribute 'eddidhost'
+
+2021-08-27 09:22:10,779   10708    ERROR result.py(175) - 测试产生错误： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 252, in tearDown
+    self.s.close()
+AttributeError: 'Test_新建用户' object has no attribute 's'
+
+2021-08-27 09:22:10,795   10708     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:22:10,811   10708     INFO result.py(91) - 耗时： 0.40195584297180176
+2021-08-27 09:22:10,826   10708     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:22:10,846   10708     INFO test_运营用户创建审批.py(28) - 获取到的token为
+2021-08-27 09:22:10,846   10708    ERROR result.py(175) - 测试产生错误： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 213, in test_submitAudit提交审核
+    s = self.s
+AttributeError: 'Test_新建用户' object has no attribute 's'
+
+2021-08-27 09:22:10,847   10708    ERROR result.py(175) - 测试产生错误： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 252, in tearDown
+    self.s.close()
+AttributeError: 'Test_新建用户' object has no attribute 's'
+
+2021-08-27 09:22:10,847   10708     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:22:10,847   10708     INFO result.py(91) - 耗时： 0.021164655685424805
+2021-08-27 09:22:10,847   10476    ERROR test_runner.py(195) - 
+Error	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Error	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Error	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Error	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 09:22:10,848   10476     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:00.649011
+共计执行用例数量：2
+执行成功用例数量：0
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：2
+
+2021-08-27 09:27:04,907   10936     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 09:27:04,908   14700     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:27:04,908   14700     INFO test_运营用户创建审批.py(33) - 获取到的token为
+2021-08-27 09:27:05,010   14700    ERROR result.py(175) - 测试产生错误： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 36, in test_applyClient用户资料提交
+    eddidhost=self.eddidhost
+AttributeError: 'Test_新建用户' object has no attribute 'eddidhost'
+
+2021-08-27 09:27:05,040   14700     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:27:05,070   14700     INFO result.py(91) - 耗时： 0.13164997100830078
+2021-08-27 09:27:05,070   14700     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:27:05,071   14700     INFO test_运营用户创建审批.py(33) - 获取到的token为
+2021-08-27 09:27:05,071   14700    ERROR result.py(175) - 测试产生错误： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 220, in test_submitAudit提交审核
+    eddidhost=self.eddidhost
+AttributeError: 'Test_新建用户' object has no attribute 'eddidhost'
+
+2021-08-27 09:27:05,071   14700     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 09:27:05,072   14700     INFO result.py(91) - 耗时： 0.0009965896606445312
+2021-08-27 09:27:05,072   10936    ERROR test_runner.py(195) - 
+Error	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Error	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 09:27:05,073   10936     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:00.377346
+共计执行用例数量：2
+执行成功用例数量：0
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：2
+
+2021-08-27 10:14:52,867   14660     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 10:14:52,868   27824     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:14:53,068   27824     INFO test_运营用户创建审批.py(33) - 获取到的token为
+2021-08-27 10:14:53,132   27824    ERROR result.py(175) - 测试产生错误： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 36, in test_applyClient用户资料提交
+    eddidhost=self.eddidhost
+AttributeError: 'Test_新建用户' object has no attribute 'eddidhost'
+
+2021-08-27 10:14:53,132   27824     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:14:53,148   27824     INFO result.py(91) - 耗时： 0.2643258571624756
+2021-08-27 10:14:53,148   27824     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:14:53,167   27824     INFO test_运营用户创建审批.py(33) - 获取到的token为
+2021-08-27 10:14:53,168   27824    ERROR result.py(175) - 测试产生错误： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 220, in test_submitAudit提交审核
+    eddidhost=self.eddidhost
+AttributeError: 'Test_新建用户' object has no attribute 'eddidhost'
+
+2021-08-27 10:14:53,168   27824     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:14:53,168   27824     INFO result.py(91) - 耗时： 0.020041704177856445
+2021-08-27 10:14:53,168   14660    ERROR test_runner.py(195) - 
+Error	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Error	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 10:14:53,169   14660     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:00.501839
+共计执行用例数量：2
+执行成功用例数量：0
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：2
+
+2021-08-27 10:16:13,580   21456     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 10:16:13,580   11836     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:16:13,673   11836     INFO test_运营用户创建审批.py(33) - 获取到的token为
+2021-08-27 10:16:13,780   11836    ERROR result.py(175) - 测试产生错误： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 37, in test_applyClient用户资料提交
+    idCardNo=self.idCardNo
+AttributeError: 'Test_新建用户' object has no attribute 'idCardNo'
+
+2021-08-27 10:16:13,796   11836     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:16:13,828   11836     INFO result.py(91) - 耗时： 0.21445131301879883
+2021-08-27 10:16:13,843   11836     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:16:13,864   11836     INFO test_运营用户创建审批.py(33) - 获取到的token为
+2021-08-27 10:16:14,006   11836     INFO test_运营用户创建审批.py(223) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 10:16:18,019   11836     INFO test_运营用户创建审批.py(236) - 接口请求url为：http://sit-cdms.ynm3k.com/api/client/submitAudit
+2021-08-27 10:16:18,019   11836     INFO test_运营用户创建审批.py(238) - 提交审核获取到的手机号为：19928165057
+2021-08-27 10:16:18,102   11836     INFO test_运营用户创建审批.py(241) - 请求数据库cd_clnt_apply_info查询到applyId的值为：()
+2021-08-27 10:16:18,153   11836  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 254, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != 'JSON invalid format'
+- 操作成功
++ JSON invalid format
+
+
+2021-08-27 10:16:18,154   11836     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:16:18,154   11836     INFO result.py(91) - 耗时： 4.311550140380859
+2021-08-27 10:16:18,154   21456    ERROR test_runner.py(195) - 
+Error	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 10:16:18,155   21456     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:04.777433
+共计执行用例数量：2
+执行成功用例数量：0
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：1
+
+2021-08-27 10:16:51,563   25912     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 10:16:51,565    5452     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:16:51,667    5452     INFO test_运营用户创建审批.py(33) - 获取到的token为
+2021-08-27 10:16:51,682    5452     INFO test_运营用户创建审批.py(40) - 初始化 Session
+2021-08-27 10:16:51,714    5452     INFO test_运营用户创建审批.py(50) - 接口请求url为：http://sit-cdms.ynm3k.com/api/client/applyClient
+2021-08-27 10:16:57,044    5452     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:16:57,044    5452     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:16:57,060    5452     INFO result.py(91) - 耗时： 5.479364395141602
+2021-08-27 10:16:57,060    5452     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:16:57,083    5452     INFO test_运营用户创建审批.py(33) - 获取到的token为
+2021-08-27 10:16:57,220    5452     INFO test_运营用户创建审批.py(223) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 10:17:01,233    5452     INFO test_运营用户创建审批.py(236) - 接口请求url为：http://sit-cdms.ynm3k.com/api/client/submitAudit
+2021-08-27 10:17:01,233    5452     INFO test_运营用户创建审批.py(238) - 提交审核获取到的手机号为：19854642493
+2021-08-27 10:17:01,311    5452     INFO test_运营用户创建审批.py(241) - 请求数据库cd_clnt_apply_info查询到applyId的值为：()
+2021-08-27 10:17:01,373    5452  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 254, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != 'JSON invalid format'
+- 操作成功
++ JSON invalid format
+
+
+2021-08-27 10:17:01,373    5452     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:17:01,373    5452     INFO result.py(91) - 耗时： 4.3127899169921875
+2021-08-27 10:17:01,373   25912     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 10:17:01,373   25912    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 10:17:01,374   25912     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:10.020235
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-27 10:46:03,305   17448     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 10:46:03,307   20528     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:46:03,542   20528    ERROR result.py(175) - 测试产生错误： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 26, in setUp
+    print("身份证号", idCardNo)
+NameError: name 'idCardNo' is not defined
+
+2021-08-27 10:46:03,542   20528     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:46:03,557   20528     INFO result.py(91) - 耗时： 0.23536896705627441
+2021-08-27 10:46:03,557   20528     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:46:03,577   20528    ERROR result.py(175) - 测试产生错误： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 26, in setUp
+    print("身份证号", idCardNo)
+NameError: name 'idCardNo' is not defined
+
+2021-08-27 10:46:03,577   20528     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:46:03,577   20528     INFO result.py(91) - 耗时： 0.019841670989990234
+2021-08-27 10:46:03,577   17448    ERROR test_runner.py(195) - 
+Error	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Error	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 10:46:03,579   17448     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:00.474730
+共计执行用例数量：2
+执行成功用例数量：0
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：2
+
+2021-08-27 10:53:44,918   19848     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 10:53:44,920   23860     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:53:45,175   23860     INFO test_运营用户创建审批.py(27) - 获取到的token为
+2021-08-27 10:53:45,313   23860    ERROR result.py(175) - 测试产生错误： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 31, in test_applyClient用户资料提交
+    idCardNo=self.idCardNo
+AttributeError: 'Test_新建用户' object has no attribute 'idCardNo'
+
+2021-08-27 10:53:45,313   23860     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:53:45,313   23860     INFO result.py(91) - 耗时： 0.3929769992828369
+2021-08-27 10:53:45,313   23860     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:53:45,333   23860     INFO test_运营用户创建审批.py(27) - 获取到的token为
+2021-08-27 10:53:45,334   23860    ERROR result.py(175) - 测试产生错误： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 213, in test_submitAudit提交审核
+    phone=self.phone
+AttributeError: 'Test_新建用户' object has no attribute 'phone'
+
+2021-08-27 10:53:45,334   23860     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:53:45,334   23860     INFO result.py(91) - 耗时： 0.021107196807861328
+2021-08-27 10:53:45,334   19848    ERROR test_runner.py(195) - 
+Error	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Error	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 10:53:45,335   19848     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:00.624909
+共计执行用例数量：2
+执行成功用例数量：0
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：2
+
+2021-08-27 10:55:26,386   25144     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 10:55:26,388    9372     INFO result.py(69) - 开始测试： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:55:26,610    9372     INFO test_运营用户创建审批.py(27) - 获取到的token为
+2021-08-27 10:55:26,641    9372     INFO test_运营用户创建审批.py(34) - 初始化 Session
+2021-08-27 10:55:26,753    9372     INFO test_运营用户创建审批.py(44) - 接口请求url为：http://sit-cdms.ynm3k.com/api/client/applyClient
+2021-08-27 10:55:32,028    9372     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:55:32,028    9372     INFO result.py(90) - 测试结束： test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:55:32,028    9372     INFO result.py(91) - 耗时： 5.639939308166504
+2021-08-27 10:55:32,044    9372     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:55:32,095    9372     INFO test_运营用户创建审批.py(27) - 获取到的token为
+2021-08-27 10:55:32,278    9372     INFO test_运营用户创建审批.py(217) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 10:55:36,291    9372     INFO test_运营用户创建审批.py(230) - 接口请求url为：http://sit-cdms.ynm3k.com/api/client/submitAudit
+2021-08-27 10:55:36,291    9372     INFO test_运营用户创建审批.py(232) - 提交审核获取到的手机号为：12862199894
+2021-08-27 10:55:36,375    9372     INFO test_运营用户创建审批.py(235) - 请求数据库cd_clnt_apply_info查询到applyId的值为：()
+2021-08-27 10:55:36,453    9372  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 248, in test_submitAudit提交审核
+    self.assertEqual("操作成功", r.json().get("msg"))
+AssertionError: '操作成功' != 'JSON invalid format'
+- 操作成功
++ JSON invalid format
+
+
+2021-08-27 10:55:36,453    9372     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 10:55:36,453    9372     INFO result.py(91) - 耗时： 4.409123420715332
+2021-08-27 10:55:36,453   25144     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 10:55:36,453   25144    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 10:55:36,454   25144     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:10.267956
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-27 14:20:50,307   26288     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 14:20:50,308   24284     INFO result.py(69) - 开始测试： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:20:50,309   24284     INFO test_运营用户创建审批12.py(22) - 初始化CreatUser
+2021-08-27 14:20:50,467   24284     INFO applyClient用户资料提交.py(29) - 接口请求url为：http://sit-cdms.ynm3k.com/api/client/applyClient
+2021-08-27 14:20:50,701   24284     INFO test_运营用户创建审批12.py(28) - 资料提交接口'/api/client/applyClient'的响应结果为:'<Response [200]>'
+2021-08-27 14:20:50,794   24284    ERROR result.py(175) - 测试产生错误： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批12.py", line 42, in tearDown
+    self.s.close()
+AttributeError: 'Test_新建用户' object has no attribute 's'
+
+2021-08-27 14:20:50,794   24284     INFO result.py(90) - 测试结束： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:20:50,809   24284     INFO result.py(91) - 耗时： 0.4847538471221924
+2021-08-27 14:20:50,840   24284     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:20:50,840   24284     INFO test_运营用户创建审批12.py(22) - 初始化CreatUser
+2021-08-27 14:20:51,342   24284     INFO applyClient用户资料提交.py(195) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 14:20:55,353   24284     INFO applyClient用户资料提交.py(208) - 接口请求url为：http://sit-cdms.ynm3k.com/api/client/submitAudit
+2021-08-27 14:20:55,353   24284     INFO applyClient用户资料提交.py(210) - 提交审核获取到的手机号为：12897117758
+2021-08-27 14:20:55,905   24284     INFO test_运营用户创建审批12.py(37) - 资料提交接口'/api/client/submitAudit'的响应结果为:'<Response [200]>'
+2021-08-27 14:20:55,907   24284  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批12.py", line 39, in test_submitAudit提交审核
+    self.assertEqual("操作成功", submitAudit.json().get("msg"))
+AssertionError: '操作成功' != '用户没有创建worldCheck或未关联，请检查，稍后操作'
+- 操作成功
++ 用户没有创建worldCheck或未关联，请检查，稍后操作
+
+
+2021-08-27 14:20:55,907   24284    ERROR result.py(175) - 测试产生错误： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批12.py", line 42, in tearDown
+    self.s.close()
+AttributeError: 'Test_新建用户' object has no attribute 's'
+
+2021-08-27 14:20:55,907   24284     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:20:55,907   24284     INFO result.py(91) - 耗时： 5.067530393600464
+2021-08-27 14:20:55,908   26288    ERROR test_runner.py(195) - 
+Error	test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+Error	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+
+2021-08-27 14:20:55,908   26288     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:05.801498
+共计执行用例数量：3
+执行成功用例数量：0
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：2
+
+2021-08-27 14:21:48,347   18544     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 14:21:48,349    9220     INFO result.py(69) - 开始测试： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:21:48,349    9220     INFO test_运营用户创建审批12.py(21) - 初始化CreatUser
+2021-08-27 14:21:48,614    9220     INFO applyClient用户资料提交.py(29) - 接口请求url为：http://sit-cdms.ynm3k.com/api/client/applyClient
+2021-08-27 14:21:48,816    9220     INFO test_运营用户创建审批12.py(27) - 资料提交接口'/api/client/applyClient'的响应结果为:'<Response [200]>'
+2021-08-27 14:21:48,816    9220     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:21:48,832    9220     INFO result.py(90) - 测试结束： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:21:48,832    9220     INFO result.py(91) - 耗时： 0.48326992988586426
+2021-08-27 14:21:48,847    9220     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:21:48,847    9220     INFO test_运营用户创建审批12.py(21) - 初始化CreatUser
+2021-08-27 14:21:49,316    9220     INFO applyClient用户资料提交.py(195) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 14:21:53,330    9220     INFO applyClient用户资料提交.py(208) - 接口请求url为：http://sit-cdms.ynm3k.com/api/client/submitAudit
+2021-08-27 14:21:53,330    9220     INFO applyClient用户资料提交.py(210) - 提交审核获取到的手机号为：16761377312
+2021-08-27 14:21:53,532    9220     INFO test_运营用户创建审批12.py(35) - 资料提交接口'/api/client/submitAudit'的响应结果为:'<Response [200]>'
+2021-08-27 14:21:53,532    9220     INFO result.py(156) - 测试执行通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:21:53,532    9220     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:21:53,532    9220     INFO result.py(91) - 耗时： 4.684244394302368
+2021-08-27 14:21:53,532   18544     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+Pass	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+
+2021-08-27 14:21:53,533   18544     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:05.384644
+共计执行用例数量：2
+执行成功用例数量：2
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-27 14:35:38,666   17240     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 14:35:38,668   17608     INFO result.py(69) - 开始测试： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:35:38,668   17608     INFO test_运营用户创建审批12.py(21) - 初始化CreatUser
+2021-08-27 14:35:38,852   17608     INFO applyClient用户资料提交.py(19) - 获取到的token为
+2021-08-27 14:35:38,868   17608     INFO applyClient用户资料提交.py(188) - 提交申请单时注册用户手机号码为：16692815525
+2021-08-27 14:35:39,123   17608     INFO applyClient用户资料提交.py(190) - 接口'http://sit-cdms.ynm3k.com/api/client/applyClient'的响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 14:35:39,123   17608     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:35:39,139   17608     INFO result.py(90) - 测试结束： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:35:39,139   17608     INFO result.py(91) - 耗时： 0.47076845169067383
+2021-08-27 14:35:39,139   17608     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:35:39,139   17608     INFO test_运营用户创建审批12.py(21) - 初始化CreatUser
+2021-08-27 14:35:39,600   17608     INFO applyClient用户资料提交.py(195) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 14:35:43,605   17608     INFO applyClient用户资料提交.py(203) - 获取到的token为
+2021-08-27 14:35:43,605   17608     INFO applyClient用户资料提交.py(211) - 提交审核获取到的手机号为：16692815525
+2021-08-27 14:35:43,733   17608     INFO applyClient用户资料提交.py(223) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/submitAudit'的响应结果为:'{"code":"CDMS_04040","msg":"用户没有创建worldCheck或未关联，请检查，稍后操作","data":""}'
+2021-08-27 14:35:43,733   17608  WARNING result.py(190) - 测试未通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批12.py", line 37, in test_submitAudit提交审核
+    self.assertEqual("操作成功", submitAudit.json().get("msg"))
+AssertionError: '操作成功' != '用户没有创建worldCheck或未关联，请检查，稍后操作'
+- 操作成功
++ 用户没有创建worldCheck或未关联，请检查，稍后操作
+
+
+2021-08-27 14:35:43,733   17608     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:35:43,733   17608     INFO result.py(91) - 耗时： 4.594277620315552
+2021-08-27 14:35:43,733   17240     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+
+2021-08-27 14:35:43,734   17240    ERROR test_runner.py(195) - 
+Fail	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+
+2021-08-27 14:35:43,735   17240     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:05.266241
+共计执行用例数量：2
+执行成功用例数量：1
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-27 14:40:55,421   13568     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 14:40:55,422   18620     INFO result.py(69) - 开始测试： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:40:55,422   18620     INFO test_运营用户创建审批12.py(21) - 初始化CreatUser
+2021-08-27 14:40:55,646   18620     INFO applyClient用户资料提交.py(19) - 获取到的token为
+2021-08-27 14:40:55,693   18620     INFO applyClient用户资料提交.py(188) - 提交申请单时注册用户手机号码为：11492363009
+2021-08-27 14:40:55,943   18620     INFO applyClient用户资料提交.py(190) - 接口'http://sit-cdms.ynm3k.com/api/client/applyClient'的响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 14:41:00,975   18620     INFO test_运营用户创建审批12.py(42) - 接口请求完成后，等待系统处理数据，等待5秒
+2021-08-27 14:41:00,975   18620     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:41:00,990   18620     INFO result.py(90) - 测试结束： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:41:01,006   18620     INFO result.py(91) - 耗时： 5.5681304931640625
+2021-08-27 14:41:01,022   18620     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:41:01,022   18620     INFO test_运营用户创建审批12.py(21) - 初始化CreatUser
+2021-08-27 14:41:01,524   18620     INFO applyClient用户资料提交.py(195) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 14:41:05,527   18620     INFO applyClient用户资料提交.py(203) - 获取到的token为
+2021-08-27 14:41:05,527   18620     INFO applyClient用户资料提交.py(211) - 提交审核获取到的手机号为：11492363009
+2021-08-27 14:41:05,763   18620     INFO applyClient用户资料提交.py(223) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/submitAudit'的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 14:41:10,773   18620     INFO test_运营用户创建审批12.py(42) - 接口请求完成后，等待系统处理数据，等待5秒
+2021-08-27 14:41:10,773   18620     INFO result.py(156) - 测试执行通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:41:10,773   18620     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:41:10,773   18620     INFO result.py(91) - 耗时： 9.751163244247437
+2021-08-27 14:41:10,773   13568     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+Pass	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+
+2021-08-27 14:41:10,774   13568     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:15.572131
+共计执行用例数量：2
+执行成功用例数量：2
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-27 14:42:41,294   25728     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 14:42:41,296   14344     INFO result.py(69) - 开始测试： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:42:41,296   14344     INFO test_运营用户创建审批12.py(21) - 初始化CreatUser
+2021-08-27 14:42:41,427   14344     INFO applyClient用户资料提交.py(19) - 获取到的token为:DFBE3D9E2326647F4AEDD5B9E14CBD2E7AC79FFD18F78973
+2021-08-27 14:42:41,473   14344     INFO applyClient用户资料提交.py(188) - 提交申请单时注册用户手机号码为：16760036201
+2021-08-27 14:42:41,775   14344     INFO applyClient用户资料提交.py(190) - 接口'http://sit-cdms.ynm3k.com/api/client/applyClient'的响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 14:42:46,798   14344     INFO test_运营用户创建审批12.py(42) - 接口请求完成后，等待系统处理数据，等待5秒
+2021-08-27 14:42:46,814   14344     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:42:46,814   14344     INFO result.py(90) - 测试结束： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:42:46,814   14344     INFO result.py(91) - 耗时： 5.518261909484863
+2021-08-27 14:42:46,814   14344     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:42:46,814   14344     INFO test_运营用户创建审批12.py(21) - 初始化CreatUser
+2021-08-27 14:42:47,291   14344     INFO applyClient用户资料提交.py(195) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 14:42:51,306   14344     INFO applyClient用户资料提交.py(203) - 获取到的token为:DFBE3D9E2326647F4AEDD5B9E14CBD2E7AC79FFD18F78973
+2021-08-27 14:42:51,306   14344     INFO applyClient用户资料提交.py(211) - 提交审核获取到的手机号为：16760036201
+2021-08-27 14:42:51,582   14344     INFO applyClient用户资料提交.py(223) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/submitAudit'的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 14:42:56,599   14344     INFO test_运营用户创建审批12.py(42) - 接口请求完成后，等待系统处理数据，等待5秒
+2021-08-27 14:42:56,599   14344     INFO result.py(156) - 测试执行通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:42:56,599   14344     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+2021-08-27 14:42:56,599   14344     INFO result.py(91) - 耗时： 9.784134864807129
+2021-08-27 14:42:56,599   25728     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+Pass	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批12.Test_新建用户)
+
+2021-08-27 14:42:56,600   25728     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:15.507141
+共计执行用例数量：2
+执行成功用例数量：2
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-27 14:45:05,688   17656     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 14:45:05,689   11468     INFO result.py(69) - 开始测试： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 14:45:05,689   11468     INFO test_运营用户创建审批.py(21) - 初始化CreatUser
+2021-08-27 14:45:05,830   11468     INFO applyClient用户资料提交.py(19) - 获取到的token为:DFBE3D9E2326647F7F40642834F444AE7AC79FFD18F78973
+2021-08-27 14:45:05,830   11468     INFO applyClient用户资料提交.py(188) - 提交申请单时注册用户手机号码为：10305770198
+2021-08-27 14:45:06,084   11468     INFO applyClient用户资料提交.py(190) - 接口'http://sit-cdms.ynm3k.com/api/client/applyClient'的响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 14:45:10,112   11468     INFO test_运营用户创建审批.py(42) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 14:45:10,112   11468     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 14:45:10,128   11468     INFO result.py(90) - 测试结束： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 14:45:10,143   11468     INFO result.py(91) - 耗时： 4.438156366348267
+2021-08-27 14:45:10,158   11468     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 14:45:10,158   11468     INFO test_运营用户创建审批.py(21) - 初始化CreatUser
+2021-08-27 14:45:10,615   11468     INFO applyClient用户资料提交.py(195) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 14:45:14,618   11468     INFO applyClient用户资料提交.py(203) - 获取到的token为:DFBE3D9E2326647F7F40642834F444AE7AC79FFD18F78973
+2021-08-27 14:45:14,618   11468     INFO applyClient用户资料提交.py(211) - 提交审核获取到的手机号为：10305770198
+2021-08-27 14:45:14,781   11468     INFO applyClient用户资料提交.py(223) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/submitAudit'的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 14:45:18,794   11468     INFO test_运营用户创建审批.py(42) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 14:45:18,794   11468     INFO result.py(156) - 测试执行通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 14:45:18,794   11468     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 14:45:18,794   11468     INFO result.py(91) - 耗时： 8.635523080825806
+2021-08-27 14:45:18,794   17656     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Pass	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 14:45:18,795   17656     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:13.304824
+共计执行用例数量：2
+执行成功用例数量：2
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
