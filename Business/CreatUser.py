@@ -1,5 +1,4 @@
 import requests
-import unittest
 from Business.login import cdms_获取token
 from Common.random_number import Randoms
 import logging

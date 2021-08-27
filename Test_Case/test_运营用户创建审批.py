@@ -7,7 +7,7 @@ from Common.eddid_data_update import *
 # from Business.login import cdms_获取token
 import json
 from Common.random_number import Randoms
-from Business.applyClient用户资料提交 import CreatUser
+from Business.CreatUser import CreatUser
 
 
 
