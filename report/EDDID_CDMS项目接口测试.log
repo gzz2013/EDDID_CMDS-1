@@ -1419,3 +1419,770 @@ Pass	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_
 跳过执行用例数量：0
 产生异常用例数量：0
 
+2021-08-27 16:13:09,330    7100     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 16:13:09,332   15864     INFO result.py(69) - 开始测试： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:13:09,333   15864     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 16:13:09,613   15864     INFO CreatUser.py(25) - 当前token为:DFBE3D9E2326647FA2875FA2D4ED44B27AC79FFD18F78973
+2021-08-27 16:13:09,613   15864     INFO CreatUser.py(189) - 提交申请单时注册用户手机号码为：11283317434
+2021-08-27 16:13:09,970   15864     INFO CreatUser.py(191) - 接口'http://sit-cdms.ynm3k.com/api/client/applyClient'的响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 16:13:13,987   15864     INFO test_运营用户创建审批.py(44) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 16:13:13,987   15864     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:13:13,987   15864     INFO result.py(90) - 测试结束： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:13:14,003   15864     INFO result.py(91) - 耗时： 4.65357518196106
+2021-08-27 16:13:14,019   15864     INFO result.py(69) - 开始测试： test_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:13:14,019   15864     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 16:13:14,019   15864     INFO CreatUser.py(229) - 当前token为:DFBE3D9E2326647FA2875FA2D4ED44B27AC79FFD18F78973
+2021-08-27 16:13:14,019   15864     INFO CreatUser.py(237) - 提交审核获取到的手机号为：11283317434
+2021-08-27 16:13:18,046   15864     INFO test_运营用户创建审批.py(44) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 16:13:18,156   15864    ERROR result.py(175) - 测试产生错误： test_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 36, in test_operatingWorkFlowFirst提交锁
+    operatingWorkFlowFirst=self.creatUser.operatingWorkFlowFirst提交锁()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 240, in operatingWorkFlowFirst提交锁
+    print("查询数据库cd_clnt_apply_info查询到applyId的值为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-08-27 16:13:18,172   15864     INFO result.py(90) - 测试结束： test_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:13:18,188   15864     INFO result.py(91) - 耗时： 4.1528918743133545
+2021-08-27 16:13:18,188   15864     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:13:18,188   15864     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 16:13:18,653   15864     INFO CreatUser.py(196) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 16:13:18,653   15864     INFO CreatUser.py(204) - 当前token为:DFBE3D9E2326647FA2875FA2D4ED44B27AC79FFD18F78973
+2021-08-27 16:13:18,653   15864     INFO CreatUser.py(209) - 提交审核获取到的手机号为：11283317434
+2021-08-27 16:13:18,871   15864     INFO CreatUser.py(220) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/submitAudit'的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 16:13:22,883   15864     INFO test_运营用户创建审批.py(44) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 16:13:22,883   15864     INFO result.py(156) - 测试执行通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:13:22,883   15864     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:13:22,883   15864     INFO result.py(91) - 耗时： 4.69536018371582
+2021-08-27 16:13:22,884    7100     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Pass	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 16:13:22,884    7100    ERROR test_runner.py(195) - 
+Error	test_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 16:13:22,885    7100     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:13.758098
+共计执行用例数量：3
+执行成功用例数量：2
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：1
+
+2021-08-27 16:18:09,171    9180     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 16:18:09,174   12348     INFO result.py(69) - 开始测试： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:18:09,180   12348     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 16:18:09,367   12348     INFO CreatUser.py(25) - 当前token为:DFBE3D9E2326647FAC4E9A9618AC73AB7AC79FFD18F78973
+2021-08-27 16:18:09,415   12348     INFO CreatUser.py(189) - 提交申请单时注册用户手机号码为：10131829017
+2021-08-27 16:18:09,667   12348     INFO CreatUser.py(191) - 接口'http://sit-cdms.ynm3k.com/api/client/applyClient'的响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 16:18:13,699   12348     INFO test_运营用户创建审批.py(44) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 16:18:13,699   12348     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:18:13,699   12348     INFO result.py(90) - 测试结束： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:18:13,715   12348     INFO result.py(91) - 耗时： 4.518905162811279
+2021-08-27 16:18:13,731   12348     INFO result.py(69) - 开始测试： test_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:18:13,731   12348     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 16:18:13,731   12348     INFO CreatUser.py(229) - 当前token为:DFBE3D9E2326647FAC4E9A9618AC73AB7AC79FFD18F78973
+2021-08-27 16:18:17,761   12348     INFO test_运营用户创建审批.py(44) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 16:18:17,869   12348    ERROR result.py(175) - 测试产生错误： test_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 36, in test_operatingWorkFlowFirst提交锁
+    operatingWorkFlowFirst=self.creatUser.operatingWorkFlowFirst提交锁()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 240, in operatingWorkFlowFirst提交锁
+    print("查询数据库cd_clnt_apply_info查询到applyId的值为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-08-27 16:18:17,869   12348     INFO result.py(90) - 测试结束： test_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:18:17,885   12348     INFO result.py(91) - 耗时： 4.137957811355591
+2021-08-27 16:18:17,900   12348     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:18:17,900   12348     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 16:18:18,448   12348     INFO CreatUser.py(196) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 16:18:18,448   12348     INFO CreatUser.py(204) - 当前token为:DFBE3D9E2326647FAC4E9A9618AC73AB7AC79FFD18F78973
+2021-08-27 16:18:18,448   12348     INFO CreatUser.py(209) - 提交审核获取到的手机号为：10131829017
+2021-08-27 16:18:18,716   12348     INFO CreatUser.py(220) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/submitAudit'的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 16:18:22,723   12348     INFO test_运营用户创建审批.py(44) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 16:18:22,723   12348     INFO result.py(156) - 测试执行通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:18:22,723   12348     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:18:22,723   12348     INFO result.py(91) - 耗时： 4.822773694992065
+2021-08-27 16:18:22,723    9180     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Pass	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 16:18:22,724    9180    ERROR test_runner.py(195) - 
+Error	test_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 16:18:22,724    9180     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:13.765339
+共计执行用例数量：3
+执行成功用例数量：2
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：1
+
+2021-08-27 16:19:01,440   17176     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 16:19:01,442   27632     INFO result.py(69) - 开始测试： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:19:01,442   27632     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 16:19:01,711   27632     INFO CreatUser.py(25) - 当前token为:DFBE3D9E2326647FE3AD50F22E98B8D67AC79FFD18F78973
+2021-08-27 16:19:01,837   27632     INFO CreatUser.py(189) - 提交申请单时注册用户手机号码为：12161051364
+2021-08-27 16:19:02,170   27632     INFO CreatUser.py(191) - 接口'http://sit-cdms.ynm3k.com/api/client/applyClient'的响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 16:19:06,219   27632     INFO test_运营用户创建审批.py(44) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 16:19:06,219   27632     INFO result.py(156) - 测试执行通过： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:19:06,235   27632     INFO result.py(90) - 测试结束： test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:19:06,235   27632     INFO result.py(91) - 耗时： 4.792201995849609
+2021-08-27 16:19:06,251   27632     INFO result.py(69) - 开始测试： test_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:19:06,251   27632     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 16:19:06,251   27632     INFO CreatUser.py(229) - 当前token为:DFBE3D9E2326647FE3AD50F22E98B8D67AC79FFD18F78973
+2021-08-27 16:19:06,969   27632     INFO CreatUser.py(248) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147691","applyNo":null,"result":false,"operatingMessage":"当前用户没有权限锁定/解锁该记录"}]}'
+2021-08-27 16:19:10,997   27632     INFO test_运营用户创建审批.py(44) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 16:19:11,060   27632    ERROR result.py(175) - 测试产生错误： test_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 39, in test_operatingWorkFlowFirst提交锁
+    self.assertEqual("操作成功", operatingWorkFlowFirst.json().get("data")[0].operatingMessage)
+AttributeError: 'dict' object has no attribute 'operatingMessage'
+
+2021-08-27 16:19:11,060   27632     INFO result.py(90) - 测试结束： test_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:19:11,076   27632     INFO result.py(91) - 耗时： 4.8098368644714355
+2021-08-27 16:19:11,076   27632     INFO result.py(69) - 开始测试： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:19:11,076   27632     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 16:19:11,982   27632     INFO CreatUser.py(196) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 16:19:11,982   27632     INFO CreatUser.py(204) - 当前token为:DFBE3D9E2326647FE3AD50F22E98B8D67AC79FFD18F78973
+2021-08-27 16:19:11,982   27632     INFO CreatUser.py(209) - 提交审核获取到的手机号为：12161051364
+2021-08-27 16:19:12,267   27632     INFO CreatUser.py(220) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/submitAudit'的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 16:19:16,280   27632     INFO test_运营用户创建审批.py(44) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 16:19:16,280   27632     INFO result.py(156) - 测试执行通过： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:19:16,280   27632     INFO result.py(90) - 测试结束： test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:19:16,280   27632     INFO result.py(91) - 耗时： 5.203612804412842
+2021-08-27 16:19:16,281   17176     INFO test_runner.py(193) - 
+Pass	test_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Pass	test_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 16:19:16,281   17176    ERROR test_runner.py(195) - 
+Error	test_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 16:19:16,282   17176     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:15.110892
+共计执行用例数量：3
+执行成功用例数量：2
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：1
+
+2021-08-27 16:33:52,027   10988     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 16:33:52,029   14056     INFO result.py(69) - 开始测试： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:33:52,030   14056     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 16:33:52,223   14056     INFO CreatUser.py(25) - 当前token为:DFBE3D9E2326647F9F3AB68CC17926867AC79FFD18F78973
+2021-08-27 16:33:52,238   14056     INFO CreatUser.py(189) - 提交申请单时注册用户手机号码为：11722114051
+2021-08-27 16:33:52,460   14056     INFO CreatUser.py(191) - 接口'http://sit-cdms.ynm3k.com/api/client/applyClient'的响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 16:33:56,489   14056     INFO test_运营用户创建审批.py(44) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 16:33:56,489   14056     INFO result.py(156) - 测试执行通过： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:33:56,505   14056     INFO result.py(90) - 测试结束： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:33:56,505   14056     INFO result.py(91) - 耗时： 4.475052833557129
+2021-08-27 16:33:56,505   14056     INFO result.py(69) - 开始测试： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:33:56,505   14056     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 16:33:57,095   14056     INFO CreatUser.py(196) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 16:33:57,095   14056     INFO CreatUser.py(204) - 当前token为:DFBE3D9E2326647F9F3AB68CC17926867AC79FFD18F78973
+2021-08-27 16:33:57,142   14056     INFO CreatUser.py(209) - 提交审核获取到的手机号为：11722114051
+2021-08-27 16:33:57,717   14056     INFO CreatUser.py(220) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/submitAudit'的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 16:34:01,737   14056     INFO test_运营用户创建审批.py(44) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 16:34:01,753   14056     INFO result.py(156) - 测试执行通过： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:34:01,769   14056     INFO result.py(90) - 测试结束： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:34:01,769   14056     INFO result.py(91) - 耗时： 5.263883352279663
+2021-08-27 16:34:01,785   14056     INFO result.py(69) - 开始测试： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:34:01,785   14056     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 16:34:01,785   14056     INFO CreatUser.py(229) - 当前token为:DFBE3D9E2326647F9F3AB68CC17926867AC79FFD18F78973
+2021-08-27 16:34:01,893   14056     INFO CreatUser.py(248) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147692","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-08-27 16:34:05,899   14056     INFO test_运营用户创建审批.py(44) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 16:34:05,899   14056    ERROR result.py(175) - 测试产生错误： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 39, in test_3_operatingWorkFlowFirst提交锁
+    self.assertEqual("操作成功", operatingWorkFlowFirst.json().get("data")[0].operatingMessage)
+AttributeError: 'dict' object has no attribute 'operatingMessage'
+
+2021-08-27 16:34:05,900   14056     INFO result.py(90) - 测试结束： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:34:05,900   14056     INFO result.py(91) - 耗时： 4.115649461746216
+2021-08-27 16:34:05,900   10988     INFO test_runner.py(193) - 
+Pass	test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Pass	test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 16:34:05,900   10988    ERROR test_runner.py(195) - 
+Error	test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 16:34:05,901   10988     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:14.077272
+共计执行用例数量：3
+执行成功用例数量：2
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：1
+
+2021-08-27 16:38:30,981     276     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 16:38:30,983   24532     INFO result.py(69) - 开始测试： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:38:30,983   24532     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 16:38:31,173   24532     INFO CreatUser.py(25) - 当前token为:DFBE3D9E2326647FD02B0497CFE4B76D7AC79FFD18F78973
+2021-08-27 16:38:31,203   24532     INFO CreatUser.py(189) - 提交申请单时注册用户手机号码为：16166895271
+2021-08-27 16:38:31,438   24532     INFO CreatUser.py(191) - 接口'http://sit-cdms.ynm3k.com/api/client/applyClient'的响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 16:38:35,454   24532     INFO test_运营用户创建审批.py(44) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 16:38:35,454   24532     INFO result.py(156) - 测试执行通过： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:38:35,454   24532     INFO result.py(90) - 测试结束： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:38:35,454   24532     INFO result.py(91) - 耗时： 4.470722913742065
+2021-08-27 16:42:02,766   10336     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 16:42:02,768    9772     INFO result.py(69) - 开始测试： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:42:02,768    9772     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 16:42:02,992    9772     INFO CreatUser.py(25) - 当前token为:DFBE3D9E2326647FF724F94798671D947AC79FFD18F78973
+2021-08-27 16:42:02,992    9772     INFO CreatUser.py(189) - 提交申请单时注册用户手机号码为：16322205537
+2021-08-27 16:42:03,255    9772     INFO CreatUser.py(191) - 接口'http://sit-cdms.ynm3k.com/api/client/applyClient'的响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 16:42:07,282    9772     INFO test_运营用户创建审批.py(44) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 16:42:07,282    9772     INFO result.py(156) - 测试执行通过： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:42:07,298    9772     INFO result.py(90) - 测试结束： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:42:07,298    9772     INFO result.py(91) - 耗时： 4.529910326004028
+2021-08-27 16:42:07,314    9772     INFO result.py(69) - 开始测试： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:42:07,314    9772     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 16:42:08,036    9772     INFO CreatUser.py(196) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 16:42:13,058    9772     INFO CreatUser.py(204) - 当前token为:DFBE3D9E2326647FF724F94798671D947AC79FFD18F78973
+2021-08-27 16:42:13,073    9772     INFO CreatUser.py(209) - 提交审核获取到的手机号为：16322205537
+2021-08-27 16:42:13,639    9772     INFO CreatUser.py(220) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/submitAudit'的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 16:42:17,665    9772     INFO test_运营用户创建审批.py(44) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 16:42:17,665    9772     INFO result.py(156) - 测试执行通过： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:42:17,681    9772     INFO result.py(90) - 测试结束： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:42:17,697    9772     INFO result.py(91) - 耗时： 10.366955995559692
+2021-08-27 16:42:17,697    9772     INFO result.py(69) - 开始测试： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:42:17,697    9772     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 16:42:17,697    9772     INFO CreatUser.py(229) - 当前token为:DFBE3D9E2326647FF724F94798671D947AC79FFD18F78973
+2021-08-27 16:42:17,870    9772     INFO CreatUser.py(248) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147697","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-08-27 16:42:21,883    9772     INFO test_运营用户创建审批.py(44) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 16:42:21,884    9772    ERROR result.py(175) - 测试产生错误： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 39, in test_3_operatingWorkFlowFirst提交锁
+    self.assertEqual("操作成功", operatingWorkFlowFirst.json().get("data")[0].operatingMessage)
+AttributeError: 'dict' object has no attribute 'operatingMessage'
+
+2021-08-27 16:42:21,884    9772     INFO result.py(90) - 测试结束： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:42:21,884    9772     INFO result.py(91) - 耗时： 4.187393426895142
+2021-08-27 16:42:21,884   10336     INFO test_runner.py(193) - 
+Pass	test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Pass	test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 16:42:21,884   10336    ERROR test_runner.py(195) - 
+Error	test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 16:42:21,885   10336     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:19.315779
+共计执行用例数量：3
+执行成功用例数量：2
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：1
+
+2021-08-27 16:43:33,806   23860     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 16:43:33,808   15188     INFO result.py(69) - 开始测试： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:43:33,808   15188     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 16:43:33,987   15188     INFO CreatUser.py(25) - 当前token为:DFBE3D9E2326647F5AF56AB6E792A7BB7AC79FFD18F78973
+2021-08-27 16:43:34,115   15188     INFO CreatUser.py(189) - 提交申请单时注册用户手机号码为：16521663192
+2021-08-27 16:43:34,366   15188     INFO CreatUser.py(191) - 接口'http://sit-cdms.ynm3k.com/api/client/applyClient'的响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 16:43:38,395   15188     INFO test_运营用户创建审批.py(44) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 16:43:38,395   15188     INFO result.py(156) - 测试执行通过： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:43:38,410   15188     INFO result.py(90) - 测试结束： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:43:38,442   15188     INFO result.py(91) - 耗时： 4.602489709854126
+2021-08-27 16:43:38,458   15188     INFO result.py(69) - 开始测试： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:43:38,458   15188     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 16:43:39,323   15188     INFO CreatUser.py(196) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 16:43:44,343   15188     INFO CreatUser.py(204) - 当前token为:DFBE3D9E2326647F5AF56AB6E792A7BB7AC79FFD18F78973
+2021-08-27 16:43:44,358   15188     INFO CreatUser.py(209) - 提交审核获取到的手机号为：16521663192
+2021-08-27 16:43:44,765   15188     INFO CreatUser.py(220) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/submitAudit'的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 16:43:48,795   15188     INFO test_运营用户创建审批.py(44) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 16:43:48,795   15188     INFO result.py(156) - 测试执行通过： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:43:48,795   15188     INFO result.py(90) - 测试结束： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:43:48,795   15188     INFO result.py(91) - 耗时： 10.337369680404663
+2021-08-27 16:43:48,795   15188     INFO result.py(69) - 开始测试： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:43:48,795   15188     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 16:43:48,795   15188     INFO CreatUser.py(229) - 当前token为:DFBE3D9E2326647F5AF56AB6E792A7BB7AC79FFD18F78973
+2021-08-27 16:43:48,951   15188     INFO CreatUser.py(248) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147698","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-08-27 16:43:52,962   15188     INFO test_运营用户创建审批.py(44) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 16:43:52,962   15188     INFO result.py(156) - 测试执行通过： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:43:52,962   15188     INFO result.py(90) - 测试结束： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 16:43:52,962   15188     INFO result.py(91) - 耗时： 4.1664557456970215
+2021-08-27 16:43:52,962   23860     INFO test_runner.py(193) - 
+Pass	test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Pass	test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Pass	test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 16:43:52,963   23860     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:19.359930
+共计执行用例数量：3
+执行成功用例数量：3
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-08-27 19:58:32,530    6292     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 19:58:32,532   22996     INFO result.py(69) - 开始测试： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 19:58:32,541   22996     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 19:58:36,564   22996     INFO test_运营用户创建审批.py(86) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 19:58:36,752   22996    ERROR result.py(175) - 测试产生错误： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 74, in test_10_batchOperatingWorkFlowEnd批量确认
+    batchOperatingWorkFlowEnd=self.creatUser.batchOperatingWorkFlowEnd批量确认()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 486, in batchOperatingWorkFlowEnd批量确认
+    "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
+NameError: name 'token' is not defined
+
+2021-08-27 19:58:36,752   22996     INFO result.py(90) - 测试结束： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 19:58:36,768   22996     INFO result.py(91) - 耗时： 4.2107298374176025
+2021-08-27 19:58:36,783   22996     INFO result.py(69) - 开始测试： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 19:58:36,783   22996     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 19:58:36,893   22996     INFO CreatUser.py(25) - 当前token为:DFBE3D9E2326647F88A0C438D1C227987AC79FFD18F78973
+2021-08-27 19:58:36,893   22996     INFO CreatUser.py(189) - 提交申请单时注册用户手机号码为：19937132429
+2021-08-27 19:58:37,283   22996     INFO CreatUser.py(191) - 接口'http://sit-cdms.ynm3k.com/api/client/applyClient'的响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 19:58:41,310   22996     INFO test_运营用户创建审批.py(86) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 19:58:41,310   22996     INFO result.py(156) - 测试执行通过： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 19:58:41,325   22996     INFO result.py(90) - 测试结束： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 19:58:41,325   22996     INFO result.py(91) - 耗时： 4.542212724685669
+2021-08-27 19:58:41,325   22996     INFO result.py(69) - 开始测试： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 19:58:41,325   22996     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 19:58:42,049   22996     INFO CreatUser.py(196) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 19:58:47,060   22996     INFO CreatUser.py(204) - 当前token为:DFBE3D9E2326647F88A0C438D1C227987AC79FFD18F78973
+2021-08-27 19:58:47,060   22996     INFO CreatUser.py(209) - 提交审核获取到的手机号为：19937132429
+2021-08-27 19:58:47,364   22996     INFO CreatUser.py(220) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/submitAudit'的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 19:58:51,375   22996     INFO test_运营用户创建审批.py(86) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 19:58:51,375   22996     INFO result.py(156) - 测试执行通过： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 19:58:51,375   22996     INFO result.py(90) - 测试结束： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 19:58:51,376   22996     INFO result.py(91) - 耗时： 10.049585103988647
+2021-08-27 20:01:50,963   21720     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 20:01:50,965    9556     INFO result.py(69) - 开始测试： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:01:50,966    9556     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 20:01:55,013    9556     INFO test_运营用户创建审批.py(86) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:01:55,217    9556    ERROR result.py(175) - 测试产生错误： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 74, in test_10_batchOperatingWorkFlowEnd批量确认
+    batchOperatingWorkFlowEnd=self.creatUser.batchOperatingWorkFlowEnd批量确认()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 486, in batchOperatingWorkFlowEnd批量确认
+    "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
+NameError: name 'token' is not defined
+
+2021-08-27 20:01:55,232    9556     INFO result.py(90) - 测试结束： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:01:55,263    9556     INFO result.py(91) - 耗时： 4.266579866409302
+2021-08-27 20:01:55,264    9556     INFO result.py(69) - 开始测试： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:01:55,264    9556     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 20:01:55,387    9556     INFO CreatUser.py(25) - 当前token为:DFBE3D9E2326647F7FF31D5501EC23137AC79FFD18F78973
+2021-08-27 20:01:55,387    9556     INFO CreatUser.py(189) - 提交申请单时注册用户手机号码为：19471121168
+2021-08-27 20:01:55,665    9556     INFO CreatUser.py(191) - 接口'http://sit-cdms.ynm3k.com/api/client/applyClient'的响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 20:01:59,686    9556     INFO test_运营用户创建审批.py(86) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:01:59,686    9556     INFO result.py(156) - 测试执行通过： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:01:59,702    9556     INFO result.py(90) - 测试结束： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:01:59,718    9556     INFO result.py(91) - 耗时： 4.438571214675903
+2021-08-27 20:01:59,718    9556     INFO result.py(69) - 开始测试： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:01:59,718    9556     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 20:02:00,374    9556     INFO CreatUser.py(196) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 20:02:05,404    9556     INFO CreatUser.py(204) - 当前token为:DFBE3D9E2326647F7FF31D5501EC23137AC79FFD18F78973
+2021-08-27 20:02:05,451    9556     INFO CreatUser.py(209) - 提交审核获取到的手机号为：19471121168
+2021-08-27 20:02:05,986    9556     INFO CreatUser.py(220) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/submitAudit'的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 20:02:10,016    9556     INFO test_运营用户创建审批.py(86) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:02:10,032    9556     INFO result.py(156) - 测试执行通过： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:02:10,032    9556     INFO result.py(90) - 测试结束： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:02:10,048    9556     INFO result.py(91) - 耗时： 10.313869953155518
+2021-08-27 20:02:10,048    9556     INFO result.py(69) - 开始测试： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:02:10,048    9556     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 20:02:10,049    9556     INFO CreatUser.py(230) - 当前token为:DFBE3D9E2326647F7FF31D5501EC23137AC79FFD18F78973
+2021-08-27 20:02:10,188    9556     INFO CreatUser.py(249) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147701","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-08-27 20:02:14,220    9556     INFO test_运营用户创建审批.py(86) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:02:14,236    9556     INFO result.py(156) - 测试执行通过： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:02:14,252    9556     INFO result.py(90) - 测试结束： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:02:14,252    9556     INFO result.py(91) - 耗时： 4.203778028488159
+2021-08-27 20:02:14,252    9556     INFO result.py(69) - 开始测试： test_4_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:02:14,252    9556     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 20:02:14,252    9556     INFO CreatUser.py(258) - 当前token为:DFBE3D9E2326647F7FF31D5501EC23137AC79FFD18F78973
+2021-08-27 20:02:14,391    9556     INFO CreatUser.py(287) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/saveRiskAssessment'的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 20:02:18,423    9556     INFO test_运营用户创建审批.py(86) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:02:18,423    9556     INFO result.py(156) - 测试执行通过： test_4_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:02:18,423    9556     INFO result.py(90) - 测试结束： test_4_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:02:18,423    9556     INFO result.py(91) - 耗时： 4.171066999435425
+2021-08-27 20:02:18,423    9556     INFO result.py(69) - 开始测试： test_5_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:02:18,424    9556     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 20:02:18,424    9556     INFO CreatUser.py(296) - 当前token为:DFBE3D9E2326647F7FF31D5501EC23137AC79FFD18F78973
+2021-08-27 20:02:18,640    9556     INFO CreatUser.py(394) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147701","applyNo":null,"result":true,"operatingMessage":""}]}'
+2021-08-27 20:02:22,662    9556     INFO test_运营用户创建审批.py(86) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:02:22,678    9556  WARNING result.py(190) - 测试未通过： test_5_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 48, in test_5_operatingWorkFlow内部人员审核
+    self.assertEqual("true", operatingWorkFlow.json().get("data")[0].get("result"))
+AssertionError: 'true' != True
+
+2021-08-27 20:02:22,693    9556     INFO result.py(90) - 测试结束： test_5_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:02:22,725    9556     INFO result.py(91) - 耗时： 4.269601583480835
+2021-08-27 20:02:22,725    9556     INFO result.py(69) - 开始测试： test_6_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:02:22,726    9556     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 20:02:22,726    9556     INFO CreatUser.py(403) - 当前token为:DFBE3D9E2326647F7FF31D5501EC23137AC79FFD18F78973
+2021-08-27 20:02:22,836    9556     INFO CreatUser.py(422) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147701","applyNo":null,"result":false,"operatingMessage":"当前用户没有权限锁定/解锁该记录"}]}'
+2021-08-27 20:02:26,854    9556     INFO test_运营用户创建审批.py(86) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:02:26,870    9556  WARNING result.py(190) - 测试未通过： test_6_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 54, in test_6_operatingWorkFlowNo不用锁定审核通过
+    self.assertEqual("true", operatingWorkFlowNo.json().get("data")[0].get("result"))
+AssertionError: 'true' != False
+
+2021-08-27 20:02:26,870    9556     INFO result.py(90) - 测试结束： test_6_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:02:26,870    9556     INFO result.py(91) - 耗时： 4.144911527633667
+2021-08-27 20:02:26,871    9556     INFO result.py(69) - 开始测试： test_7_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:02:26,871    9556     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 20:02:26,871    9556     INFO CreatUser.py(431) - 当前token为:DFBE3D9E2326647F7FF31D5501EC23137AC79FFD18F78973
+2021-08-27 20:02:26,933    9556     INFO CreatUser.py(450) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147701","applyNo":null,"result":false,"operatingMessage":"当前用户没有权限锁定/解锁该记录"}]}'
+2021-08-27 20:02:30,964    9556     INFO test_运营用户创建审批.py(86) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:02:30,979    9556  WARNING result.py(190) - 测试未通过： test_7_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 60, in test_7_operatingWorkFlowAgaint提交锁
+    self.assertEqual("操作成功", operatingWorkFlowAgaint.json().get("data")[0].get("operatingMessage"))
+AssertionError: '操作成功' != '当前用户没有权限锁定/解锁该记录'
+- 操作成功
++ 当前用户没有权限锁定/解锁该记录
+
+
+2021-08-27 20:02:30,995    9556     INFO result.py(90) - 测试结束： test_7_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:02:30,995    9556     INFO result.py(91) - 耗时： 4.124555826187134
+2021-08-27 20:02:30,995    9556     INFO result.py(69) - 开始测试： test_8_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:02:30,995    9556     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 20:02:35,019    9556     INFO test_运营用户创建审批.py(86) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:02:35,050    9556    ERROR result.py(175) - 测试产生错误： test_8_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 63, in test_8_batchOperatingWorkFlow批量生成账号确定
+    batchOperatingWorkFlow=self.creatUser.batchOperatingWorkFlow批量生成账号确定()
+AttributeError: 'CreatUser' object has no attribute 'batchOperatingWorkFlow批量生成账号确定'
+
+2021-08-27 20:02:35,050    9556     INFO result.py(90) - 测试结束： test_8_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:02:35,066    9556     INFO result.py(91) - 耗时： 4.054149627685547
+2021-08-27 20:02:35,082    9556     INFO result.py(69) - 开始测试： test_9_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:02:35,082    9556     INFO test_运营用户创建审批.py(20) - 初始化CreatUser
+2021-08-27 20:02:35,082    9556     INFO CreatUser.py(460) - 当前token为:DFBE3D9E2326647F7FF31D5501EC23137AC79FFD18F78973
+2021-08-27 20:02:35,082    9556     INFO CreatUser.py(471) - applyId:1147701
+2021-08-27 20:02:35,145    9556     INFO CreatUser.py(479) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147701","applyNo":null,"result":false,"operatingMessage":"当前用户没有权限锁定/解锁该记录"}]}'
+2021-08-27 20:02:39,152    9556     INFO test_运营用户创建审批.py(86) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:02:39,152    9556  WARNING result.py(190) - 测试未通过： test_9_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 71, in test_9_operatingWorkFlowThird提交锁
+    self.assertEqual("操作成功", operatingWorkFlowThird.json().get("data")[0].get("operatingMessage"))
+AssertionError: '操作成功' != '当前用户没有权限锁定/解锁该记录'
+- 操作成功
++ 当前用户没有权限锁定/解锁该记录
+
+
+2021-08-27 20:02:39,152    9556     INFO result.py(90) - 测试结束： test_9_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:02:39,152    9556     INFO result.py(91) - 耗时： 4.070264577865601
+2021-08-27 20:02:39,152   21720     INFO test_runner.py(193) - 
+Pass	test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Pass	test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Pass	test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Pass	test_4_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 20:02:39,152   21720    ERROR test_runner.py(195) - 
+Error	test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Fail	test_5_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Fail	test_6_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Fail	test_7_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Error	test_8_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Fail	test_9_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 20:02:39,153   21720     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:48.386908
+共计执行用例数量：10
+执行成功用例数量：4
+执行失败用例数量：4
+跳过执行用例数量：0
+产生异常用例数量：2
+
+2021-08-27 20:15:47,090    5620     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 20:15:47,094    9024     INFO result.py(69) - 开始测试： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:15:47,113    9024     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
+2021-08-27 20:15:51,132    9024     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:15:51,292    9024    ERROR result.py(175) - 测试产生错误： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 73, in test_10_batchOperatingWorkFlowEnd批量确认
+    batchOperatingWorkFlowEnd = self.creatUser.batchOperatingWorkFlowEnd批量确认()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 529, in batchOperatingWorkFlowEnd批量确认
+    "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
+NameError: name 'token' is not defined
+
+2021-08-27 20:15:51,292    9024     INFO result.py(90) - 测试结束： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:15:51,292    9024     INFO result.py(91) - 耗时： 4.178874969482422
+2021-08-27 20:15:51,293    9024     INFO result.py(69) - 开始测试： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:15:51,293    9024     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
+2021-08-27 20:15:51,433    9024     INFO CreatUser.py(26) - 当前token为:DFBE3D9E2326647F242C3735A9D2B6267AC79FFD18F78973
+2021-08-27 20:15:51,433    9024     INFO CreatUser.py(190) - 提交申请单时注册用户手机号码为：12220032030
+2021-08-27 20:15:51,694    9024     INFO CreatUser.py(192) - 接口'http://sit-cdms.ynm3k.com/api/client/applyClient'的响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 20:15:55,713    9024     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:15:55,713    9024     INFO result.py(156) - 测试执行通过： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:15:55,713    9024     INFO result.py(90) - 测试结束： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:15:55,713    9024     INFO result.py(91) - 耗时： 4.419936418533325
+2021-08-27 20:15:55,713    9024     INFO result.py(69) - 开始测试： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:15:55,713    9024     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
+2021-08-27 20:15:56,350    9024     INFO CreatUser.py(198) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 20:16:01,372    9024     INFO CreatUser.py(206) - 当前token为:DFBE3D9E2326647F242C3735A9D2B6267AC79FFD18F78973
+2021-08-27 20:16:01,372    9024     INFO CreatUser.py(211) - 提交审核获取到的手机号为：12220032030
+2021-08-27 20:16:02,010    9024     INFO CreatUser.py(222) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/submitAudit'的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 20:16:06,040    9024     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:16:06,040    9024     INFO result.py(156) - 测试执行通过： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:16:06,040    9024     INFO result.py(90) - 测试结束： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:16:06,040    9024     INFO result.py(91) - 耗时： 10.327362060546875
+2021-08-27 20:16:06,040    9024     INFO result.py(69) - 开始测试： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:16:06,041    9024     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
+2021-08-27 20:16:06,041    9024     INFO CreatUser.py(232) - 当前token为:DFBE3D9E2326647F242C3735A9D2B6267AC79FFD18F78973
+2021-08-27 20:16:06,403    9024     INFO CreatUser.py(251) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147702","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-08-27 20:16:10,427    9024     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:16:10,427    9024     INFO result.py(156) - 测试执行通过： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:16:10,427    9024     INFO result.py(90) - 测试结束： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:16:10,427    9024     INFO result.py(91) - 耗时： 4.3867974281311035
+2021-08-27 20:16:10,427    9024     INFO result.py(69) - 开始测试： test_4_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:16:10,427    9024     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
+2021-08-27 20:16:10,428    9024     INFO CreatUser.py(261) - 当前token为:DFBE3D9E2326647F242C3735A9D2B6267AC79FFD18F78973
+2021-08-27 20:16:10,428    9024     INFO CreatUser.py(266) - 当前applyId为：1147702
+2021-08-27 20:16:10,612    9024     INFO CreatUser.py(290) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/saveRiskAssessment'的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 20:16:14,628    9024     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:16:14,628    9024     INFO result.py(156) - 测试执行通过： test_4_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:16:14,628    9024     INFO result.py(90) - 测试结束： test_4_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:16:14,628    9024     INFO result.py(91) - 耗时： 4.201754808425903
+2021-08-27 20:16:14,628    9024     INFO result.py(69) - 开始测试： test_5_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:16:14,629    9024     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
+2021-08-27 20:16:14,644    9024     INFO CreatUser.py(300) - 当前token为:DFBE3D9E2326647F242C3735A9D2B6267AC79FFD18F78973
+2021-08-27 20:16:14,864    9024     INFO CreatUser.py(398) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147702","applyNo":null,"result":true,"operatingMessage":""}]}'
+2021-08-27 20:16:18,893    9024     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:16:18,909    9024  WARNING result.py(190) - 测试未通过： test_5_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 45, in test_5_operatingWorkFlow内部人员审核
+    self.assertEqual("true", operatingWorkFlow.json().get("data")[0].get("result"))
+AssertionError: 'true' != True
+
+2021-08-27 20:16:18,925    9024     INFO result.py(90) - 测试结束： test_5_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:16:18,925    9024     INFO result.py(91) - 耗时： 4.2955310344696045
+2021-08-27 20:16:18,925    9024     INFO result.py(69) - 开始测试： test_6_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:16:18,925    9024     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
+2021-08-27 20:16:18,925    9024     INFO CreatUser.py(408) - 当前token为:DFBE3D9E2326647F242C3735A9D2B6267AC79FFD18F78973
+2021-08-27 20:16:18,926    9024     INFO CreatUser.py(419) - 当前applyId为：1147702
+2021-08-27 20:16:19,051    9024     INFO CreatUser.py(427) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147702","applyNo":null,"result":false,"operatingMessage":"当前用户没有权限锁定/解锁该记录"}]}'
+2021-08-27 20:16:23,068    9024     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:16:23,083    9024  WARNING result.py(190) - 测试未通过： test_6_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 51, in test_6_operatingWorkFlowNo不用锁定审核通过
+    self.assertEqual("true", operatingWorkFlowNo.json().get("data")[0].get("result"))
+AssertionError: 'true' != False
+
+2021-08-27 20:16:23,083    9024     INFO result.py(90) - 测试结束： test_6_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:16:23,083    9024     INFO result.py(91) - 耗时： 4.157872438430786
+2021-08-27 20:16:23,083    9024     INFO result.py(69) - 开始测试： test_7_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:16:23,084    9024     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
+2021-08-27 20:16:23,084    9024     INFO CreatUser.py(437) - 当前token为:DFBE3D9E2326647F242C3735A9D2B6267AC79FFD18F78973
+2021-08-27 20:16:23,160    9024     INFO CreatUser.py(456) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147702","applyNo":null,"result":false,"operatingMessage":"当前用户没有权限锁定/解锁该记录"}]}'
+2021-08-27 20:16:27,179    9024     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:16:27,195    9024  WARNING result.py(190) - 测试未通过： test_7_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 57, in test_7_operatingWorkFlowAgaint提交锁
+    self.assertEqual("操作成功", operatingWorkFlowAgaint.json().get("data")[0].get("operatingMessage"))
+AssertionError: '操作成功' != '当前用户没有权限锁定/解锁该记录'
+- 操作成功
++ 当前用户没有权限锁定/解锁该记录
+
+
+2021-08-27 20:16:27,195    9024     INFO result.py(90) - 测试结束： test_7_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:16:27,195    9024     INFO result.py(91) - 耗时： 4.110996961593628
+2021-08-27 20:16:27,195    9024     INFO result.py(69) - 开始测试： test_8_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:16:27,195    9024     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
+2021-08-27 20:16:27,195    9024     INFO CreatUser.py(466) - 当前token为:DFBE3D9E2326647F242C3735A9D2B6267AC79FFD18F78973
+2021-08-27 20:16:27,333    9024     INFO CreatUser.py(492) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/batchOperatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147702","applyNo":null,"result":false,"operatingMessage":"您当前没权限进行此操作"}]}'
+2021-08-27 20:16:31,359    9024     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:16:31,375    9024  WARNING result.py(190) - 测试未通过： test_8_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 63, in test_8_batchOperatingWorkFlow批量生成账号确定
+    self.assertEqual("true", batchOperatingWorkFlow.json().get("data")[0].get("result"))
+AssertionError: 'true' != False
+
+2021-08-27 20:16:31,407    9024     INFO result.py(90) - 测试结束： test_8_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:16:31,407    9024     INFO result.py(91) - 耗时： 4.211926221847534
+2021-08-27 20:16:31,407    9024     INFO result.py(69) - 开始测试： test_9_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:16:31,407    9024     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
+2021-08-27 20:16:31,407    9024     INFO CreatUser.py(502) - 当前token为:DFBE3D9E2326647F242C3735A9D2B6267AC79FFD18F78973
+2021-08-27 20:16:31,407    9024     INFO CreatUser.py(513) - 当前applyId为：1147702
+2021-08-27 20:16:31,436    9024     INFO CreatUser.py(521) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147702","applyNo":null,"result":false,"operatingMessage":"当前用户没有权限锁定/解锁该记录"}]}'
+2021-08-27 20:16:35,438    9024     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:16:35,438    9024  WARNING result.py(190) - 测试未通过： test_9_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 69, in test_9_operatingWorkFlowThird提交锁
+    self.assertEqual("操作成功", operatingWorkFlowThird.json().get("data")[0].get("operatingMessage"))
+AssertionError: '操作成功' != '当前用户没有权限锁定/解锁该记录'
+- 操作成功
++ 当前用户没有权限锁定/解锁该记录
+
+
+2021-08-27 20:16:35,438    9024     INFO result.py(90) - 测试结束： test_9_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:16:35,438    9024     INFO result.py(91) - 耗时： 4.0312769412994385
+2021-08-27 20:16:35,439    5620     INFO test_runner.py(193) - 
+Pass	test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Pass	test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Pass	test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Pass	test_4_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 20:16:35,439    5620    ERROR test_runner.py(195) - 
+Error	test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Fail	test_5_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Fail	test_6_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Fail	test_7_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Fail	test_8_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Fail	test_9_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 20:16:35,440    5620     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:48.544648
+共计执行用例数量：10
+执行成功用例数量：4
+执行失败用例数量：5
+跳过执行用例数量：0
+产生异常用例数量：1
+
+2021-08-27 20:17:24,056   26996     INFO test_runner.py(156) - 预计并发线程数：1
+2021-08-27 20:17:24,059   23032     INFO result.py(69) - 开始测试： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:17:24,059   23032     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
+2021-08-27 20:17:28,104   23032     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:17:28,275   23032    ERROR result.py(175) - 测试产生错误： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 73, in test_10_batchOperatingWorkFlowEnd批量确认
+    batchOperatingWorkFlowEnd = self.creatUser.batchOperatingWorkFlowEnd批量确认()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 529, in batchOperatingWorkFlowEnd批量确认
+    "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
+NameError: name 'token' is not defined
+
+2021-08-27 20:17:28,275   23032     INFO result.py(90) - 测试结束： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:17:28,291   23032     INFO result.py(91) - 耗时： 4.215716361999512
+2021-08-27 20:17:28,291   23032     INFO result.py(69) - 开始测试： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:17:28,291   23032     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
+2021-08-27 20:17:28,415   23032     INFO CreatUser.py(26) - 当前token为:DFBE3D9E2326647FD63EC62A9A48B2877AC79FFD18F78973
+2021-08-27 20:17:28,415   23032     INFO CreatUser.py(190) - 提交申请单时注册用户手机号码为：10334530415
+2021-08-27 20:17:28,679   23032     INFO CreatUser.py(192) - 接口'http://sit-cdms.ynm3k.com/api/client/applyClient'的响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 20:17:32,713   23032     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:17:32,713   23032     INFO result.py(156) - 测试执行通过： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:17:32,729   23032     INFO result.py(90) - 测试结束： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:17:32,729   23032     INFO result.py(91) - 耗时： 4.4381797313690186
+2021-08-27 20:17:32,745   23032     INFO result.py(69) - 开始测试： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:17:32,745   23032     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
+2021-08-27 20:17:33,308   23032     INFO CreatUser.py(198) - 已完成修改WorldCheck的状态为FALSE
+2021-08-27 20:17:38,327   23032     INFO CreatUser.py(206) - 当前token为:DFBE3D9E2326647FD63EC62A9A48B2877AC79FFD18F78973
+2021-08-27 20:17:38,327   23032     INFO CreatUser.py(211) - 提交审核获取到的手机号为：10334530415
+2021-08-27 20:17:38,793   23032     INFO CreatUser.py(222) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/submitAudit'的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 20:17:42,821   23032     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:17:42,836   23032     INFO result.py(156) - 测试执行通过： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:17:42,836   23032     INFO result.py(90) - 测试结束： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:17:42,852   23032     INFO result.py(91) - 耗时： 10.091378211975098
+2021-08-27 20:17:42,852   23032     INFO result.py(69) - 开始测试： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:17:42,852   23032     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
+2021-08-27 20:17:42,852   23032     INFO CreatUser.py(232) - 当前token为:DFBE3D9E2326647FD63EC62A9A48B2877AC79FFD18F78973
+2021-08-27 20:17:43,205   23032     INFO CreatUser.py(251) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147703","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-08-27 20:17:47,227   23032     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:17:47,243   23032     INFO result.py(156) - 测试执行通过： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:17:47,243   23032     INFO result.py(90) - 测试结束： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:17:47,258   23032     INFO result.py(91) - 耗时： 4.39066481590271
+2021-08-27 20:17:47,258   23032     INFO result.py(69) - 开始测试： test_4_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:17:47,258   23032     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
+2021-08-27 20:17:47,258   23032     INFO CreatUser.py(261) - 当前token为:DFBE3D9E2326647FD63EC62A9A48B2877AC79FFD18F78973
+2021-08-27 20:17:47,259   23032     INFO CreatUser.py(266) - 当前applyId为：1147703
+2021-08-27 20:17:47,412   23032     INFO CreatUser.py(290) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/saveRiskAssessment'的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-27 20:17:51,443   23032     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:17:51,443   23032     INFO result.py(156) - 测试执行通过： test_4_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:17:51,459   23032     INFO result.py(90) - 测试结束： test_4_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:17:51,459   23032     INFO result.py(91) - 耗时： 4.200756788253784
+2021-08-27 20:17:51,475   23032     INFO result.py(69) - 开始测试： test_5_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:17:51,475   23032     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
+2021-08-27 20:17:51,475   23032     INFO CreatUser.py(300) - 当前token为:DFBE3D9E2326647FD63EC62A9A48B2877AC79FFD18F78973
+2021-08-27 20:17:51,679   23032     INFO CreatUser.py(398) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147703","applyNo":null,"result":true,"operatingMessage":""}]}'
+2021-08-27 20:17:55,697   23032     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:17:55,713   23032  WARNING result.py(190) - 测试未通过： test_5_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 45, in test_5_operatingWorkFlow内部人员审核
+    self.assertEqual("true", operatingWorkFlow.json().get("data")[0].get("result"))
+AssertionError: 'true' != True
+
+2021-08-27 20:17:55,729   23032     INFO result.py(90) - 测试结束： test_5_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:17:55,729   23032     INFO result.py(91) - 耗时： 4.254615545272827
+2021-08-27 20:17:55,745   23032     INFO result.py(69) - 开始测试： test_6_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:17:55,745   23032     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
+2021-08-27 20:17:55,745   23032     INFO CreatUser.py(408) - 当前token为:DFBE3D9E2326647FD63EC62A9A48B2877AC79FFD18F78973
+2021-08-27 20:17:55,974   23032     INFO CreatUser.py(419) - 当前applyId为：1147703
+2021-08-27 20:17:56,128   23032     INFO CreatUser.py(427) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147703","applyNo":null,"result":false,"operatingMessage":"当前用户没有权限锁定/解锁该记录"}]}'
+2021-08-27 20:18:00,148   23032     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:18:00,164   23032  WARNING result.py(190) - 测试未通过： test_6_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 51, in test_6_operatingWorkFlowNo不用锁定审核通过
+    self.assertEqual("true", operatingWorkFlowNo.json().get("data")[0].get("result"))
+AssertionError: 'true' != False
+
+2021-08-27 20:18:00,164   23032     INFO result.py(90) - 测试结束： test_6_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:18:00,164   23032     INFO result.py(91) - 耗时： 4.4191718101501465
+2021-08-27 20:18:00,164   23032     INFO result.py(69) - 开始测试： test_7_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:18:00,164   23032     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
+2021-08-27 20:18:00,165   23032     INFO CreatUser.py(437) - 当前token为:DFBE3D9E2326647FD63EC62A9A48B2877AC79FFD18F78973
+2021-08-27 20:18:00,722   23032     INFO CreatUser.py(456) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147703","applyNo":null,"result":false,"operatingMessage":"当前用户没有权限锁定/解锁该记录"}]}'
+2021-08-27 20:18:04,741   23032     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:18:04,773   23032  WARNING result.py(190) - 测试未通过： test_7_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 57, in test_7_operatingWorkFlowAgaint提交锁
+    self.assertEqual("操作成功", operatingWorkFlowAgaint.json().get("data")[0].get("operatingMessage"))
+AssertionError: '操作成功' != '当前用户没有权限锁定/解锁该记录'
+- 操作成功
++ 当前用户没有权限锁定/解锁该记录
+
+
+2021-08-27 20:18:04,773   23032     INFO result.py(90) - 测试结束： test_7_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:18:04,773   23032     INFO result.py(91) - 耗时： 4.608753442764282
+2021-08-27 20:18:04,774   23032     INFO result.py(69) - 开始测试： test_8_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:18:04,774   23032     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
+2021-08-27 20:18:04,774   23032     INFO CreatUser.py(466) - 当前token为:DFBE3D9E2326647FD63EC62A9A48B2877AC79FFD18F78973
+2021-08-27 20:18:05,349   23032     INFO CreatUser.py(492) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/batchOperatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147703","applyNo":null,"result":false,"operatingMessage":"您当前没权限进行此操作"}]}'
+2021-08-27 20:18:09,379   23032     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:18:09,379   23032  WARNING result.py(190) - 测试未通过： test_8_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 63, in test_8_batchOperatingWorkFlow批量生成账号确定
+    self.assertEqual("true", batchOperatingWorkFlow.json().get("data")[0].get("result"))
+AssertionError: 'true' != False
+
+2021-08-27 20:18:09,379   23032     INFO result.py(90) - 测试结束： test_8_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:18:09,379   23032     INFO result.py(91) - 耗时： 4.604742050170898
+2021-08-27 20:18:09,379   23032     INFO result.py(69) - 开始测试： test_9_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:18:09,380   23032     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
+2021-08-27 20:18:09,380   23032     INFO CreatUser.py(502) - 当前token为:DFBE3D9E2326647FD63EC62A9A48B2877AC79FFD18F78973
+2021-08-27 20:18:09,457   23032     INFO CreatUser.py(513) - 当前applyId为：1147703
+2021-08-27 20:18:09,487   23032     INFO CreatUser.py(521) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147703","applyNo":null,"result":false,"operatingMessage":"当前用户没有权限锁定/解锁该记录"}]}'
+2021-08-27 20:18:13,494   23032     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-27 20:18:13,494   23032  WARNING result.py(190) - 测试未通过： test_9_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 69, in test_9_operatingWorkFlowThird提交锁
+    self.assertEqual("操作成功", operatingWorkFlowThird.json().get("data")[0].get("operatingMessage"))
+AssertionError: '操作成功' != '当前用户没有权限锁定/解锁该记录'
+- 操作成功
++ 当前用户没有权限锁定/解锁该记录
+
+
+2021-08-27 20:18:13,494   23032     INFO result.py(90) - 测试结束： test_9_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-27 20:18:13,495   23032     INFO result.py(91) - 耗时： 4.114508390426636
+2021-08-27 20:18:13,495   26996     INFO test_runner.py(193) - 
+Pass	test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Pass	test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Pass	test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Pass	test_4_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 20:18:13,495   26996    ERROR test_runner.py(195) - 
+Error	test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Fail	test_5_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Fail	test_6_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Fail	test_7_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Fail	test_8_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_新建用户)
+Fail	test_9_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+
+2021-08-27 20:18:13,496   26996     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:00:49.638713
+共计执行用例数量：10
+执行成功用例数量：4
+执行失败用例数量：5
+跳过执行用例数量：0
+产生异常用例数量：1
+
