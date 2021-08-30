@@ -40,8 +40,8 @@ class CreatUser():
                     "email": "gan" + phone + "@qq.com",
                     "phoneAreaCode": "CHN",
                     "phoneNo": phone,
-                    "houseAddress": "104phone" + phone,
-                    "houseAddressPinYin": "104phone" + phone,
+                    "houseAddress": "中英街" + phone+"号",
+                    "houseAddressPinYin": "zhongyingjie" + phone +"hao",
                     "postAddress": "接口自动化",
                     "natnlty": "CHN",
                     "idCardType": "2",
@@ -59,7 +59,7 @@ class CreatUser():
                     "companyName": "接口自动化" + phone,
                     "businessNature": "wholesale&retail",
                     "officeAddress": "47845512245" + phone,
-                    "officePhone": "0771-${phone}",
+                    "officePhone": "0771-"+ phone,
                     "registeredCompany": "Y",
                     "employmentRemark": "",
                     "totalIncomeYear": "gt1000000",
@@ -639,7 +639,6 @@ class CreatUser():
 if __name__ == "__main__":
     # 实例化CreatUser
     CreatUser = CreatUser()
-
     print("步骤1：", CreatUser.ApplyClinet资料提交().text)
     time.sleep(4)
     print("步骤2：", CreatUser.SubmitAudit提交审核().text)

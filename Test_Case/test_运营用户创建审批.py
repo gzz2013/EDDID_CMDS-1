@@ -76,8 +76,6 @@ class Test_新建用户(unittest.TestCase):
         batchOperatingWorkFlowEnd = self.creatUser.batchOperatingWorkFlowEnd批量确认()
         self.assertEqual(200, batchOperatingWorkFlowEnd.status_code)
         self.assertEqual("操作成功", batchOperatingWorkFlowEnd.json().get("msg"))
-        # self.assertEqual(applyId, operatingWorkFlowThird.json().get("data")[0].get("applyId"))
-        # self.assertIn(bool("true"), batchOperatingWorkFlowEnd.json().get("data")[0].get("result"))
         self.assertEqual(True, batchOperatingWorkFlowEnd.json().get("data")[0].get("result"))
 
     #
