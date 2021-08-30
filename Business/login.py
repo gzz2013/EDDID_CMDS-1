@@ -10,13 +10,13 @@ def cdms_获取token():
     #登录访问的接口
     url="http://sit-cdms.ynm3k.com/api/auth/login"
     #账号密码
-    data = {"account": "ganjiexiang", "password": "111111"}
+    data = {"account": "cdmstest", "password": "111111"}
     data['password'] = MD5_Encrypt(str="111111")
     print("data=",data)
     res = logins.post(url=url, data=data)
     token = res.json()["data"]["token"]
     return token
-
-print("token=",cdms_获取token())
+if __name__ == "__main__":
+    print("token=",cdms_获取token())
 
 

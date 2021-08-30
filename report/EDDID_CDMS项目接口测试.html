@@ -241,8 +241,8 @@ tr {
 }
 </style>
     <script language="javascript" type="text/javascript">
-var chartData_cn = [[4, '#1c965b', '通过'], [5, '#ff5722', '失败'], [1, '#ff9800', '错误']];
-var chartData_en = [[4, '#1c965b', 'Passed'], [5, '#ff5722', 'Failed'], [1, '#ff9800', 'Error']];
+var chartData_cn = [[10, '#1c965b', '通过']];
+var chartData_en = [[10, '#1c965b', 'Passed']];
 
 function addClass(e, c) {
   if (!isClass(e, c)) {
@@ -653,19 +653,19 @@ goChart(chartData_cn);
     <strong>
       <span class="lang-cn">启动时间：</span>
       <span class="lang-en">Start Time:</span>
-    </strong> 2021-08-27 20:17:23
+    </strong> 2021-08-30 15:25:10
   </p>
   <p class='attribute'>
     <strong>
       <span class="lang-cn">结束时间：</span>
       <span class="lang-en">End Time:</span>
-    </strong> 2021-08-27 20:18:13
+    </strong> 2021-08-30 15:26:02
   </p>
   <p class='attribute'>
     <strong>
       <span class="lang-cn">运行时长：</span>
       <span class="lang-en">Duration:</span>
-    </strong> 0:00:49.638713
+    </strong> 0:00:51.617971
   </p>
   <p class='attribute'>
     <strong>
@@ -675,11 +675,11 @@ goChart(chartData_cn);
     <span class="lang-cn">合计：</span>
     <span class="lang-en">Total:</span>10&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">通过：</span>
-    <span class="lang-en">Passed:</span>4&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="lang-en">Passed:</span>10&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">失败：</span>
-    <span class="lang-en">Failed:</span>5&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="lang-en">Failed:</span>0&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">错误：</span>
-    <span class="lang-en">Error:</span>1&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="lang-en">Error:</span>0&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">跳过：</span>
     <span class="lang-en">Skipped:</span>0&nbsp;&nbsp;&nbsp;&nbsp;
   </p>
@@ -765,15 +765,15 @@ goChart(chartData_cn);
             <span class="lang-en">View</span>
         </th>
     </tr>
-    <tr class='errorClass'>
+    <tr class='passClass'>
     <td>c1</td>
     <td>Test_Case.test_运营用户创建审批.Test_新建用户</td>
     <td>10</td>
-    <td class="passCase">4</td>
-    <td class="failCase">5</td>
-    <td class="errorCase">1</td>
+    <td class="passCase">10</td>
+    <td class="failCase">0</td>
+    <td class="errorCase">0</td>
     <td class="skipCase">0</td>
-    <td style="text-align:right;">40.00%</td>
+    <td style="text-align:right;">100.00%</td>
     <td>0</td>
     <td>
         <a href="javascript:showClassDetail('c1',10)">
@@ -782,42 +782,38 @@ goChart(chartData_cn);
         </a>
     </td>
 </tr>
-<tr id='et1.1'>
-<td>et1.1</td>
-    <td class='errorCase' colspan='7'>
-        <div class='testcase'>test_10_batchOperatingWorkFlowEnd批量确认</div>
+<tr id='pt1.1'>
+<td>pt1.1</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_01_applyClient用户资料提交用例校验</div>
     </td>
-    <td class='errorCase'>
+    <td class='passCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
     </td>
-    <td class='errorCase' align='center'>
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.1.1',1, false)">
-            <span class="lang-cn">错误</span>
-            <span class="lang-en">error</span>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
         </a>
     </td>
 </tr>
-<tr id='div_S_et1.1.1' name='div_et1.1.1' class="hiddenRow">
+<tr id='div_S_pt1.1.1' name='div_pt1.1.1' class="hiddenRow">
     <td colspan='10'>
         <div class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'
-                 onclick="document.getElementById('div_S_et1.1.1').className = 'hiddenRow'">
+                 onclick="document.getElementById('div_S_pt1.1.1').className = 'hiddenRow'">
                 <a onfocus='this.blur();'>[x]</a>
             </div>
-            <pre>et1.1.1:
-2021-08-27 20:17:24,059   23032     INFO result.py(69) - 开始测试： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:17:24,059   23032     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
-2021-08-27 20:17:28,104   23032     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
-2021-08-27 20:17:28,275   23032    ERROR result.py(175) - 测试产生错误： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
-Traceback (most recent call last):
-  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 73, in test_10_batchOperatingWorkFlowEnd批量确认
-    batchOperatingWorkFlowEnd = self.creatUser.batchOperatingWorkFlowEnd批量确认()
-  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 529, in batchOperatingWorkFlowEnd批量确认
-    "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
-NameError: name 'token' is not defined
-
-2021-08-27 20:17:28,275   23032     INFO result.py(90) - 测试结束： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:17:28,291   23032     INFO result.py(91) - 耗时： 4.215716361999512
+            <pre>pt1.1.1:
+2021-08-30 15:25:10,806   10928     INFO result.py(69) - 开始测试： test_01_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:10,807   10928     INFO test_运营用户创建审批.py(11) - 初始化CreatUser
+2021-08-30 15:25:11,400   10928     INFO CreatUser.py(25) - 当前token为:4AA2464CE650B1625D68A10AC9F42BEC7AC79FFD18F78973
+2021-08-30 15:25:11,400   10928     INFO CreatUser.py(187) - 提交申请单时注册用户手机号码为：10199612946
+2021-08-30 15:25:11,661   10928     INFO CreatUser.py(189) - 接口'http://sit-cdms.ynm3k.com/api/client/applyClient'的响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-30 15:25:15,682   10928     INFO test_运营用户创建审批.py(87) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-30 15:25:15,697   10928     INFO result.py(156) - 测试执行通过： test_01_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:15,697   10928     INFO result.py(90) - 测试结束： test_01_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:15,713   10928     INFO result.py(91) - 耗时： 4.889888763427734
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -826,7 +822,7 @@ NameError: name 'token' is not defined
 </tr><tr id='pt1.2'>
 <td>pt1.2</td>
     <td class='passCase' colspan='7'>
-        <div class='testcase'>test_1_applyClient用户资料提交用例校验</div>
+        <div class='testcase'>test_02_submitAudit提交审核</div>
     </td>
     <td class='passCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
@@ -846,15 +842,16 @@ NameError: name 'token' is not defined
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.2.1:
-2021-08-27 20:17:28,291   23032     INFO result.py(69) - 开始测试： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:17:28,291   23032     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
-2021-08-27 20:17:28,415   23032     INFO CreatUser.py(26) - 当前token为:DFBE3D9E2326647FD63EC62A9A48B2877AC79FFD18F78973
-2021-08-27 20:17:28,415   23032     INFO CreatUser.py(190) - 提交申请单时注册用户手机号码为：10334530415
-2021-08-27 20:17:28,679   23032     INFO CreatUser.py(192) - 接口'http://sit-cdms.ynm3k.com/api/client/applyClient'的响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
-2021-08-27 20:17:32,713   23032     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
-2021-08-27 20:17:32,713   23032     INFO result.py(156) - 测试执行通过： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:17:32,729   23032     INFO result.py(90) - 测试结束： test_1_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:17:32,729   23032     INFO result.py(91) - 耗时： 4.4381797313690186
+2021-08-30 15:25:15,713   10928     INFO result.py(69) - 开始测试： test_02_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:15,713   10928     INFO test_运营用户创建审批.py(11) - 初始化CreatUser
+2021-08-30 15:25:16,309   10928     INFO CreatUser.py(196) - 已完成修改WorldCheck的状态为FALSE
+2021-08-30 15:25:21,353   10928     INFO CreatUser.py(204) - 当前token为:4AA2464CE650B1625D68A10AC9F42BEC7AC79FFD18F78973
+2021-08-30 15:25:21,384   10928     INFO CreatUser.py(210) - 提交审核获取到的手机号为：10199612946
+2021-08-30 15:25:21,886   10928     INFO CreatUser.py(221) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/submitAudit'的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-30 15:25:25,911   10928     INFO test_运营用户创建审批.py(87) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-30 15:25:25,911   10928     INFO result.py(156) - 测试执行通过： test_02_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:25,927   10928     INFO result.py(90) - 测试结束： test_02_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:25,927   10928     INFO result.py(91) - 耗时： 10.213664293289185
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -863,7 +860,7 @@ NameError: name 'token' is not defined
 </tr><tr id='pt1.3'>
 <td>pt1.3</td>
     <td class='passCase' colspan='7'>
-        <div class='testcase'>test_2_submitAudit提交审核</div>
+        <div class='testcase'>test_03_operatingWorkFlowFirst提交锁</div>
     </td>
     <td class='passCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
@@ -883,16 +880,15 @@ NameError: name 'token' is not defined
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.3.1:
-2021-08-27 20:17:32,745   23032     INFO result.py(69) - 开始测试： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:17:32,745   23032     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
-2021-08-27 20:17:33,308   23032     INFO CreatUser.py(198) - 已完成修改WorldCheck的状态为FALSE
-2021-08-27 20:17:38,327   23032     INFO CreatUser.py(206) - 当前token为:DFBE3D9E2326647FD63EC62A9A48B2877AC79FFD18F78973
-2021-08-27 20:17:38,327   23032     INFO CreatUser.py(211) - 提交审核获取到的手机号为：10334530415
-2021-08-27 20:17:38,793   23032     INFO CreatUser.py(222) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/submitAudit'的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
-2021-08-27 20:17:42,821   23032     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
-2021-08-27 20:17:42,836   23032     INFO result.py(156) - 测试执行通过： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:17:42,836   23032     INFO result.py(90) - 测试结束： test_2_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:17:42,852   23032     INFO result.py(91) - 耗时： 10.091378211975098
+2021-08-30 15:25:25,943   10928     INFO result.py(69) - 开始测试： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:25,943   10928     INFO test_运营用户创建审批.py(11) - 初始化CreatUser
+2021-08-30 15:25:25,943   10928     INFO CreatUser.py(232) - 当前token为:4AA2464CE650B1625D68A10AC9F42BEC7AC79FFD18F78973
+2021-08-30 15:25:25,943   10928     INFO CreatUser.py(240) - 提交审核获取到的手机号为：10199612946
+2021-08-30 15:25:26,445   10928     INFO CreatUser.py(251) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147814","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-08-30 15:25:30,477   10928     INFO test_运营用户创建审批.py(87) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-30 15:25:30,477   10928     INFO result.py(156) - 测试执行通过： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:30,493   10928     INFO result.py(90) - 测试结束： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:30,493   10928     INFO result.py(91) - 耗时： 4.550286293029785
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -901,7 +897,7 @@ NameError: name 'token' is not defined
 </tr><tr id='pt1.4'>
 <td>pt1.4</td>
     <td class='passCase' colspan='7'>
-        <div class='testcase'>test_3_operatingWorkFlowFirst提交锁</div>
+        <div class='testcase'>test_04_saveRiskAssessment风控评估提交</div>
     </td>
     <td class='passCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
@@ -921,14 +917,14 @@ NameError: name 'token' is not defined
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.4.1:
-2021-08-27 20:17:42,852   23032     INFO result.py(69) - 开始测试： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:17:42,852   23032     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
-2021-08-27 20:17:42,852   23032     INFO CreatUser.py(232) - 当前token为:DFBE3D9E2326647FD63EC62A9A48B2877AC79FFD18F78973
-2021-08-27 20:17:43,205   23032     INFO CreatUser.py(251) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147703","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
-2021-08-27 20:17:47,227   23032     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
-2021-08-27 20:17:47,243   23032     INFO result.py(156) - 测试执行通过： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:17:47,243   23032     INFO result.py(90) - 测试结束： test_3_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:17:47,258   23032     INFO result.py(91) - 耗时： 4.39066481590271
+2021-08-30 15:25:30,493   10928     INFO result.py(69) - 开始测试： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:30,493   10928     INFO test_运营用户创建审批.py(11) - 初始化CreatUser
+2021-08-30 15:25:30,493   10928     INFO CreatUser.py(268) - 当前applyId为：1147814
+2021-08-30 15:25:30,604   10928     INFO CreatUser.py(292) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/saveRiskAssessment'的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-08-30 15:25:34,621   10928     INFO test_运营用户创建审批.py(87) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-30 15:25:34,621   10928     INFO result.py(156) - 测试执行通过： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:34,621   10928     INFO result.py(90) - 测试结束： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:34,637   10928     INFO result.py(91) - 耗时： 4.1279237270355225
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -937,7 +933,7 @@ NameError: name 'token' is not defined
 </tr><tr id='pt1.5'>
 <td>pt1.5</td>
     <td class='passCase' colspan='7'>
-        <div class='testcase'>test_4_saveRiskAssessment风控评估提交</div>
+        <div class='testcase'>test_05_operatingWorkFlow内部人员审核</div>
     </td>
     <td class='passCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
@@ -957,228 +953,196 @@ NameError: name 'token' is not defined
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.5.1:
-2021-08-27 20:17:47,258   23032     INFO result.py(69) - 开始测试： test_4_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:17:47,258   23032     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
-2021-08-27 20:17:47,258   23032     INFO CreatUser.py(261) - 当前token为:DFBE3D9E2326647FD63EC62A9A48B2877AC79FFD18F78973
-2021-08-27 20:17:47,259   23032     INFO CreatUser.py(266) - 当前applyId为：1147703
-2021-08-27 20:17:47,412   23032     INFO CreatUser.py(290) - 提交审核接口'http://sit-cdms.ynm3k.com/api/client/saveRiskAssessment'的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
-2021-08-27 20:17:51,443   23032     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
-2021-08-27 20:17:51,443   23032     INFO result.py(156) - 测试执行通过： test_4_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:17:51,459   23032     INFO result.py(90) - 测试结束： test_4_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:17:51,459   23032     INFO result.py(91) - 耗时： 4.200756788253784
+2021-08-30 15:25:34,638   10928     INFO result.py(69) - 开始测试： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:34,638   10928     INFO test_运营用户创建审批.py(11) - 初始化CreatUser
+2021-08-30 15:25:34,638   10928     INFO CreatUser.py(303) - 当前token为:4AA2464CE650B1625D68A10AC9F42BEC7AC79FFD18F78973
+2021-08-30 15:25:34,840   10928     INFO CreatUser.py(402) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147814","applyNo":null,"result":true,"operatingMessage":""}]}'
+2021-08-30 15:25:38,889   10928     INFO test_运营用户创建审批.py(87) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-30 15:25:38,889   10928     INFO result.py(156) - 测试执行通过： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:38,889   10928     INFO result.py(90) - 测试结束： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:38,889   10928     INFO result.py(91) - 耗时： 4.251650333404541
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
         </div>
     </td>
-</tr><tr id='ft1.6'>
-<td>ft1.6</td>
-    <td class='failCase' colspan='7'>
-        <div class='testcase'>test_5_operatingWorkFlow内部人员审核</div>
+</tr><tr id='pt1.6'>
+<td>pt1.6</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_06_operatingWorkFlowNo不用锁定审核通过</div>
     </td>
-    <td class='failCase'>
+    <td class='passCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
     </td>
-    <td class='failCase' align='center'>
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.6.1',1, false)">
-            <span class="lang-cn">失败</span>
-            <span class="lang-en">fail</span>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
         </a>
     </td>
 </tr>
-<tr id='div_S_ft1.6.1' name='div_ft1.6.1' class="hiddenRow">
+<tr id='div_S_pt1.6.1' name='div_pt1.6.1' class="hiddenRow">
     <td colspan='10'>
         <div class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'
-                 onclick="document.getElementById('div_S_ft1.6.1').className = 'hiddenRow'">
+                 onclick="document.getElementById('div_S_pt1.6.1').className = 'hiddenRow'">
                 <a onfocus='this.blur();'>[x]</a>
             </div>
-            <pre>ft1.6.1:
-2021-08-27 20:17:51,475   23032     INFO result.py(69) - 开始测试： test_5_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:17:51,475   23032     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
-2021-08-27 20:17:51,475   23032     INFO CreatUser.py(300) - 当前token为:DFBE3D9E2326647FD63EC62A9A48B2877AC79FFD18F78973
-2021-08-27 20:17:51,679   23032     INFO CreatUser.py(398) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147703","applyNo":null,"result":true,"operatingMessage":""}]}'
-2021-08-27 20:17:55,697   23032     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
-2021-08-27 20:17:55,713   23032  WARNING result.py(190) - 测试未通过： test_5_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
-Traceback (most recent call last):
-  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 45, in test_5_operatingWorkFlow内部人员审核
-    self.assertEqual("true", operatingWorkFlow.json().get("data")[0].get("result"))
-AssertionError: 'true' != True
-
-2021-08-27 20:17:55,729   23032     INFO result.py(90) - 测试结束： test_5_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:17:55,729   23032     INFO result.py(91) - 耗时： 4.254615545272827
+            <pre>pt1.6.1:
+2021-08-30 15:25:38,889   10928     INFO result.py(69) - 开始测试： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:38,889   10928     INFO test_运营用户创建审批.py(11) - 初始化CreatUser
+2021-08-30 15:25:38,890   10928     INFO CreatUser.py(413) - 当前token为:4AA2464CE650B1625D68A10AC9F42BEC7AC79FFD18F78973
+2021-08-30 15:25:39,033   10928     INFO CreatUser.py(419) - 提交审核获取到的手机号为：10199612946
+2021-08-30 15:25:39,363   10928     INFO CreatUser.py(422) - 当前applyId为：1147814
+2021-08-30 15:25:39,757   10928     INFO CreatUser.py(512) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147814","applyNo":null,"result":true,"operatingMessage":""}]}'
+2021-08-30 15:25:43,776   10928     INFO test_运营用户创建审批.py(87) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-30 15:25:43,776   10928     INFO result.py(156) - 测试执行通过： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:43,776   10928     INFO result.py(90) - 测试结束： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:43,776   10928     INFO result.py(91) - 耗时： 4.886918783187866
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
         </div>
     </td>
-</tr><tr id='ft1.7'>
-<td>ft1.7</td>
-    <td class='failCase' colspan='7'>
-        <div class='testcase'>test_6_operatingWorkFlowNo不用锁定审核通过</div>
+</tr><tr id='pt1.7'>
+<td>pt1.7</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_07_operatingWorkFlowAgaint提交锁</div>
     </td>
-    <td class='failCase'>
+    <td class='passCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
     </td>
-    <td class='failCase' align='center'>
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.7.1',1, false)">
-            <span class="lang-cn">失败</span>
-            <span class="lang-en">fail</span>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.7.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
         </a>
     </td>
 </tr>
-<tr id='div_S_ft1.7.1' name='div_ft1.7.1' class="hiddenRow">
+<tr id='div_S_pt1.7.1' name='div_pt1.7.1' class="hiddenRow">
     <td colspan='10'>
         <div class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'
-                 onclick="document.getElementById('div_S_ft1.7.1').className = 'hiddenRow'">
+                 onclick="document.getElementById('div_S_pt1.7.1').className = 'hiddenRow'">
                 <a onfocus='this.blur();'>[x]</a>
             </div>
-            <pre>ft1.7.1:
-2021-08-27 20:17:55,745   23032     INFO result.py(69) - 开始测试： test_6_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:17:55,745   23032     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
-2021-08-27 20:17:55,745   23032     INFO CreatUser.py(408) - 当前token为:DFBE3D9E2326647FD63EC62A9A48B2877AC79FFD18F78973
-2021-08-27 20:17:55,974   23032     INFO CreatUser.py(419) - 当前applyId为：1147703
-2021-08-27 20:17:56,128   23032     INFO CreatUser.py(427) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147703","applyNo":null,"result":false,"operatingMessage":"当前用户没有权限锁定/解锁该记录"}]}'
-2021-08-27 20:18:00,148   23032     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
-2021-08-27 20:18:00,164   23032  WARNING result.py(190) - 测试未通过： test_6_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_新建用户)
-Traceback (most recent call last):
-  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 51, in test_6_operatingWorkFlowNo不用锁定审核通过
-    self.assertEqual("true", operatingWorkFlowNo.json().get("data")[0].get("result"))
-AssertionError: 'true' != False
-
-2021-08-27 20:18:00,164   23032     INFO result.py(90) - 测试结束： test_6_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:18:00,164   23032     INFO result.py(91) - 耗时： 4.4191718101501465
+            <pre>pt1.7.1:
+2021-08-30 15:25:43,792   10928     INFO result.py(69) - 开始测试： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:43,792   10928     INFO test_运营用户创建审批.py(11) - 初始化CreatUser
+2021-08-30 15:25:43,792   10928     INFO CreatUser.py(529) - 提交审核获取到的手机号为：10199612946
+2021-08-30 15:25:44,297   10928     INFO CreatUser.py(540) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147814","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-08-30 15:25:48,315   10928     INFO test_运营用户创建审批.py(87) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-30 15:25:48,331   10928     INFO result.py(156) - 测试执行通过： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:48,331   10928     INFO result.py(90) - 测试结束： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:48,331   10928     INFO result.py(91) - 耗时： 4.538820266723633
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
         </div>
     </td>
-</tr><tr id='ft1.8'>
-<td>ft1.8</td>
-    <td class='failCase' colspan='7'>
-        <div class='testcase'>test_7_operatingWorkFlowAgaint提交锁</div>
+</tr><tr id='pt1.8'>
+<td>pt1.8</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_08_batchOperatingWorkFlow批量生成账号确定</div>
     </td>
-    <td class='failCase'>
+    <td class='passCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
     </td>
-    <td class='failCase' align='center'>
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.8.1',1, false)">
-            <span class="lang-cn">失败</span>
-            <span class="lang-en">fail</span>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.8.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
         </a>
     </td>
 </tr>
-<tr id='div_S_ft1.8.1' name='div_ft1.8.1' class="hiddenRow">
+<tr id='div_S_pt1.8.1' name='div_pt1.8.1' class="hiddenRow">
     <td colspan='10'>
         <div class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'
-                 onclick="document.getElementById('div_S_ft1.8.1').className = 'hiddenRow'">
+                 onclick="document.getElementById('div_S_pt1.8.1').className = 'hiddenRow'">
                 <a onfocus='this.blur();'>[x]</a>
             </div>
-            <pre>ft1.8.1:
-2021-08-27 20:18:00,164   23032     INFO result.py(69) - 开始测试： test_7_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:18:00,164   23032     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
-2021-08-27 20:18:00,165   23032     INFO CreatUser.py(437) - 当前token为:DFBE3D9E2326647FD63EC62A9A48B2877AC79FFD18F78973
-2021-08-27 20:18:00,722   23032     INFO CreatUser.py(456) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147703","applyNo":null,"result":false,"operatingMessage":"当前用户没有权限锁定/解锁该记录"}]}'
-2021-08-27 20:18:04,741   23032     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
-2021-08-27 20:18:04,773   23032  WARNING result.py(190) - 测试未通过： test_7_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
-Traceback (most recent call last):
-  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 57, in test_7_operatingWorkFlowAgaint提交锁
-    self.assertEqual("操作成功", operatingWorkFlowAgaint.json().get("data")[0].get("operatingMessage"))
-AssertionError: '操作成功' != '当前用户没有权限锁定/解锁该记录'
-- 操作成功
-+ 当前用户没有权限锁定/解锁该记录
-
-
-2021-08-27 20:18:04,773   23032     INFO result.py(90) - 测试结束： test_7_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:18:04,773   23032     INFO result.py(91) - 耗时： 4.608753442764282
+            <pre>pt1.8.1:
+2021-08-30 15:25:48,331   10928     INFO result.py(69) - 开始测试： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:48,331   10928     INFO test_运营用户创建审批.py(11) - 初始化CreatUser
+2021-08-30 15:25:52,823   10928     INFO test_运营用户创建审批.py(87) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-30 15:25:52,823   10928     INFO result.py(156) - 测试执行通过： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:52,823   10928     INFO result.py(90) - 测试结束： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:52,823   10928     INFO result.py(91) - 耗时： 4.492028713226318
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
         </div>
     </td>
-</tr><tr id='ft1.9'>
-<td>ft1.9</td>
-    <td class='failCase' colspan='7'>
-        <div class='testcase'>test_8_batchOperatingWorkFlow批量生成账号确定</div>
+</tr><tr id='pt1.9'>
+<td>pt1.9</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_09_operatingWorkFlowThird提交锁</div>
     </td>
-    <td class='failCase'>
+    <td class='passCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
     </td>
-    <td class='failCase' align='center'>
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.9.1',1, false)">
-            <span class="lang-cn">失败</span>
-            <span class="lang-en">fail</span>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.9.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
         </a>
     </td>
 </tr>
-<tr id='div_S_ft1.9.1' name='div_ft1.9.1' class="hiddenRow">
+<tr id='div_S_pt1.9.1' name='div_pt1.9.1' class="hiddenRow">
     <td colspan='10'>
         <div class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'
-                 onclick="document.getElementById('div_S_ft1.9.1').className = 'hiddenRow'">
+                 onclick="document.getElementById('div_S_pt1.9.1').className = 'hiddenRow'">
                 <a onfocus='this.blur();'>[x]</a>
             </div>
-            <pre>ft1.9.1:
-2021-08-27 20:18:04,774   23032     INFO result.py(69) - 开始测试： test_8_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:18:04,774   23032     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
-2021-08-27 20:18:04,774   23032     INFO CreatUser.py(466) - 当前token为:DFBE3D9E2326647FD63EC62A9A48B2877AC79FFD18F78973
-2021-08-27 20:18:05,349   23032     INFO CreatUser.py(492) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/batchOperatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147703","applyNo":null,"result":false,"operatingMessage":"您当前没权限进行此操作"}]}'
-2021-08-27 20:18:09,379   23032     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
-2021-08-27 20:18:09,379   23032  WARNING result.py(190) - 测试未通过： test_8_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_新建用户)
-Traceback (most recent call last):
-  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 63, in test_8_batchOperatingWorkFlow批量生成账号确定
-    self.assertEqual("true", batchOperatingWorkFlow.json().get("data")[0].get("result"))
-AssertionError: 'true' != False
-
-2021-08-27 20:18:09,379   23032     INFO result.py(90) - 测试结束： test_8_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:18:09,379   23032     INFO result.py(91) - 耗时： 4.604742050170898
+            <pre>pt1.9.1:
+2021-08-30 15:25:52,823   10928     INFO result.py(69) - 开始测试： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:52,823   10928     INFO test_运营用户创建审批.py(11) - 初始化CreatUser
+2021-08-30 15:25:52,824   10928     INFO CreatUser.py(588) - 提交审核获取到的手机号为：10199612946
+2021-08-30 15:25:52,995   10928     INFO CreatUser.py(591) - 当前applyId为：1147814
+2021-08-30 15:25:53,087   10928     INFO CreatUser.py(599) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147814","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-08-30 15:25:57,124   10928     INFO test_运营用户创建审批.py(87) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-30 15:25:57,124   10928     INFO result.py(156) - 测试执行通过： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:57,140   10928     INFO result.py(90) - 测试结束： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:57,140   10928     INFO result.py(91) - 耗时： 4.316457748413086
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
         </div>
     </td>
-</tr><tr id='ft1.10'>
-<td>ft1.10</td>
-    <td class='failCase' colspan='7'>
-        <div class='testcase'>test_9_operatingWorkFlowThird提交锁</div>
+</tr><tr id='pt1.10'>
+<td>pt1.10</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_10_batchOperatingWorkFlowEnd批量确认</div>
     </td>
-    <td class='failCase'>
+    <td class='passCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
     </td>
-    <td class='failCase' align='center'>
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.10.1',1, false)">
-            <span class="lang-cn">失败</span>
-            <span class="lang-en">fail</span>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.10.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
         </a>
     </td>
 </tr>
-<tr id='div_S_ft1.10.1' name='div_ft1.10.1' class="hiddenRow">
+<tr id='div_S_pt1.10.1' name='div_pt1.10.1' class="hiddenRow">
     <td colspan='10'>
         <div class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'
-                 onclick="document.getElementById('div_S_ft1.10.1').className = 'hiddenRow'">
+                 onclick="document.getElementById('div_S_pt1.10.1').className = 'hiddenRow'">
                 <a onfocus='this.blur();'>[x]</a>
             </div>
-            <pre>ft1.10.1:
-2021-08-27 20:18:09,379   23032     INFO result.py(69) - 开始测试： test_9_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:18:09,380   23032     INFO test_运营用户创建审批.py(17) - 初始化CreatUser
-2021-08-27 20:18:09,380   23032     INFO CreatUser.py(502) - 当前token为:DFBE3D9E2326647FD63EC62A9A48B2877AC79FFD18F78973
-2021-08-27 20:18:09,457   23032     INFO CreatUser.py(513) - 当前applyId为：1147703
-2021-08-27 20:18:09,487   23032     INFO CreatUser.py(521) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147703","applyNo":null,"result":false,"operatingMessage":"当前用户没有权限锁定/解锁该记录"}]}'
-2021-08-27 20:18:13,494   23032     INFO test_运营用户创建审批.py(82) - 接口请求完成后，等待系统处理数据，等待4秒
-2021-08-27 20:18:13,494   23032  WARNING result.py(190) - 测试未通过： test_9_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
-Traceback (most recent call last):
-  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 69, in test_9_operatingWorkFlowThird提交锁
-    self.assertEqual("操作成功", operatingWorkFlowThird.json().get("data")[0].get("operatingMessage"))
-AssertionError: '操作成功' != '当前用户没有权限锁定/解锁该记录'
-- 操作成功
-+ 当前用户没有权限锁定/解锁该记录
-
-
-2021-08-27 20:18:13,494   23032     INFO result.py(90) - 测试结束： test_9_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_新建用户)
-2021-08-27 20:18:13,495   23032     INFO result.py(91) - 耗时： 4.114508390426636
+            <pre>pt1.10.1:
+2021-08-30 15:25:57,140   10928     INFO result.py(69) - 开始测试： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:25:57,140   10928     INFO test_运营用户创建审批.py(11) - 初始化CreatUser
+2021-08-30 15:25:57,140   10928     INFO CreatUser.py(614) - 提交审核获取到的手机号为：10199612946
+2021-08-30 15:25:57,222   10928     INFO CreatUser.py(617) - 当前applyId为：1147814
+2021-08-30 15:25:58,238   10928     INFO CreatUser.py(633) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/batchOperatingWorkFlow'的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1147814","applyNo":null,"result":true,"operatingMessage":null}]}'
+2021-08-30 15:26:02,240   10928     INFO test_运营用户创建审批.py(87) - 接口请求完成后，等待系统处理数据，等待4秒
+2021-08-30 15:26:02,240   10928     INFO result.py(156) - 测试执行通过： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:26:02,240   10928     INFO result.py(90) - 测试结束： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_新建用户)
+2021-08-30 15:26:02,240   10928     INFO result.py(91) - 耗时： 5.1001198291778564
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -1192,11 +1156,11 @@ AssertionError: '操作成功' != '当前用户没有权限锁定/解锁该记�
             <span class="lang-en">Total</span>
         </td>
         <td>10</td>
-        <td class="passCase">4</td>
-        <td class="failCase">5</td>
-        <td class="errorCase">1</td>
+        <td class="passCase">10</td>
+        <td class="failCase">0</td>
+        <td class="errorCase">0</td>
         <td class="skipCase">0</td>
-        <td style="text-align:right;">40.00%</td>
+        <td style="text-align:right;">100.00%</td>
         <td>0</td>
         <td>&nbsp;</td>
     </tr>

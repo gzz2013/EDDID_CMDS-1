@@ -8,7 +8,6 @@ from Common.eddid_data_select import *
 
 
 class CreatUser():
-
     # 步骤1
     def ApplyClinet资料提交(self):
         global phone, token, eddidhost, s
@@ -24,12 +23,10 @@ class CreatUser():
             "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
         }
         logging.info("当前token为:{}".format(token))
-
+        print("当前token为:{}".format(token))
         print("headers", headers)
         applyClienturl = eddidhost + "/api/client/applyClient"
         print("applyClienturl:", applyClienturl)
-        # logging.info("接口请求url为：{}".format(applyClienturl))
-
         data = {
             "infos": [
                 {
@@ -190,6 +187,7 @@ class CreatUser():
         logging.info("提交申请单时注册用户手机号码为：{}".format(phone))
         applyClientResp = s.post(url=applyClienturl, headers=headers, json=data)
         logging.info("接口'{}'的响应结果为：'{}'".format(applyClienturl, applyClientResp.text))
+        print("步骤1接口'{}'的响应结果为：'{}'".format(applyClienturl, applyClientResp.text))
         return applyClientResp
 
     # 步骤2
@@ -204,6 +202,7 @@ class CreatUser():
             "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
         }
         logging.info("当前token为:{}".format(token))
+        print("当前token为:{}".format(token))
         print("headers", headers)
         submitAuditurl = eddidhost + "/api/client/submitAudit"
         print("submitAuditurl为:", submitAuditurl)
@@ -220,6 +219,7 @@ class CreatUser():
         print("data=", data)
         SubmitAuditResp = s.post(url=submitAuditurl, headers=headers, json=data)
         logging.info("提交审核接口'{}'的响应结果为:'{}'".format(submitAuditurl, SubmitAuditResp.text))
+        print("步骤2提交审核接口'{}'的响应结果为:'{}'".format(submitAuditurl, SubmitAuditResp.text))
         return SubmitAuditResp
 
     # 步骤3
@@ -230,14 +230,14 @@ class CreatUser():
             "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
         }
         logging.info("当前token为:{}".format(token))
+
+        print("当前token为:{}".format(token))
         print("headers", headers)
         operatingWorkFlowFirsturl = eddidhost + "/api/common/operatingWorkFlow"
 
         print("submitAuditurl为:", operatingWorkFlowFirsturl)
 
-        # logging.info("接口请求url为：{}".format(submitAuditurl))
-
-        # logging.info("提交审核获取到的手机号为：{}".format(phone))
+        logging.info("提交审核获取到的手机号为：{}".format(phone))
         global applyId
         applyId = cd_clnt_apply_info(phone)
         print("查询数据库cd_clnt_apply_info查询到applyId的值为：{}".format(applyId))
@@ -249,6 +249,7 @@ class CreatUser():
         print("data=", data)
         operatingWorkFlowFirstResp = s.post(url=operatingWorkFlowFirsturl, headers=headers, json=data)
         logging.info("提交审核接口'{}'的响应结果为:'{}'".format(operatingWorkFlowFirsturl, operatingWorkFlowFirstResp.text))
+        print("步骤3提交审核接口'{}'的响应结果为:'{}'".format(operatingWorkFlowFirsturl, operatingWorkFlowFirstResp.text))
         return operatingWorkFlowFirstResp
 
     # 步骤4
@@ -258,7 +259,8 @@ class CreatUser():
             "Connection": "keep-alive",
             "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
         }
-        logging.info("当前token为:{}".format(token))
+        # logging.info("当前token为:{}".format(token))
+        print("当前token为:{}".format(token))
         print("headers", headers)
         saveRiskAssessmenturl = eddidhost + "/api/client/saveRiskAssessment"
 
@@ -288,6 +290,7 @@ class CreatUser():
         print("data=", data)
         saveRiskAssessmentResp = s.post(url=saveRiskAssessmenturl, headers=headers, json=data)
         logging.info("提交审核接口'{}'的响应结果为:'{}'".format(saveRiskAssessmenturl, saveRiskAssessmentResp.text))
+        print("步骤4提交审核接口'{}'的响应结果为:'{}'".format(saveRiskAssessmenturl, saveRiskAssessmentResp.text))
         return saveRiskAssessmentResp
 
     # 步骤5
@@ -298,6 +301,7 @@ class CreatUser():
             "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
         }
         logging.info("当前token为:{}".format(token))
+        print("当前token为:{}".format(token))
         print("headers", headers)
         operatingWorkFlowturl = eddidhost + "/api/common/operatingWorkFlow"
 
@@ -396,6 +400,7 @@ class CreatUser():
         print("data=", data)
         operatingWorkFlowResp = s.post(url=operatingWorkFlowturl, headers=headers, json=data)
         logging.info("提交审核接口'{}'的响应结果为:'{}'".format(operatingWorkFlowturl, operatingWorkFlowResp.text))
+        print("步骤5提交审核接口'{}'的响应结果为:'{}'".format(operatingWorkFlowturl, operatingWorkFlowResp.text))
         return operatingWorkFlowResp
 
     # 步骤6
@@ -406,25 +411,106 @@ class CreatUser():
             "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
         }
         logging.info("当前token为:{}".format(token))
+        print("当前token为:{}".format(token))
         print("headers", headers)
         operatingWorkFlowNourl = eddidhost + "/api/common/operatingWorkFlow"
 
         print("submitAuditurl为:", operatingWorkFlowNourl)
-
-        # logging.info("接口请求url为：{}".format(submitAuditurl))
-
-        # logging.info("提交审核获取到的手机号为：{}".format(phone))
+        logging.info("提交审核获取到的手机号为：{}".format(phone))
         global applyId
         applyId = cd_clnt_apply_info(phone)
         logging.info("当前applyId为：{}".format(applyId))
         data = {
             "applyId": applyId,
+            "checkItemList": [
+                {
+                    "itemId": "1",
+                    "itemCde": "Application Form",
+                    "itemDesc": "Application Form",
+                    "cscheckFlag": "true",
+                    "rocheckFlag": "true",
+                    "opscheckFlag": "false"
+                },
+                {
+                    "itemId": "2",
+                    "itemCde": "Fee schedule",
+                    "itemDesc": "Fee schedule",
+                    "cscheckFlag": "true",
+                    "rocheckFlag": "true",
+                    "opscheckFlag": "false"
+                },
+                {
+                    "itemId": "3",
+                    "itemCde": "ID card Copy",
+                    "itemDesc": "ID card Copy",
+                    "cscheckFlag": "true",
+                    "rocheckFlag": "true",
+                    "opscheckFlag": "false"
+                },
+                {
+                    "itemId": "4",
+                    "itemCde": "SFC search",
+                    "itemDesc": "SFC search",
+                    "cscheckFlag": "true",
+                    "rocheckFlag": "true",
+                    "opscheckFlag": "false"
+                },
+                {
+                    "itemId": "5",
+                    "itemCde": "Worldcheck",
+                    "itemDesc": "Worldcheck",
+                    "cscheckFlag": "false",
+                    "rocheckFlag": "false",
+                    "opscheckFlag": "false"
+                },
+                {
+                    "itemId": "6",
+                    "itemCde": "Address Proof (if any)",
+                    "itemDesc": "Address Proof (if any)",
+                    "cscheckFlag": "false",
+                    "rocheckFlag": "false",
+                    "opscheckFlag": "false"
+                },
+                {
+                    "itemId": "7",
+                    "itemCde": "Bank proof (if any)",
+                    "itemDesc": "Bank proof (if any)",
+                    "cscheckFlag": "false",
+                    "rocheckFlag": "false",
+                    "opscheckFlag": "false"
+                },
+                {
+                    "itemId": "8",
+                    "itemCde": "Source of Fund (if any)",
+                    "itemDesc": "Source of Fund (if any)",
+                    "cscheckFlag": "false",
+                    "rocheckFlag": "false",
+                    "opscheckFlag": "false"
+                },
+                {
+                    "itemId": "9",
+                    "itemCde": "Source of Wealth (if any)",
+                    "itemDesc": "Source of Wealth (if any)",
+                    "cscheckFlag": "false",
+                    "rocheckFlag": "false",
+                    "opscheckFlag": "false"
+                },
+                {
+                    "itemId": "10",
+                    "itemCde": "Other",
+                    "itemDesc": "Other",
+                    "cscheckFlag": "false",
+                    "rocheckFlag": "false",
+                    "opscheckFlag": "false"
+                }
+            ],
             "workFlowCode": "openClient",
-            "controlCode": "LOCK"
+            "controlCode": "PASS"
         }
         print("data=", data)
         operatingWorkFlowNoResp = s.post(url=operatingWorkFlowNourl, headers=headers, json=data)
         logging.info("提交审核接口'{}'的响应结果为:'{}'".format(operatingWorkFlowNourl, operatingWorkFlowNoResp.text))
+        print("步骤6提交审核接口'{}'的响应结果为:'{}'".format(operatingWorkFlowNourl, operatingWorkFlowNoResp.text))
         return operatingWorkFlowNoResp
 
     # 步骤7
@@ -434,15 +520,13 @@ class CreatUser():
             "Connection": "keep-alive",
             "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
         }
-        logging.info("当前token为:{}".format(token))
+        # logging.info("当前token为:{}".format(token))
+        print("当前token为:{}".format(token))
         print("headers", headers)
         operatingWorkFlowAgainturl = eddidhost + "/api/common/operatingWorkFlow"
 
         print("submitAuditurl为:", operatingWorkFlowAgainturl)
-
-        # logging.info("接口请求url为：{}".format(submitAuditurl))
-
-        # logging.info("提交审核获取到的手机号为：{}".format(phone))
+        logging.info("提交审核获取到的手机号为：{}".format(phone))
         global applyId
         applyId = cd_clnt_apply_info(phone)
         print("查询数据库cd_clnt_apply_info查询到applyId的值为：{}".format(applyId))
@@ -454,6 +538,7 @@ class CreatUser():
         print("data=", data)
         operatingWorkFlowAgaintResp = s.post(url=operatingWorkFlowAgainturl, headers=headers, json=data)
         logging.info("提交审核接口'{}'的响应结果为:'{}'".format(operatingWorkFlowAgainturl, operatingWorkFlowAgaintResp.text))
+        print("步骤7提交审核接口'{}'的响应结果为:'{}'".format(operatingWorkFlowAgainturl, operatingWorkFlowAgaintResp.text))
         return operatingWorkFlowAgaintResp
 
     # 步骤8
@@ -463,15 +548,11 @@ class CreatUser():
             "Connection": "keep-alive",
             "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
         }
-        logging.info("当前token为:{}".format(token))
+        print("当前token为:{}".format(token))
         print("headers", headers)
         batchOperatingWorkFlowurl = eddidhost + "/api/common/batchOperatingWorkFlow"
 
         print("submitAuditurl为:", batchOperatingWorkFlowurl)
-
-        # logging.info("接口请求url为：{}".format(submitAuditurl))
-
-        # logging.info("提交审核获取到的手机号为：{}".format(phone))
         global applyId
         applyId = cd_clnt_apply_info(phone)
         print("查询数据库cd_clnt_apply_info查询到applyId的值为：{}".format(applyId))
@@ -489,7 +570,7 @@ class CreatUser():
         }
         print("data=", data)
         batchOperatingWorkFlowResp = s.post(url=batchOperatingWorkFlowurl, headers=headers, json=data)
-        logging.info("提交审核接口'{}'的响应结果为:'{}'".format(batchOperatingWorkFlowurl, batchOperatingWorkFlowResp.text))
+        print("步骤8提交审核接口'{}'的响应结果为:'{}'".format(batchOperatingWorkFlowurl, batchOperatingWorkFlowResp.text))
         return batchOperatingWorkFlowResp
 
     # 步骤9
@@ -499,15 +580,12 @@ class CreatUser():
             "Connection": "keep-alive",
             "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
         }
-        logging.info("当前token为:{}".format(token))
+        # logging.info("当前token为:{}".format(token))
+        print("当前token为:{}".format(token))
         print("headers", headers)
         operatingWorkFlowThirdurl = eddidhost + "/api/common/operatingWorkFlow"
-
         print("submitAuditurl为:", operatingWorkFlowThirdurl)
-
-        # logging.info("接口请求url为：{}".format(submitAuditurl))
-
-        # logging.info("提交审核获取到的手机号为：{}".format(phone))
+        logging.info("提交审核获取到的手机号为：{}".format(phone))
         global applyId
         applyId = cd_clnt_apply_info(phone)
         logging.info("当前applyId为：{}".format(applyId))
@@ -519,6 +597,7 @@ class CreatUser():
         print("data=", data)
         operatingWorkFlowThirdResp = s.post(url=operatingWorkFlowThirdurl, headers=headers, json=data)
         logging.info("提交审核接口'{}'的响应结果为:'{}'".format(operatingWorkFlowThirdurl, operatingWorkFlowThirdResp.text))
+        print("步骤9提交审核接口'{}'的响应结果为:'{}'".format(operatingWorkFlowThirdurl, operatingWorkFlowThirdResp.text))
         return operatingWorkFlowThirdResp
 
     # 步骤10
@@ -528,18 +607,15 @@ class CreatUser():
             "Connection": "keep-alive",
             "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
         }
-        logging.info("当前token为:{}".format(token))
+        # logging.info("当前token为:{}".format(token))
+        print("当前token为:{}".format(token))
         print("headers", headers)
         batchOperatingWorkFlowEndurl = eddidhost + "/api/common/batchOperatingWorkFlow"
-
-        print("submitAuditurl为:", batchOperatingWorkFlowEndurl)
-
-        # logging.info("接口请求url为：{}".format(submitAuditurl))
-
-        # logging.info("提交审核获取到的手机号为：{}".format(phone))
+        logging.info("提交审核获取到的手机号为：{}".format(phone))
         global applyId
         applyId = cd_clnt_apply_info(phone)
         logging.info("当前applyId为：{}".format(applyId))
+
         data = {
             "applyIds": [
                 applyId
@@ -555,6 +631,7 @@ class CreatUser():
         print("data=", data)
         batchOperatingWorkFlowEndResp = s.post(url=batchOperatingWorkFlowEndurl, headers=headers, json=data)
         logging.info("提交审核接口'{}'的响应结果为:'{}'".format(batchOperatingWorkFlowEndurl, batchOperatingWorkFlowEndResp.text))
+        print("步骤10提交审核接口'{}'的响应结果为:'{}'".format(batchOperatingWorkFlowEndurl, batchOperatingWorkFlowEndResp.text))
         return batchOperatingWorkFlowEndResp
 
 
@@ -563,8 +640,22 @@ if __name__ == "__main__":
     # 实例化CreatUser
     CreatUser = CreatUser()
 
-    print(CreatUser.ApplyClinet资料提交().text)
+    print("步骤1：", CreatUser.ApplyClinet资料提交().text)
     time.sleep(4)
-    print(CreatUser.SubmitAudit提交审核().text)
+    print("步骤2：", CreatUser.SubmitAudit提交审核().text)
     time.sleep(4)
-    print(CreatUser.operatingWorkFlowFirst提交锁().text)
+    print("步骤3：", CreatUser.operatingWorkFlowFirst提交锁().text)
+    time.sleep(4)
+    print("步骤4：", CreatUser.saveRiskAssessment风控评估提交().text)
+    time.sleep(4)
+    print("步骤5：", CreatUser.operatingWorkFlow内部人员审核().text)
+    time.sleep(4)
+    print("步骤6：", CreatUser.operatingWorkFlowNo不用锁定审核通过().text)
+    time.sleep(4)
+    print("步骤7：", CreatUser.operatingWorkFlowAgain提交锁().text)
+    time.sleep(4)
+    print("步骤8：", CreatUser.batchOperatingWorkFlow批量生成账号确定().text)
+    time.sleep(4)
+    print("步骤9：", CreatUser.operatingWorkFlowThird提交锁().text)
+    time.sleep(4)
+    print("步骤10：", CreatUser.batchOperatingWorkFlowEnd批量确认().text)
