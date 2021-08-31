@@ -186,8 +186,8 @@ class CreatUser():
         }
         logging.info("提交申请单时注册用户手机号码为：{}".format(phone))
         applyClientResp = s.post(url=applyClienturl, headers=headers, json=data)
-        logging.info("接口'{}'的响应结果为：'{}'".format(applyClienturl, applyClientResp.text))
-        print("步骤1接口'{}'的响应结果为：'{}'".format(applyClienturl, applyClientResp.text))
+        logging.info("步骤1接口'{}';请求参数为:{};响应结果为：'{}'".format(applyClienturl, data,applyClientResp.text))
+        print("步骤1接口'{}';请求参数为:{};响应结果为：'{}'".format(applyClienturl, data,applyClientResp.text))
         return applyClientResp
 
     # 步骤2
@@ -218,8 +218,8 @@ class CreatUser():
         }
         print("data=", data)
         SubmitAuditResp = s.post(url=submitAuditurl, headers=headers, json=data)
-        logging.info("提交审核接口'{}'的响应结果为:'{}'".format(submitAuditurl, SubmitAuditResp.text))
-        print("步骤2提交审核接口'{}'的响应结果为:'{}'".format(submitAuditurl, SubmitAuditResp.text))
+        logging.info("步骤2提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(submitAuditurl,data, SubmitAuditResp.text))
+        print("步骤2提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(submitAuditurl,data, SubmitAuditResp.text))
         return SubmitAuditResp
 
     # 步骤3
@@ -248,8 +248,8 @@ class CreatUser():
         }
         print("data=", data)
         operatingWorkFlowFirstResp = s.post(url=operatingWorkFlowFirsturl, headers=headers, json=data)
-        logging.info("提交审核接口'{}'的响应结果为:'{}'".format(operatingWorkFlowFirsturl, operatingWorkFlowFirstResp.text))
-        print("步骤3提交审核接口'{}'的响应结果为:'{}'".format(operatingWorkFlowFirsturl, operatingWorkFlowFirstResp.text))
+        logging.info("步骤3提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowFirsturl,data, operatingWorkFlowFirstResp.text))
+        print("步骤3提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowFirsturl,data, operatingWorkFlowFirstResp.text))
         return operatingWorkFlowFirstResp
 
     # 步骤4
@@ -289,8 +289,8 @@ class CreatUser():
         }
         print("data=", data)
         saveRiskAssessmentResp = s.post(url=saveRiskAssessmenturl, headers=headers, json=data)
-        logging.info("提交审核接口'{}'的响应结果为:'{}'".format(saveRiskAssessmenturl, saveRiskAssessmentResp.text))
-        print("步骤4提交审核接口'{}'的响应结果为:'{}'".format(saveRiskAssessmenturl, saveRiskAssessmentResp.text))
+        logging.info("步骤4提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(saveRiskAssessmenturl,data, saveRiskAssessmentResp.text))
+        print("步骤4提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(saveRiskAssessmenturl,data, saveRiskAssessmentResp.text))
         return saveRiskAssessmentResp
 
     # 步骤5
@@ -399,8 +399,8 @@ class CreatUser():
         }
         print("data=", data)
         operatingWorkFlowResp = s.post(url=operatingWorkFlowturl, headers=headers, json=data)
-        logging.info("提交审核接口'{}'的响应结果为:'{}'".format(operatingWorkFlowturl, operatingWorkFlowResp.text))
-        print("步骤5提交审核接口'{}'的响应结果为:'{}'".format(operatingWorkFlowturl, operatingWorkFlowResp.text))
+        logging.info("步骤5提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowturl,data,operatingWorkFlowResp.text))
+        print("步骤5提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowturl,data,operatingWorkFlowResp.text))
         return operatingWorkFlowResp
 
     # 步骤6
@@ -509,8 +509,8 @@ class CreatUser():
         }
         print("data=", data)
         operatingWorkFlowNoResp = s.post(url=operatingWorkFlowNourl, headers=headers, json=data)
-        logging.info("提交审核接口'{}'的响应结果为:'{}'".format(operatingWorkFlowNourl, operatingWorkFlowNoResp.text))
-        print("步骤6提交审核接口'{}'的响应结果为:'{}'".format(operatingWorkFlowNourl, operatingWorkFlowNoResp.text))
+        logging.info("步骤6提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowNourl, data,operatingWorkFlowNoResp.text))
+        print("步骤6提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowNourl, data,operatingWorkFlowNoResp.text))
         return operatingWorkFlowNoResp
 
     # 步骤7
@@ -537,8 +537,8 @@ class CreatUser():
         }
         print("data=", data)
         operatingWorkFlowAgaintResp = s.post(url=operatingWorkFlowAgainturl, headers=headers, json=data)
-        logging.info("提交审核接口'{}'的响应结果为:'{}'".format(operatingWorkFlowAgainturl, operatingWorkFlowAgaintResp.text))
-        print("步骤7提交审核接口'{}'的响应结果为:'{}'".format(operatingWorkFlowAgainturl, operatingWorkFlowAgaintResp.text))
+        logging.info("提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowAgainturl,data,operatingWorkFlowAgaintResp.text))
+        print("提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowAgainturl,data,operatingWorkFlowAgaintResp.text))
         return operatingWorkFlowAgaintResp
 
     # 步骤8
@@ -570,7 +570,8 @@ class CreatUser():
         }
         print("data=", data)
         batchOperatingWorkFlowResp = s.post(url=batchOperatingWorkFlowurl, headers=headers, json=data)
-        print("步骤8提交审核接口'{}'的响应结果为:'{}'".format(batchOperatingWorkFlowurl, batchOperatingWorkFlowResp.text))
+        logging.info("提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(batchOperatingWorkFlowurl,data, batchOperatingWorkFlowResp.text))
+        print("提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(batchOperatingWorkFlowurl,data, batchOperatingWorkFlowResp.text))
         return batchOperatingWorkFlowResp
 
     # 步骤9
@@ -596,8 +597,8 @@ class CreatUser():
         }
         print("data=", data)
         operatingWorkFlowThirdResp = s.post(url=operatingWorkFlowThirdurl, headers=headers, json=data)
-        logging.info("提交审核接口'{}'的响应结果为:'{}'".format(operatingWorkFlowThirdurl, operatingWorkFlowThirdResp.text))
-        print("步骤9提交审核接口'{}'的响应结果为:'{}'".format(operatingWorkFlowThirdurl, operatingWorkFlowThirdResp.text))
+        logging.info("提交审核接口'{}',请求参数为：{},的响应结果为:'{}'".format(operatingWorkFlowThirdurl,data, operatingWorkFlowThirdResp.text))
+        print("步骤9提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowThirdurl,data, operatingWorkFlowThirdResp.text))
         return operatingWorkFlowThirdResp
 
     # 步骤10
@@ -630,8 +631,8 @@ class CreatUser():
         }
         print("data=", data)
         batchOperatingWorkFlowEndResp = s.post(url=batchOperatingWorkFlowEndurl, headers=headers, json=data)
-        logging.info("提交审核接口'{}'的响应结果为:'{}'".format(batchOperatingWorkFlowEndurl, batchOperatingWorkFlowEndResp.text))
-        print("步骤10提交审核接口'{}'的响应结果为:'{}'".format(batchOperatingWorkFlowEndurl, batchOperatingWorkFlowEndResp.text))
+        logging.info("提交审核接口'{}';请求参数为:{};的响应结果为:'{}'".format(batchOperatingWorkFlowEndurl,data, batchOperatingWorkFlowEndResp.text))
+        print("步骤10提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(batchOperatingWorkFlowEndurl,data, batchOperatingWorkFlowEndResp.text))
         return batchOperatingWorkFlowEndResp
 
 
