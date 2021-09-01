@@ -177,8 +177,8 @@ class CreatUser():
             "accts": [
                 "securitiesCash",
                 "futuresMargin",
-                "leveragedForeignExchangeAccountMargin",
-                "securitiesAyersCash"
+                # "leveragedForeignExchangeAccountMargin",
+                # "securitiesAyersCash"
             ],
             "promotionNumber": "EDAC520",
             "agreeToTheTerms": "true",
