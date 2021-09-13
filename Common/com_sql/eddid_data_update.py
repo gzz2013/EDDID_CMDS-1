@@ -1,4 +1,4 @@
-from Common.eddid_sit_库链接 import SQL_Check
+from Common.com_sql.eddid_sit_库链接 import SQL_Check
 
 SQL_Check = SQL_Check()
 

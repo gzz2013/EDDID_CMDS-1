@@ -1,17 +1,16 @@
 import unittest
 import HTMLReport
+
 from Test_Suite import suite_运营用户创建审批
-# from Business.saas_login import saas_获取token
-# from Common.生成时间随机数 import write_numtime
+from Test_Suite import suite_换汇申请单
 
 
 suite = unittest.TestSuite()
 
-suite.addTests(suite_运营用户创建审批.get_suite())
-# saas_获取token()
-# 跑用例前先生成token存到token.txt
-# write_numtime()
-#随机数写入文本
+suite.addTests(suite_运营用户创建审批.get_suite_creatUser新建用户())
+suite.addTests(suite_换汇申请单.get_suite_CreateExchange新建换汇申请单())
+
+
 
 if __name__ == '__main__':
     HTMLReport.TestRunner(

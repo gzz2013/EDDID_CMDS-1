@@ -2,17 +2,17 @@ import requests
 from Business.login import cdms_获取token
 from Common.random_number import Randoms
 import logging
-from Common.eddid_data_update import *
+from Common.com_sql.eddid_data_update import *
 import time
-from Common.eddid_data_select import *
-
+from Common.com_sql.eddid_data_select import *
+# from Config.config import *
 
 class CreatUser():
     # 步骤1
     def ApplyClinet资料提交(self):
         global phone, token, eddidhost, s
         phone = Randoms().telephone()
-        eddidhost = "http://sit-cdms.ynm3k.com"
+        eddidhost = "http://sit-cdms.ynm3k.com/"
         idCardNo = Randoms().ident_generator()
         token = cdms_获取token()
         s = requests.Session()
@@ -37,11 +37,11 @@ class CreatUser():
                     "chName": "自动化甘" + phone,
                     "usedCnName": "自动化" + phone,
                     "usedChName": "自动化" + phone,
-                    "email": "gan" + phone + "@qq.com",
+                    "email": phone+"Z@qq.com",
                     "phoneAreaCode": "CHN",
                     "phoneNo": phone,
-                    "houseAddress": "中英街" + phone+"号",
-                    "houseAddressPinYin": "zhongyingjie" + phone +"hao",
+                    "houseAddress": "中英街"+phone+"号",
+                    "houseAddressPinYin": "zhon" + phone +"hao",
                     "postAddress": "接口自动化",
                     "natnlty": "CHN",
                     "idCardType": "2",
@@ -173,12 +173,27 @@ class CreatUser():
             "bankCardNo": "",
             "elecNo": "",
             "responsible": "kwokwah.wong",
-            "emailLanguage": "zh-hans",
+            # "emailLanguage": "zh-hans",
+            # 简体
+            "emailLanguage": "zh-hant",
+            # 繁体
             "accts": [
+                #cdms开户
+
                 "securitiesCash",
-                "futuresMargin",
+                #证券现金
+
+                # "securitiesMargin",
+                # 证券保证金
+
+                # "futuresMargin",
+                # 期货保证金
+
                 # "leveragedForeignExchangeAccountMargin",
+                # 杠杆式外汇账户(保证金)
+
                 # "securitiesAyersCash"
+                # #全权委托证券（现金）账户
             ],
             "promotionNumber": "EDAC520",
             "agreeToTheTerms": "true",
@@ -192,10 +207,11 @@ class CreatUser():
 
     # 步骤2
     def SubmitAudit提交审核(self):
+        time.sleep(10)
         cd_clnt_wc_match(phone)
         logging.info("已完成修改WorldCheck的状态为FALSE")
         # 必须要等待修改完成后才能提交审核
-        time.sleep(5)
+        time.sleep(10)
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
@@ -637,25 +653,54 @@ class CreatUser():
 
 
 # ”if __name__=="__main__":“的作用在当前文件run时会执行下面的代码，如果时外部调用就不会执行if里面的代码
-if __name__ == "__main__":
-    # 实例化CreatUser
+
+
+if __name__=="__main__":
+    a=1
     CreatUser = CreatUser()
-    print("步骤1：", CreatUser.ApplyClinet资料提交().text)
-    time.sleep(4)
-    print("步骤2：", CreatUser.SubmitAudit提交审核().text)
-    time.sleep(4)
-    print("步骤3：", CreatUser.operatingWorkFlowFirst提交锁().text)
-    time.sleep(4)
-    print("步骤4：", CreatUser.saveRiskAssessment风控评估提交().text)
-    time.sleep(4)
-    print("步骤5：", CreatUser.operatingWorkFlow内部人员审核().text)
-    time.sleep(4)
-    print("步骤6：", CreatUser.operatingWorkFlowNo不用锁定审核通过().text)
-    time.sleep(4)
-    print("步骤7：", CreatUser.operatingWorkFlowAgain提交锁().text)
-    time.sleep(4)
-    print("步骤8：", CreatUser.batchOperatingWorkFlow批量生成账号确定().text)
-    time.sleep(4)
-    print("步骤9：", CreatUser.operatingWorkFlowThird提交锁().text)
-    time.sleep(4)
-    print("步骤10：", CreatUser.batchOperatingWorkFlowEnd批量确认().text)
+    for i in range(a):
+        # 实例化CreatUser
+        print("步骤1：", CreatUser.ApplyClinet资料提交().text)
+        time.sleep(10)
+        print("步骤2：", CreatUser.SubmitAudit提交审核().text)
+        time.sleep(10)
+        print("步骤3：", CreatUser.operatingWorkFlowFirst提交锁().text)
+        time.sleep(4)
+        print("步骤4：", CreatUser.saveRiskAssessment风控评估提交().text)
+        time.sleep(4)
+        print("步骤5：", CreatUser.operatingWorkFlow内部人员审核().text)
+        time.sleep(4)
+        print("步骤6：", CreatUser.operatingWorkFlowNo不用锁定审核通过().text)
+        time.sleep(4)
+        print("步骤7：", CreatUser.operatingWorkFlowAgain提交锁().text)
+        time.sleep(4)
+        print("步骤8：", CreatUser.batchOperatingWorkFlow批量生成账号确定().text)
+        time.sleep(4)
+        print("步骤9：", CreatUser.operatingWorkFlowThird提交锁().text)
+        time.sleep(4)
+        print("步骤10：", CreatUser.batchOperatingWorkFlowEnd批量确认().text)
+        time.sleep(4)
+
+# if __name__=="__main__":
+#     CreatUser = CreatUser()
+#     # 实例化CreatUser
+#     print("步骤1：", CreatUser.ApplyClinet资料提交().text)
+#     time.sleep(4)
+#     print("步骤2：", CreatUser.SubmitAudit提交审核().text)
+#     time.sleep(4)
+#     print("步骤3：", CreatUser.operatingWorkFlowFirst提交锁().text)
+#     time.sleep(4)
+#     print("步骤4：", CreatUser.saveRiskAssessment风控评估提交().text)
+#     time.sleep(4)
+#     print("步骤5：", CreatUser.operatingWorkFlow内部人员审核().text)
+#     time.sleep(4)
+#     print("步骤6：", CreatUser.operatingWorkFlowNo不用锁定审核通过().text)
+#     time.sleep(4)
+#     print("步骤7：", CreatUser.operatingWorkFlowAgain提交锁().text)
+#     time.sleep(4)
+#     print("步骤8：", CreatUser.batchOperatingWorkFlow批量生成账号确定().text)
+#     time.sleep(4)
+#     print("步骤9：", CreatUser.operatingWorkFlowThird提交锁().text)
+#     time.sleep(4)
+#     print("步骤10：", CreatUser.batchOperatingWorkFlowEnd批量确认().text)
+#     time.sleep(4)

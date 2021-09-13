@@ -4,7 +4,7 @@ import logging
 from Business.CreatUser import CreatUser
 
 
-class Test_新建用户(unittest.TestCase):
+class Test_creatUser新建用户(unittest.TestCase):
 
     def setUp(self):
         self.creatUser = CreatUser()
@@ -80,6 +80,6 @@ class Test_新建用户(unittest.TestCase):
 
     #
     def tearDown(self):
-        a = 4
+        a = 6
         time.sleep(a)
         logging.info("接口请求完成后，等待系统处理数据，等待{}秒".format(a))

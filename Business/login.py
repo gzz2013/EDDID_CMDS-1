@@ -1,6 +1,5 @@
 import requests
 from Common.MD5加密 import MD5_Encrypt
-
 # from Config.config import *
 # from Common.token_写入 import tk_写入
 
@@ -8,7 +7,7 @@ from Common.MD5加密 import MD5_Encrypt
 def cdms_获取token():
     logins = requests.Session()
     #登录访问的接口
-    url="http://sit-cdms.ynm3k.com/api/auth/login"
+    url= "http://sit-cdms.ynm3k.com/api/auth/login"
     #账号密码
     data = {"account": "cdmstest", "password": "111111"}
     data['password'] = MD5_Encrypt(str="111111")
