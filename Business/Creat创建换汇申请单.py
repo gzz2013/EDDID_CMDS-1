@@ -1,10 +1,9 @@
 import requests
 from Business.login import cdms_获取token
-from Common.random_number import Randoms
 import logging
-from Common.com_sql.eddid_data_update import *
 import time
 from Common.com_sql.eddid_data_select import *
+from Config.cdms_config import *
 
 
 
@@ -13,14 +12,14 @@ class CreateExchange():
     def createExchange创建换汇申请单(self):
 
         global clientId, applyAmount
-        clientId=11431
-        applyAmount=7766
+        clientId=CreateExchangeclientId
+        applyAmount=CreateExchangeAmount
         #查询符合条件的换汇账号
-        a=cd_ac('NORMAL','CASH','EQUITIES',11431)
+        a=cd_ac('NORMAL','CASH','EQUITIES',clientId)
 
         token = cdms_获取token()
         s = requests.Session()
-        eddidhost = "http://sit-cdms.ynm3k.com/"
+        eddidhost = url
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
@@ -41,7 +40,7 @@ class CreateExchange():
             "fromCurrency": "HKD",
             "toCurrency": "USD",
             "exchangeRate": 7.76500,
-            "clientId": 11431,
+            "clientId": clientId,
             "applyAmount": applyAmount,
             "accountId": a,
             "accountCategory": "securitiesCash",

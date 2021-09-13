@@ -5,14 +5,14 @@ import logging
 from Common.com_sql.eddid_data_update import *
 import time
 from Common.com_sql.eddid_data_select import *
-
+from Config.cdms_config import *
 
 class CreatUser():
     # 步骤1
     def ApplyClinet资料提交(self):
         global phone, token, eddidhost, s
         phone = Randoms().telephone()
-        eddidhost = "http://sit-cdms.ynm3k.com"
+        eddidhost = url
         idCardNo = Randoms().ident_generator()
         token = cdms_获取token()
         s = requests.Session()
