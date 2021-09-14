@@ -15,13 +15,13 @@ class Test_CreateExchange新建换汇申请单(unittest.TestCase):
         createExchange = self.CreateExchange.createExchange创建换汇申请单()
         self.assertEqual(200, createExchange.status_code)
         self.assertEqual("操作成功", createExchange.json().get("msg"))
-        print("已执行用例1=======")
+        print("已执行用例1===============================================================")
 
     def test_02_auditExchange提交审核换汇申请单(self):
         auditExchange = self.CreateExchange.auditExchange提交审核换汇申请单()
         self.assertEqual(200, auditExchange.status_code)
         self.assertEqual("操作成功", auditExchange.json().get("msg"))
-        print("已执行用例2=======")
+        print("已执行用例2===============================================================")
 
     # def test_03_operatingWorkFlowFirst提交锁(self):
     #     operatingWorkFlowFirst = self.creatUser.operatingWorkFlowFirst提交锁()
