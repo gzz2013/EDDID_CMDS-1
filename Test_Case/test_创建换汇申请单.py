@@ -18,7 +18,7 @@ class Test_CreateExchange新建换汇申请单(unittest.TestCase):
         print("已执行用例1=======")
 
     def test_02_auditExchange提交审核换汇申请单(self):
-        auditExchange = self.CreateExchange.createExchange创建换汇申请单()
+        auditExchange = self.CreateExchange.auditExchange提交审核换汇申请单()
         self.assertEqual(200, auditExchange.status_code)
         self.assertEqual("操作成功", auditExchange.json().get("msg"))
         print("已执行用例2=======")

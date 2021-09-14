@@ -1,3 +1,5 @@
+import json
+
 import requests
 from Business.login import cdms_获取token
 from Common.random_number import Randoms
@@ -6,16 +8,53 @@ from Common.com_sql.eddid_data_update import *
 import time
 from Common.com_sql.eddid_data_select import *
 from Config.cdms_config import *
+from Common.data_文本读写 import *
 
+
+# Randoms=Randoms()
 class CreatUser():
     # 步骤1
     def ApplyClinet资料提交(self):
-        global phone, token, eddidhost, s
+        global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo
+
+        # 生成电话号
         phone = Randoms().telephone()
 
-        #配置文件cdms_config中引入host
-        eddidhost = url
+        # 生成新邮箱
+        cremail = Randoms.RandomEmail()
+
+        # 英文名firstName
+        rfirstName = Randoms().creat_EFName()
+
+        # 英文名lastName
+        rlastName = Randoms().creat_ELName()
+
+        # 中文名chName
+        rchName = Randoms().creat_CFName() + Randoms().creat_CLName()
+
+        # 生成身份证号
         idCardNo = Randoms().ident_generator()
+
+        #新列表用来存放用户基本信息
+        userinformationList=[]
+        userinformationList.append(phone)
+        userinformationList.append(cremail)
+        userinformationList.append(rfirstName)
+        userinformationList.append(rlastName)
+        userinformationList.append(rchName)
+        userinformationList.append(idCardNo)
+        print("userinformationList:",userinformationList)
+
+        # 将userinformationList写入文本
+        data_write("F:\python\EDDID_CDMS\Data\duserinformation.txt",userinformationList)
+        print("data写入的文本路径为“F:\python\EDDID_CDMS\Data\userinformation.txt”，写入数据为:{}".format(userinformationList))
+        logging.info("写入的文本路径为“F:\python\EDDID_CDMS\Data\userinformation.txt”，写入数据为:{}".format(userinformationList))
+
+
+
+        # 配置文件cdms_config中引入host
+        eddidhost = url
+
         token = cdms_获取token()
         s = requests.Session()
 
@@ -29,21 +68,22 @@ class CreatUser():
         print("headers", headers)
         applyClienturl = eddidhost + "/api/client/applyClient"
         print("applyClienturl:", applyClienturl)
+        logging.info("提交申请单时注册用户手机号码为：{}".format(phone))
         data = {
             "infos": [
                 {
                     "title": "mr",
                     "informationType": 1,
-                    "firstName": "ZDH" + phone,
-                    "lastName": "ZDH" + phone,
-                    "chName": "自动化甘" + phone,
-                    "usedCnName": "自动化" + phone,
-                    "usedChName": "自动化" + phone,
-                    "email": phone+"Z@qq.com",
+                    "firstName": rfirstName,
+                    "lastName": rlastName,
+                    "chName": rchName,
+                    "usedCnName": rlastName + phone,
+                    "usedChName": rchName + "接口自动化创建账号",
+                    "email": cremail,
                     "phoneAreaCode": "CHN",
                     "phoneNo": phone,
-                    "houseAddress": "中英街"+phone+"号",
-                    "houseAddressPinYin": "zhon" + phone +"hao",
+                    "houseAddress": "中英街" + phone + "号",
+                    "houseAddressPinYin": "zhon" + phone + "hao",
                     "postAddress": "接口自动化",
                     "natnlty": "CHN",
                     "idCardType": "2",
@@ -61,7 +101,7 @@ class CreatUser():
                     "companyName": "接口自动化" + phone,
                     "businessNature": "wholesale&retail",
                     "officeAddress": "47845512245" + phone,
-                    "officePhone": "0771-"+ phone,
+                    "officePhone": "0771-" + phone,
                     "registeredCompany": "Y",
                     "employmentRemark": "",
                     "totalIncomeYear": "gt1000000",
@@ -180,10 +220,10 @@ class CreatUser():
             "emailLanguage": "zh-hant",
             # 繁体
             "accts": [
-                #cdms开户
+                # cdms开户
 
                 "securitiesCash",
-                #证券现金
+                # 证券现金
 
                 # "securitiesMargin",
                 # 证券保证金
@@ -201,17 +241,18 @@ class CreatUser():
             "agreeToTheTerms": "true",
             "personalInfoDeclartion": "true"
         }
-        logging.info("提交申请单时注册用户手机号码为：{}".format(phone))
+
         applyClientResp = s.post(url=applyClienturl, headers=headers, json=data)
-        logging.info("步骤1接口'{}';请求参数为:{};响应结果为：'{}'".format(applyClienturl, data,applyClientResp.text))
-        print("步骤1接口'{}';请求参数为:{};响应结果为：'{}'".format(applyClienturl, data,applyClientResp.text))
+        logging.info("步骤1接口'{}';请求参数为:{};响应结果为：'{}'".format(applyClienturl, data, applyClientResp.text))
+        print("步骤1接口'{}';请求参数为:{};响应结果为：'{}'".format(applyClienturl, data, applyClientResp.text))
         return applyClientResp
 
     # 步骤2
     def SubmitAudit提交审核(self):
-        time.sleep(10)
+        time.sleep(11)
         cd_clnt_wc_match(phone)
-        logging.info("已完成修改WorldCheck的状态为FALSE")
+        print("*******************************************已完成修改WorldCheck的状态为FALSE*******************************************")
+        logging.info("*******************************************已完成修改WorldCheck的状态为FALSE*******************************************")
         # 必须要等待修改完成后才能提交审核
         time.sleep(10)
         headers = {
@@ -236,8 +277,8 @@ class CreatUser():
         }
         print("data=", data)
         SubmitAuditResp = s.post(url=submitAuditurl, headers=headers, json=data)
-        logging.info("步骤2提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(submitAuditurl,data, SubmitAuditResp.text))
-        print("步骤2提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(submitAuditurl,data, SubmitAuditResp.text))
+        logging.info("步骤2提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(submitAuditurl, data, SubmitAuditResp.text))
+        print("步骤2提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(submitAuditurl, data, SubmitAuditResp.text))
         return SubmitAuditResp
 
     # 步骤3
@@ -266,8 +307,10 @@ class CreatUser():
         }
         print("data=", data)
         operatingWorkFlowFirstResp = s.post(url=operatingWorkFlowFirsturl, headers=headers, json=data)
-        logging.info("步骤3提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowFirsturl,data, operatingWorkFlowFirstResp.text))
-        print("步骤3提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowFirsturl,data, operatingWorkFlowFirstResp.text))
+        logging.info("步骤3提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowFirsturl, data,
+                                                                operatingWorkFlowFirstResp.text))
+        print("步骤3提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowFirsturl, data,
+                                                         operatingWorkFlowFirstResp.text))
         return operatingWorkFlowFirstResp
 
     # 步骤4
@@ -307,8 +350,9 @@ class CreatUser():
         }
         print("data=", data)
         saveRiskAssessmentResp = s.post(url=saveRiskAssessmenturl, headers=headers, json=data)
-        logging.info("步骤4提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(saveRiskAssessmenturl,data, saveRiskAssessmentResp.text))
-        print("步骤4提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(saveRiskAssessmenturl,data, saveRiskAssessmentResp.text))
+        logging.info(
+            "步骤4提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(saveRiskAssessmenturl, data, saveRiskAssessmentResp.text))
+        print("步骤4提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(saveRiskAssessmenturl, data, saveRiskAssessmentResp.text))
         return saveRiskAssessmentResp
 
     # 步骤5
@@ -417,8 +461,9 @@ class CreatUser():
         }
         print("data=", data)
         operatingWorkFlowResp = s.post(url=operatingWorkFlowturl, headers=headers, json=data)
-        logging.info("步骤5提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowturl,data,operatingWorkFlowResp.text))
-        print("步骤5提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowturl,data,operatingWorkFlowResp.text))
+        logging.info(
+            "步骤5提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowturl, data, operatingWorkFlowResp.text))
+        print("步骤5提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowturl, data, operatingWorkFlowResp.text))
         return operatingWorkFlowResp
 
     # 步骤6
@@ -527,8 +572,9 @@ class CreatUser():
         }
         print("data=", data)
         operatingWorkFlowNoResp = s.post(url=operatingWorkFlowNourl, headers=headers, json=data)
-        logging.info("步骤6提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowNourl, data,operatingWorkFlowNoResp.text))
-        print("步骤6提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowNourl, data,operatingWorkFlowNoResp.text))
+        logging.info(
+            "步骤6提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowNourl, data, operatingWorkFlowNoResp.text))
+        print("步骤6提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowNourl, data, operatingWorkFlowNoResp.text))
         return operatingWorkFlowNoResp
 
     # 步骤7
@@ -555,8 +601,10 @@ class CreatUser():
         }
         print("data=", data)
         operatingWorkFlowAgaintResp = s.post(url=operatingWorkFlowAgainturl, headers=headers, json=data)
-        logging.info("提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowAgainturl,data,operatingWorkFlowAgaintResp.text))
-        print("提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowAgainturl,data,operatingWorkFlowAgaintResp.text))
+        logging.info(
+            "提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowAgainturl, data, operatingWorkFlowAgaintResp.text))
+        print(
+            "提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowAgainturl, data, operatingWorkFlowAgaintResp.text))
         return operatingWorkFlowAgaintResp
 
     # 步骤8
@@ -588,8 +636,9 @@ class CreatUser():
         }
         print("data=", data)
         batchOperatingWorkFlowResp = s.post(url=batchOperatingWorkFlowurl, headers=headers, json=data)
-        logging.info("提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(batchOperatingWorkFlowurl,data, batchOperatingWorkFlowResp.text))
-        print("提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(batchOperatingWorkFlowurl,data, batchOperatingWorkFlowResp.text))
+        logging.info(
+            "提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(batchOperatingWorkFlowurl, data, batchOperatingWorkFlowResp.text))
+        print("提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(batchOperatingWorkFlowurl, data, batchOperatingWorkFlowResp.text))
         return batchOperatingWorkFlowResp
 
     # 步骤9
@@ -615,8 +664,10 @@ class CreatUser():
         }
         print("data=", data)
         operatingWorkFlowThirdResp = s.post(url=operatingWorkFlowThirdurl, headers=headers, json=data)
-        logging.info("提交审核接口'{}',请求参数为：{},的响应结果为:'{}'".format(operatingWorkFlowThirdurl,data, operatingWorkFlowThirdResp.text))
-        print("步骤9提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowThirdurl,data, operatingWorkFlowThirdResp.text))
+        logging.info(
+            "提交审核接口'{}',请求参数为：{},的响应结果为:'{}'".format(operatingWorkFlowThirdurl, data, operatingWorkFlowThirdResp.text))
+        print("步骤9提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowThirdurl, data,
+                                                         operatingWorkFlowThirdResp.text))
         return operatingWorkFlowThirdResp
 
     # 步骤10
@@ -649,16 +700,24 @@ class CreatUser():
         }
         print("data=", data)
         batchOperatingWorkFlowEndResp = s.post(url=batchOperatingWorkFlowEndurl, headers=headers, json=data)
-        logging.info("提交审核接口'{}';请求参数为:{};的响应结果为:'{}'".format(batchOperatingWorkFlowEndurl,data, batchOperatingWorkFlowEndResp.text))
-        print("步骤10提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(batchOperatingWorkFlowEndurl,data, batchOperatingWorkFlowEndResp.text))
+        logging.info("提交审核接口'{}';请求参数为:{};的响应结果为:'{}'".format(batchOperatingWorkFlowEndurl, data,
+                                                              batchOperatingWorkFlowEndResp.text))
+        print("步骤10提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(batchOperatingWorkFlowEndurl, data,
+                                                          batchOperatingWorkFlowEndResp.text))
         return batchOperatingWorkFlowEndResp
+
+    def SQLCheckUser(self):
+        time.sleep(10)
+        # 通过直接调用cd_enty表查询
+        CheckUsers = cd_enty(phone)
+        print("通过phone='{}'查询cd_enty表的结果为{}".format(phone, CheckUsers))
+        logging.info("通过'{}'查询cd_enty表的结果为{}".format(phone, CheckUsers))
+        return CheckUsers
 
 
 # ”if __name__=="__main__":“的作用在当前文件run时会执行下面的代码，如果时外部调用就不会执行if里面的代码
-
-
-if __name__=="__main__":
-    a=1
+if __name__ == "__main__":
+    a = 1
     CreatUser = CreatUser()
     for i in range(a):
         # 实例化CreatUser
@@ -682,6 +741,10 @@ if __name__=="__main__":
         time.sleep(4)
         print("步骤10：", CreatUser.batchOperatingWorkFlowEnd批量确认().text)
         time.sleep(4)
+        print("步骤11：", CreatUser.SQLCheckUser())
+        time.sleep(4)
+
+
 
 # if __name__=="__main__":
 #     CreatUser = CreatUser()

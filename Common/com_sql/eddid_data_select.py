@@ -29,8 +29,18 @@ def cd_exch(clientId,applyAmount):
     applyid = apply_id[0][0]
     return applyid
 
-if __name__=="__main__":
-    a=cd_ac('NORMAL','CASH','EQUITIES',11431)
-    print(a)
+#通过phoen查询注册账户信息
+def cd_enty(phone):
+    userinformation = SQL_Check.eddid_gfss_sit(database="eddid_gfss_sit",
+                                     sql="SELECT * FROM cd_enty WHERE phone='{}'".format(phone))
+    return userinformation
 
-# cd_exch()
+
+
+
+if __name__=="__main__":
+    # a=cd_ac('NORMAL','CASH','EQUITIES',11431)
+    # print(a)
+    print(cd_enty(16847802102))
+    print(cd_enty(16847802102)[0][4])
+

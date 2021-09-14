@@ -31,7 +31,8 @@ class CreateExchange():
         createExchangeturl = eddidhost + "/api/funds/createExchange"
         print("createExchangeturl为:", createExchangeturl)
 
-        # logging.info("提交审核获取到的手机号为：{}".format(phone))
+        logging.info("当前获取到applyAmount的值为：{}".format(applyAmount))
+        logging.info("查询数据库cd_ac查询到accountId的值为：{}".format(a))
         # global applyId
         # applyId = cd_clnt_apply_info(phone)
         print("查询数据库cd_ac查询到accountId的值为：{}".format(a))
@@ -70,7 +71,7 @@ class CreateExchange():
         auditExchangeurl = eddidhost + "/api/funds/auditExchange"
         print("auditExchangeurl为:", auditExchangeurl)
 
-        # logging.info("提交审核获取到的手机号为：{}".format(phone))
+        logging.info("查询数据库cd_exch查询到applyid的值为：{}".format(applyid))
         # global applyId
         # applyId = cd_clnt_apply_info(phone)
         print("查询数据库cd_exch查询到applyid的值为：{}".format(applyid))
@@ -78,7 +79,6 @@ class CreateExchange():
             "applyId": applyid,
             "approvalResult": "PASS",
             "fileList": [
-
             ],
             "statusCode": "SETL"
         }

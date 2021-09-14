@@ -2,6 +2,8 @@ import unittest
 import time
 import logging
 from Business.CreatUser import CreatUser
+from Common.com_sql import *
+from Common.data_文本读写 import *
 
 
 class Test_creatUser新建用户(unittest.TestCase):
@@ -77,6 +79,34 @@ class Test_creatUser新建用户(unittest.TestCase):
         self.assertEqual(200, batchOperatingWorkFlowEnd.status_code)
         self.assertEqual("操作成功", batchOperatingWorkFlowEnd.json().get("msg"))
         self.assertEqual(True, batchOperatingWorkFlowEnd.json().get("data")[0].get("result"))
+        print("已执行用例10=======")
+
+    def test_11_SQLCheckUser(self):
+        userinf=datahandle(data_read("F:\python\EDDID_CDMS\Data\userinformation.txt"))
+        logging.info("从文本中读到的用户基本信息为：{}".format(userinf))
+
+        SQLCheckUser=self.creatUser.SQLCheckUser()
+
+        # 检验电话
+        self.assertEqual(userinf[0], SQLCheckUser[0][18])
+        # 检验邮箱
+        self.assertEqual(userinf[1], SQLCheckUser[0][15])
+        # 检验英文姓
+        self.assertEqual(userinf[3], SQLCheckUser[0][10])
+        # 检验英文名
+        self.assertEqual(userinf[2], SQLCheckUser[0][9])
+        # 检验中文姓名
+        self.assertEqual(userinf[4], SQLCheckUser[0][13])
+        # 检验身份证
+        self.assertEqual(userinf[5], SQLCheckUser[0][4])
+        #非空校验
+        self.assertIsNotNone(SQLCheckUser)
+        self.assertEqual("PERSONAL", SQLCheckUser[0][2])
+
+        logging.info("已执行用例11，数据库校验已完成")
+        print("已执行用例11=======")
+
+
 
     #
     def tearDown(self):

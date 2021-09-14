@@ -191,9 +191,66 @@ class Randoms():
         # 拼接得到完整的18位身份证号
         return ident + key[summation % 11]
 
-# if __name__=="__main__":
-#     C=CreateRanDom()
-#     C.r_string()
+
+    #生成随机金额
+    def randomAmount(self):
+        rAmount=float(random.randint(1,100))+float('%.2f'%(random.random()))
+        return rAmount
+
+    #生成邮箱
+    # -*- coding:utf-8 -*-
+    def RandomEmail(emailType=None, rang=None):
+        __emailtype = ["@qq.com", "@163.com", "@126.com", "@189.com","@gzz.com","@edd.com"]
+        # 如果没有指定邮箱类型，默认在 __emailtype中随机一个
+        if emailType == None:
+            __randomEmail = random.choice(__emailtype)
+        else:
+            __randomEmail = emailType
+        # 如果没有指定邮箱长度，默认在4-10之间随机
+        if rang == None:
+            __rang = random.randint(8, 10)
+        else:
+            __rang = int(rang)
+        __Number = "0123456789qbcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPWRSTUVWXYZ"
+        __randomNumber = "".join(random.choice(__Number) for i in range(__rang))
+        _email = __randomNumber + __randomEmail
+        return _email
+
+    #生成英文姓氏
+    def creat_EFName(self):
+        EF = ["Baker", "Cook", "Miller", "Turner", "Smith", "London", "Hall", "Kent", "Mill", "Brook", "Churchill", "Hill",
+              "Green", "Wood", "Well", "Brown", "White", "Longman", "Sharp", "Yonng", "Back", "Hand", "Finger", "Brain",
+              "Bird", "Bull", "Cotton", "Fox", "Stock", "Cotton", "Reed", "George", "Henry", "David", "Clinton", "Macadam"]
+        Number = "0123456789qbcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPWRSTUVWXYZ"
+        FName = random.choice(EF)+ random.choice(Number)
+        return FName
+
+    #生成英文名字
+    def creat_ELName(self):
+        EL = ["Boyce", "Elvis", "Ziv", "Eudolf", "Steven", "Tyrone", "Owen", "Herman", "Andrew", "Vic", "Miles", "Eonald",
+              "Wden", "Will", "Eock", "Owen", "Abbott", "Cornelius", "Dali", "Fallon", "Harsh", "Kirby", "Vvincent"]
+        LName = random.choice(EL)
+        return LName
+
+
+    #生成中文姓氏
+    def creat_CFName(self):
+        CF=["李","王","张","刘","陈","杨","赵","冯","于","曹","袁","康","邱","秦","江","崔","白","郝","傅","曹","程","梁","胡","何","赵"]
+        FName = random.choice(CF)
+        return FName
+
+    #生成中文名字
+    def creat_CLName(self):
+        CL=["彩绘","浪花","米猪","一手","蜜蜂","菜花","西瓜","油条","大佬","细佬","大山","哦耶","一龙","奶油","大锤","悠悠"]
+        Number = "0123456789qbcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPWRSTUVWXYZ"
+
+        LName = random.choice(CL) + random.choice(Number)
+        return LName
+
+
+    #生成中文名
+
+
 
 if __name__ == '__main__':
     # Randoms().tax_code()
@@ -203,10 +260,10 @@ if __name__ == '__main__':
     # print(tel)
     # print(Randoms().number())
 
-    # 此处可以完善下，需要大量的身份证号的或者是需要做自动化的可以把身份证号做下去重之后再写进文件
-    for j in range(10):
-        print(Randoms().ident_generator())
+    # # 此处可以完善下，需要大量的身份证号的或者是需要做自动化的可以把身份证号做下去重之后再写进文件
+    # for j in range(10):
+    #     print(Randoms().ident_generator())
 
-
+    print(Randoms.RandomEmail())
 
 # 42 9004 19940327 117 5
