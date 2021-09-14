@@ -241,8 +241,8 @@ tr {
 }
 </style>
     <script language="javascript" type="text/javascript">
-var chartData_cn = [[12, '#1c965b', '通过'], [1, '#ff5722', '失败']];
-var chartData_en = [[12, '#1c965b', 'Passed'], [1, '#ff5722', 'Failed']];
+var chartData_cn = [[5, '#1c965b', '通过'], [7, '#ff5722', '失败'], [1, '#ff9800', '错误']];
+var chartData_en = [[5, '#1c965b', 'Passed'], [7, '#ff5722', 'Failed'], [1, '#ff9800', 'Error']];
 
 function addClass(e, c) {
   if (!isClass(e, c)) {
@@ -653,19 +653,19 @@ goChart(chartData_cn);
     <strong>
       <span class="lang-cn">启动时间：</span>
       <span class="lang-en">Start Time:</span>
-    </strong> 2021-09-14 18:37:35
+    </strong> 2021-09-14 19:19:41
   </p>
   <p class='attribute'>
     <strong>
       <span class="lang-cn">结束时间：</span>
       <span class="lang-en">End Time:</span>
-    </strong> 2021-09-14 18:39:35
+    </strong> 2021-09-14 19:21:46
   </p>
   <p class='attribute'>
     <strong>
       <span class="lang-cn">运行时长：</span>
       <span class="lang-en">Duration:</span>
-    </strong> 0:02:00.047374
+    </strong> 0:02:05.953471
   </p>
   <p class='attribute'>
     <strong>
@@ -675,11 +675,11 @@ goChart(chartData_cn);
     <span class="lang-cn">合计：</span>
     <span class="lang-en">Total:</span>13&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">通过：</span>
-    <span class="lang-en">Passed:</span>12&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="lang-en">Passed:</span>5&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">失败：</span>
-    <span class="lang-en">Failed:</span>1&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="lang-en">Failed:</span>7&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">错误：</span>
-    <span class="lang-en">Error:</span>0&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="lang-en">Error:</span>1&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">跳过：</span>
     <span class="lang-en">Skipped:</span>0&nbsp;&nbsp;&nbsp;&nbsp;
   </p>
@@ -765,15 +765,15 @@ goChart(chartData_cn);
             <span class="lang-en">View</span>
         </th>
     </tr>
-    <tr class='passClass'>
+    <tr class='errorClass'>
     <td>c1</td>
     <td>Test_Case.test_运营用户创建审批.Test_creatUser新建用户</td>
     <td>11</td>
-    <td class="passCase">11</td>
-    <td class="failCase">0</td>
-    <td class="errorCase">0</td>
+    <td class="passCase">4</td>
+    <td class="failCase">6</td>
+    <td class="errorCase">1</td>
     <td class="skipCase">0</td>
-    <td style="text-align:right;">100.00%</td>
+    <td style="text-align:right;">36.36%</td>
     <td>0</td>
     <td>
         <a href="javascript:showClassDetail('c1',11)">
@@ -805,16 +805,16 @@ goChart(chartData_cn);
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.1.1:
-2021-09-14 18:37:36,129   31388     INFO result.py(69) - 开始测试： test_01_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:37:36,129   31388     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
-2021-09-14 18:37:36,236   31388     INFO CreatUser.py(51) - 写入的文本路径为“F:\python\EDDID_CDMS\Data\data.txt”，写入数据为:['12786236810', 'dVWqnytJy3@163.com', 'Hillk', 'Eonald', '李细佬C', '330101197101311802']
-2021-09-14 18:37:36,838   31388     INFO CreatUser.py(66) - 当前token为:4AA2464CE650B1620B5A3C4DB0BCE0187AC79FFD18F78973
-2021-09-14 18:37:36,884   31388     INFO CreatUser.py(71) - 提交申请单时注册用户手机号码为：12786236810
-2021-09-14 18:37:37,120   31388     INFO CreatUser.py(246) - 步骤1接口'http://sit-cdms.ynm3k.com//api/client/applyClient';请求参数为:{'infos': [{'title': 'mr', 'informationType': 1, 'firstName': 'Hillk', 'lastName': 'Eonald', 'chName': '李细佬C', 'usedCnName': 'Eonald12786236810', 'usedChName': '李细佬C接口自动化创建账号', 'email': 'dVWqnytJy3@163.com', 'phoneAreaCode': 'CHN', 'phoneNo': '12786236810', 'houseAddress': '中英街12786236810号', 'houseAddressPinYin': 'zhon12786236810hao', 'postAddress': '接口自动化', 'natnlty': 'CHN', 'idCardType': '2', 'idCardNo': '330101197101311802', 'otherCardType': '', 'otherCardNo': '', 'countryIssue': 'CHN', 'overCountry': 'CHN', 'birthday': '1994-08-09', 'idExpiresDate': '2023-08-31', 'birthdayPlace': 'CHN', 'employmentStatus': 'self', 'post': 'businessOwner', 'workingYear': '11', 'companyName': '接口自动化12786236810', 'businessNature': 'wholesale&amp;retail', 'officeAddress': '4784551224512786236810', 'officePhone': '0771-12786236810', 'registeredCompany': 'Y', 'employmentRemark': '', 'totalIncomeYear': 'gt1000000', 'sourceOfIncome': ['selfOperatedBusinessIncome', 'salary'], 'sourceOfIncomeRemake': '', 'totalCapital': 'gt8000000', 'sourceOfCapital': ['salary', 'savings', 'pension'], 'sourceOfCapitalRemark': '', 'sourceOfMoney': ['selfOperated'], 'sourceOfMoneyRemark': '', 'securitiesExperience': 'gt10Years', 'cbbcExperience': 'gt10Years', 'warrantExperience': 'gt10Years', 'futuresExperience': 'gt10Years', 'optionsExperience': 'gt10Years', 'foreignExchangExperience': 'gt10Years', 'metalExperience': 'gt10Years', 'autoTransationExperience': 'gt10Years', 'otherInvest': '', 'otherExperience': '', 'withDerivativesKnowledge': 'Y', 'withDerivativesWoking': 'Y', 'withDerivativesDeal': 'Y', 'applicationOpenDerivatives': 'Y', 'understandTheRisks': 'Y', 'haveDeclaredBankruptcy': 'N', 'declaredBankruptcyDate': '', 'isInternalStaff': 'N', 'staffNameRelationship': '', 'relationshipWithInternalEmployees': 'Y', 'employeesName': '11212', 'isRegisteredPerson': 'N', 'registeredPersonRemark': '', 'isUsPerson': 'N', 'taxNumber': '', 'isUsTaxPerson': 'N', 'taxNumberTwo': '', 'isPepPerson': 'N', 'pepPersonName': '', 'investmentObjective': ['asset', 'income'], 'riskTolerance': 'high', 'throughChannels': ['lecture'], 'throughChannelRemark': '', 'isFinalBeneficiary': 'Y', 'finalBeneficiaryName': '', 'isFinalPrincipal': 'Y', 'finalPrincipalName': '', 'businessNatureRemark': ''}], 'marginAcctS': [], 'taxs': [{'residencyJurisdiction': 'CHN', 'taxNumber': '', 'resonType': 'A', 'resonRemark': ''}], 'attachs': {'passportMaterial': ['/hzlc_20210819191744.jpg'], 'addressVerificationMaterials': ['/hzlc_20210819191748.jpg'], 'bankCardMaterials': ['/hzlc_20210819191751.jpg'], 'proofOfIncome': ['/hzlc_20210819191759.jpg'], 'writtenApplicationMaterials': ['/APP_20200811142432_20210819191759.pdf'], 'otherInformation': ['/dinggg_20210819191801.jpg'], 'bankruptcyProve': [], 'acquaintHighLevelInstructionsProve': [], 'tradingAuthorization': []}, 'settleAcctS': [], 'clientType': 'PERSONAL', 'openWay': 'visitingAccount', 'bankName': '', 'bankCardNo': '', 'elecNo': '', 'responsible': 'kwokwah.wong', 'emailLanguage': 'zh-hant', 'accts': ['securitiesCash'], 'promotionNumber': 'EDAC520', 'agreeToTheTerms': 'true', 'personalInfoDeclartion': 'true'};响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
-2021-09-14 18:37:43,183   31388     INFO test_运营用户创建审批.py(115) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-09-14 18:37:43,212   31388     INFO result.py(156) - 测试执行通过： test_01_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:37:43,212   31388     INFO result.py(90) - 测试结束： test_01_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:37:43,227   31388     INFO result.py(91) - 耗时： 7.083073377609253
+2021-09-14 19:19:41,204    7532     INFO result.py(69) - 开始测试： test_01_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:19:41,204    7532     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-09-14 19:19:41,328    7532     INFO CreatUser.py(57) - 记录数据的文件名为：userdatainf.txt，写入数据为:['16363067331', 'x5oWnSO6R@163.com', 'Braino', 'Cornelius', '冯菜花j', '430101198604051115', 'miss']
+2021-09-14 19:19:43,952    7532     INFO CreatUser.py(72) - 当前token为:4AA2464CE650B162D841B22D9DAA52607AC79FFD18F78973
+2021-09-14 19:19:43,968    7532     INFO CreatUser.py(77) - 提交申请单时注册用户手机号码为：16363067331
+2021-09-14 19:19:44,249    7532     INFO CreatUser.py(252) - 步骤1接口'http://sit-cdms.ynm3k.com//api/client/applyClient';请求参数为:{'infos': [{'title': 'miss', 'informationType': 1, 'firstName': 'Braino', 'lastName': 'Cornelius', 'chName': '冯菜花j', 'usedCnName': 'Cornelius16363067331', 'usedChName': '冯菜花j接口自动化创建账号', 'email': 'x5oWnSO6R@163.com', 'phoneAreaCode': 'CHN', 'phoneNo': '16363067331', 'houseAddress': '中英街16363067331号', 'houseAddressPinYin': 'zhon16363067331hao', 'postAddress': '接口自动化', 'natnlty': 'CHN', 'idCardType': '2', 'idCardNo': '430101198604051115', 'otherCardType': '', 'otherCardNo': '', 'countryIssue': 'CHN', 'overCountry': 'CHN', 'birthday': '1994-08-09', 'idExpiresDate': '2023-08-31', 'birthdayPlace': 'CHN', 'employmentStatus': 'self', 'post': 'businessOwner', 'workingYear': '11', 'companyName': '接口自动化16363067331', 'businessNature': 'wholesale&amp;retail', 'officeAddress': '4784551224516363067331', 'officePhone': '0771-16363067331', 'registeredCompany': 'Y', 'employmentRemark': '', 'totalIncomeYear': 'gt1000000', 'sourceOfIncome': ['selfOperatedBusinessIncome', 'salary'], 'sourceOfIncomeRemake': '', 'totalCapital': 'gt8000000', 'sourceOfCapital': ['salary', 'savings', 'pension'], 'sourceOfCapitalRemark': '', 'sourceOfMoney': ['selfOperated'], 'sourceOfMoneyRemark': '', 'securitiesExperience': 'gt10Years', 'cbbcExperience': 'gt10Years', 'warrantExperience': 'gt10Years', 'futuresExperience': 'gt10Years', 'optionsExperience': 'gt10Years', 'foreignExchangExperience': 'gt10Years', 'metalExperience': 'gt10Years', 'autoTransationExperience': 'gt10Years', 'otherInvest': '', 'otherExperience': '', 'withDerivativesKnowledge': 'Y', 'withDerivativesWoking': 'Y', 'withDerivativesDeal': 'Y', 'applicationOpenDerivatives': 'Y', 'understandTheRisks': 'Y', 'haveDeclaredBankruptcy': 'N', 'declaredBankruptcyDate': '', 'isInternalStaff': 'N', 'staffNameRelationship': '', 'relationshipWithInternalEmployees': 'Y', 'employeesName': '11212', 'isRegisteredPerson': 'N', 'registeredPersonRemark': '', 'isUsPerson': 'N', 'taxNumber': '', 'isUsTaxPerson': 'N', 'taxNumberTwo': '', 'isPepPerson': 'N', 'pepPersonName': '', 'investmentObjective': ['asset', 'income'], 'riskTolerance': 'high', 'throughChannels': ['lecture'], 'throughChannelRemark': '', 'isFinalBeneficiary': 'Y', 'finalBeneficiaryName': '', 'isFinalPrincipal': 'Y', 'finalPrincipalName': '', 'businessNatureRemark': ''}], 'marginAcctS': [], 'taxs': [{'residencyJurisdiction': 'CHN', 'taxNumber': '', 'resonType': 'A', 'resonRemark': ''}], 'attachs': {'passportMaterial': ['/hzlc_20210819191744.jpg'], 'addressVerificationMaterials': ['/hzlc_20210819191748.jpg'], 'bankCardMaterials': ['/hzlc_20210819191751.jpg'], 'proofOfIncome': ['/hzlc_20210819191759.jpg'], 'writtenApplicationMaterials': ['/APP_20200811142432_20210819191759.pdf'], 'otherInformation': ['/dinggg_20210819191801.jpg'], 'bankruptcyProve': [], 'acquaintHighLevelInstructionsProve': [], 'tradingAuthorization': []}, 'settleAcctS': [], 'clientType': 'PERSONAL', 'openWay': 'visitingAccount', 'bankName': '', 'bankCardNo': '', 'elecNo': '', 'responsible': 'kwokwah.wong', 'emailLanguage': 'zh-hant', 'accts': ['securitiesCash'], 'promotionNumber': 'EDAC520', 'agreeToTheTerms': 'true', 'personalInfoDeclartion': 'true'};响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-09-14 19:19:50,304    7532     INFO test_运营用户创建审批.py(117) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-09-14 19:19:50,304    7532     INFO result.py(156) - 测试执行通过： test_01_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:19:50,319    7532     INFO result.py(90) - 测试结束： test_01_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:19:50,351    7532     INFO result.py(91) - 耗时： 9.115634202957153
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -843,16 +843,16 @@ goChart(chartData_cn);
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.2.1:
-2021-09-14 18:37:43,243   31388     INFO result.py(69) - 开始测试： test_02_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:37:43,243   31388     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
-2021-09-14 18:37:54,972   31388     INFO CreatUser.py(255) - *******************************************已完成修改WorldCheck的状态为FALSE*******************************************
-2021-09-14 18:38:05,001   31388     INFO CreatUser.py(263) - 当前token为:4AA2464CE650B1620B5A3C4DB0BCE0187AC79FFD18F78973
-2021-09-14 18:38:05,110   31388     INFO CreatUser.py(269) - 提交审核获取到的手机号为：12786236810
-2021-09-14 18:38:05,609   31388     INFO CreatUser.py(280) - 步骤2提交审核接口'http://sit-cdms.ynm3k.com//api/client/submitAudit';请求参数为:{'applyId': 1148866, 'clientSource': 'CDMS', 'workFlowCode': 'openClient'};响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
-2021-09-14 18:38:11,629   31388     INFO test_运营用户创建审批.py(115) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-09-14 18:38:11,629   31388     INFO result.py(156) - 测试执行通过： test_02_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:11,629   31388     INFO result.py(90) - 测试结束： test_02_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:11,645   31388     INFO result.py(91) - 耗时： 28.385491132736206
+2021-09-14 19:19:50,367    7532     INFO result.py(69) - 开始测试： test_02_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:19:50,367    7532     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-09-14 19:20:02,132    7532     INFO CreatUser.py(261) - *******************************************已完成修改WorldCheck的状态为FALSE*******************************************
+2021-09-14 19:20:12,158    7532     INFO CreatUser.py(269) - 当前token为:4AA2464CE650B162D841B22D9DAA52607AC79FFD18F78973
+2021-09-14 19:20:12,158    7532     INFO CreatUser.py(275) - 提交审核获取到的手机号为：16363067331
+2021-09-14 19:20:12,658    7532     INFO CreatUser.py(286) - 步骤2提交审核接口'http://sit-cdms.ynm3k.com//api/client/submitAudit';请求参数为:{'applyId': 1148870, 'clientSource': 'CDMS', 'workFlowCode': 'openClient'};响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-09-14 19:20:18,686    7532     INFO test_运营用户创建审批.py(117) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-09-14 19:20:18,702    7532     INFO result.py(156) - 测试执行通过： test_02_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:20:18,702    7532     INFO result.py(90) - 测试结束： test_02_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:20:18,718    7532     INFO result.py(91) - 耗时： 28.33505630493164
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -881,15 +881,15 @@ goChart(chartData_cn);
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.3.1:
-2021-09-14 18:38:11,661   31388     INFO result.py(69) - 开始测试： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:11,661   31388     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
-2021-09-14 18:38:11,661   31388     INFO CreatUser.py(291) - 当前token为:4AA2464CE650B1620B5A3C4DB0BCE0187AC79FFD18F78973
-2021-09-14 18:38:11,661   31388     INFO CreatUser.py(299) - 提交审核获取到的手机号为：12786236810
-2021-09-14 18:38:12,136   31388     INFO CreatUser.py(310) - 步骤3提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 1148866, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1148866","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
-2021-09-14 18:38:18,211   31388     INFO test_运营用户创建审批.py(115) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-09-14 18:38:18,211   31388     INFO result.py(156) - 测试执行通过： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:18,211   31388     INFO result.py(90) - 测试结束： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:18,227   31388     INFO result.py(91) - 耗时： 6.550464630126953
+2021-09-14 19:20:18,734    7532     INFO result.py(69) - 开始测试： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:20:18,734    7532     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-09-14 19:20:18,734    7532     INFO CreatUser.py(297) - 当前token为:4AA2464CE650B162D841B22D9DAA52607AC79FFD18F78973
+2021-09-14 19:20:18,734    7532     INFO CreatUser.py(305) - 提交审核获取到的手机号为：16363067331
+2021-09-14 19:20:19,263    7532     INFO CreatUser.py(316) - 步骤3提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 1148870, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1148870","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-09-14 19:20:25,282    7532     INFO test_运营用户创建审批.py(117) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-09-14 19:20:25,282    7532     INFO result.py(156) - 测试执行通过： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:20:25,298    7532     INFO result.py(90) - 测试结束： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:20:25,298    7532     INFO result.py(91) - 耗时： 6.563939809799194
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -918,270 +918,316 @@ goChart(chartData_cn);
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.4.1:
-2021-09-14 18:38:18,227   31388     INFO result.py(69) - 开始测试： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:18,227   31388     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
-2021-09-14 18:38:18,227   31388     INFO CreatUser.py(329) - 当前applyId为：1148866
-2021-09-14 18:38:18,337   31388     INFO CreatUser.py(353) - 步骤4提交审核接口'http://sit-cdms.ynm3k.com//api/client/saveRiskAssessment';请求参数为:{'applyId': 1148866, 'riskAssessmentInfoDTO': {'isAmlOrCft': 'true', 'isPeb': None, 'isPolice': None, 'isIcac': None, 'isHighRiskBusiness': None, 'isJfiu': None, 'isCorruption': None, 'isOtherInformation': None, 'nonFaceToFace': None, 'isUnemployed': None, 'isNonFatf': None, 'isNonFinancial': None, 'isTemporaryAddr': None, 'residence': '新西兰', 'otherInformation': '', 'riskAssessmentLevel': 'TERMINATE'}};响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
-2021-09-14 18:38:24,380   31388     INFO test_运营用户创建审批.py(115) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-09-14 18:38:24,380   31388     INFO result.py(156) - 测试执行通过： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:24,380   31388     INFO result.py(90) - 测试结束： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:24,395   31388     INFO result.py(91) - 耗时： 6.152536153793335
+2021-09-14 19:20:25,298    7532     INFO result.py(69) - 开始测试： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:20:25,298    7532     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-09-14 19:20:25,298    7532     INFO CreatUser.py(335) - 当前applyId为：1148870
+2021-09-14 19:20:27,412    7532     INFO CreatUser.py(359) - 步骤4提交审核接口'http://sit-cdms.ynm3k.com//api/client/saveRiskAssessment';请求参数为:{'applyId': 1148870, 'riskAssessmentInfoDTO': {'isAmlOrCft': 'true', 'isPeb': None, 'isPolice': None, 'isIcac': None, 'isHighRiskBusiness': None, 'isJfiu': None, 'isCorruption': None, 'isOtherInformation': None, 'nonFaceToFace': None, 'isUnemployed': None, 'isNonFatf': None, 'isNonFinancial': None, 'isTemporaryAddr': None, 'residence': '新西兰', 'otherInformation': '', 'riskAssessmentLevel': 'TERMINATE'}};响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-09-14 19:20:33,431    7532     INFO test_运营用户创建审批.py(117) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-09-14 19:20:33,431    7532     INFO result.py(156) - 测试执行通过： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:20:33,447    7532     INFO result.py(90) - 测试结束： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:20:33,462    7532     INFO result.py(91) - 耗时： 8.149348020553589
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
         </div>
     </td>
-</tr><tr id='pt1.5'>
-<td>pt1.5</td>
-    <td class='passCase' colspan='7'>
+</tr><tr id='ft1.5'>
+<td>ft1.5</td>
+    <td class='failCase' colspan='7'>
         <div class='testcase'>test_05_operatingWorkFlow内部人员审核</div>
     </td>
-    <td class='passCase'>
+    <td class='failCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
     </td>
-    <td class='passCase' align='center'>
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5.1',1, false)">
-            <span class="lang-cn">通过</span>
-            <span class="lang-en">pass</span>
+    <td class='failCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.5.1',1, false)">
+            <span class="lang-cn">失败</span>
+            <span class="lang-en">fail</span>
         </a>
     </td>
 </tr>
-<tr id='div_S_pt1.5.1' name='div_pt1.5.1' class="hiddenRow">
+<tr id='div_S_ft1.5.1' name='div_ft1.5.1' class="hiddenRow">
     <td colspan='10'>
         <div class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'
-                 onclick="document.getElementById('div_S_pt1.5.1').className = 'hiddenRow'">
+                 onclick="document.getElementById('div_S_ft1.5.1').className = 'hiddenRow'">
                 <a onfocus='this.blur();'>[x]</a>
             </div>
-            <pre>pt1.5.1:
-2021-09-14 18:38:24,410   31388     INFO result.py(69) - 开始测试： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:24,410   31388     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
-2021-09-14 18:38:24,410   31388     INFO CreatUser.py(365) - 当前token为:4AA2464CE650B1620B5A3C4DB0BCE0187AC79FFD18F78973
-2021-09-14 18:38:24,672   31388     INFO CreatUser.py(464) - 步骤5提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 1148866, 'checkItemList': [{'itemId': '1', 'itemCde': 'Application Form', 'itemDesc': 'Application Form', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '2', 'itemCde': 'Fee schedule', 'itemDesc': 'Fee schedule', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '3', 'itemCde': 'ID card Copy', 'itemDesc': 'ID card Copy', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '4', 'itemCde': 'SFC search', 'itemDesc': 'SFC search', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '5', 'itemCde': 'Worldcheck', 'itemDesc': 'Worldcheck', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '6', 'itemCde': 'Address Proof (if any)', 'itemDesc': 'Address Proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '7', 'itemCde': 'Bank proof (if any)', 'itemDesc': 'Bank proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '8', 'itemCde': 'Source of Fund (if any)', 'itemDesc': 'Source of Fund (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '9', 'itemCde': 'Source of Wealth (if any)', 'itemDesc': 'Source of Wealth (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '10', 'itemCde': 'Other', 'itemDesc': 'Other', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}], 'workFlowCode': 'openClient', 'controlCode': 'PASS', 'isStaff': 'false', 'lockBy': 'ED_RO', 'licensedPersonSign': ''};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1148866","applyNo":null,"result":true,"operatingMessage":""}]}'
-2021-09-14 18:38:30,700   31388     INFO test_运营用户创建审批.py(115) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-09-14 18:38:30,716   31388     INFO result.py(156) - 测试执行通过： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:30,716   31388     INFO result.py(90) - 测试结束： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:30,716   31388     INFO result.py(91) - 耗时： 6.306122064590454
+            <pre>ft1.5.1:
+2021-09-14 19:20:33,462    7532     INFO result.py(69) - 开始测试： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:20:33,462    7532     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-09-14 19:20:33,462    7532     INFO CreatUser.py(371) - 当前token为:4AA2464CE650B162D841B22D9DAA52607AC79FFD18F78973
+2021-09-14 19:20:33,961    7532     INFO CreatUser.py(470) - 步骤5提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 1148870, 'checkItemList': [{'itemId': '1', 'itemCde': 'Application Form', 'itemDesc': 'Application Form', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '2', 'itemCde': 'Fee schedule', 'itemDesc': 'Fee schedule', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '3', 'itemCde': 'ID card Copy', 'itemDesc': 'ID card Copy', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '4', 'itemCde': 'SFC search', 'itemDesc': 'SFC search', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '5', 'itemCde': 'Worldcheck', 'itemDesc': 'Worldcheck', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '6', 'itemCde': 'Address Proof (if any)', 'itemDesc': 'Address Proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '7', 'itemCde': 'Bank proof (if any)', 'itemDesc': 'Bank proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '8', 'itemCde': 'Source of Fund (if any)', 'itemDesc': 'Source of Fund (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '9', 'itemCde': 'Source of Wealth (if any)', 'itemDesc': 'Source of Wealth (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '10', 'itemCde': 'Other', 'itemDesc': 'Other', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}], 'workFlowCode': 'openClient', 'controlCode': 'PASS', 'isStaff': 'false', 'lockBy': 'ED_RO', 'licensedPersonSign': ''};响应结果为:'{"code":"MAS_01130","msg":"错误码:[MAS_01130],未完成 World Check 評估, 請先處理!","data":""}'
+2021-09-14 19:20:39,983    7532     INFO test_运营用户创建审批.py(117) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-09-14 19:20:40,044    7532  WARNING result.py(190) - 测试未通过： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 43, in test_05_operatingWorkFlow内部人员审核
+    self.assertEqual("操作成功", operatingWorkFlow.json().get("msg"))
+AssertionError: '操作成功' != '错误码:[MAS_01130],未完成 World Check 評估, 請先處理!'
+- 操作成功
++ 错误码:[MAS_01130],未完成 World Check 評估, 請先處理!
+
+
+2021-09-14 19:20:40,044    7532     INFO result.py(90) - 测试结束： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:20:40,044    7532     INFO result.py(91) - 耗时： 6.581429958343506
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
         </div>
     </td>
-</tr><tr id='pt1.6'>
-<td>pt1.6</td>
-    <td class='passCase' colspan='7'>
+</tr><tr id='ft1.6'>
+<td>ft1.6</td>
+    <td class='failCase' colspan='7'>
         <div class='testcase'>test_06_operatingWorkFlowNo不用锁定审核通过</div>
     </td>
-    <td class='passCase'>
+    <td class='failCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
     </td>
-    <td class='passCase' align='center'>
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6.1',1, false)">
-            <span class="lang-cn">通过</span>
-            <span class="lang-en">pass</span>
+    <td class='failCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.6.1',1, false)">
+            <span class="lang-cn">失败</span>
+            <span class="lang-en">fail</span>
         </a>
     </td>
 </tr>
-<tr id='div_S_pt1.6.1' name='div_pt1.6.1' class="hiddenRow">
+<tr id='div_S_ft1.6.1' name='div_ft1.6.1' class="hiddenRow">
     <td colspan='10'>
         <div class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'
-                 onclick="document.getElementById('div_S_pt1.6.1').className = 'hiddenRow'">
+                 onclick="document.getElementById('div_S_ft1.6.1').className = 'hiddenRow'">
                 <a onfocus='this.blur();'>[x]</a>
             </div>
-            <pre>pt1.6.1:
-2021-09-14 18:38:30,732   31388     INFO result.py(69) - 开始测试： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:30,732   31388     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
-2021-09-14 18:38:30,732   31388     INFO CreatUser.py(476) - 当前token为:4AA2464CE650B1620B5A3C4DB0BCE0187AC79FFD18F78973
-2021-09-14 18:38:30,732   31388     INFO CreatUser.py(482) - 提交审核获取到的手机号为：12786236810
-2021-09-14 18:38:30,947   31388     INFO CreatUser.py(485) - 当前applyId为：1148866
-2021-09-14 18:38:31,354   31388     INFO CreatUser.py(575) - 步骤6提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 1148866, 'checkItemList': [{'itemId': '1', 'itemCde': 'Application Form', 'itemDesc': 'Application Form', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '2', 'itemCde': 'Fee schedule', 'itemDesc': 'Fee schedule', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '3', 'itemCde': 'ID card Copy', 'itemDesc': 'ID card Copy', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '4', 'itemCde': 'SFC search', 'itemDesc': 'SFC search', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '5', 'itemCde': 'Worldcheck', 'itemDesc': 'Worldcheck', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '6', 'itemCde': 'Address Proof (if any)', 'itemDesc': 'Address Proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '7', 'itemCde': 'Bank proof (if any)', 'itemDesc': 'Bank proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '8', 'itemCde': 'Source of Fund (if any)', 'itemDesc': 'Source of Fund (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '9', 'itemCde': 'Source of Wealth (if any)', 'itemDesc': 'Source of Wealth (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '10', 'itemCde': 'Other', 'itemDesc': 'Other', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}], 'workFlowCode': 'openClient', 'controlCode': 'PASS'};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1148866","applyNo":null,"result":true,"operatingMessage":""}]}'
-2021-09-14 18:38:37,384   31388     INFO test_运营用户创建审批.py(115) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-09-14 18:38:37,384   31388     INFO result.py(156) - 测试执行通过： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:37,384   31388     INFO result.py(90) - 测试结束： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:37,400   31388     INFO result.py(91) - 耗时： 6.6520068645477295
+            <pre>ft1.6.1:
+2021-09-14 19:20:40,060    7532     INFO result.py(69) - 开始测试： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:20:40,060    7532     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-09-14 19:20:40,060    7532     INFO CreatUser.py(482) - 当前token为:4AA2464CE650B162D841B22D9DAA52607AC79FFD18F78973
+2021-09-14 19:20:40,060    7532     INFO CreatUser.py(488) - 提交审核获取到的手机号为：16363067331
+2021-09-14 19:20:40,390    7532     INFO CreatUser.py(491) - 当前applyId为：1148870
+2021-09-14 19:20:40,640    7532     INFO CreatUser.py(581) - 步骤6提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 1148870, 'checkItemList': [{'itemId': '1', 'itemCde': 'Application Form', 'itemDesc': 'Application Form', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '2', 'itemCde': 'Fee schedule', 'itemDesc': 'Fee schedule', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '3', 'itemCde': 'ID card Copy', 'itemDesc': 'ID card Copy', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '4', 'itemCde': 'SFC search', 'itemDesc': 'SFC search', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '5', 'itemCde': 'Worldcheck', 'itemDesc': 'Worldcheck', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '6', 'itemCde': 'Address Proof (if any)', 'itemDesc': 'Address Proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '7', 'itemCde': 'Bank proof (if any)', 'itemDesc': 'Bank proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '8', 'itemCde': 'Source of Fund (if any)', 'itemDesc': 'Source of Fund (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '9', 'itemCde': 'Source of Wealth (if any)', 'itemDesc': 'Source of Wealth (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '10', 'itemCde': 'Other', 'itemDesc': 'Other', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}], 'workFlowCode': 'openClient', 'controlCode': 'PASS'};响应结果为:'{"code":"MAS_01130","msg":"错误码:[MAS_01130],未完成 World Check 評估, 請先處理!","data":""}'
+2021-09-14 19:20:46,664    7532     INFO test_运营用户创建审批.py(117) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-09-14 19:20:46,680    7532  WARNING result.py(190) - 测试未通过： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 50, in test_06_operatingWorkFlowNo不用锁定审核通过
+    self.assertEqual("操作成功", operatingWorkFlowNo.json().get("msg"))
+AssertionError: '操作成功' != '错误码:[MAS_01130],未完成 World Check 評估, 請先處理!'
+- 操作成功
++ 错误码:[MAS_01130],未完成 World Check 評估, 請先處理!
+
+
+2021-09-14 19:20:46,680    7532     INFO result.py(90) - 测试结束： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:20:46,680    7532     INFO result.py(91) - 耗时： 6.620228052139282
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
         </div>
     </td>
-</tr><tr id='pt1.7'>
-<td>pt1.7</td>
-    <td class='passCase' colspan='7'>
+</tr><tr id='ft1.7'>
+<td>ft1.7</td>
+    <td class='failCase' colspan='7'>
         <div class='testcase'>test_07_operatingWorkFlowAgaint提交锁</div>
     </td>
-    <td class='passCase'>
+    <td class='failCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
     </td>
-    <td class='passCase' align='center'>
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.7.1',1, false)">
-            <span class="lang-cn">通过</span>
-            <span class="lang-en">pass</span>
+    <td class='failCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.7.1',1, false)">
+            <span class="lang-cn">失败</span>
+            <span class="lang-en">fail</span>
         </a>
     </td>
 </tr>
-<tr id='div_S_pt1.7.1' name='div_pt1.7.1' class="hiddenRow">
+<tr id='div_S_ft1.7.1' name='div_ft1.7.1' class="hiddenRow">
     <td colspan='10'>
         <div class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'
-                 onclick="document.getElementById('div_S_pt1.7.1').className = 'hiddenRow'">
+                 onclick="document.getElementById('div_S_ft1.7.1').className = 'hiddenRow'">
                 <a onfocus='this.blur();'>[x]</a>
             </div>
-            <pre>pt1.7.1:
-2021-09-14 18:38:37,400   31388     INFO result.py(69) - 开始测试： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:37,400   31388     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
-2021-09-14 18:38:37,400   31388     INFO CreatUser.py(593) - 提交审核获取到的手机号为：12786236810
-2021-09-14 18:38:38,868   31388     INFO CreatUser.py(604) - 提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 1148866, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1148866","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
-2021-09-14 18:38:44,934   31388     INFO test_运营用户创建审批.py(115) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-09-14 18:38:44,934   31388     INFO result.py(156) - 测试执行通过： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:44,950   31388     INFO result.py(90) - 测试结束： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:44,950   31388     INFO result.py(91) - 耗时： 7.54979395866394
+            <pre>ft1.7.1:
+2021-09-14 19:20:46,680    7532     INFO result.py(69) - 开始测试： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:20:46,681    7532     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-09-14 19:20:46,681    7532     INFO CreatUser.py(599) - 提交审核获取到的手机号为：16363067331
+2021-09-14 19:20:48,334    7532     INFO CreatUser.py(610) - 提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 1148870, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1148870","applyNo":null,"result":false,"operatingMessage":"当前用户没有权限锁定/解锁该记录"}]}'
+2021-09-14 19:20:54,356    7532     INFO test_运营用户创建审批.py(117) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-09-14 19:20:54,372    7532  WARNING result.py(190) - 测试未通过： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 58, in test_07_operatingWorkFlowAgaint提交锁
+    self.assertEqual("操作成功", operatingWorkFlowAgaint.json().get("data")[0].get("operatingMessage"))
+AssertionError: '操作成功' != '当前用户没有权限锁定/解锁该记录'
+- 操作成功
++ 当前用户没有权限锁定/解锁该记录
+
+
+2021-09-14 19:20:54,372    7532     INFO result.py(90) - 测试结束： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:20:54,388    7532     INFO result.py(91) - 耗时： 7.691413402557373
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
         </div>
     </td>
-</tr><tr id='pt1.8'>
-<td>pt1.8</td>
-    <td class='passCase' colspan='7'>
+</tr><tr id='ft1.8'>
+<td>ft1.8</td>
+    <td class='failCase' colspan='7'>
         <div class='testcase'>test_08_batchOperatingWorkFlow批量生成账号确定</div>
     </td>
-    <td class='passCase'>
+    <td class='failCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
     </td>
-    <td class='passCase' align='center'>
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.8.1',1, false)">
-            <span class="lang-cn">通过</span>
-            <span class="lang-en">pass</span>
+    <td class='failCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.8.1',1, false)">
+            <span class="lang-cn">失败</span>
+            <span class="lang-en">fail</span>
         </a>
     </td>
 </tr>
-<tr id='div_S_pt1.8.1' name='div_pt1.8.1' class="hiddenRow">
+<tr id='div_S_ft1.8.1' name='div_ft1.8.1' class="hiddenRow">
     <td colspan='10'>
         <div class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'
-                 onclick="document.getElementById('div_S_pt1.8.1').className = 'hiddenRow'">
+                 onclick="document.getElementById('div_S_ft1.8.1').className = 'hiddenRow'">
                 <a onfocus='this.blur();'>[x]</a>
             </div>
-            <pre>pt1.8.1:
-2021-09-14 18:38:44,950   31388     INFO result.py(69) - 开始测试： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:44,950   31388     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
-2021-09-14 18:38:45,650   31388     INFO CreatUser.py(639) - 提交审核接口'http://sit-cdms.ynm3k.com//api/common/batchOperatingWorkFlow';请求参数为:{'applyIds': [1148866], 'workFlowCode': 'openClient', 'controlCode': 'GENERATEACCTNO', 'workFlowOperatingDTOList': [{'applyId': 1148866}]};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1148866","applyNo":null,"result":true,"operatingMessage":null}]}'
-2021-09-14 18:38:51,679   31388     INFO test_运营用户创建审批.py(115) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-09-14 18:38:51,679   31388     INFO result.py(156) - 测试执行通过： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:51,679   31388     INFO result.py(90) - 测试结束： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:51,694   31388     INFO result.py(91) - 耗时： 6.728252649307251
+            <pre>ft1.8.1:
+2021-09-14 19:20:54,421    7532     INFO result.py(69) - 开始测试： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:20:54,421    7532     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-09-14 19:20:56,063    7532     INFO CreatUser.py(645) - 提交审核接口'http://sit-cdms.ynm3k.com//api/common/batchOperatingWorkFlow';请求参数为:{'applyIds': [1148870], 'workFlowCode': 'openClient', 'controlCode': 'GENERATEACCTNO', 'workFlowOperatingDTOList': [{'applyId': 1148870}]};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1148870","applyNo":null,"result":false,"operatingMessage":"您当前没权限进行此操作"}]}'
+2021-09-14 19:21:02,090    7532     INFO test_运营用户创建审批.py(117) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-09-14 19:21:02,106    7532  WARNING result.py(190) - 测试未通过： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 65, in test_08_batchOperatingWorkFlow批量生成账号确定
+    self.assertEqual(True, batchOperatingWorkFlow.json().get("data")[0].get("result"))
+AssertionError: True != False
+
+2021-09-14 19:21:02,106    7532     INFO result.py(90) - 测试结束： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:21:02,122    7532     INFO result.py(91) - 耗时： 7.685432195663452
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
         </div>
     </td>
-</tr><tr id='pt1.9'>
-<td>pt1.9</td>
-    <td class='passCase' colspan='7'>
+</tr><tr id='ft1.9'>
+<td>ft1.9</td>
+    <td class='failCase' colspan='7'>
         <div class='testcase'>test_09_operatingWorkFlowThird提交锁</div>
     </td>
-    <td class='passCase'>
+    <td class='failCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
     </td>
-    <td class='passCase' align='center'>
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.9.1',1, false)">
-            <span class="lang-cn">通过</span>
-            <span class="lang-en">pass</span>
+    <td class='failCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.9.1',1, false)">
+            <span class="lang-cn">失败</span>
+            <span class="lang-en">fail</span>
         </a>
     </td>
 </tr>
-<tr id='div_S_pt1.9.1' name='div_pt1.9.1' class="hiddenRow">
+<tr id='div_S_ft1.9.1' name='div_ft1.9.1' class="hiddenRow">
     <td colspan='10'>
         <div class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'
-                 onclick="document.getElementById('div_S_pt1.9.1').className = 'hiddenRow'">
+                 onclick="document.getElementById('div_S_ft1.9.1').className = 'hiddenRow'">
                 <a onfocus='this.blur();'>[x]</a>
             </div>
-            <pre>pt1.9.1:
-2021-09-14 18:38:51,694   31388     INFO result.py(69) - 开始测试： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:51,694   31388     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
-2021-09-14 18:38:51,694   31388     INFO CreatUser.py(656) - 提交审核获取到的手机号为：12786236810
-2021-09-14 18:38:51,932   31388     INFO CreatUser.py(659) - 当前applyId为：1148866
-2021-09-14 18:38:52,072   31388     INFO CreatUser.py(667) - 提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow',请求参数为：{'applyId': 1148866, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'},的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1148866","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
-2021-09-14 18:38:58,119   31388     INFO test_运营用户创建审批.py(115) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-09-14 18:38:58,119   31388     INFO result.py(156) - 测试执行通过： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:58,119   31388     INFO result.py(90) - 测试结束： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:58,135   31388     INFO result.py(91) - 耗时： 6.425062417984009
+            <pre>ft1.9.1:
+2021-09-14 19:21:02,154    7532     INFO result.py(69) - 开始测试： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:21:02,154    7532     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-09-14 19:21:02,154    7532     INFO CreatUser.py(662) - 提交审核获取到的手机号为：16363067331
+2021-09-14 19:21:02,702    7532     INFO CreatUser.py(665) - 当前applyId为：1148870
+2021-09-14 19:21:03,001    7532     INFO CreatUser.py(673) - 提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow',请求参数为：{'applyId': 1148870, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'},的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1148870","applyNo":null,"result":false,"operatingMessage":"当前用户没有权限锁定/解锁该记录"}]}'
+2021-09-14 19:21:09,052    7532     INFO test_运营用户创建审批.py(117) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-09-14 19:21:09,068    7532  WARNING result.py(190) - 测试未通过： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 73, in test_09_operatingWorkFlowThird提交锁
+    self.assertEqual("操作成功", operatingWorkFlowThird.json().get("data")[0].get("operatingMessage"))
+AssertionError: '操作成功' != '当前用户没有权限锁定/解锁该记录'
+- 操作成功
++ 当前用户没有权限锁定/解锁该记录
+
+
+2021-09-14 19:21:09,068    7532     INFO result.py(90) - 测试结束： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:21:09,068    7532     INFO result.py(91) - 耗时： 6.914490699768066
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
         </div>
     </td>
-</tr><tr id='pt1.10'>
-<td>pt1.10</td>
-    <td class='passCase' colspan='7'>
+</tr><tr id='ft1.10'>
+<td>ft1.10</td>
+    <td class='failCase' colspan='7'>
         <div class='testcase'>test_10_batchOperatingWorkFlowEnd批量确认</div>
     </td>
-    <td class='passCase'>
+    <td class='failCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
     </td>
-    <td class='passCase' align='center'>
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.10.1',1, false)">
-            <span class="lang-cn">通过</span>
-            <span class="lang-en">pass</span>
+    <td class='failCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.10.1',1, false)">
+            <span class="lang-cn">失败</span>
+            <span class="lang-en">fail</span>
         </a>
     </td>
 </tr>
-<tr id='div_S_pt1.10.1' name='div_pt1.10.1' class="hiddenRow">
+<tr id='div_S_ft1.10.1' name='div_ft1.10.1' class="hiddenRow">
     <td colspan='10'>
         <div class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'
-                 onclick="document.getElementById('div_S_pt1.10.1').className = 'hiddenRow'">
+                 onclick="document.getElementById('div_S_ft1.10.1').className = 'hiddenRow'">
                 <a onfocus='this.blur();'>[x]</a>
             </div>
-            <pre>pt1.10.1:
-2021-09-14 18:38:58,135   31388     INFO result.py(69) - 开始测试： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:38:58,135   31388     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
-2021-09-14 18:38:58,135   31388     INFO CreatUser.py(684) - 提交审核获取到的手机号为：12786236810
-2021-09-14 18:38:58,463   31388     INFO CreatUser.py(687) - 当前applyId为：1148866
-2021-09-14 18:38:59,059   31388     INFO CreatUser.py(703) - 提交审核接口'http://sit-cdms.ynm3k.com//api/common/batchOperatingWorkFlow';请求参数为:{'applyIds': [1148866], 'workFlowCode': 'openClient', 'controlCode': 'PASS', 'workFlowOperatingDTOList': [{'applyId': 1148866}]};的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1148866","applyNo":null,"result":true,"operatingMessage":null}]}'
-2021-09-14 18:39:05,090   31388     INFO test_运营用户创建审批.py(115) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-09-14 18:39:05,090   31388     INFO result.py(156) - 测试执行通过： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:39:05,090   31388     INFO result.py(90) - 测试结束： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:39:05,090   31388     INFO result.py(91) - 耗时： 6.955385684967041
+            <pre>ft1.10.1:
+2021-09-14 19:21:09,068    7532     INFO result.py(69) - 开始测试： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:21:09,068    7532     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-09-14 19:21:09,068    7532     INFO CreatUser.py(690) - 提交审核获取到的手机号为：16363067331
+2021-09-14 19:21:09,427    7532     INFO CreatUser.py(693) - 当前applyId为：1148870
+2021-09-14 19:21:10,658    7532     INFO CreatUser.py(709) - 提交审核接口'http://sit-cdms.ynm3k.com//api/common/batchOperatingWorkFlow';请求参数为:{'applyIds': [1148870], 'workFlowCode': 'openClient', 'controlCode': 'PASS', 'workFlowOperatingDTOList': [{'applyId': 1148870}]};的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1148870","applyNo":null,"result":false,"operatingMessage":"未完成 World Check 評估, 請先處理! "}]}'
+2021-09-14 19:21:16,679    7532     INFO test_运营用户创建审批.py(117) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-09-14 19:21:16,695    7532  WARNING result.py(190) - 测试未通过： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 81, in test_10_batchOperatingWorkFlowEnd批量确认
+    self.assertEqual(True, batchOperatingWorkFlowEnd.json().get("data")[0].get("result"))
+AssertionError: True != False
+
+2021-09-14 19:21:16,710    7532     INFO result.py(90) - 测试结束： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:21:16,710    7532     INFO result.py(91) - 耗时： 7.641546726226807
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
         </div>
     </td>
-</tr><tr id='pt1.11'>
-<td>pt1.11</td>
-    <td class='passCase' colspan='7'>
+</tr><tr id='et1.11'>
+<td>et1.11</td>
+    <td class='errorCase' colspan='7'>
         <div class='testcase'>test_11_SQLCheckUser</div>
     </td>
-    <td class='passCase'>
+    <td class='errorCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
     </td>
-    <td class='passCase' align='center'>
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.11.1',1, false)">
-            <span class="lang-cn">通过</span>
-            <span class="lang-en">pass</span>
+    <td class='errorCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.11.1',1, false)">
+            <span class="lang-cn">错误</span>
+            <span class="lang-en">error</span>
         </a>
     </td>
 </tr>
-<tr id='div_S_pt1.11.1' name='div_pt1.11.1' class="hiddenRow">
+<tr id='div_S_et1.11.1' name='div_et1.11.1' class="hiddenRow">
     <td colspan='10'>
         <div class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'
-                 onclick="document.getElementById('div_S_pt1.11.1').className = 'hiddenRow'">
+                 onclick="document.getElementById('div_S_et1.11.1').className = 'hiddenRow'">
                 <a onfocus='this.blur();'>[x]</a>
             </div>
-            <pre>pt1.11.1:
-2021-09-14 18:39:05,090   31388     INFO result.py(69) - 开始测试： test_11_SQLCheckUser (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:39:05,091   31388     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
-2021-09-14 18:39:05,186   31388     INFO test_运营用户创建审批.py(86) - 从文本中读到的用户基本信息为：['12786236810', 'dVWqnytJy3@163.com', 'Hillk', 'Eonald', '李细佬C', '330101197101311802']
-2021-09-14 18:39:15,888   31388     INFO CreatUser.py(714) - 通过'12786236810'查询cd_enty表的结果为((292471, None, 'PERSONAL', 'CHN', '330101197101311802', '2', datetime.date(2023, 8, 31), 'CHN', 'mr', 'Hillk', 'Eonald', 'Eonald12786236810', '李细佬C接口自动化创建账号', '李细佬C', 'M', 'dVWqnytJy3@163.com', None, 'CHN', '12786236810', None, '中英街12786236810号', 'zhon12786236810hao', '接口自动化', None, None, None, 'CHN', 'CHN', datetime.date(1994, 8, 9), 'CHN', 'Y', 'self', '', 'businessOwner', '11', '接口自动化12786236810', 'wholesale&amp;retail', '', '4784551224512786236810', None, '0771-12786236810', None, None, None, None, 'N', None, None, datetime.datetime(2021, 9, 14, 18, 38, 54), 'cdmstest', datetime.datetime(2021, 9, 14, 18, 38, 54), '', 1),)
-2021-09-14 18:39:15,888   31388     INFO test_运营用户创建审批.py(106) - 已执行用例11，数据库校验已完成
-2021-09-14 18:39:21,922   31388     INFO test_运营用户创建审批.py(115) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-09-14 18:39:21,922   31388     INFO result.py(156) - 测试执行通过： test_11_SQLCheckUser (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:39:21,922   31388     INFO result.py(90) - 测试结束： test_11_SQLCheckUser (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
-2021-09-14 18:39:21,937   31388     INFO result.py(91) - 耗时： 16.830982446670532
+            <pre>et1.11.1:
+2021-09-14 19:21:16,726    7532     INFO result.py(69) - 开始测试： test_11_SQLCheckUser (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:21:16,726    7532     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-09-14 19:21:16,726    7532     INFO test_运营用户创建审批.py(86) - 从文本中读到的用户基本信息为：['16363067331', 'x5oWnSO6R@163.com', 'Braino', 'Cornelius', '冯菜花j', '430101198604051115', 'miss']
+2021-09-14 19:21:27,636    7532     INFO CreatUser.py(720) - 通过'16363067331'查询cd_enty表的结果为()
+2021-09-14 19:21:33,682    7532     INFO test_运营用户创建审批.py(117) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-09-14 19:21:33,697    7532    ERROR result.py(175) - 测试产生错误： test_11_SQLCheckUser (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_运营用户创建审批.py", line 91, in test_11_SQLCheckUser
+    self.assertEqual(userinf[0], SQLCheckUser[0][18])
+IndexError: tuple index out of range
+
+2021-09-14 19:21:33,697    7532     INFO result.py(90) - 测试结束： test_11_SQLCheckUser (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-09-14 19:21:33,712    7532     INFO result.py(91) - 耗时： 16.971578121185303
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -1227,16 +1273,16 @@ goChart(chartData_cn);
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt2.1.1:
-2021-09-14 18:39:21,937   31388     INFO result.py(69) - 开始测试： test_01_createExchange创建换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
-2021-09-14 18:39:21,937   31388     INFO test_创建换汇申请单.py(12) - 初始化CreateExchange已完成
-2021-09-14 18:39:22,312   31388     INFO Creat创建换汇申请单.py(28) - 当前token为:4AA2464CE650B162EA68F8664CA2F45B7AC79FFD18F78973
-2021-09-14 18:39:22,343   31388     INFO Creat创建换汇申请单.py(34) - 当前获取到applyAmount的值为：11254
-2021-09-14 18:39:22,343   31388     INFO Creat创建换汇申请单.py(35) - 查询数据库cd_ac查询到accountId的值为：114311110
-2021-09-14 18:39:22,657   31388     INFO Creat创建换汇申请单.py(52) - 步骤1提交审核接口'http://sit-cdms.ynm3k.com//api/funds/createExchange';请求参数为:{'fromCurrency': 'HKD', 'toCurrency': 'USD', 'exchangeRate': 7.765, 'clientId': 11431, 'applyAmount': 11254, 'accountId': '114311110', 'accountCategory': 'securitiesCash', 'applySource': 4};响应结果为:'{"code":"0000","msg":"操作成功","data":true}'
-2021-09-14 18:39:28,722   31388     INFO test_创建换汇申请单.py(43) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-09-14 18:39:28,722   31388     INFO result.py(156) - 测试执行通过： test_01_createExchange创建换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
-2021-09-14 18:39:28,722   31388     INFO result.py(90) - 测试结束： test_01_createExchange创建换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
-2021-09-14 18:39:28,722   31388     INFO result.py(91) - 耗时： 6.7848427295684814
+2021-09-14 19:21:33,712    7532     INFO result.py(69) - 开始测试： test_01_createExchange创建换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-09-14 19:21:33,712    7532     INFO test_创建换汇申请单.py(12) - 初始化CreateExchange已完成
+2021-09-14 19:21:34,208    7532     INFO Creat创建换汇申请单.py(28) - 当前token为:4AA2464CE650B1620B3AB5F8B0DAEE917AC79FFD18F78973
+2021-09-14 19:21:34,208    7532     INFO Creat创建换汇申请单.py(34) - 当前获取到applyAmount的值为：11254
+2021-09-14 19:21:34,208    7532     INFO Creat创建换汇申请单.py(35) - 查询数据库cd_ac查询到accountId的值为：114311110
+2021-09-14 19:21:34,614    7532     INFO Creat创建换汇申请单.py(52) - 步骤1提交审核接口'http://sit-cdms.ynm3k.com//api/funds/createExchange';请求参数为:{'fromCurrency': 'HKD', 'toCurrency': 'USD', 'exchangeRate': 7.765, 'clientId': 11431, 'applyAmount': 11254, 'accountId': '114311110', 'accountCategory': 'securitiesCash', 'applySource': 4};响应结果为:'{"code":"0000","msg":"操作成功","data":true}'
+2021-09-14 19:21:40,677    7532     INFO test_创建换汇申请单.py(43) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-09-14 19:21:40,677    7532     INFO result.py(156) - 测试执行通过： test_01_createExchange创建换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-09-14 19:21:40,677    7532     INFO result.py(90) - 测试结束： test_01_createExchange创建换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-09-14 19:21:40,677    7532     INFO result.py(91) - 耗时： 6.964363098144531
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -1265,13 +1311,13 @@ goChart(chartData_cn);
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>ft2.2.1:
-2021-09-14 18:39:28,722   31388     INFO result.py(69) - 开始测试： test_02_auditExchange提交审核换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
-2021-09-14 18:39:28,723   31388     INFO test_创建换汇申请单.py(12) - 初始化CreateExchange已完成
-2021-09-14 18:39:29,874   31388     INFO Creat创建换汇申请单.py(68) - 当前token为:4AA2464CE650B162FC7B2ABBC8F26A9A7AC79FFD18F78973
-2021-09-14 18:39:29,875   31388     INFO Creat创建换汇申请单.py(74) - 查询数据库cd_exch查询到applyid的值为：3626
-2021-09-14 18:39:29,933   31388     INFO Creat创建换汇申请单.py(87) - 步骤2提交审核接口'http://sit-cdms.ynm3k.com//api/funds/auditExchange';请求参数为:{'applyId': 3626, 'approvalResult': 'PASS', 'fileList': [], 'statusCode': 'SETL'};响应结果为:'{"code":"CDMS_04010","msg":"错误码：[CDMS_04010]，您当前没权限进行此操作。","data":""}'
-2021-09-14 18:39:35,947   31388     INFO test_创建换汇申请单.py(43) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-09-14 18:39:35,947   31388  WARNING result.py(190) - 测试未通过： test_02_auditExchange提交审核换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-09-14 19:21:40,692    7532     INFO result.py(69) - 开始测试： test_02_auditExchange提交审核换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-09-14 19:21:40,692    7532     INFO test_创建换汇申请单.py(12) - 初始化CreateExchange已完成
+2021-09-14 19:21:40,912    7532     INFO Creat创建换汇申请单.py(68) - 当前token为:4AA2464CE650B162D48C67FD80CDCC0D7AC79FFD18F78973
+2021-09-14 19:21:40,912    7532     INFO Creat创建换汇申请单.py(74) - 查询数据库cd_exch查询到applyid的值为：3626
+2021-09-14 19:21:40,962    7532     INFO Creat创建换汇申请单.py(87) - 步骤2提交审核接口'http://sit-cdms.ynm3k.com//api/funds/auditExchange';请求参数为:{'applyId': 3626, 'approvalResult': 'PASS', 'fileList': [], 'statusCode': 'SETL'};响应结果为:'{"code":"CDMS_04010","msg":"错误码：[CDMS_04010]，您当前没权限进行此操作。","data":""}'
+2021-09-14 19:21:46,978    7532     INFO test_创建换汇申请单.py(43) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-09-14 19:21:46,978    7532  WARNING result.py(190) - 测试未通过： test_02_auditExchange提交审核换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
 Traceback (most recent call last):
   File "F:\python\EDDID_CDMS\Test_Case\test_创建换汇申请单.py", line 23, in test_02_auditExchange提交审核换汇申请单
     self.assertEqual("操作成功", auditExchange.json().get("msg"))
@@ -1280,8 +1326,8 @@ AssertionError: '操作成功' != '错误码：[CDMS_04010]，您当前没权限
 + 错误码：[CDMS_04010]，您当前没权限进行此操作。
 
 
-2021-09-14 18:39:35,947   31388     INFO result.py(90) - 测试结束： test_02_auditExchange提交审核换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
-2021-09-14 18:39:35,947   31388     INFO result.py(91) - 耗时： 7.224647760391235
+2021-09-14 19:21:46,978    7532     INFO result.py(90) - 测试结束： test_02_auditExchange提交审核换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-09-14 19:21:46,978    7532     INFO result.py(91) - 耗时： 6.286081075668335
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -1295,11 +1341,11 @@ AssertionError: '操作成功' != '错误码：[CDMS_04010]，您当前没权限
             <span class="lang-en">Total</span>
         </td>
         <td>13</td>
-        <td class="passCase">12</td>
-        <td class="failCase">1</td>
-        <td class="errorCase">0</td>
+        <td class="passCase">5</td>
+        <td class="failCase">7</td>
+        <td class="errorCase">1</td>
         <td class="skipCase">0</td>
-        <td style="text-align:right;">92.31%</td>
+        <td style="text-align:right;">38.46%</td>
         <td>0</td>
         <td>&nbsp;</td>
     </tr>

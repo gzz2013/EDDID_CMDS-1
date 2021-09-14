@@ -1,4 +1,4 @@
-import json
+# -*- coding:utf-8 -*-
 
 import requests
 from Business.login import cdms_获取token
@@ -30,10 +30,15 @@ class CreatUser():
         rlastName = Randoms().creat_ELName()
 
         # 中文名chName
-        rchName = Randoms().creat_CFName() + Randoms().creat_CLName()
+        rchName = Randoms().creat_CHName()
 
         # 生成身份证号
         idCardNo = Randoms().ident_generator()
+
+        #生成称谓（性别）
+        ctitle=Randoms().choice_title()
+
+
 
         #新列表用来存放用户基本信息
         userinformationList=[]
@@ -43,12 +48,13 @@ class CreatUser():
         userinformationList.append(rlastName)
         userinformationList.append(rchName)
         userinformationList.append(idCardNo)
+        userinformationList.append(ctitle)
         print("userinformationList:",userinformationList)
 
         # 将userinformationList写入文本
-        data_write("F:\python\EDDID_CDMS\Data\duserinformation.txt",userinformationList)
-        print("data写入的文本路径为“F:\python\EDDID_CDMS\Data\userinformation.txt”，写入数据为:{}".format(userinformationList))
-        logging.info("写入的文本路径为“F:\python\EDDID_CDMS\Data\userinformation.txt”，写入数据为:{}".format(userinformationList))
+        data_write('F:\\python\\EDDID_CDMS\\Data\\userdatainf.txt',userinformationList)
+        print("记录数据的文件名为：userdatainf.txt，写入数据为:{}".format(userinformationList))
+        logging.info("记录数据的文件名为：userdatainf.txt，写入数据为:{}".format(userinformationList))
 
 
 
@@ -72,7 +78,7 @@ class CreatUser():
         data = {
             "infos": [
                 {
-                    "title": "mr",
+                    "title": ctitle,
                     "informationType": 1,
                     "firstName": rfirstName,
                     "lastName": rlastName,
@@ -249,10 +255,14 @@ class CreatUser():
 
     # 步骤2
     def SubmitAudit提交审核(self):
-        time.sleep(11)
+
+        print("等待系统录入数据后再修改WorldCheck的状态，等待时间较长！")
+        logging.info("等待系统录入数据后再修改WorldCheck的状态，等待时间较长！")
+        time.sleep(20)
         cd_clnt_wc_match(phone)
         print("*******************************************已完成修改WorldCheck的状态为FALSE*******************************************")
         logging.info("*******************************************已完成修改WorldCheck的状态为FALSE*******************************************")
+
         # 必须要等待修改完成后才能提交审核
         time.sleep(10)
         headers = {

@@ -82,7 +82,7 @@ class Test_creatUser新建用户(unittest.TestCase):
         print("已执行用例10=======")
 
     def test_11_SQLCheckUser(self):
-        userinf=datahandle(data_read("F:\python\EDDID_CDMS\Data\userinformation.txt"))
+        userinf=datahandle(data_read('F:\\python\\EDDID_CDMS\\Data\\userdatainf.txt'))
         logging.info("从文本中读到的用户基本信息为：{}".format(userinf))
 
         SQLCheckUser=self.creatUser.SQLCheckUser()
@@ -99,6 +99,8 @@ class Test_creatUser新建用户(unittest.TestCase):
         self.assertEqual(userinf[4], SQLCheckUser[0][13])
         # 检验身份证
         self.assertEqual(userinf[5], SQLCheckUser[0][4])
+        # 检验称谓
+        self.assertEqual(userinf[6], SQLCheckUser[0][8])
         #非空校验
         self.assertIsNotNone(SQLCheckUser)
         self.assertEqual("PERSONAL", SQLCheckUser[0][2])

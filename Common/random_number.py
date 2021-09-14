@@ -234,21 +234,22 @@ class Randoms():
 
 
     #生成中文姓氏
-    def creat_CFName(self):
+    def creat_CHName(self):
         CF=["李","王","张","刘","陈","杨","赵","冯","于","曹","袁","康","邱","秦","江","崔","白","郝","傅","曹","程","梁","胡","何","赵"]
-        FName = random.choice(CF)
-        return FName
-
-    #生成中文名字
-    def creat_CLName(self):
         CL=["彩绘","浪花","米猪","一手","蜜蜂","菜花","西瓜","油条","大佬","细佬","大山","哦耶","一龙","奶油","大锤","悠悠"]
         Number = "0123456789qbcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPWRSTUVWXYZ"
-
+        FName = random.choice(CF)
         LName = random.choice(CL) + random.choice(Number)
-        return LName
+        CHName=FName + LName
+        return CHName
+
+    #随机选择性别
+    def choice_title(self):
+        T=["miss","mr","mrs"]
+        title = random.choice(T)
+        return title
 
 
-    #生成中文名
 
 
 
@@ -265,5 +266,6 @@ if __name__ == '__main__':
     #     print(Randoms().ident_generator())
 
     print(Randoms.RandomEmail())
+    print(Randoms().creat_CHName())
 
 # 42 9004 19940327 117 5

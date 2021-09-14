@@ -1,3 +1,5 @@
+#-*- coding:utf-8 -*-
+
 def data_read(file):
     with open(file, 'r',encoding="utf-8") as data_txt:
         for text in data_txt.readlines():
@@ -28,6 +30,6 @@ def datahandle(data):
 
 
 if __name__=='__main__':
-    # data_write(file="F:\python\EDDID_CDMS\Data\userinformation.txt", d='222')
-    q=data_read("/Data/userinformation.txt")
+    # data_write(file="F:\python\EDDID_CDMS\Data\userdatainf.txt", d='222')
+    q=data_read("/Data/userdatainf.txt")
     print("datahandle(q)",datahandle(q),type(datahandle(q)))
