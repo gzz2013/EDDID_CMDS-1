@@ -5,7 +5,6 @@ import pymysql
 class SQL_Check():
     # 账户中心数据库连接
     def coonect_db_zh(self,database, sql, charset='utf8'):
-
         conn = pymysql.connect(host="rm-wz94r73is5gxn6it59o.mysql.rds.aliyuncs.com", port=3306, user="eddid_dev",
                                passwd="eddid@123",
                                db=database, charset='utf8')
@@ -20,7 +19,6 @@ class SQL_Check():
             print('事务处理成功', cur.rowcount)
         results = cur.fetchall()
         return results
-
     "CMDS SIT数据库"
     def get_cdmsdb_con(self,database,sql,chartset='utf-8'):
 

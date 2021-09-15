@@ -37,9 +37,6 @@ class CreatUser():
 
         #生成称谓（性别）
         ctitle=Randoms().choice_title()
-
-
-
         #新列表用来存放用户基本信息
         userinformationList=[]
         userinformationList.append(phone)
@@ -76,164 +73,156 @@ class CreatUser():
         print("applyClienturl:", applyClienturl)
         logging.info("提交申请单时注册用户手机号码为：{}".format(phone))
         data = {
-            "infos": [
+            "infos":[
                 {
-                    "title": ctitle,
-                    "informationType": 1,
-                    "firstName": rfirstName,
-                    "lastName": rlastName,
-                    "chName": rchName,
-                    "usedCnName": rlastName + phone,
-                    "usedChName": rchName + "接口自动化创建账号",
-                    # "email": "544162008@qq.com",
-                    "email": cremail,
-                    "phoneAreaCode": "CHN",
-                    "phoneNo": phone,
-                    "houseAddress": "中英街" + phone + "号",
-                    "houseAddressPinYin": "zhon" + phone + "hao",
-                    "postAddress": "接口自动化",
-                    "natnlty": "CHN",
-                    "idCardType": "2",
-                    "idCardNo": idCardNo,
-                    "otherCardType": "",
-                    "otherCardNo": "",
-                    "countryIssue": "CHN",
-                    "overCountry": "CHN",
-                    "birthday": "1994-08-09",
-                    "idExpiresDate": "2023-08-31",
-                    "birthdayPlace": "CHN",
-                    "employmentStatus": "self",
-                    "post": "businessOwner",
-                    "workingYear": "11",
-                    "companyName": "接口自动化" + phone,
-                    "businessNature": "wholesale&retail",
-                    "officeAddress": "47845512245" + phone,
-                    "officePhone": "0771-" + phone,
-                    "registeredCompany": "Y",
-                    "employmentRemark": "",
-                    "totalIncomeYear": "gt1000000",
-                    "sourceOfIncome": [
-                        "selfOperatedBusinessIncome",
+                    "title":ctitle,
+                    "informationType":1,
+                    "firstName":rfirstName,
+                    "lastName":rlastName,
+                    "chName":rchName,
+                    "usedCnName":rlastName + phone,
+                    "usedChName":rchName + "接口自动化创建账号",
+                    "email":cremail,
+                    "phoneAreaCode":"CHN",
+                    "phoneNo":phone,
+                    "houseAddress":"中英街" + phone + "号",
+                    "houseAddressPinYin":"zhon" + phone + "hao",
+                    "postAddress":"接口自动化",
+                    "natnlty":"TWN",
+                    "idCardType":"1",
+                    "idCardNo":idCardNo,
+                    "otherCardType":"",
+                    "otherCardNo":"",
+                    "countryIssue":"CHN",
+                    "overCountry":"CHN",
+                    "birthday":"1993-11-01",
+                    "idExpiresDate":"2025-09-30",
+                    "birthdayPlace":"CHN",
+                    "employmentStatus":"employed",
+                    "post":"director&president",
+                    "workingYear":"11",
+                    "companyName":"大苏打",
+                    "businessNature":"wholesale&retail",
+                    "officeAddress":"大苏打大苏打",
+                    "officePhone":"0258545478",
+                    "registeredCompany":"",
+                    "employmentRemark":"",
+                    "totalIncomeYear":"gt1000000",
+                    "sourceOfIncome":[
+                        "selfOperatedBusinessIncome"
+                    ],
+                    "sourceOfIncomeRemake":"",
+                    "totalCapital":"gt8000000",
+                    "sourceOfCapital":[
+                        "vehicleInvestment",
                         "salary"
                     ],
-                    "sourceOfIncomeRemake": "",
-                    "totalCapital": "gt8000000",
-                    "sourceOfCapital": [
-                        "salary",
-                        "savings",
-                        "pension"
+                    "sourceOfCapitalRemark":"",
+                    "sourceOfMoney":[
+                        "savings"
                     ],
-                    "sourceOfCapitalRemark": "",
-                    "sourceOfMoney": [
-                        "selfOperated"
+                    "sourceOfMoneyRemark":"",
+                    "securitiesExperience":"gt10Years",
+                    "cbbcExperience":"gt10Years",
+                    "warrantExperience":"gt10Years",
+                    "futuresExperience":"gt10Years",
+                    "optionsExperience":"gt10Years",
+                    "foreignExchangExperience":"gt10Years",
+                    "metalExperience":"gt10Years",
+                    "autoTransationExperience":"gt10Years",
+                    "otherInvest":"",
+                    "otherExperience":"",
+                    "withDerivativesKnowledge":"Y",
+                    "withDerivativesWoking":"Y",
+                    "withDerivativesDeal":"N",
+                    "applicationOpenDerivatives":"N",
+                    "understandTheRisks":"",
+                    "haveDeclaredBankruptcy":"N",
+                    "declaredBankruptcyDate":"",
+                    "isInternalStaff":"N",
+                    "staffNameRelationship":"",
+                    "relationshipWithInternalEmployees":"N",
+                    "employeesName":"",
+                    "isRegisteredPerson":"N",
+                    "registeredPersonRemark":"",
+                    "isUsPerson":"N",
+                    "taxNumber":"",
+                    "isUsTaxPerson":"N",
+                    "taxNumberTwo":"",
+                    "isPepPerson":"N",
+                    "pepPersonName":"",
+                    "investmentObjective":[
+                        "speculation"
                     ],
-                    "sourceOfMoneyRemark": "",
-                    "securitiesExperience": "gt10Years",
-                    "cbbcExperience": "gt10Years",
-                    "warrantExperience": "gt10Years",
-                    "futuresExperience": "gt10Years",
-                    "optionsExperience": "gt10Years",
-                    "foreignExchangExperience": "gt10Years",
-                    "metalExperience": "gt10Years",
-                    "autoTransationExperience": "gt10Years",
-                    "otherInvest": "",
-                    "otherExperience": "",
-                    "withDerivativesKnowledge": "Y",
-                    "withDerivativesWoking": "Y",
-                    "withDerivativesDeal": "Y",
-                    "applicationOpenDerivatives": "Y",
-                    "understandTheRisks": "Y",
-                    "haveDeclaredBankruptcy": "N",
-                    "declaredBankruptcyDate": "",
-                    "isInternalStaff": "N",
-                    "staffNameRelationship": "",
-                    "relationshipWithInternalEmployees": "Y",
-                    "employeesName": "11212",
-                    "isRegisteredPerson": "N",
-                    "registeredPersonRemark": "",
-                    "isUsPerson": "N",
-                    "taxNumber": "",
-                    "isUsTaxPerson": "N",
-                    "taxNumberTwo": "",
-                    "isPepPerson": "N",
-                    "pepPersonName": "",
-                    "investmentObjective": [
-                        "asset",
-                        "income"
-                    ],
-                    "riskTolerance": "high",
-                    "throughChannels": [
+                    "riskTolerance":"high",
+                    "throughChannels":[
+                        "advertising",
                         "lecture"
                     ],
-                    "throughChannelRemark": "",
-                    "isFinalBeneficiary": "Y",
-                    "finalBeneficiaryName": "",
-                    "isFinalPrincipal": "Y",
-                    "finalPrincipalName": "",
-                    "businessNatureRemark": ""
+                    "throughChannelRemark":"",
+                    "isFinalBeneficiary":"Y",
+                    "finalBeneficiaryName":"",
+                    "isFinalPrincipal":"Y",
+                    "finalPrincipalName":"",
+                    "businessNatureRemark":""
                 }
             ],
-            "marginAcctS": [
+            "marginAcctS":[
 
             ],
-            "taxs": [
-                {
-                    "residencyJurisdiction": "CHN",
-                    "taxNumber": "",
-                    "resonType": "A",
-                    "resonRemark": ""
-                }
+            "taxs":[
+
             ],
-            "attachs": {
-                "passportMaterial": [
-                    "/hzlc_20210819191744.jpg"
+            "attachs":{
+                "passportMaterial":[
+                    "/dinggg_20210908162346.jpg"
                 ],
-                "addressVerificationMaterials": [
-                    "/hzlc_20210819191748.jpg"
+                "addressVerificationMaterials":[
+                    "/dinggg_20210908162349.jpg"
                 ],
-                "bankCardMaterials": [
-                    "/hzlc_20210819191751.jpg"
+                "bankCardMaterials":[
+                    "/hzlc_20210908162353.jpg"
                 ],
-                "proofOfIncome": [
-                    "/hzlc_20210819191759.jpg"
+                "writtenApplicationMaterials":[
+                    "/APP_20200811142432_20210908162403.pdf"
                 ],
-                "writtenApplicationMaterials": [
-                    "/APP_20200811142432_20210819191759.pdf"
+                "proofOfIncome":[
+                    "/dinggg_20210908162404.jpg"
                 ],
-                "otherInformation": [
-                    "/dinggg_20210819191801.jpg"
+                "otherInformation":[
+                    "/hzlc_20210908162407.jpg"
                 ],
-                "bankruptcyProve": [
+                "bankruptcyProve":[
 
                 ],
-                "acquaintHighLevelInstructionsProve": [
+                "acquaintHighLevelInstructionsProve":[
 
                 ],
-                "tradingAuthorization": [
+                "tradingAuthorization":[
 
                 ]
             },
-            "settleAcctS": [
+            "settleAcctS":[
 
             ],
-            "clientType": "PERSONAL",
-            "openWay": "visitingAccount",
-            "bankName": "",
-            "bankCardNo": "",
-            "elecNo": "",
-            "responsible": "kwokwah.wong",
-            "emailLanguage": "zh-hans",
+            "clientType":"PERSONAL",
+            "openWay":"visitingAccount",
+            "bankName":"",
+            "bankCardNo":"",
+            "elecNo":"",
+            "responsible":"ryan.chan",
+            # "emailLanguage": "zh-hans",
             # 简体
-            # "emailLanguage": "zh-hant",
+            "emailLanguage": "zh-hant",
             # 繁体
-            "accts": [
-                # "securitiesCash",
+            "accts":[
+                "securitiesCash",
                 # 证券现金
 
                 # "securitiesMargin",
                 # 证券保证金
 
-                "futuresMargin",
+                # "futuresMargin",
                 # 期货保证金
 
                 # "leveragedForeignExchangeAccountMargin",
@@ -242,9 +231,9 @@ class CreatUser():
                 # "securitiesAyersCash"
                 # #全权委托证券（现金）账户
             ],
-            "promotionNumber": "EDAC520",
-            "agreeToTheTerms": "true",
-            "personalInfoDeclartion": "true"
+            "promotionNumber":"EDAA520",
+            "agreeToTheTerms":"true",
+            "personalInfoDeclartion":"true"
         }
 
         applyClientResp = s.post(url=applyClienturl, headers=headers, json=data)
@@ -307,7 +296,8 @@ class CreatUser():
 
         logging.info("提交审核获取到的手机号为：{}".format(phone))
         # global applyId
-        # applyId = cd_clnt_apply_info(phone)[0][0]
+        # applyId = cd_clnt_apply_info(phone)
+        print("提交审核获取到的手机号为：{}".format(phone))
         print("查询数据库cd_clnt_apply_info查询到applyId的值为：{}".format(applyId))
         data = {
             "applyId": applyId,
@@ -489,6 +479,7 @@ class CreatUser():
 
         print("submitAuditurl为:", operatingWorkFlowNourl)
         logging.info("提交审核获取到的手机号为：{}".format(phone))
+        print("提交审核获取到的手机号为：{}".format(phone))
         # global applyId
         # applyId = cd_clnt_apply_info(phone)
         logging.info("当前applyId为：{}".format(applyId))
@@ -600,6 +591,7 @@ class CreatUser():
 
         print("submitAuditurl为:", operatingWorkFlowAgainturl)
         logging.info("提交审核获取到的手机号为：{}".format(phone))
+        print("提交审核获取到的手机号为：{}".format(phone))
         # global applyId
         # applyId = cd_clnt_apply_info(phone)
         print("查询数据库cd_clnt_apply_info查询到applyId的值为：{}".format(applyId))
@@ -663,7 +655,6 @@ class CreatUser():
         operatingWorkFlowThirdurl = eddidhost + "/api/common/operatingWorkFlow"
         print("submitAuditurl为:", operatingWorkFlowThirdurl)
         logging.info("提交审核获取到的手机号为：{}".format(phone))
-        print("提交审核获取到的手机号为：{}".format(phone))
         # global applyId
         # applyId = cd_clnt_apply_info(phone)
         logging.info("当前applyId为：{}".format(applyId))
@@ -717,7 +708,7 @@ class CreatUser():
                                                           batchOperatingWorkFlowEndResp.text))
         return batchOperatingWorkFlowEndResp
 
-
+    # 步骤11
     def SQLCheckUser(self):
         time.sleep(10)
         # 通过直接调用cd_enty表查询
@@ -727,7 +718,148 @@ class CreatUser():
         return CheckUsers
 
 
+   # 步骤12
+    def addAccountStructure增加结构性产品(self):
+        headers = {
+            "Accept": "application/json, text/javascript, */*; q=0.01",
+            "Connection": "keep-alive",
+            "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
+        }
+        # logging.info("当前token为:{}".format(token))
+        print("当前token为:{}".format(token))
+        print("headers", headers)
+        addAccountStructureurl = eddidhost + "/api/cdms/struc/addAccountStructure"
+        logging.info("提交审核获取到的手机号为：{}".format(phone))
+        print("提交审核获取到的手机号为：{}".format(phone))
+        # global applyId
+        # clnt_id = cd_clnt_apply_info(phone)[0][0]
+        global clnt_id,accountId,eddidId
 
+        clnt_id=cd_clnt_joint_enty(cd_enty(phone)[0][0])[0][1]
+
+        accountId=cd_ac(clnt_id)[0][0]
+
+        eddidId=cd_clnt(clnt_id)[0][3]
+
+        logging.info("获取到结构性产品的客户编号clnt_id为：{}，交易账户accountId为：{}，eddidId为：{}".format(clnt_id,accountId,eddidId))
+        print("获取到结构性产品的客户编号clnt_id为：{}，交易账户accountId为：{}，eddidId为：{}".format(clnt_id,accountId,eddidId))
+
+        data = {
+            "accountId":accountId,
+            "firstName":None,
+            "lastName":None,
+            "chineseName":rchName,
+            "eddidId":eddidId,
+            "accountCash":accountId,
+            "accountMargin":None,
+            "idUrlList":[
+                "/dinggg_20210908162346.jpg"
+            ],
+            "isOpenFuturesAcc":"false",
+            "cbbcExperience":"gt10Years",
+            "warrantExperience":"gt10Years",
+            "futuresExperience":"gt10Years",
+            "optionsExperience":"gt10Years",
+            "securitiesExperience":"gt10Years",
+            "otherInvest":"",
+            "otherExperience":"",
+            "isDerivativesKnowledge":"Y",
+            "isDerivativesWork":"Y",
+            "isDerivativesDeal":"N",
+            "exchInvestTargetList":[
+                "speculation"
+            ],
+            "exchRiskAppetite":"high",
+            "clientId":clnt_id,
+            "isStruc":"Y",
+            "isOpenClnt":"Y",
+            "applySource":"4"
+        }
+
+        print("data=", data)
+        addAccountStructureResp = s.post(url=addAccountStructureurl, headers=headers, json=data)
+        logging.info("提交审核接口'{}';请求参数为:{};的响应结果为:'{}'".format(addAccountStructureurl, data,
+                                                              addAccountStructureResp.text))
+        print("步骤11提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(addAccountStructureurl, data,
+                                                          addAccountStructureResp.text))
+        return addAccountStructureResp
+
+   # 步骤13
+    def addAccountStructure第一次审批(self):
+
+
+        headers = {
+            "Accept": "application/json, text/javascript, */*; q=0.01",
+            "Connection": "keep-alive",
+            "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
+        }
+        # logging.info("当前token为:{}".format(token))
+        print("当前token为:{}".format(token))
+        print("headers", headers)
+        auditAccountStructureurl = eddidhost + "/api/cdms/struc/auditAccountStructure"
+        logging.info("提交审核获取到的手机号为：{}".format(phone))
+        print("提交审核获取到的手机号为：{}".format(phone))
+        global Structureapplyid
+
+        Structureapplyid=cd_ac_struc_appl(clnt_id)[0][0]
+
+        logging.info("获取到结构性产品的申请单编号为：{}".format(Structureapplyid))
+        print("获取到结构性产品的申请单编号为：{}".format(Structureapplyid))
+
+        data = {
+            "id":Structureapplyid,
+            "approvalResult":"PASS",
+            "attachUrlList":[
+            ]
+        }
+        print("data=", data)
+        addAccountStructureResp = s.post(url=auditAccountStructureurl, headers=headers, json=data)
+        logging.info("提交审核接口'{}';请求参数为:{};的响应结果为:'{}'".format(auditAccountStructureurl, data,
+                                                              addAccountStructureResp.text))
+        print("步骤11提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(auditAccountStructureurl, data,
+                                                          addAccountStructureResp.text))
+        return addAccountStructureResp
+
+    # 步骤14
+    def addAccountStructure第二次审批(self):
+        headers = {
+            "Accept": "application/json, text/javascript, */*; q=0.01",
+            "Connection": "keep-alive",
+            "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
+        }
+
+        print("当前token为:{}".format(token))
+        print("headers", headers)
+        auditAccountStructureurl = eddidhost + "/api/cdms/struc/auditAccountStructure"
+        logging.info("提交审核获取到的手机号为：{}".format(phone))
+        print("提交审核获取到的手机号为：{}".format(phone))
+        Structureapplyid = cd_ac_struc_appl(clnt_id)[0][0]
+
+        logging.info("获取到结构性产品的申请单编号为：{}".format(Structureapplyid))
+        print("获取到结构性产品的申请单编号为：{}".format(Structureapplyid))
+        data = {
+            "id":Structureapplyid,
+            "approvalResult":"PASS",
+            "attachUrlList":[
+
+            ]
+        }
+        print("data=", data)
+        addAccountStructuresResp = s.post(url=auditAccountStructureurl, headers=headers, json=data)
+        logging.info("提交审核接口'{}';请求参数为:{};的响应结果为:'{}'".format(auditAccountStructureurl, data,
+                                                              addAccountStructuresResp.text))
+        print("步骤11提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(auditAccountStructureurl, data,
+                                                          addAccountStructuresResp.text))
+        return addAccountStructuresResp
+
+    # 步骤15
+    def SQLCheckcd_ac_struc_appl(self):
+        time.sleep(8)
+        # 通过直接调用cd_enty表查询
+        Checkcd_ac_struc_appl = cd_ac_struc_appl(clnt_id)
+        print("Structureapplyid='{}'查询cd_ac_struc_appl表的结果为{}".format(clnt_id, Checkcd_ac_struc_appl))
+        logging.info("通过'{}'查询cd_ac_struc_appl表的结果为{}".format(clnt_id, Checkcd_ac_struc_appl))
+        return Checkcd_ac_struc_appl
 
 
 
@@ -756,6 +888,16 @@ if __name__ == "__main__":
         print("=====================================步骤9：", CreatUser.operatingWorkFlowThird提交锁().text)
         time.sleep(4)
         print("=====================================步骤10：", CreatUser.batchOperatingWorkFlowEnd批量确认().text)
+
+        time.sleep(10)
+        print("=====================================步骤11：", CreatUser.addAccountStructure增加结构性产品())
+        time.sleep(4)
+        print("=====================================步骤12：", CreatUser.addAccountStructure结构性产品申请第一次审批().text)
+        time.sleep(4)
+        print("=====================================步骤13：", CreatUser.addAccountStructure结构性产品申请第二次审批().text)
+
+
+
         # time.sleep(4)
         # print("步骤11：", CreatUser.SQLCheckUser())
         # time.sleep(4)
