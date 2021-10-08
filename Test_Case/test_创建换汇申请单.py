@@ -46,18 +46,7 @@ class Test_CreateExchange新建换汇申请单(unittest.TestCase):
 
         print("已执行用例3===============================================================")
 
-    # def test_03_operatingWorkFlowFirst提交锁(self):
-    #     operatingWorkFlowFirst = self.creatUser.operatingWorkFlowFirst提交锁()
-    #     self.assertEqual(200, operatingWorkFlowFirst.status_code)
-    #     self.assertEqual("操作成功", operatingWorkFlowFirst.json().get("msg"))
-    #     self.assertEqual("操作成功", operatingWorkFlowFirst.json().get("data")[0].get("operatingMessage"))
-    #     print("已执行用例3=======")
-    #
-    # def test_04_saveRiskAssessment风控评估提交(self):
-    #     saveRiskAssessment = self.creatUser.saveRiskAssessment风控评估提交()
-    #     self.assertEqual(200, saveRiskAssessment.status_code)
-    #     self.assertEqual("操作成功", saveRiskAssessment.json().get("msg"))
-    #     print("已执行用例4=======")
+
 
     #
     def tearDown(self):

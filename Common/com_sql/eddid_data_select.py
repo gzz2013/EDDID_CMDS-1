@@ -74,4 +74,6 @@ if __name__=="__main__":
     print("cd_clnt_joint_enty:::",cd_clnt_joint_enty(cd_enty(16847802102)[0][0])[0][1])
     print("cd_ac:::", cd_ac(cd_clnt_joint_enty(cd_enty(16847802102)[0][0])[0][1])[0][0])
     print("cd_clnt:::", cd_clnt(500533)[0][3])
+    print("cd_ac:::1111",cd_ac(11431))
+
 

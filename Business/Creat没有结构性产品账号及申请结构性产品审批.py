@@ -281,6 +281,7 @@ class CreatUser():
 
     # 步骤3
     def operatingWorkFlowFirst提交锁(self):
+        time.sleep(20)
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",

@@ -19,7 +19,7 @@ class CreateExchange():
         applyAmount=Randoms().randomAmount()
 
         #查询符合条件的换汇账号
-        comp_account=cd_ac('NORMAL','CASH','EQUITIES',clientId)
+        comp_account=cd_ac(clientId)[0][0]
 
         token = cdms_获取token()
         s = requests.Session()
