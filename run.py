@@ -18,5 +18,6 @@ if __name__ == '__main__':
         title="EDDID_CDMS项目接口测试",
         description="如有疑问请联系-ganjiexiang",
         report_file_name="EDDID_CDMS项目接口测试",
+        #report_file_name字段不能改，关系到Jenkins的配置报告的生成
         thread_count=1
     ).run(suite)

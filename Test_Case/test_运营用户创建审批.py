@@ -108,7 +108,6 @@ class Test_creatUser新建用户(unittest.TestCase):
         print("已执行用例11===============================================================")
 
 
-
     def tearDown(self):
         a = 6
         time.sleep(a)

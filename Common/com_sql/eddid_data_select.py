@@ -69,7 +69,6 @@ if __name__=="__main__":
     print(cd_enty(16847802102))
     print("cd_enty:::",cd_enty(16847802102)[0][4])
     print("cd_clnt_apply_info:::",cd_clnt_apply_info(16847802102)[0][0])
-
     print("cd_enty2:::",cd_enty(16847802102)[0][0])
     print("cd_clnt_joint_enty:::",cd_clnt_joint_enty(cd_enty(16847802102)[0][0])[0][1])
     print("cd_ac:::", cd_ac(cd_clnt_joint_enty(cd_enty(16847802102)[0][0])[0][1])[0][0])
