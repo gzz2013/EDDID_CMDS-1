@@ -6,8 +6,8 @@ from Test_Suite import suite_运营用户创建审批,suite_运营用户创建�
 
 suite = unittest.TestSuite()
 
-# suite.addTests(suite_运营用户创建审批.get_suite_creatUser新建用户())
-# suite.addTests(suite_换汇申请单.get_suite_CreateExchange新建换汇申请单())
+suite.addTests(suite_运营用户创建审批.get_suite_creatUser新建用户())
+suite.addTests(suite_换汇申请单.get_suite_CreateExchange新建换汇申请单())
 suite.addTests(suite_运营用户创建结构性产品及审批.get_suite_creatUser没有结构性产品账号及申请结构性产品审批())
 
 
