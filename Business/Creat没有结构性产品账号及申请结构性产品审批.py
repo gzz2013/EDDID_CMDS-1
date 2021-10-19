@@ -246,13 +246,13 @@ class CreatUser():
 
         print("等待系统录入数据后再修改WorldCheck的状态，等待时间20s")
         logging.info("等待系统录入数据后再修改WorldCheck的状态，等待时间20s")
-        time.sleep(20)
+        time.sleep(30)
         cd_clnt_wc_match(phone)
         print("*******************************************已完成修改WorldCheck的状态为FALSE*******************************************")
         logging.info("*******************************************已完成修改WorldCheck的状态为FALSE*******************************************")
 
         # 必须要等待修改完成后才能提交审核
-        time.sleep(15)
+        time.sleep(40)
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
@@ -281,7 +281,7 @@ class CreatUser():
 
     # 步骤3
     def operatingWorkFlowFirst提交锁(self):
-        time.sleep(20)
+        time.sleep(30)
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",

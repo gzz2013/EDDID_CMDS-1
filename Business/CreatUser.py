@@ -255,15 +255,15 @@ class CreatUser():
     # 步骤2
     def SubmitAudit提交审核(self):
 
-        print("等待系统录入数据后再修改WorldCheck的状态，等待时间20s")
-        logging.info("等待系统录入数据后再修改WorldCheck的状态，等待时间20s")
-        time.sleep(20)
+        print("等待系统录入数据后再修改WorldCheck的状态，等待时间40s")
+        logging.info("等待系统录入数据后再修改WorldCheck的状态，等待时间40s")
+        time.sleep(30)
         cd_clnt_wc_match(phone)
         print("*******************************************已完成修改WorldCheck的状态为FALSE*******************************************")
         logging.info("*******************************************已完成修改WorldCheck的状态为FALSE*******************************************")
 
         # 必须要等待修改完成后才能提交审核
-        time.sleep(15)
+        time.sleep(40)
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
@@ -292,7 +292,7 @@ class CreatUser():
 
     # 步骤3
     def operatingWorkFlowFirst提交锁(self):
-        time.sleep(20)
+        time.sleep(35)
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
@@ -745,20 +745,20 @@ if __name__ == "__main__":
         time.sleep(10)
         print("=====================================步骤3：", CreatUser.operatingWorkFlowFirst提交锁().text)
         time.sleep(4)
-        print("=====================================步骤4：", CreatUser.saveRiskAssessment风控评估提交().text)
-        time.sleep(4)
-        print("=====================================步骤5：", CreatUser.operatingWorkFlow内部人员审核().text)
-        time.sleep(4)
-        print("=====================================步骤6：", CreatUser.operatingWorkFlowNo不用锁定审核通过().text)
-        time.sleep(4)
-        print("=====================================步骤7：", CreatUser.operatingWorkFlowAgain提交锁().text)
-        time.sleep(4)
-        print("=====================================步骤8：", CreatUser.batchOperatingWorkFlow批量生成账号确定().text)
-        time.sleep(4)
-        print("=====================================步骤9：", CreatUser.operatingWorkFlowThird提交锁().text)
-        time.sleep(4)
-        print("=====================================步骤10：", CreatUser.batchOperatingWorkFlowEnd批量确认().text)
+        # print("=====================================步骤4：", CreatUser.saveRiskAssessment风控评估提交().text)
         # time.sleep(4)
+        # print("=====================================步骤5：", CreatUser.operatingWorkFlow内部人员审核().text)
+        # time.sleep(4)
+        # print("=====================================步骤6：", CreatUser.operatingWorkFlowNo不用锁定审核通过().text)
+        # time.sleep(4)
+        # print("=====================================步骤7：", CreatUser.operatingWorkFlowAgain提交锁().text)
+        # time.sleep(4)
+        # print("=====================================步骤8：", CreatUser.batchOperatingWorkFlow批量生成账号确定().text)
+        # time.sleep(4)
+        # print("=====================================步骤9：", CreatUser.operatingWorkFlowThird提交锁().text)
+        # time.sleep(4)
+        # print("=====================================步骤10：", CreatUser.batchOperatingWorkFlowEnd批量确认().text)
+        # # time.sleep(4)
         # print("步骤11：", CreatUser.SQLCheckUser())
         # time.sleep(4)
 

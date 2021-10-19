@@ -1,19 +1,19 @@
 
 #环境配置
 # sit# 数据库
-url = "http://sit-cdms.ynm3k.com/"
-uatdatabase="eddid_gfss_sit"
+# url = "http://sit-cdms.ynm3k.com/"
+# uatdatabase="eddid_gfss_sit"
 
 # ***************************************
 
 # sit2# 数据库
-# url="http://sit-cdms2.ynm3k.com/"
-# uatdatabase="eddid_gfss_sit2"
+url="http://sit-cdms2.ynm3k.com/"
+uatdatabase="eddid_gfss_sit2"
 
 # ————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 #运营人员登录账户
-cdmsuser="cdmstest"
-# cdmsuser="ganjiexiang"
+# cdmsuser="cdmstest"
+cdmsuser="ganjiexiang"
 cdmsuserp="111111"
 # ————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 
