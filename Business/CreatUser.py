@@ -227,13 +227,13 @@ class CreatUser():
             # "emailLanguage": "zh-hant",
             # 繁体
             "accts": [
-                # "securitiesCash",
+                "securitiesCash",
                 # 证券现金
 
                 # "securitiesMargin",
                 # 证券保证金
 
-                "futuresMargin",
+                # "futuresMargin",
                 # 期货保证金
 
                 # "leveragedForeignExchangeAccountMargin",
@@ -745,22 +745,22 @@ if __name__ == "__main__":
         time.sleep(10)
         print("=====================================步骤3：", CreatUser.operatingWorkFlowFirst提交锁().text)
         time.sleep(4)
-        # print("=====================================步骤4：", CreatUser.saveRiskAssessment风控评估提交().text)
+        print("=====================================步骤4：", CreatUser.saveRiskAssessment风控评估提交().text)
+        time.sleep(4)
+        print("=====================================步骤5：", CreatUser.operatingWorkFlow内部人员审核().text)
+        time.sleep(4)
+        print("=====================================步骤6：", CreatUser.operatingWorkFlowNo不用锁定审核通过().text)
+        time.sleep(4)
+        print("=====================================步骤7：", CreatUser.operatingWorkFlowAgain提交锁().text)
+        time.sleep(4)
+        print("=====================================步骤8：", CreatUser.batchOperatingWorkFlow批量生成账号确定().text)
+        time.sleep(4)
+        print("=====================================步骤9：", CreatUser.operatingWorkFlowThird提交锁().text)
+        time.sleep(4)
+        print("=====================================步骤10：", CreatUser.batchOperatingWorkFlowEnd批量确认().text)
         # time.sleep(4)
-        # print("=====================================步骤5：", CreatUser.operatingWorkFlow内部人员审核().text)
-        # time.sleep(4)
-        # print("=====================================步骤6：", CreatUser.operatingWorkFlowNo不用锁定审核通过().text)
-        # time.sleep(4)
-        # print("=====================================步骤7：", CreatUser.operatingWorkFlowAgain提交锁().text)
-        # time.sleep(4)
-        # print("=====================================步骤8：", CreatUser.batchOperatingWorkFlow批量生成账号确定().text)
-        # time.sleep(4)
-        # print("=====================================步骤9：", CreatUser.operatingWorkFlowThird提交锁().text)
-        # time.sleep(4)
-        # print("=====================================步骤10：", CreatUser.batchOperatingWorkFlowEnd批量确认().text)
-        # # time.sleep(4)
-        # print("步骤11：", CreatUser.SQLCheckUser())
-        # time.sleep(4)
+        print("步骤11：", CreatUser.SQLCheckUser())
+        time.sleep(4)
 
 
 
