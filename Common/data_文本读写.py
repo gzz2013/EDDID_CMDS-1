@@ -5,14 +5,10 @@ def data_read(file):
         for text in data_txt.readlines():
             return text
 
-
 def data_write(file,d):
     with open(file,'w',encoding="utf-8") as data_txt:
         # data_txt.write(str(d))
         data_txt.writelines(str(d))
-        # data_txt.writelines("d,",{str(d)})
-
-        # data_txt.writelines("d",)
         # data_txt.writelines("d,",{str(d)})
 
 # 将从txt的列表数据中提取后转为LIST

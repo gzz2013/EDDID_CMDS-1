@@ -83,9 +83,7 @@ class Test_creatUser新建用户(unittest.TestCase):
     def test_11_SQLCheckUser(self):
         userinf=datahandle(data_read('F:\\python\\EDDID_CDMS\\Data\\userdatainf.txt'))
         logging.info("从文本中读到的用户基本信息为：{}".format(userinf))
-
         SQLCheckUser=self.creatUser.SQLCheckUser()
-
         # 检验电话
         self.assertEqual(userinf[0], SQLCheckUser[0][18])
         # 检验邮箱

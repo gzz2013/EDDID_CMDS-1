@@ -16,30 +16,20 @@ class CreatUser():
     # 步骤1
     def ApplyClinet资料提交(self):
         global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo
-
         # 生成电话号
         phone = Randoms().telephone()
-
         # 生成新邮箱
         cremail = Randoms.RandomEmail()
-
         # 英文名firstName
         rfirstName = Randoms().creat_EFName()
-
         # 英文名lastName
         rlastName = Randoms().creat_ELName()
-
         # 中文名chName
         rchName = Randoms().creat_CHName()
-
         # 生成身份证号
         idCardNo = Randoms().ident_generator()
-
         #生成称谓（性别）
         ctitle=Randoms().choice_title()
-
-
-
         #新列表用来存放用户基本信息
         userinformationList=[]
         userinformationList.append(phone)
@@ -50,20 +40,14 @@ class CreatUser():
         userinformationList.append(idCardNo)
         userinformationList.append(ctitle)
         print("userinformationList:",userinformationList)
-
         # 将userinformationList写入文本
         data_write('F:\\python\\EDDID_CDMS\\Data\\userdatainf.txt',userinformationList)
         print("记录数据的文件名为：userdatainf.txt，写入数据为:{}".format(userinformationList))
         logging.info("记录数据的文件名为：userdatainf.txt，写入数据为:{}".format(userinformationList))
-
-
-
         # 配置文件cdms_config中引入host
         eddidhost = url
-
         token = cdms_获取token()
         s = requests.Session()
-
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
@@ -214,7 +198,6 @@ class CreatUser():
                 ]
             },
             "settleAcctS": [
-
             ],
             "clientType": "PERSONAL",
             "openWay": "visitingAccount",
@@ -227,18 +210,14 @@ class CreatUser():
             # "emailLanguage": "zh-hant",
             # 繁体
             "accts": [
-                "securitiesCash",
+                # "securitiesCash",
                 # 证券现金
-
                 # "securitiesMargin",
                 # 证券保证金
-
                 # "futuresMargin",
                 # 期货保证金
-
-                # "leveragedForeignExchangeAccountMargin",
+                "leveragedForeignExchangeAccountMargin",
                 # 杠杆式外汇账户(保证金)
-
                 # "securitiesAyersCash"
                 # #全权委托证券（现金）账户
             ],
@@ -727,9 +706,6 @@ class CreatUser():
         print("通过phone='{}'查询cd_enty表的结果为{}".format(phone, CheckUsers))
         logging.info("通过'{}'查询cd_enty表的结果为{}".format(phone, CheckUsers))
         return CheckUsers
-
-
-
 
 
 
