@@ -30,6 +30,8 @@ class CreatUser():
         idCardNo = Randoms().ident_generator()
         #生成称谓（性别）
         ctitle=Randoms().choice_title()
+        # 获取随机的账户类型
+        caccts=Randoms().choice_accts()
         #新列表用来存放用户基本信息
         userinformationList=[]
         userinformationList.append(phone)
@@ -39,6 +41,7 @@ class CreatUser():
         userinformationList.append(rchName)
         userinformationList.append(idCardNo)
         userinformationList.append(ctitle)
+        userinformationList.append(caccts)
         print("userinformationList:",userinformationList)
         # 将userinformationList写入文本
         data_write('F:\\python\\EDDID_CDMS\\Data\\userdatainf.txt',userinformationList)
@@ -162,6 +165,7 @@ class CreatUser():
             ],
             "taxs": [
                 {
+                    #居住地
                     "residencyJurisdiction": "CHN",
                     "taxNumber": "",
                     "resonType": "A",
@@ -205,18 +209,19 @@ class CreatUser():
             "bankCardNo": "",
             "elecNo": "",
             "responsible": "kwokwah.wong",
-            "emailLanguage": "zh-hans",
+            # "emailLanguage": "zh-hans",
             # 简体
-            # "emailLanguage": "zh-hant",
+            "emailLanguage": "zh-hant",
             # 繁体
             "accts": [
+                caccts
                 # "securitiesCash",
                 # 证券现金
                 # "securitiesMargin",
                 # 证券保证金
                 # "futuresMargin",
                 # 期货保证金
-                "leveragedForeignExchangeAccountMargin",
+                # "leveragedForeignExchangeAccountMargin",
                 # 杠杆式外汇账户(保证金)
                 # "securitiesAyersCash"
                 # #全权委托证券（现金）账户

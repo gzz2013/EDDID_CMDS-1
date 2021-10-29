@@ -41,13 +41,9 @@ class Test_CreateExchange新建换汇申请单(unittest.TestCase):
         self.assertEqual(Txtexchorderinfor[1], SQLCheckexchorderinfor[0][3])
         #截取数据库的金额字段后再做比较
         self.assertEqual(float(Txtexchorderinfor[2]), float('%.2f'%(SQLCheckexchorderinfor[0][9])))
-
-
+        self.assertEqual(float(Txtexchorderinfor[3]), float('%.3f'%(SQLCheckexchorderinfor[0][7])))
 
         print("已执行用例3===============================================================")
-
-
-
     #
     def tearDown(self):
         a = 6

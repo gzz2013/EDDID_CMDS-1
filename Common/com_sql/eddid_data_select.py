@@ -62,6 +62,24 @@ def  cd_ac_struc_appl(clnt_id):
     return cd_ac_struc_appl
 
 
+#通过交易证券账号和金额查询出金申请单号
+def  cd_withdrawal(clnt_id,wd_amt):
+    cd_withdrawal = SQL_Check.eddid_gfss_sit(database=sqldata,
+                                     sql="select * from cd_withdrawal where clnt_id={} and wd_amt={}  ".format(clnt_id,wd_amt))
+    return cd_withdrawal
+
+#查询当前流程状态
+def  gs_wrkflw_log(apply_id):
+    gs_wrkflw_log = SQL_Check.eddid_gfss_sit(database=sqldata,
+                                     sql="select * from gs_wrkflw_log where apply_id={} ORDER BY init_time DESC  limit 1;".format(apply_id))
+    return gs_wrkflw_log
+
+
+#获取当前最新的汇率
+def  get_newrate():
+    gs_wrkflw_log=SQL_Check.eddid_gfss_sit(database=sqldata,
+                                     sql="select * from cd_exch_rate ORDER BY init_time DESC LIMIT 1;")
+    return gs_wrkflw_log
 
 if __name__=="__main__":
     # a=cd_ac('NORMAL','CASH','EQUITIES',11431)
@@ -74,5 +92,10 @@ if __name__=="__main__":
     print("cd_ac:::", cd_ac(cd_clnt_joint_enty(cd_enty(16847802102)[0][0])[0][1])[0][0])
     print("cd_clnt:::", cd_clnt(500533)[0][3])
     print("cd_ac:::1111",cd_ac(11431))
+    print("cd_withdrawal",cd_withdrawal(12071,14.45))
+    print("gs_wrkflw_log",gs_wrkflw_log(52155))
+    print("gs_wrkflw_log",gs_wrkflw_log(52154))
+    print("get_newrate",get_newrate())
+
 
 

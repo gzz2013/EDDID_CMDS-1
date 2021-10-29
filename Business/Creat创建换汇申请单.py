@@ -18,12 +18,12 @@ class CreateExchange():
         clientId=CreateExchangeclientId
         applyAmount=Randoms().randomAmount()
 
+        #从数据库中读取到的最新汇率数据库小数类型转化成python的浮点型
+        newrate=float('%.3f' % (get_newrate()[0][2]))
         #查询符合条件的换汇账号
         comp_account=cd_ac(clientId)[0][0]
-
         token = cdms_获取token()
         s = requests.Session()
-
         #引入url
         eddidhost = url
         headers = {
@@ -44,6 +44,7 @@ class CreateExchange():
         Exchangeoderinfor.append(clientId)
         Exchangeoderinfor.append(comp_account)
         Exchangeoderinfor.append(applyAmount)
+        Exchangeoderinfor.append(newrate)
         data_write('F:\\python\\EDDID_CDMS\\Data\\exchorderinfor.txt',Exchangeoderinfor)
 
         print("Exchangeoderinfor:",Exchangeoderinfor)
@@ -51,13 +52,13 @@ class CreateExchange():
         print("记录数据的文件名为：exchorderinfor.txt，写入数据为:{}".format(Exchangeoderinfor))
         logging.info("记录数据的文件名为：exchorderinfor.txt，写入数据为:{}".format(Exchangeoderinfor))
 
-
         print("查询数据库cd_ac查询到的换汇账号为{}".format(comp_account))
         print("当前获取到applyAmount的值为：{}".format(applyAmount))
         data = {
+            #港元兑换美元：持有港元*sell_rate(USD)
             "fromCurrency": "HKD",
             "toCurrency": "USD",
-            "exchangeRate": 7.76500,
+            "exchangeRate": newrate,
             "clientId": clientId,
             "applyAmount": applyAmount,
             "accountId": comp_account,
@@ -78,9 +79,7 @@ class CreateExchange():
         print("等待系统录入数据后再提交审批，等待时间15s")
         logging.info("等待系统录入数据后再提交审批，等待时间15s")
         time.sleep(15)
-
         applyid=cd_exch(clientId,applyAmount)[0][0]
-
         token = cdms_获取token()
         s = requests.Session()
         headers = {

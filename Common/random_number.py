@@ -249,6 +249,19 @@ class Randoms():
         title = random.choice(T)
         return title
 
+    #随机选择账户类型
+    def choice_accts(self):
+        T=["securitiesCash","securitiesMargin","futuresMargin","leveragedForeignExchangeAccountMargin","securitiesAyersCash",]
+        accts = random.choice(T)
+        return accts
+
+    #随机账户
+    def choice_clientId(self):
+        T=[11431,12071]
+        accts = random.choice(T)
+        return accts
+
+
 
 
 
