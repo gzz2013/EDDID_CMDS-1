@@ -7,7 +7,7 @@ from Common.com_sql.eddid_data_select import *
 from Config.cdms_config import *
 
 
-class CreatEquitiesWithdrawal():
+class CreatEquitiesWithdrawal出金():
 
     def createWithdrawal创建出金单(self):
         global clientId, withdrawalAmount, eddidhost, token, s
@@ -425,7 +425,7 @@ class CreatEquitiesWithdrawal():
 
 if __name__ == "__main__":
     a = 1
-    CreatEquitiesWithdrawal = CreatEquitiesWithdrawal()
+    CreatEquitiesWithdrawal = CreatEquitiesWithdrawal出金()
     for i in range(a):
         # 实例化CreatUser
         print("=====================================步骤1：", CreatEquitiesWithdrawal.createWithdrawal创建出金单().text)

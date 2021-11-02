@@ -241,8 +241,8 @@ tr {
 }
 </style>
     <script language="javascript" type="text/javascript">
-var chartData_cn = [[8, '#1c965b', '通过']];
-var chartData_en = [[8, '#1c965b', 'Passed']];
+var chartData_cn = [[12, '#1c965b', '通过']];
+var chartData_en = [[12, '#1c965b', 'Passed']];
 
 function addClass(e, c) {
   if (!isClass(e, c)) {
@@ -653,19 +653,19 @@ goChart(chartData_cn);
     <strong>
       <span class="lang-cn">启动时间：</span>
       <span class="lang-en">Start Time:</span>
-    </strong> 2021-10-29 17:46:16
+    </strong> 2021-11-02 17:38:51
   </p>
   <p class='attribute'>
     <strong>
       <span class="lang-cn">结束时间：</span>
       <span class="lang-en">End Time:</span>
-    </strong> 2021-10-29 17:55:39
+    </strong> 2021-11-02 17:53:52
   </p>
   <p class='attribute'>
     <strong>
       <span class="lang-cn">运行时长：</span>
       <span class="lang-en">Duration:</span>
-    </strong> 0:09:22.582199
+    </strong> 0:15:01.730554
   </p>
   <p class='attribute'>
     <strong>
@@ -673,9 +673,9 @@ goChart(chartData_cn);
       <span class="lang-en">Status:</span>
     </strong>
     <span class="lang-cn">合计：</span>
-    <span class="lang-en">Total:</span>8&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="lang-en">Total:</span>12&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">通过：</span>
-    <span class="lang-en">Passed:</span>8&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="lang-en">Passed:</span>12&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">失败：</span>
     <span class="lang-en">Failed:</span>0&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">错误：</span>
@@ -767,7 +767,7 @@ goChart(chartData_cn);
     </tr>
     <tr class='passClass'>
     <td>c1</td>
-    <td>Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal</td>
+    <td>Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金</td>
     <td>8</td>
     <td class="passCase">8</td>
     <td class="failCase">0</td>
@@ -805,14 +805,14 @@ goChart(chartData_cn);
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.1.1:
-2021-10-29 17:46:16,904    5600     INFO result.py(69) - 开始测试： test_01_createWithdrawal创建出金单 (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:46:16,905    5600     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
-2021-10-29 17:46:17,551    5600     INFO CreatEquitiesWithdrawal.py(34) - 当前token为:9F2BF5D1DBB334F4E1DD4B66F713DB937AC79FFD18F78973
-2021-10-29 17:46:17,932    5600     INFO CreatEquitiesWithdrawal.py(59) - 步骤1接口'http://sit-cdms.ynm3k.com//api/funds/createWithdrawal';请求参数为:{'clientId': 12071, 'actualAmountCurrency': 'HKD', 'withdrawalAmount': 60.77, 'accountId': 120711110, 'accountCategory': 'securitiesCash', 'clientBankAccountId': '1356', 'withdrawalType': 'LOCAL', 'applySource': 4, 'fileList': ['/hzlc_20211025162042.jpg'], 'serviceCurrency': 'HKD', 'serviceCharge': 0, 'actualAmount': 60.77, 'feeList': []};响应结果为：'{"code":"0000","msg":"操作成功","data":true}'
-2021-10-29 17:46:23,954    5600     INFO test_创建出金申请单.py(74) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-10-29 17:46:23,954    5600     INFO result.py(156) - 测试执行通过： test_01_createWithdrawal创建出金单 (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:46:23,969    5600     INFO result.py(90) - 测试结束： test_01_createWithdrawal创建出金单 (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:46:23,969    5600     INFO result.py(91) - 耗时： 7.064131498336792
+2021-11-02 17:38:51,271   14356     INFO result.py(69) - 开始测试： test_01_createWithdrawal创建出金单 (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:38:51,271   14356     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-02 17:38:51,903   14356     INFO CreatEquitiesWithdrawal出金.py(34) - 当前token为:9F2BF5D1DBB334F4DA3E1A5FE227828C7AC79FFD18F78973
+2021-11-02 17:38:52,437   14356     INFO CreatEquitiesWithdrawal出金.py(59) - 步骤1接口'http://sit-cdms.ynm3k.com//api/funds/createWithdrawal';请求参数为:{'clientId': 11431, 'actualAmountCurrency': 'HKD', 'withdrawalAmount': 25.25, 'accountId': 114311110, 'accountCategory': 'securitiesCash', 'clientBankAccountId': '1356', 'withdrawalType': 'LOCAL', 'applySource': 4, 'fileList': ['/hzlc_20211025162042.jpg'], 'serviceCurrency': 'HKD', 'serviceCharge': 0, 'actualAmount': 25.25, 'feeList': []};响应结果为：'{"code":"0000","msg":"操作成功","data":true}'
+2021-11-02 17:38:58,487   14356     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-02 17:38:58,487   14356     INFO result.py(156) - 测试执行通过： test_01_createWithdrawal创建出金单 (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:38:58,503   14356     INFO result.py(90) - 测试结束： test_01_createWithdrawal创建出金单 (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:38:58,503   14356     INFO result.py(91) - 耗时： 7.231749534606934
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -841,14 +841,14 @@ goChart(chartData_cn);
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.2.1:
-2021-10-29 17:46:23,969    5600     INFO result.py(69) - 开始测试： test_02_operatingWorkFlowNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:46:23,969    5600     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
-2021-10-29 17:46:24,325    5600     INFO CreatEquitiesWithdrawal.py(71) - 当前token为:9F2BF5D1DBB334F4E1DD4B66F713DB937AC79FFD18F78973
-2021-10-29 17:46:24,578    5600     INFO CreatEquitiesWithdrawal.py(83) - 步骤2接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 52211, 'workFlowCode': 'withdrawalApply', 'controlCode': 'LOCK'};响应结果为：'{"code":"0000","msg":"操作成功","data":[{"applyId":"52211","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
-2021-10-29 17:46:30,595    5600     INFO test_创建出金申请单.py(74) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-10-29 17:46:30,595    5600     INFO result.py(156) - 测试执行通过： test_02_operatingWorkFlowNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:46:30,611    5600     INFO result.py(90) - 测试结束： test_02_operatingWorkFlowNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:46:30,627    5600     INFO result.py(91) - 耗时： 6.642226457595825
+2021-11-02 17:38:58,519   14356     INFO result.py(69) - 开始测试： test_02_operatingWorkFlowNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:38:58,519   14356     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-02 17:38:58,927   14356     INFO CreatEquitiesWithdrawal出金.py(71) - 当前token为:9F2BF5D1DBB334F4DA3E1A5FE227828C7AC79FFD18F78973
+2021-11-02 17:38:59,162   14356     INFO CreatEquitiesWithdrawal出金.py(83) - 步骤2接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 52236, 'workFlowCode': 'withdrawalApply', 'controlCode': 'LOCK'};响应结果为：'{"code":"0000","msg":"操作成功","data":[{"applyId":"52236","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-11-02 17:39:05,244   14356     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-02 17:39:05,244   14356     INFO result.py(156) - 测试执行通过： test_02_operatingWorkFlowNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:39:05,244   14356     INFO result.py(90) - 测试结束： test_02_operatingWorkFlowNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:39:05,260   14356     INFO result.py(91) - 耗时： 6.725013494491577
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -877,14 +877,14 @@ goChart(chartData_cn);
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.3.1:
-2021-10-29 17:46:30,627    5600     INFO result.py(69) - 开始测试： test_03_auditWithdrawalNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:46:30,627    5600     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
-2021-10-29 17:46:30,627    5600     INFO CreatEquitiesWithdrawal.py(93) - 当前token为:9F2BF5D1DBB334F4E1DD4B66F713DB937AC79FFD18F78973
-2021-10-29 17:46:30,816    5600     INFO CreatEquitiesWithdrawal.py(112) - 步骤3接口'http://sit-cdms.ynm3k.com//api/funds/auditWithdrawal';请求参数为:{'applyId': 52211, 'approvalResult': 'CS2_PASS_8', 'fileList': [{'file': '/hzlc_20211025162042.jpg', 'type': 'user'}], 'statusCode': 'CS2_8', 'clientBankAccountName': '521423'};响应结果为：'{"code":"0000","msg":"操作成功","data":true}'
-2021-10-29 17:46:36,916    5600     INFO test_创建出金申请单.py(74) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-10-29 17:46:36,916    5600     INFO result.py(156) - 测试执行通过： test_03_auditWithdrawalNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:46:36,932    5600     INFO result.py(90) - 测试结束： test_03_auditWithdrawalNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:46:36,932    5600     INFO result.py(91) - 耗时： 6.304133892059326
+2021-11-02 17:39:05,260   14356     INFO result.py(69) - 开始测试： test_03_auditWithdrawalNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:39:05,260   14356     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-02 17:39:05,260   14356     INFO CreatEquitiesWithdrawal出金.py(93) - 当前token为:9F2BF5D1DBB334F4DA3E1A5FE227828C7AC79FFD18F78973
+2021-11-02 17:39:05,386   14356     INFO CreatEquitiesWithdrawal出金.py(112) - 步骤3接口'http://sit-cdms.ynm3k.com//api/funds/auditWithdrawal';请求参数为:{'applyId': 52236, 'approvalResult': 'CS2_PASS_8', 'fileList': [{'file': '/hzlc_20211025162042.jpg', 'type': 'user'}], 'statusCode': 'CS2_8', 'clientBankAccountName': '521423'};响应结果为：'{"code":"0000","msg":"操作成功","data":true}'
+2021-11-02 17:39:11,428   14356     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-02 17:39:11,428   14356     INFO result.py(156) - 测试执行通过： test_03_auditWithdrawalNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:39:11,428   14356     INFO result.py(90) - 测试结束： test_03_auditWithdrawalNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:39:11,443   14356     INFO result.py(91) - 耗时： 6.167506456375122
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -913,14 +913,14 @@ goChart(chartData_cn);
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.4.1:
-2021-10-29 17:46:36,932    5600     INFO result.py(69) - 开始测试： test_04_operatingWorkFlowTO (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:46:36,932    5600     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
-2021-10-29 17:46:36,932    5600     INFO CreatEquitiesWithdrawal.py(122) - 当前token为:9F2BF5D1DBB334F4E1DD4B66F713DB937AC79FFD18F78973
-2021-10-29 17:46:36,994    5600     INFO CreatEquitiesWithdrawal.py(134) - 步骤4接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 52211, 'workFlowCode': 'withdrawalApply', 'controlCode': 'LOCK'};响应结果为：'{"code":"0000","msg":"操作成功","data":[{"applyId":"52211","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
-2021-10-29 17:46:43,023    5600     INFO test_创建出金申请单.py(74) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-10-29 17:46:43,023    5600     INFO result.py(156) - 测试执行通过： test_04_operatingWorkFlowTO (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:46:43,023    5600     INFO result.py(90) - 测试结束： test_04_operatingWorkFlowTO (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:46:43,038    5600     INFO result.py(91) - 耗时： 6.0917041301727295
+2021-11-02 17:39:11,460   14356     INFO result.py(69) - 开始测试： test_04_operatingWorkFlowTO (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:39:11,460   14356     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-02 17:39:11,460   14356     INFO CreatEquitiesWithdrawal出金.py(122) - 当前token为:9F2BF5D1DBB334F4DA3E1A5FE227828C7AC79FFD18F78973
+2021-11-02 17:39:11,568   14356     INFO CreatEquitiesWithdrawal出金.py(134) - 步骤4接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 52236, 'workFlowCode': 'withdrawalApply', 'controlCode': 'LOCK'};响应结果为：'{"code":"0000","msg":"操作成功","data":[{"applyId":"52236","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-11-02 17:39:17,591   14356     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-02 17:39:17,607   14356     INFO result.py(156) - 测试执行通过： test_04_operatingWorkFlowTO (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:39:17,607   14356     INFO result.py(90) - 测试结束： test_04_operatingWorkFlowTO (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:39:17,623   14356     INFO result.py(91) - 耗时： 6.1476521492004395
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -949,14 +949,14 @@ goChart(chartData_cn);
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.5.1:
-2021-10-29 17:46:43,038    5600     INFO result.py(69) - 开始测试： test_05_auditWithdrawalTo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:46:43,038    5600     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
-2021-10-29 17:46:43,038    5600     INFO CreatEquitiesWithdrawal.py(144) - 当前token为:9F2BF5D1DBB334F4E1DD4B66F713DB937AC79FFD18F78973
-2021-10-29 17:46:43,148    5600     INFO CreatEquitiesWithdrawal.py(163) - 步骤5接口'http://sit-cdms.ynm3k.com//api/funds/auditWithdrawal';请求参数为:{'applyId': 52211, 'approvalResult': 'CLER_PASS_8', 'fileList': [{'file': '/hzlc_20211025162042.jpg', 'type': 'user'}], 'statusCode': 'CLER_8', 'clientBankAccountName': '521423'};响应结果为：'{"code":"0000","msg":"操作成功","data":true}'
-2021-10-29 17:54:49,240    5600     INFO test_创建出金申请单.py(74) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-10-29 17:54:49,272    5600     INFO result.py(156) - 测试执行通过： test_05_auditWithdrawalTo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:54:49,272    5600     INFO result.py(90) - 测试结束： test_05_auditWithdrawalTo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:54:49,288    5600     INFO result.py(91) - 耗时： 486.23401951789856
+2021-11-02 17:39:17,623   14356     INFO result.py(69) - 开始测试： test_05_auditWithdrawalTo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:39:17,623   14356     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-02 17:39:17,623   14356     INFO CreatEquitiesWithdrawal出金.py(144) - 当前token为:9F2BF5D1DBB334F4DA3E1A5FE227828C7AC79FFD18F78973
+2021-11-02 17:39:17,795   14356     INFO CreatEquitiesWithdrawal出金.py(163) - 步骤5接口'http://sit-cdms.ynm3k.com//api/funds/auditWithdrawal';请求参数为:{'applyId': 52236, 'approvalResult': 'CLER_PASS_8', 'fileList': [{'file': '/hzlc_20211025162042.jpg', 'type': 'user'}], 'statusCode': 'CLER_8', 'clientBankAccountName': '521423'};响应结果为：'{"code":"0000","msg":"操作成功","data":true}'
+2021-11-02 17:47:23,882   14356     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-02 17:47:23,882   14356     INFO result.py(156) - 测试执行通过： test_05_auditWithdrawalTo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:47:23,882   14356     INFO result.py(90) - 测试结束： test_05_auditWithdrawalTo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:47:23,898   14356     INFO result.py(91) - 耗时： 486.2588691711426
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -985,14 +985,14 @@ goChart(chartData_cn);
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.6.1:
-2021-10-29 17:54:49,288    5600     INFO result.py(69) - 开始测试： test_06_get_current_state (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:54:49,288    5600     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
-2021-10-29 17:54:59,976    5600     INFO CreatEquitiesWithdrawal.py(198) - 当前token为:9F2BF5D1DBB334F4E1DD4B66F713DB937AC79FFD18F78973
-2021-10-29 17:55:20,676    5600     INFO CreatEquitiesWithdrawal.py(281) - 步骤6接口'http://sit-cdms.ynm3k.com//api/funds/auditWithdrawal';请求参数为:{'applyId': 52211, 'approvalResult': 'RO_PASS_8', 'fileList': [{'file': '/hzlc_20211025162042.jpg', 'type': 'user'}], 'statusCode': 'RO_8', 'clientBankAccountName': '521423'};响应结果为：'{"code":"0000","msg":"操作成功","data":true}'
-2021-10-29 17:55:26,695    5600     INFO test_创建出金申请单.py(74) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-10-29 17:55:26,711    5600     INFO result.py(156) - 测试执行通过： test_06_get_current_state (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:55:26,711    5600     INFO result.py(90) - 测试结束： test_06_get_current_state (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:55:26,727    5600     INFO result.py(91) - 耗时： 37.42317318916321
+2021-11-02 17:47:23,898   14356     INFO result.py(69) - 开始测试： test_06_get_current_state (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:47:23,898   14356     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-02 17:47:35,767   14356     INFO CreatEquitiesWithdrawal出金.py(260) - 当前token为:9F2BF5D1DBB334F4DA3E1A5FE227828C7AC79FFD18F78973
+2021-11-02 17:47:36,269   14356     INFO CreatEquitiesWithdrawal出金.py(281) - 步骤6接口'http://sit-cdms.ynm3k.com//api/funds/auditWithdrawal';请求参数为:{'applyId': 52236, 'approvalResult': 'RO_PASS_8', 'fileList': [{'file': '/hzlc_20211025162042.jpg', 'type': 'user'}], 'statusCode': 'RO_8', 'clientBankAccountName': '521423'};响应结果为：'{"code":"0000","msg":"操作成功","data":true}'
+2021-11-02 17:47:42,291   14356     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-02 17:47:42,291   14356     INFO result.py(156) - 测试执行通过： test_06_get_current_state (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:47:42,307   14356     INFO result.py(90) - 测试结束： test_06_get_current_state (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:47:42,307   14356     INFO result.py(91) - 耗时： 18.4087655544281
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -1021,14 +1021,14 @@ goChart(chartData_cn);
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.7.1:
-2021-10-29 17:55:26,742    5600     INFO result.py(69) - 开始测试： test_07_operatingWorkFlowfourth (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:55:26,743    5600     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
-2021-10-29 17:55:26,743    5600     INFO CreatEquitiesWithdrawal.py(376) - 当前token为:9F2BF5D1DBB334F4E1DD4B66F713DB937AC79FFD18F78973
-2021-10-29 17:55:26,836    5600     INFO CreatEquitiesWithdrawal.py(388) - 步骤7接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 52211, 'workFlowCode': 'withdrawalApply', 'controlCode': 'LOCK'};响应结果为：'{"code":"0000","msg":"操作成功","data":[{"applyId":"52211","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
-2021-10-29 17:55:32,863    5600     INFO test_创建出金申请单.py(74) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-10-29 17:55:32,863    5600     INFO result.py(156) - 测试执行通过： test_07_operatingWorkFlowfourth (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:55:32,879    5600     INFO result.py(90) - 测试结束： test_07_operatingWorkFlowfourth (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:55:32,879    5600     INFO result.py(91) - 耗时： 6.136447906494141
+2021-11-02 17:47:42,307   14356     INFO result.py(69) - 开始测试： test_07_operatingWorkFlowfourth (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:47:42,307   14356     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-02 17:47:42,307   14356     INFO CreatEquitiesWithdrawal出金.py(376) - 当前token为:9F2BF5D1DBB334F4DA3E1A5FE227828C7AC79FFD18F78973
+2021-11-02 17:47:42,415   14356     INFO CreatEquitiesWithdrawal出金.py(388) - 步骤7接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 52236, 'workFlowCode': 'withdrawalApply', 'controlCode': 'LOCK'};响应结果为：'{"code":"0000","msg":"操作成功","data":[{"applyId":"52236","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-11-02 17:47:48,462   14356     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-02 17:47:48,462   14356     INFO result.py(156) - 测试执行通过： test_07_operatingWorkFlowfourth (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:47:48,462   14356     INFO result.py(90) - 测试结束： test_07_operatingWorkFlowfourth (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:47:48,478   14356     INFO result.py(91) - 耗时： 6.155290842056274
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -1057,14 +1057,175 @@ goChart(chartData_cn);
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.8.1:
-2021-10-29 17:55:32,879    5600     INFO result.py(69) - 开始测试： test_08_auditWithdrawalAcctPass (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:55:32,880    5600     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
-2021-10-29 17:55:32,880    5600     INFO CreatEquitiesWithdrawal.py(400) - 当前token为:9F2BF5D1DBB334F4E1DD4B66F713DB937AC79FFD18F78973
-2021-10-29 17:55:33,287    5600     INFO CreatEquitiesWithdrawal.py(419) - 步骤8接口'http://sit-cdms.ynm3k.com//api/funds/auditWithdrawal';请求参数为:{'applyId': 52211, 'approvalResult': 'ACCT_PASS_8', 'fileList': [{'file': '/hzlc_20211025162042.jpg', 'type': 'user'}], 'statusCode': 'ACCT_8', 'clientBankAccountName': '521423'};响应结果为：'{"code":"0000","msg":"操作成功","data":true}'
-2021-10-29 17:55:39,293    5600     INFO test_创建出金申请单.py(74) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-10-29 17:55:39,293    5600     INFO result.py(156) - 测试执行通过： test_08_auditWithdrawalAcctPass (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:55:39,293    5600     INFO result.py(90) - 测试结束： test_08_auditWithdrawalAcctPass (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal)
-2021-10-29 17:55:39,293    5600     INFO result.py(91) - 耗时： 6.413557767868042
+2021-11-02 17:47:48,478   14356     INFO result.py(69) - 开始测试： test_08_auditWithdrawalAcctPass (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:47:48,478   14356     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-02 17:47:48,478   14356     INFO CreatEquitiesWithdrawal出金.py(400) - 当前token为:9F2BF5D1DBB334F4DA3E1A5FE227828C7AC79FFD18F78973
+2021-11-02 17:47:48,939   14356     INFO CreatEquitiesWithdrawal出金.py(419) - 步骤8接口'http://sit-cdms.ynm3k.com//api/funds/auditWithdrawal';请求参数为:{'applyId': 52236, 'approvalResult': 'ACCT_PASS_8', 'fileList': [{'file': '/hzlc_20211025162042.jpg', 'type': 'user'}], 'statusCode': 'ACCT_8', 'clientBankAccountName': '521423'};响应结果为：'{"code":"0000","msg":"操作成功","data":true}'
+2021-11-02 17:47:54,960   14356     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-02 17:47:54,960   14356     INFO result.py(156) - 测试执行通过： test_08_auditWithdrawalAcctPass (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:47:54,975   14356     INFO result.py(90) - 测试结束： test_08_auditWithdrawalAcctPass (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-02 17:47:55,007   14356     INFO result.py(91) - 耗时： 6.496706962585449
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr class='passClass'>
+    <td>c2</td>
+    <td>Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金</td>
+    <td>4</td>
+    <td class="passCase">4</td>
+    <td class="failCase">0</td>
+    <td class="errorCase">0</td>
+    <td class="skipCase">0</td>
+    <td style="text-align:right;">100.00%</td>
+    <td>0</td>
+    <td>
+        <a href="javascript:showClassDetail('c2',4)">
+            <span class="lang-cn">细节</span>
+            <span class="lang-en">Detail</span>
+        </a>
+    </td>
+</tr>
+<tr id='pt2.1'>
+<td>pt2.1</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_01_createDeposit创建入金单</div>
+    </td>
+    <td class='passCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_pt2.1.1' name='div_pt2.1.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_pt2.1.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>pt2.1.1:
+2021-11-02 17:47:55,007   14356     INFO result.py(69) - 开始测试： test_01_createDeposit创建入金单 (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-02 17:47:55,007   14356     INFO test_创建入金申请单.py(13) - 初始化CreatEquitiesDeposit入金已完成
+2021-11-02 17:47:56,205   14356     INFO CreatEquitiesDeposit入金.py(34) - 当前token为:9F2BF5D1DBB334F414EF074DED22E7017AC79FFD18F78973
+2021-11-02 17:47:56,564   14356     INFO CreatEquitiesDeposit入金.py(60) - 步骤1接口'http://sit-cdms.ynm3k.com//api/funds/createDeposit';请求参数为:{'clientId': 11431, 'depositType': 'online_bank_deposit', 'remittanceBankName': '渣打银行(香港)有限公司 003', 'remittanceBankCard': '32323232', 'sibMobile': 'null', 'depositAmount': 50.55, 'accountId': '114311110', 'accountCategory': 'securitiesCash', 'remittanceBankCode': '003', 'beneficiaryBankCode': '012', 'beneficiaryBankName': '中国银行（香港）有限公司', 'beneficiaryBankCard': '012-873-2-002063-5', 'depositCurrency': 'HKD', 'applySource': 4, 'fileList': ['/hzlc_20211101100818.jpg']};响应结果为：'{"code":"0000","msg":"操作成功","data":true}'
+2021-11-02 17:48:02,585   14356     INFO test_创建入金申请单.py(47) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-02 17:48:02,585   14356     INFO result.py(156) - 测试执行通过： test_01_createDeposit创建入金单 (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-02 17:48:02,601   14356     INFO result.py(90) - 测试结束： test_01_createDeposit创建入金单 (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-02 17:48:02,601   14356     INFO result.py(91) - 耗时： 7.5936925411224365
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='pt2.2'>
+<td>pt2.2</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_02_operatingWorkFlowNo</div>
+    </td>
+    <td class='passCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.2.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_pt2.2.1' name='div_pt2.2.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_pt2.2.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>pt2.2.1:
+2021-11-02 17:48:02,601   14356     INFO result.py(69) - 开始测试： test_02_operatingWorkFlowNo (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-02 17:48:02,601   14356     INFO test_创建入金申请单.py(13) - 初始化CreatEquitiesDeposit入金已完成
+2021-11-02 17:48:02,829   14356     INFO CreatEquitiesDeposit入金.py(72) - 当前token为:9F2BF5D1DBB334F414EF074DED22E7017AC79FFD18F78973
+2021-11-02 17:48:02,955   14356     INFO CreatEquitiesDeposit入金.py(84) - 步骤2接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 6189, 'workFlowCode': 'depositApply', 'controlCode': 'LOCK'};响应结果为：'{"code":"0000","msg":"操作成功","data":[{"applyId":"6189","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-11-02 17:48:09,000   14356     INFO test_创建入金申请单.py(47) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-02 17:48:09,031   14356     INFO result.py(156) - 测试执行通过： test_02_operatingWorkFlowNo (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-02 17:48:09,031   14356     INFO result.py(90) - 测试结束： test_02_operatingWorkFlowNo (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-02 17:48:09,047   14356     INFO result.py(91) - 耗时： 6.430768966674805
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='pt2.3'>
+<td>pt2.3</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_03_auditDepositNo</div>
+    </td>
+    <td class='passCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.3.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_pt2.3.1' name='div_pt2.3.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_pt2.3.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>pt2.3.1:
+2021-11-02 17:48:09,047   14356     INFO result.py(69) - 开始测试： test_03_auditDepositNo (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-02 17:48:09,047   14356     INFO test_创建入金申请单.py(13) - 初始化CreatEquitiesDeposit入金已完成
+2021-11-02 17:48:09,048   14356     INFO CreatEquitiesDeposit入金.py(94) - 当前token为:9F2BF5D1DBB334F414EF074DED22E7017AC79FFD18F78973
+2021-11-02 17:48:10,196   14356     INFO CreatEquitiesDeposit入金.py(123) - 步骤3接口'http://sit-cdms.ynm3k.com//api/funds/auditDeposit';请求参数为:{'applyId': 6189, 'approvalResult': 'CS2_PASS_7', 'statusCode': 'CS2_7', 'fileList': [{'file': '/hzlc_20211101100818.jpg', 'type': 'user'}], 'depositType': 'online_bank_deposit', 'realAmount': 50.55, 'realBankCard': '012-873-2-002063-5', 'realBankCode': '016', 'realCurrency': 'HKD', 'valueDate': '2021-11-02 17:48:09'};响应结果为：'{"code":"0000","msg":"操作成功","data":true}'
+2021-11-02 17:48:16,238   14356     INFO test_创建入金申请单.py(47) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-02 17:48:16,238   14356     INFO result.py(156) - 测试执行通过： test_03_auditDepositNo (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-02 17:48:16,254   14356     INFO result.py(90) - 测试结束： test_03_auditDepositNo (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-02 17:48:16,254   14356     INFO result.py(91) - 耗时： 7.20690131187439
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='pt2.4'>
+<td>pt2.4</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_04_get_current_state_deposit</div>
+    </td>
+    <td class='passCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.4.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_pt2.4.1' name='div_pt2.4.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_pt2.4.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>pt2.4.1:
+2021-11-02 17:48:16,254   14356     INFO result.py(69) - 开始测试： test_04_get_current_state_deposit (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-02 17:48:16,254   14356     INFO test_创建入金申请单.py(13) - 初始化CreatEquitiesDeposit入金已完成
+2021-11-02 17:53:46,361   14356     INFO CreatEquitiesDeposit入金.py(148) - 当前token为:9F2BF5D1DBB334F414EF074DED22E7017AC79FFD18F78973
+2021-11-02 17:53:46,802   14356     INFO CreatEquitiesDeposit入金.py(176) - 步骤4接口'http://sit-cdms.ynm3k.com//api/funds/auditDeposit';请求参数为:{'applyId': 6189, 'approvalResult': 'SYS_ERROR_PASS_7', 'statusCode': 'SYS_ERROR_7', 'fileList': [{'file': '/hzlc_20211101100818.jpg', 'type': 'user'}], 'depositType': 'online_bank_deposit'};响应结果为：'{"code":"0000","msg":"操作成功","data":true}'
+2021-11-02 17:53:52,814   14356     INFO test_创建入金申请单.py(47) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-02 17:53:52,814   14356     INFO result.py(156) - 测试执行通过： test_04_get_current_state_deposit (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-02 17:53:52,814   14356     INFO result.py(90) - 测试结束： test_04_get_current_state_deposit (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-02 17:53:52,814   14356     INFO result.py(91) - 耗时： 336.5594229698181
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -1077,8 +1238,8 @@ goChart(chartData_cn);
             <span class="lang-cn">合计</span>
             <span class="lang-en">Total</span>
         </td>
-        <td>8</td>
-        <td class="passCase">8</td>
+        <td>12</td>
+        <td class="passCase">12</td>
         <td class="failCase">0</td>
         <td class="errorCase">0</td>
         <td class="skipCase">0</td>

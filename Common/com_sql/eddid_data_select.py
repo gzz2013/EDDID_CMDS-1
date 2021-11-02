@@ -68,6 +68,13 @@ def  cd_withdrawal(clnt_id,wd_amt):
                                      sql="select * from cd_withdrawal where clnt_id={} and wd_amt={}  ".format(clnt_id,wd_amt))
     return cd_withdrawal
 
+#通过交易证券账号和金额查询入金申请单号
+def  cd_deposit(clnt_id,dep_amt):
+    cd_deposit = SQL_Check.eddid_gfss_sit(database=sqldata,
+                                     sql="select * from cd_deposit where clnt_id={} and dep_amt={}  ".format(clnt_id,dep_amt))
+    return cd_deposit
+
+
 #查询当前流程状态
 def  gs_wrkflw_log(apply_id):
     gs_wrkflw_log = SQL_Check.eddid_gfss_sit(database=sqldata,
@@ -96,6 +103,7 @@ if __name__=="__main__":
     print("gs_wrkflw_log",gs_wrkflw_log(52155))
     print("gs_wrkflw_log",gs_wrkflw_log(52154))
     print("get_newrate",get_newrate())
+    print("cd_deposit++++++++++++++",cd_deposit(11431,46.41))
 
 
 
