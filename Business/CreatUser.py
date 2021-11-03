@@ -11,7 +11,8 @@ from Config.cdms_config import *
 from Common.data_文本读写 import *
 
 
-# Randoms=Randoms()
+
+
 class CreatUser():
     # 步骤1
     def ApplyClinet资料提交(self):
@@ -209,13 +210,13 @@ class CreatUser():
             "bankCardNo": "",
             "elecNo": "",
             "responsible": "kwokwah.wong",
-            # "emailLanguage": "zh-hans",
+            "emailLanguage": "zh-hans",
             # 简体
-            "emailLanguage": "zh-hant",
+            # "emailLanguage": "zh-hant",
             # 繁体
             "accts": [
-                caccts
-                # "securitiesCash",
+                # caccts
+                "securitiesCash",
                 # 证券现金
                 # "securitiesMargin",
                 # 证券保证金
@@ -721,9 +722,9 @@ if __name__ == "__main__":
     for i in range(a):
         # 实例化CreatUser
         print("=====================================步骤1：", CreatUser.ApplyClinet资料提交().text)
-        time.sleep(10)
+        time.sleep(30)
         print("=====================================步骤2：", CreatUser.SubmitAudit提交审核().text)
-        time.sleep(10)
+        time.sleep(40)
         print("=====================================步骤3：", CreatUser.operatingWorkFlowFirst提交锁().text)
         time.sleep(4)
         print("=====================================步骤4：", CreatUser.saveRiskAssessment风控评估提交().text)
@@ -739,8 +740,8 @@ if __name__ == "__main__":
         print("=====================================步骤9：", CreatUser.operatingWorkFlowThird提交锁().text)
         time.sleep(4)
         print("=====================================步骤10：", CreatUser.batchOperatingWorkFlowEnd批量确认().text)
-        # time.sleep(4)
-        print("步骤11：", CreatUser.SQLCheckUser())
+        time.sleep(4)
+        print("=====================================步骤11：", CreatUser.SQLCheckUser())
         time.sleep(4)
 
 
