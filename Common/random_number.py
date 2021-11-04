@@ -261,7 +261,11 @@ class Randoms():
         accts = random.choice(T)
         return accts
 
-
+    def choice_Language(self):
+        #"zh-hant"=繁体；"zh-hans"=简体
+        T=["zh-hans","zh-hant"]
+        accts = random.choice(T)
+        return accts
 
 
 

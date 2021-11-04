@@ -35,6 +35,8 @@ class CreatUser():
         # 生成身份证号
         idCardNo = Randoms().ident_generator()
 
+
+
         #生成称谓（性别）
         ctitle=Randoms().choice_title()
         #新列表用来存放用户基本信息

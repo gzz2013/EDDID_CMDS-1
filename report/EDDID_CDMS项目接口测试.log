@@ -13617,3 +13617,1623 @@ TypeError: auditDeposit_comp_p() missing 1 required positional argument: 'self'
 2021-11-03 18:15:00,859   16448     INFO result.py(91) - 耗时： 7.2366416454315186
 2021-11-03 18:15:00,859   16448     INFO result.py(69) - 开始测试： test_06_get_current_state_deposit (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
 2021-11-03 18:15:00,859   16448     INFO test_创建大额入金申请单.py(11) - 初始化CreatEquitiesDeposit入金已完成
+2021-11-03 18:20:30,973   16448     INFO CreatEquitiesDeposit大额入金.py(193) - 当前token为:22B6DA631F1B297C4131D97DCCE23C9D7AC79FFD18F78973
+2021-11-03 18:20:31,037   16448     INFO CreatEquitiesDeposit大额入金.py(221) - 步骤6接口'http://sit-cdms.ynm3k.com//api/funds/auditDeposit';请求参数为:{'applyId': 6201, 'approvalResult': 'SYS_ERROR_PASS_7', 'statusCode': 'SYS_ERROR_7', 'fileList': [{'file': '/hzlc_20211101100818.jpg', 'type': 'user'}], 'depositType': 'online_bank_deposit'};响应结果为：'{"code":"0020","msg":"未登录:Login Timeout","data":""}'
+2021-11-03 18:20:37,050   16448     INFO test_创建大额入金申请单.py(57) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-03 18:20:37,050   16448  WARNING result.py(190) - 测试未通过： test_06_get_current_state_deposit (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建大额入金申请单.py", line 49, in test_06_get_current_state_deposit
+    self.assertEqual("操作成功", get_current_state_deposit.json().get("msg"))
+AssertionError: '操作成功' != '未登录:Login Timeout'
+- 操作成功
++ 未登录:Login Timeout
+
+
+2021-11-03 18:20:37,050   16448     INFO result.py(90) - 测试结束： test_06_get_current_state_deposit (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+2021-11-03 18:20:37,050   16448     INFO result.py(91) - 耗时： 336.1917476654053
+2021-11-03 18:20:37,052   16700     INFO test_runner.py(193) - 
+Pass	test_01_createDeposit创建入金单 (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+Pass	test_02_operatingWorkFlowNo (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+Pass	test_03_auditDepositNo (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+Pass	test_04_operatingWorkFlowTo (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+Pass	test_05_auditDeposit_comp_p (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+
+2021-11-03 18:20:37,052   16700    ERROR test_runner.py(195) - 
+Fail	test_06_get_current_state_deposit (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+
+2021-11-03 18:20:37,053   16700     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:06:09.830639
+共计执行用例数量：6
+执行成功用例数量：5
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-11-04 10:14:58,923   14620     INFO test_runner.py(156) - 预计并发线程数：1
+2021-11-04 10:14:58,938    6040     INFO result.py(69) - 开始测试： test_01_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:14:58,939    6040     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 10:14:59,002    6040     INFO CreatUser.py(52) - 记录数据的文件名为：userdatainf.txt，写入数据为:['19957374999', 'RopMc74EYg@126.com', 'Foxp', 'Ziv', '刘午后t', '640101198703021156', 'mrs', 'securitiesCash']
+2021-11-04 10:14:59,620    6040     INFO CreatUser.py(62) - 当前token为:22B6DA631F1B297CDEFCD73EB94658777AC79FFD18F78973
+2021-11-04 10:14:59,714    6040     INFO CreatUser.py(67) - 提交申请单时注册用户手机号码为：19957374999
+2021-11-04 10:15:00,523    6040     INFO CreatUser.py(239) - 步骤1接口'http://sit-cdms.ynm3k.com//api/client/applyClient';请求参数为:{'infos': [{'title': 'mrs', 'informationType': 1, 'firstName': 'Foxp', 'lastName': 'Ziv', 'chName': '刘午后t', 'usedCnName': 'Ziv19957374999', 'usedChName': '刘午后t接口自动化创建账号', 'email': 'RopMc74EYg@126.com', 'phoneAreaCode': 'CHN', 'phoneNo': '19957374999', 'houseAddress': '中英街19957374999号', 'houseAddressPinYin': 'zhon19957374999hao', 'postAddress': '接口自动化', 'natnlty': 'CHN', 'idCardType': '2', 'idCardNo': '640101198703021156', 'otherCardType': '', 'otherCardNo': '', 'countryIssue': 'CHN', 'overCountry': 'CHN', 'birthday': '1994-08-09', 'idExpiresDate': '2023-08-31', 'birthdayPlace': 'CHN', 'employmentStatus': 'self', 'post': 'businessOwner', 'workingYear': '11', 'companyName': '接口自动化19957374999', 'businessNature': 'wholesale&retail', 'officeAddress': '4784551224519957374999', 'officePhone': '0771-19957374999', 'registeredCompany': 'Y', 'employmentRemark': '', 'totalIncomeYear': 'gt1000000', 'sourceOfIncome': ['selfOperatedBusinessIncome', 'salary'], 'sourceOfIncomeRemake': '', 'totalCapital': 'gt8000000', 'sourceOfCapital': ['salary', 'savings', 'pension'], 'sourceOfCapitalRemark': '', 'sourceOfMoney': ['selfOperated'], 'sourceOfMoneyRemark': '', 'securitiesExperience': 'gt10Years', 'cbbcExperience': 'gt10Years', 'warrantExperience': 'gt10Years', 'futuresExperience': 'gt10Years', 'optionsExperience': 'gt10Years', 'foreignExchangExperience': 'gt10Years', 'metalExperience': 'gt10Years', 'autoTransationExperience': 'gt10Years', 'otherInvest': '', 'otherExperience': '', 'withDerivativesKnowledge': 'Y', 'withDerivativesWoking': 'Y', 'withDerivativesDeal': 'Y', 'applicationOpenDerivatives': 'Y', 'understandTheRisks': 'Y', 'haveDeclaredBankruptcy': 'N', 'declaredBankruptcyDate': '', 'isInternalStaff': 'N', 'staffNameRelationship': '', 'relationshipWithInternalEmployees': 'Y', 'employeesName': '11212', 'isRegisteredPerson': 'N', 'registeredPersonRemark': '', 'isUsPerson': 'N', 'taxNumber': '', 'isUsTaxPerson': 'N', 'taxNumberTwo': '', 'isPepPerson': 'N', 'pepPersonName': '', 'investmentObjective': ['asset', 'income'], 'riskTolerance': 'high', 'throughChannels': ['lecture'], 'throughChannelRemark': '', 'isFinalBeneficiary': 'Y', 'finalBeneficiaryName': '', 'isFinalPrincipal': 'Y', 'finalPrincipalName': '', 'businessNatureRemark': ''}], 'marginAcctS': [], 'taxs': [{'residencyJurisdiction': 'CHN', 'taxNumber': '', 'resonType': 'A', 'resonRemark': ''}], 'attachs': {'passportMaterial': ['/hzlc_20210819191744.jpg'], 'addressVerificationMaterials': ['/hzlc_20210819191748.jpg'], 'bankCardMaterials': ['/hzlc_20210819191751.jpg'], 'proofOfIncome': ['/hzlc_20210819191759.jpg'], 'writtenApplicationMaterials': ['/APP_20200811142432_20210819191759.pdf'], 'otherInformation': ['/dinggg_20210819191801.jpg'], 'bankruptcyProve': [], 'acquaintHighLevelInstructionsProve': [], 'tradingAuthorization': []}, 'settleAcctS': [], 'clientType': 'PERSONAL', 'openWay': 'visitingAccount', 'bankName': '', 'bankCardNo': '', 'elecNo': '', 'responsible': 'kwokwah.wong', 'emailLanguage': 'zh-hant', 'accts': ['securitiesCash'], 'promotionNumber': 'EDAC520', 'agreeToTheTerms': 'true', 'personalInfoDeclartion': 'true'};响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-11-04 10:15:06,576    6040     INFO test_运营用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 10:15:06,576    6040     INFO result.py(156) - 测试执行通过： test_01_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:15:06,592    6040     INFO result.py(90) - 测试结束： test_01_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:15:06,610    6040     INFO result.py(91) - 耗时： 7.6534810066223145
+2021-11-04 10:15:06,610    6040     INFO result.py(69) - 开始测试： test_02_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:15:06,610    6040     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 10:15:06,610    6040     INFO CreatUser.py(247) - 等待系统录入数据后再修改WorldCheck的状态，等待时间40s
+2021-11-04 10:15:38,041    6040     INFO CreatUser.py(251) - *******************************************已完成修改WorldCheck的状态为FALSE*******************************************
+2021-11-04 10:16:18,059    6040     INFO CreatUser.py(260) - 当前token为:22B6DA631F1B297CDEFCD73EB94658777AC79FFD18F78973
+2021-11-04 10:16:18,075    6040     INFO CreatUser.py(266) - 提交审核获取到的手机号为：19957374999
+2021-11-04 10:16:18,847    6040     INFO CreatUser.py(277) - 步骤2提交审核接口'http://sit-cdms.ynm3k.com//api/client/submitAudit';请求参数为:{'applyId': 1150030, 'clientSource': 'CDMS', 'workFlowCode': 'openClient'};响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-11-04 10:16:24,877    6040     INFO test_运营用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 10:16:24,877    6040     INFO result.py(156) - 测试执行通过： test_02_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:16:24,893    6040     INFO result.py(90) - 测试结束： test_02_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:16:24,893    6040     INFO result.py(91) - 耗时： 78.28271341323853
+2021-11-04 10:16:24,893    6040     INFO result.py(69) - 开始测试： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:16:24,893    6040     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 10:16:59,911    6040     INFO CreatUser.py(290) - 当前token为:22B6DA631F1B297CDEFCD73EB94658777AC79FFD18F78973
+2021-11-04 10:16:59,911    6040     INFO CreatUser.py(298) - 提交审核获取到的手机号为：19957374999
+2021-11-04 10:17:00,133    6040     INFO CreatUser.py(309) - 步骤3提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 1150030, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150030","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-11-04 10:17:06,193    6040     INFO test_运营用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 10:17:06,193    6040     INFO result.py(156) - 测试执行通过： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:06,209    6040     INFO result.py(90) - 测试结束： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:06,209    6040     INFO result.py(91) - 耗时： 41.31650972366333
+2021-11-04 10:17:06,225    6040     INFO result.py(69) - 开始测试： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:06,225    6040     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 10:17:06,225    6040     INFO CreatUser.py(328) - 当前applyId为：1150030
+2021-11-04 10:17:06,351    6040     INFO CreatUser.py(352) - 步骤4提交审核接口'http://sit-cdms.ynm3k.com//api/client/saveRiskAssessment';请求参数为:{'applyId': 1150030, 'riskAssessmentInfoDTO': {'isAmlOrCft': 'true', 'isPeb': None, 'isPolice': None, 'isIcac': None, 'isHighRiskBusiness': None, 'isJfiu': None, 'isCorruption': None, 'isOtherInformation': None, 'nonFaceToFace': None, 'isUnemployed': None, 'isNonFatf': None, 'isNonFinancial': None, 'isTemporaryAddr': None, 'residence': '新西兰', 'otherInformation': '', 'riskAssessmentLevel': 'TERMINATE'}};响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-11-04 10:17:12,369    6040     INFO test_运营用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 10:17:12,369    6040     INFO result.py(156) - 测试执行通过： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:12,369    6040     INFO result.py(90) - 测试结束： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:12,384    6040     INFO result.py(91) - 耗时： 6.143320083618164
+2021-11-04 10:17:12,384    6040     INFO result.py(69) - 开始测试： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:12,384    6040     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 10:17:12,385    6040     INFO CreatUser.py(364) - 当前token为:22B6DA631F1B297CDEFCD73EB94658777AC79FFD18F78973
+2021-11-04 10:17:12,623    6040     INFO CreatUser.py(463) - 步骤5提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 1150030, 'checkItemList': [{'itemId': '1', 'itemCde': 'Application Form', 'itemDesc': 'Application Form', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '2', 'itemCde': 'Fee schedule', 'itemDesc': 'Fee schedule', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '3', 'itemCde': 'ID card Copy', 'itemDesc': 'ID card Copy', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '4', 'itemCde': 'SFC search', 'itemDesc': 'SFC search', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '5', 'itemCde': 'Worldcheck', 'itemDesc': 'Worldcheck', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '6', 'itemCde': 'Address Proof (if any)', 'itemDesc': 'Address Proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '7', 'itemCde': 'Bank proof (if any)', 'itemDesc': 'Bank proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '8', 'itemCde': 'Source of Fund (if any)', 'itemDesc': 'Source of Fund (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '9', 'itemCde': 'Source of Wealth (if any)', 'itemDesc': 'Source of Wealth (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '10', 'itemCde': 'Other', 'itemDesc': 'Other', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}], 'workFlowCode': 'openClient', 'controlCode': 'PASS', 'isStaff': 'false', 'lockBy': 'ED_RO', 'licensedPersonSign': ''};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150030","applyNo":null,"result":true,"operatingMessage":""}]}'
+2021-11-04 10:17:18,651    6040     INFO test_运营用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 10:17:18,667    6040     INFO result.py(156) - 测试执行通过： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:18,667    6040     INFO result.py(90) - 测试结束： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:18,683    6040     INFO result.py(91) - 耗时： 6.282740354537964
+2021-11-04 10:17:18,714    6040     INFO result.py(69) - 开始测试： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:18,714    6040     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 10:17:18,714    6040     INFO CreatUser.py(475) - 当前token为:22B6DA631F1B297CDEFCD73EB94658777AC79FFD18F78973
+2021-11-04 10:17:18,715    6040     INFO CreatUser.py(481) - 提交审核获取到的手机号为：19957374999
+2021-11-04 10:17:18,715    6040     INFO CreatUser.py(484) - 当前applyId为：1150030
+2021-11-04 10:17:19,016    6040     INFO CreatUser.py(574) - 步骤6提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 1150030, 'checkItemList': [{'itemId': '1', 'itemCde': 'Application Form', 'itemDesc': 'Application Form', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '2', 'itemCde': 'Fee schedule', 'itemDesc': 'Fee schedule', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '3', 'itemCde': 'ID card Copy', 'itemDesc': 'ID card Copy', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '4', 'itemCde': 'SFC search', 'itemDesc': 'SFC search', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '5', 'itemCde': 'Worldcheck', 'itemDesc': 'Worldcheck', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '6', 'itemCde': 'Address Proof (if any)', 'itemDesc': 'Address Proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '7', 'itemCde': 'Bank proof (if any)', 'itemDesc': 'Bank proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '8', 'itemCde': 'Source of Fund (if any)', 'itemDesc': 'Source of Fund (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '9', 'itemCde': 'Source of Wealth (if any)', 'itemDesc': 'Source of Wealth (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '10', 'itemCde': 'Other', 'itemDesc': 'Other', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}], 'workFlowCode': 'openClient', 'controlCode': 'PASS'};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150030","applyNo":null,"result":true,"operatingMessage":""}]}'
+2021-11-04 10:17:25,047    6040     INFO test_运营用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 10:17:25,047    6040     INFO result.py(156) - 测试执行通过： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:25,047    6040     INFO result.py(90) - 测试结束： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:25,047    6040     INFO result.py(91) - 耗时： 6.332853555679321
+2021-11-04 10:17:25,063    6040     INFO result.py(69) - 开始测试： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:25,063    6040     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 10:17:25,063    6040     INFO CreatUser.py(592) - 提交审核获取到的手机号为：19957374999
+2021-11-04 10:17:25,189    6040     INFO CreatUser.py(603) - 提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 1150030, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150030","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-11-04 10:17:31,219    6040     INFO test_运营用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 10:17:31,219    6040     INFO result.py(156) - 测试执行通过： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:31,219    6040     INFO result.py(90) - 测试结束： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:31,235    6040     INFO result.py(91) - 耗时： 6.156533479690552
+2021-11-04 10:17:31,235    6040     INFO result.py(69) - 开始测试： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:31,235    6040     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 10:17:31,410    6040     INFO CreatUser.py(638) - 提交审核接口'http://sit-cdms.ynm3k.com//api/common/batchOperatingWorkFlow';请求参数为:{'applyIds': [1150030], 'workFlowCode': 'openClient', 'controlCode': 'GENERATEACCTNO', 'workFlowOperatingDTOList': [{'applyId': 1150030}]};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150030","applyNo":null,"result":true,"operatingMessage":null}]}'
+2021-11-04 10:17:37,431    6040     INFO test_运营用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 10:17:37,431    6040     INFO result.py(156) - 测试执行通过： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:37,431    6040     INFO result.py(90) - 测试结束： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:37,431    6040     INFO result.py(91) - 耗时： 6.1952338218688965
+2021-11-04 10:17:37,432    6040     INFO result.py(69) - 开始测试： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:37,432    6040     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 10:17:37,432    6040     INFO CreatUser.py(655) - 提交审核获取到的手机号为：19957374999
+2021-11-04 10:17:37,432    6040     INFO CreatUser.py(659) - 当前applyId为：1150030
+2021-11-04 10:17:37,637    6040     INFO CreatUser.py(667) - 提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow',请求参数为：{'applyId': 1150030, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'},的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150030","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-11-04 10:17:43,661    6040     INFO test_运营用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 10:17:43,661    6040     INFO result.py(156) - 测试执行通过： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:43,677    6040     INFO result.py(90) - 测试结束： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:43,677    6040     INFO result.py(91) - 耗时： 6.245812654495239
+2021-11-04 10:17:43,693    6040     INFO result.py(69) - 开始测试： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:43,693    6040     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 10:17:43,693    6040     INFO CreatUser.py(684) - 提交审核获取到的手机号为：19957374999
+2021-11-04 10:17:43,693    6040     INFO CreatUser.py(688) - 当前applyId为：1150030
+2021-11-04 10:17:44,736    6040     INFO CreatUser.py(704) - 提交审核接口'http://sit-cdms.ynm3k.com//api/common/batchOperatingWorkFlow';请求参数为:{'applyIds': [1150030], 'workFlowCode': 'openClient', 'controlCode': 'PASS', 'workFlowOperatingDTOList': [{'applyId': 1150030}]};的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150030","applyNo":null,"result":true,"operatingMessage":null}]}'
+2021-11-04 10:17:50,789    6040     INFO test_运营用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 10:17:50,789    6040     INFO result.py(156) - 测试执行通过： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:50,805    6040     INFO result.py(90) - 测试结束： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:50,805    6040     INFO result.py(91) - 耗时： 7.1119771003723145
+2021-11-04 10:17:50,821    6040     INFO result.py(69) - 开始测试： test_11_SQLCheckUser (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:17:50,821    6040     INFO test_运营用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 10:17:50,821    6040     INFO test_运营用户创建审批.py(85) - 从文本中读到的用户基本信息为：['19957374999', 'RopMc74EYg@126.com', 'Foxp', 'Ziv', '刘午后t', '640101198703021156', 'mrs', 'securitiesCash']
+2021-11-04 10:18:01,128    6040     INFO CreatUser.py(716) - 通过'19957374999'查询cd_enty表的结果为((292794, None, 'PERSONAL', 'CHN', '640101198703021156', '2', datetime.date(2023, 8, 31), 'CHN', 'mrs', 'Foxp', 'Ziv', 'Ziv19957374999', '刘午后t接口自动化创建账号', '刘午后t', 'F', 'RopMc74EYg@126.com', None, 'CHN', '19957374999', None, '中英街19957374999号', 'zhon19957374999hao', '接口自动化', None, None, None, 'CHN', 'CHN', datetime.date(1994, 8, 9), 'CHN', 'Y', 'self', '', 'businessOwner', '11', '接口自动化19957374999', 'wholesale&retail', '', '4784551224519957374999', None, '0771-19957374999', None, None, None, None, 'N', None, None, datetime.datetime(2021, 11, 4, 10, 17, 48), 'ganjiexiang', datetime.datetime(2021, 11, 4, 10, 17, 48), '', 1),)
+2021-11-04 10:18:01,128    6040     INFO test_运营用户创建审批.py(105) - 已执行用例11，数据库校验已完成
+2021-11-04 10:18:07,137    6040     INFO test_运营用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 10:18:07,137    6040     INFO result.py(156) - 测试执行通过： test_11_SQLCheckUser (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:18:07,137    6040     INFO result.py(90) - 测试结束： test_11_SQLCheckUser (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+2021-11-04 10:18:07,137    6040     INFO result.py(91) - 耗时： 16.316171646118164
+2021-11-04 10:18:07,137   14620     INFO test_runner.py(193) - 
+Pass	test_01_applyClient用户资料提交用例校验 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+Pass	test_02_submitAudit提交审核 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+Pass	test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+Pass	test_04_saveRiskAssessment风控评估提交 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+Pass	test_05_operatingWorkFlow内部人员审核 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+Pass	test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+Pass	test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+Pass	test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+Pass	test_09_operatingWorkFlowThird提交锁 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+Pass	test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+Pass	test_11_SQLCheckUser (Test_Case.test_运营用户创建审批.Test_creatUser新建用户)
+
+2021-11-04 10:18:07,139   14620     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:03:08.413101
+共计执行用例数量：11
+执行成功用例数量：11
+执行失败用例数量：0
+跳过执行用例数量：0
+产生异常用例数量：0
+
+2021-11-04 13:28:28,379   15608     INFO test_runner.py(156) - 预计并发线程数：1
+2021-11-04 13:28:28,382    8144     INFO result.py(69) - 开始测试： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:28:28,399    8144     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:28:34,428    8144     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:28:34,491    8144    ERROR result.py(175) - 测试产生错误： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建全类型交易账户及审批.py", line 16, in test_01_applyClient用户资料提交用例校验
+    applyClient = self.creatUser.ApplyClinet资料提交()
+  File "F:\python\EDDID_CDMS\Business\CreatUser开通所有交易账户.py", line 46, in ApplyClinet资料提交
+    userinformationList.append(caccts)
+NameError: name 'caccts' is not defined
+
+2021-11-04 13:28:34,491    8144     INFO result.py(90) - 测试结束： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:28:34,491    8144     INFO result.py(91) - 耗时： 6.092705249786377
+2021-11-04 13:28:34,491    8144     INFO result.py(69) - 开始测试： test_02_submitAudit提交审核 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:28:34,491    8144     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:28:34,492    8144     INFO CreatUser开通所有交易账户.py(243) - 等待系统录入数据后再修改WorldCheck的状态，等待时间40s
+2021-11-04 13:29:04,676    8144     INFO CreatUser开通所有交易账户.py(247) - *******************************************已完成修改WorldCheck的状态为FALSE*******************************************
+2021-11-04 13:29:16,595   16140     INFO test_runner.py(156) - 预计并发线程数：1
+2021-11-04 13:29:16,598   14500     INFO result.py(69) - 开始测试： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:29:16,607   14500     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:29:16,734   14500     INFO CreatUser开通所有交易账户.py(51) - 记录数据的文件名为：userdatainf.txt，写入数据为:['16142625549', 'HfpSX8IwT@gzz.com', 'Reed7', 'Eock', '赵菜花w', '110101197405051770', 'miss']
+2021-11-04 13:29:17,368   14500     INFO CreatUser开通所有交易账户.py(61) - 当前token为:22B6DA631F1B297C0EAB5AA6919E880D7AC79FFD18F78973
+2021-11-04 13:29:17,368   14500     INFO CreatUser开通所有交易账户.py(66) - 提交申请单时注册用户手机号码为：16142625549
+2021-11-04 13:29:17,636   14500     INFO CreatUser开通所有交易账户.py(236) - 步骤1接口'http://sit-cdms.ynm3k.com//api/client/applyClient';请求参数为:{'infos': [{'title': 'miss', 'informationType': 1, 'firstName': 'Reed7', 'lastName': 'Eock', 'chName': '赵菜花w', 'usedCnName': 'Eock16142625549', 'usedChName': '赵菜花w接口自动化创建账号', 'email': 'HfpSX8IwT@gzz.com', 'phoneAreaCode': 'CHN', 'phoneNo': '16142625549', 'houseAddress': '中英街16142625549号', 'houseAddressPinYin': 'zhon16142625549hao', 'postAddress': '接口自动化', 'natnlty': 'CHN', 'idCardType': '2', 'idCardNo': '110101197405051770', 'otherCardType': '', 'otherCardNo': '', 'countryIssue': 'CHN', 'overCountry': 'CHN', 'birthday': '1994-08-09', 'idExpiresDate': '2023-08-31', 'birthdayPlace': 'CHN', 'employmentStatus': 'self', 'post': 'businessOwner', 'workingYear': '11', 'companyName': '接口自动化16142625549', 'businessNature': 'wholesale&retail', 'officeAddress': '4784551224516142625549', 'officePhone': '0771-16142625549', 'registeredCompany': 'Y', 'employmentRemark': '', 'totalIncomeYear': 'gt1000000', 'sourceOfIncome': ['selfOperatedBusinessIncome', 'salary'], 'sourceOfIncomeRemake': '', 'totalCapital': 'gt8000000', 'sourceOfCapital': ['salary', 'savings', 'pension'], 'sourceOfCapitalRemark': '', 'sourceOfMoney': ['selfOperated'], 'sourceOfMoneyRemark': '', 'securitiesExperience': 'gt10Years', 'cbbcExperience': 'gt10Years', 'warrantExperience': 'gt10Years', 'futuresExperience': 'gt10Years', 'optionsExperience': 'gt10Years', 'foreignExchangExperience': 'gt10Years', 'metalExperience': 'gt10Years', 'autoTransationExperience': 'gt10Years', 'otherInvest': '', 'otherExperience': '', 'withDerivativesKnowledge': 'Y', 'withDerivativesWoking': 'Y', 'withDerivativesDeal': 'Y', 'applicationOpenDerivatives': 'Y', 'understandTheRisks': 'Y', 'haveDeclaredBankruptcy': 'N', 'declaredBankruptcyDate': '', 'isInternalStaff': 'N', 'staffNameRelationship': '', 'relationshipWithInternalEmployees': 'Y', 'employeesName': '11212', 'isRegisteredPerson': 'N', 'registeredPersonRemark': '', 'isUsPerson': 'N', 'taxNumber': '', 'isUsTaxPerson': 'N', 'taxNumberTwo': '', 'isPepPerson': 'N', 'pepPersonName': '', 'investmentObjective': ['asset', 'income'], 'riskTolerance': 'high', 'throughChannels': ['lecture'], 'throughChannelRemark': '', 'isFinalBeneficiary': 'Y', 'finalBeneficiaryName': '', 'isFinalPrincipal': 'Y', 'finalPrincipalName': '', 'businessNatureRemark': ''}], 'marginAcctS': [], 'taxs': [{'residencyJurisdiction': 'CHN', 'taxNumber': '', 'resonType': 'A', 'resonRemark': ''}], 'attachs': {'passportMaterial': ['/hzlc_20210819191744.jpg'], 'addressVerificationMaterials': ['/hzlc_20210819191748.jpg'], 'bankCardMaterials': ['/hzlc_20210819191751.jpg'], 'proofOfIncome': ['/hzlc_20210819191759.jpg'], 'writtenApplicationMaterials': ['/APP_20200811142432_20210819191759.pdf'], 'otherInformation': ['/dinggg_20210819191801.jpg'], 'bankruptcyProve': [], 'acquaintHighLevelInstructionsProve': [], 'tradingAuthorization': []}, 'settleAcctS': [], 'clientType': 'PERSONAL', 'openWay': 'visitingAccount', 'bankName': '', 'bankCardNo': '', 'elecNo': '', 'responsible': 'kwokwah.wong', 'emailLanguage': 'zh-hant', 'accts': ['securitiesCash', 'securitiesMargin', 'futuresMargin', 'leveragedForeignExchangeAccountMargin', 'securitiesAyersCash'], 'promotionNumber': 'EDAC520', 'agreeToTheTerms': 'true', 'personalInfoDeclartion': 'true'};响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-11-04 13:29:23,709   14500     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:29:23,709   14500     INFO result.py(156) - 测试执行通过： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:29:23,709   14500     INFO result.py(90) - 测试结束： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:29:23,709   14500     INFO result.py(91) - 耗时： 7.102033853530884
+2021-11-04 13:29:23,725   14500     INFO result.py(69) - 开始测试： test_02_submitAudit提交审核 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:29:23,725   14500     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:29:23,725   14500     INFO CreatUser开通所有交易账户.py(243) - 等待系统录入数据后再修改WorldCheck的状态，等待时间40s
+2021-11-04 13:29:54,551   14500     INFO CreatUser开通所有交易账户.py(247) - *******************************************已完成修改WorldCheck的状态为FALSE*******************************************
+2021-11-04 13:30:34,597   14500     INFO CreatUser开通所有交易账户.py(256) - 当前token为:22B6DA631F1B297C0EAB5AA6919E880D7AC79FFD18F78973
+2021-11-04 13:30:34,612   14500     INFO CreatUser开通所有交易账户.py(262) - 提交审核获取到的手机号为：16142625549
+2021-11-04 13:30:35,116   14500     INFO CreatUser开通所有交易账户.py(273) - 步骤2提交审核接口'http://sit-cdms.ynm3k.com//api/client/submitAudit';请求参数为:{'applyId': 1150050, 'clientSource': 'CDMS', 'workFlowCode': 'openClient'};响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-11-04 13:30:41,161   14500     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:30:41,161   14500     INFO result.py(156) - 测试执行通过： test_02_submitAudit提交审核 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:30:41,177   14500     INFO result.py(90) - 测试结束： test_02_submitAudit提交审核 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:30:41,177   14500     INFO result.py(91) - 耗时： 77.45218658447266
+2021-11-04 13:30:41,193   14500     INFO result.py(69) - 开始测试： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:30:41,193   14500     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:31:16,221   14500     INFO CreatUser开通所有交易账户.py(286) - 当前token为:22B6DA631F1B297C0EAB5AA6919E880D7AC79FFD18F78973
+2021-11-04 13:31:16,221   14500     INFO CreatUser开通所有交易账户.py(294) - 提交审核获取到的手机号为：16142625549
+2021-11-04 13:31:16,348   14500     INFO CreatUser开通所有交易账户.py(305) - 步骤3提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 1150050, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150050","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-11-04 13:31:22,378   14500     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:31:22,394   14500     INFO result.py(156) - 测试执行通过： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:31:22,410   14500     INFO result.py(90) - 测试结束： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:31:22,410   14500     INFO result.py(91) - 耗时： 41.216679096221924
+2021-11-04 13:31:22,410   14500     INFO result.py(69) - 开始测试： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:31:22,410   14500     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:31:22,410   14500     INFO CreatUser开通所有交易账户.py(324) - 当前applyId为：1150050
+2021-11-04 13:31:22,537   14500     INFO CreatUser开通所有交易账户.py(348) - 步骤4提交审核接口'http://sit-cdms.ynm3k.com//api/client/saveRiskAssessment';请求参数为:{'applyId': 1150050, 'riskAssessmentInfoDTO': {'isAmlOrCft': 'true', 'isPeb': None, 'isPolice': None, 'isIcac': None, 'isHighRiskBusiness': None, 'isJfiu': None, 'isCorruption': None, 'isOtherInformation': None, 'nonFaceToFace': None, 'isUnemployed': None, 'isNonFatf': None, 'isNonFinancial': None, 'isTemporaryAddr': None, 'residence': '新西兰', 'otherInformation': '', 'riskAssessmentLevel': 'TERMINATE'}};响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-11-04 13:31:28,573   14500     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:31:28,573   14500     INFO result.py(156) - 测试执行通过： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:31:28,589   14500     INFO result.py(90) - 测试结束： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:31:28,589   14500     INFO result.py(91) - 耗时： 6.179469108581543
+2021-11-04 13:31:28,605   14500     INFO result.py(69) - 开始测试： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:31:28,605   14500     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:31:28,605   14500     INFO CreatUser开通所有交易账户.py(360) - 当前token为:22B6DA631F1B297C0EAB5AA6919E880D7AC79FFD18F78973
+2021-11-04 13:31:28,859   14500     INFO CreatUser开通所有交易账户.py(459) - 步骤5提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 1150050, 'checkItemList': [{'itemId': '1', 'itemCde': 'Application Form', 'itemDesc': 'Application Form', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '2', 'itemCde': 'Fee schedule', 'itemDesc': 'Fee schedule', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '3', 'itemCde': 'ID card Copy', 'itemDesc': 'ID card Copy', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '4', 'itemCde': 'SFC search', 'itemDesc': 'SFC search', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '5', 'itemCde': 'Worldcheck', 'itemDesc': 'Worldcheck', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '6', 'itemCde': 'Address Proof (if any)', 'itemDesc': 'Address Proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '7', 'itemCde': 'Bank proof (if any)', 'itemDesc': 'Bank proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '8', 'itemCde': 'Source of Fund (if any)', 'itemDesc': 'Source of Fund (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '9', 'itemCde': 'Source of Wealth (if any)', 'itemDesc': 'Source of Wealth (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '10', 'itemCde': 'Other', 'itemDesc': 'Other', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}], 'workFlowCode': 'openClient', 'controlCode': 'PASS', 'isStaff': 'false', 'lockBy': 'ED_RO', 'licensedPersonSign': ''};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150050","applyNo":null,"result":true,"operatingMessage":""}]}'
+2021-11-04 13:31:34,878   14500     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:31:34,878   14500     INFO result.py(156) - 测试执行通过： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:31:34,878   14500     INFO result.py(90) - 测试结束： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:31:34,894   14500     INFO result.py(91) - 耗时： 6.2722532749176025
+2021-11-04 13:31:34,894   14500     INFO result.py(69) - 开始测试： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:31:34,894   14500     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:31:34,894   14500     INFO CreatUser开通所有交易账户.py(471) - 当前token为:22B6DA631F1B297C0EAB5AA6919E880D7AC79FFD18F78973
+2021-11-04 13:31:34,894   14500     INFO CreatUser开通所有交易账户.py(477) - 提交审核获取到的手机号为：16142625549
+2021-11-04 13:31:34,895   14500     INFO CreatUser开通所有交易账户.py(480) - 当前applyId为：1150050
+2021-11-04 13:31:35,117   14500     INFO CreatUser开通所有交易账户.py(570) - 步骤6提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 1150050, 'checkItemList': [{'itemId': '1', 'itemCde': 'Application Form', 'itemDesc': 'Application Form', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '2', 'itemCde': 'Fee schedule', 'itemDesc': 'Fee schedule', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '3', 'itemCde': 'ID card Copy', 'itemDesc': 'ID card Copy', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '4', 'itemCde': 'SFC search', 'itemDesc': 'SFC search', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '5', 'itemCde': 'Worldcheck', 'itemDesc': 'Worldcheck', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '6', 'itemCde': 'Address Proof (if any)', 'itemDesc': 'Address Proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '7', 'itemCde': 'Bank proof (if any)', 'itemDesc': 'Bank proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '8', 'itemCde': 'Source of Fund (if any)', 'itemDesc': 'Source of Fund (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '9', 'itemCde': 'Source of Wealth (if any)', 'itemDesc': 'Source of Wealth (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '10', 'itemCde': 'Other', 'itemDesc': 'Other', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}], 'workFlowCode': 'openClient', 'controlCode': 'PASS'};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150050","applyNo":null,"result":true,"operatingMessage":""}]}'
+2021-11-04 13:31:41,155   14500     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:31:41,155   14500     INFO result.py(156) - 测试执行通过： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:31:41,171   14500     INFO result.py(90) - 测试结束： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:31:41,171   14500     INFO result.py(91) - 耗时： 6.2771806716918945
+2021-11-04 13:31:41,187   14500     INFO result.py(69) - 开始测试： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:31:41,187   14500     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:31:41,187   14500     INFO CreatUser开通所有交易账户.py(588) - 提交审核获取到的手机号为：16142625549
+2021-11-04 13:31:41,330   14500     INFO CreatUser开通所有交易账户.py(599) - 提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 1150050, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150050","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-11-04 13:31:47,367   14500     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:31:47,367   14500     INFO result.py(156) - 测试执行通过： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:31:47,383   14500     INFO result.py(90) - 测试结束： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:31:47,383   14500     INFO result.py(91) - 耗时： 6.196432828903198
+2021-11-04 13:31:47,383   14500     INFO result.py(69) - 开始测试： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:31:47,383   14500     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:31:47,542   14500     INFO CreatUser开通所有交易账户.py(634) - 提交审核接口'http://sit-cdms.ynm3k.com//api/common/batchOperatingWorkFlow';请求参数为:{'applyIds': [1150050], 'workFlowCode': 'openClient', 'controlCode': 'GENERATEACCTNO', 'workFlowOperatingDTOList': [{'applyId': 1150050}]};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150050","applyNo":null,"result":true,"operatingMessage":null}]}'
+2021-11-04 13:31:53,597   14500     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:31:53,597   14500     INFO result.py(156) - 测试执行通过： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:31:53,613   14500     INFO result.py(90) - 测试结束： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:31:53,613   14500     INFO result.py(91) - 耗时： 6.22956919670105
+2021-11-04 13:31:53,613   14500     INFO result.py(69) - 开始测试： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:31:53,613   14500     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:31:53,613   14500     INFO CreatUser开通所有交易账户.py(651) - 提交审核获取到的手机号为：16142625549
+2021-11-04 13:31:53,614   14500     INFO CreatUser开通所有交易账户.py(655) - 当前applyId为：1150050
+2021-11-04 13:31:54,721   14500     INFO CreatUser开通所有交易账户.py(663) - 提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow',请求参数为：{'applyId': 1150050, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'},的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150050","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-11-04 13:32:00,750   14500     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:32:00,750   14500     INFO result.py(156) - 测试执行通过： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:32:00,750   14500     INFO result.py(90) - 测试结束： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:32:00,750   14500     INFO result.py(91) - 耗时： 7.136908769607544
+2021-11-04 13:32:00,750   14500     INFO result.py(69) - 开始测试： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:32:00,750   14500     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:32:00,751   14500     INFO CreatUser开通所有交易账户.py(680) - 提交审核获取到的手机号为：16142625549
+2021-11-04 13:32:00,751   14500     INFO CreatUser开通所有交易账户.py(684) - 当前applyId为：1150050
+2021-11-04 13:32:02,014   14500     INFO CreatUser开通所有交易账户.py(700) - 提交审核接口'http://sit-cdms.ynm3k.com//api/common/batchOperatingWorkFlow';请求参数为:{'applyIds': [1150050], 'workFlowCode': 'openClient', 'controlCode': 'PASS', 'workFlowOperatingDTOList': [{'applyId': 1150050}]};的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150050","applyNo":null,"result":false,"operatingMessage":"创建MT5账户失败"}]}'
+2021-11-04 13:32:08,032   14500     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:32:08,128   14500  WARNING result.py(190) - 测试未通过： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建全类型交易账户及审批.py", line 80, in test_10_batchOperatingWorkFlowEnd批量确认
+    self.assertEqual(True, batchOperatingWorkFlowEnd.json().get("data")[0].get("result"))
+AssertionError: True != False
+
+2021-11-04 13:32:08,128   14500     INFO result.py(90) - 测试结束： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:32:08,128   14500     INFO result.py(91) - 耗时： 7.378422260284424
+2021-11-04 13:32:08,144   14500     INFO result.py(69) - 开始测试： test_11_SQLCheckUser (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:32:08,144   14500     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:32:08,144   14500     INFO test_用户创建全类型交易账户及审批.py(85) - 从文本中读到的用户基本信息为：['16142625549', 'HfpSX8IwT@gzz.com', 'Reed7', 'Eock', '赵菜花w', '110101197405051770', 'miss']
+2021-11-04 13:32:18,458   14500     INFO CreatUser开通所有交易账户.py(712) - 通过'16142625549'查询cd_enty表的结果为()
+2021-11-04 13:32:24,461   14500     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:32:24,461   14500    ERROR result.py(175) - 测试产生错误： test_11_SQLCheckUser (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建全类型交易账户及审批.py", line 88, in test_11_SQLCheckUser
+    self.assertEqual(userinf[0], SQLCheckUser[0][18])
+IndexError: tuple index out of range
+
+2021-11-04 13:32:24,461   14500     INFO result.py(90) - 测试结束： test_11_SQLCheckUser (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:32:24,461   14500     INFO result.py(91) - 耗时： 16.316715002059937
+2021-11-04 13:32:24,462   16140     INFO test_runner.py(193) - 
+Pass	test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Pass	test_02_submitAudit提交审核 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Pass	test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Pass	test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Pass	test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Pass	test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Pass	test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Pass	test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Pass	test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+
+2021-11-04 13:32:24,462   16140    ERROR test_runner.py(195) - 
+Fail	test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Error	test_11_SQLCheckUser (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+
+2021-11-04 13:32:24,463   16140     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:03:08.056913
+共计执行用例数量：11
+执行成功用例数量：9
+执行失败用例数量：1
+跳过执行用例数量：0
+产生异常用例数量：1
+
+2021-11-04 13:34:26,623   14808     INFO test_runner.py(156) - 预计并发线程数：3
+2021-11-04 13:34:26,631   10616     INFO result.py(69) - 开始测试： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:34:26,631   10616     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:34:26,631   13268     INFO result.py(69) - 开始测试： test_02_submitAudit提交审核 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:34:26,632   13268     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:34:26,632   13268     INFO CreatUser.py(243) - 等待系统录入数据后再修改WorldCheck的状态，等待时间40s
+2021-11-04 13:34:26,632   16164     INFO result.py(69) - 开始测试： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:34:26,661   16164     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:34:26,693   10616     INFO CreatUser.py(51) - 记录数据的文件名为：userdatainf.txt，写入数据为:['10524536831', 'U2YnhpPq@163.com', 'ClintonH', 'Eonald', '胡承q', '230101195411081907', 'mr', 'securitiesMargin']
+2021-11-04 13:34:27,308   10616     INFO CreatUser.py(61) - 当前token为:22B6DA631F1B297CED3CC99586F7704C7AC79FFD18F78973
+2021-11-04 13:34:27,496   10616     INFO CreatUser.py(66) - 提交申请单时注册用户手机号码为：10524536831
+2021-11-04 13:34:27,829   10616     INFO CreatUser.py(236) - 步骤1接口'http://sit-cdms.ynm3k.com//api/client/applyClient';请求参数为:{'infos': [{'title': 'mr', 'informationType': 1, 'firstName': 'ClintonH', 'lastName': 'Eonald', 'chName': '胡承q', 'usedCnName': 'Eonald10524536831', 'usedChName': '胡承q接口自动化创建账号', 'email': 'U2YnhpPq@163.com', 'phoneAreaCode': 'CHN', 'phoneNo': '10524536831', 'houseAddress': '中英街10524536831号', 'houseAddressPinYin': 'zhon10524536831hao', 'postAddress': '接口自动化', 'natnlty': 'CHN', 'idCardType': '2', 'idCardNo': '230101195411081907', 'otherCardType': '', 'otherCardNo': '', 'countryIssue': 'CHN', 'overCountry': 'CHN', 'birthday': '1994-08-09', 'idExpiresDate': '2023-08-31', 'birthdayPlace': 'CHN', 'employmentStatus': 'self', 'post': 'businessOwner', 'workingYear': '11', 'companyName': '接口自动化10524536831', 'businessNature': 'wholesale&retail', 'officeAddress': '4784551224510524536831', 'officePhone': '0771-10524536831', 'registeredCompany': 'Y', 'employmentRemark': '', 'totalIncomeYear': 'gt1000000', 'sourceOfIncome': ['selfOperatedBusinessIncome', 'salary'], 'sourceOfIncomeRemake': '', 'totalCapital': 'gt8000000', 'sourceOfCapital': ['salary', 'savings', 'pension'], 'sourceOfCapitalRemark': '', 'sourceOfMoney': ['selfOperated'], 'sourceOfMoneyRemark': '', 'securitiesExperience': 'gt10Years', 'cbbcExperience': 'gt10Years', 'warrantExperience': 'gt10Years', 'futuresExperience': 'gt10Years', 'optionsExperience': 'gt10Years', 'foreignExchangExperience': 'gt10Years', 'metalExperience': 'gt10Years', 'autoTransationExperience': 'gt10Years', 'otherInvest': '', 'otherExperience': '', 'withDerivativesKnowledge': 'Y', 'withDerivativesWoking': 'Y', 'withDerivativesDeal': 'Y', 'applicationOpenDerivatives': 'Y', 'understandTheRisks': 'Y', 'haveDeclaredBankruptcy': 'N', 'declaredBankruptcyDate': '', 'isInternalStaff': 'N', 'staffNameRelationship': '', 'relationshipWithInternalEmployees': 'Y', 'employeesName': '11212', 'isRegisteredPerson': 'N', 'registeredPersonRemark': '', 'isUsPerson': 'N', 'taxNumber': '', 'isUsTaxPerson': 'N', 'taxNumberTwo': '', 'isPepPerson': 'N', 'pepPersonName': '', 'investmentObjective': ['asset', 'income'], 'riskTolerance': 'high', 'throughChannels': ['lecture'], 'throughChannelRemark': '', 'isFinalBeneficiary': 'Y', 'finalBeneficiaryName': '', 'isFinalPrincipal': 'Y', 'finalPrincipalName': '', 'businessNatureRemark': ''}], 'marginAcctS': [], 'taxs': [{'residencyJurisdiction': 'CHN', 'taxNumber': '', 'resonType': 'A', 'resonRemark': ''}], 'attachs': {'passportMaterial': ['/hzlc_20210819191744.jpg'], 'addressVerificationMaterials': ['/hzlc_20210819191748.jpg'], 'bankCardMaterials': ['/hzlc_20210819191751.jpg'], 'proofOfIncome': ['/hzlc_20210819191759.jpg'], 'writtenApplicationMaterials': ['/APP_20200811142432_20210819191759.pdf'], 'otherInformation': ['/dinggg_20210819191801.jpg'], 'bankruptcyProve': [], 'acquaintHighLevelInstructionsProve': [], 'tradingAuthorization': []}, 'settleAcctS': [], 'clientType': 'PERSONAL', 'openWay': 'visitingAccount', 'bankName': '', 'bankCardNo': '', 'elecNo': '', 'responsible': 'kwokwah.wong', 'emailLanguage': 'zh-hant', 'accts': ['leveragedForeignExchangeAccountMargin'], 'promotionNumber': 'EDAC520', 'agreeToTheTerms': 'true', 'personalInfoDeclartion': 'true'};响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-11-04 13:34:33,953   10616     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:34:33,953   10616     INFO result.py(156) - 测试执行通过： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:34:33,969   10616     INFO result.py(90) - 测试结束： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:34:33,984   10616     INFO result.py(91) - 耗时： 7.3383917808532715
+2021-11-04 13:34:34,000   10616     INFO result.py(69) - 开始测试： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:34:34,000   10616     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:34:40,023   10616     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:34:40,180   10616    ERROR result.py(175) - 测试产生错误： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建审批.py", line 35, in test_04_saveRiskAssessment风控评估提交
+    saveRiskAssessment = self.creatUser.saveRiskAssessment风控评估提交()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 324, in saveRiskAssessment风控评估提交
+    logging.info("当前applyId为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:34:40,196   10616     INFO result.py(90) - 测试结束： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:34:40,196   10616     INFO result.py(91) - 耗时： 6.196181535720825
+2021-11-04 13:34:40,212   10616     INFO result.py(69) - 开始测试： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:34:40,213   10616     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:34:40,213   10616     INFO CreatUser.py(360) - 当前token为:22B6DA631F1B297CED3CC99586F7704C7AC79FFD18F78973
+2021-11-04 13:34:46,244   10616     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:34:46,276   10616    ERROR result.py(175) - 测试产生错误： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建审批.py", line 41, in test_05_operatingWorkFlow内部人员审核
+    operatingWorkFlow = self.creatUser.operatingWorkFlow内部人员审核()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 366, in operatingWorkFlow内部人员审核
+    print("当前的applyId的值为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:34:46,276   10616     INFO result.py(90) - 测试结束： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:34:46,276   10616     INFO result.py(91) - 耗时： 6.063189506530762
+2021-11-04 13:34:46,276   10616     INFO result.py(69) - 开始测试： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:34:46,276   10616     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:34:46,277   10616     INFO CreatUser.py(471) - 当前token为:22B6DA631F1B297CED3CC99586F7704C7AC79FFD18F78973
+2021-11-04 13:34:46,277   10616     INFO CreatUser.py(477) - 提交审核获取到的手机号为：10524536831
+2021-11-04 13:34:52,300   10616     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:34:52,332   10616    ERROR result.py(175) - 测试产生错误： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建审批.py", line 48, in test_06_operatingWorkFlowNo不用锁定审核通过
+    operatingWorkFlowNo = self.creatUser.operatingWorkFlowNo不用锁定审核通过()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 480, in operatingWorkFlowNo不用锁定审核通过
+    logging.info("当前applyId为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:34:52,332   10616     INFO result.py(90) - 测试结束： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:34:52,332   10616     INFO result.py(91) - 耗时： 6.056195020675659
+2021-11-04 13:34:52,332   10616     INFO result.py(69) - 开始测试： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:34:52,332   10616     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:34:52,333   10616     INFO CreatUser.py(588) - 提交审核获取到的手机号为：10524536831
+2021-11-04 13:34:57,400   13268     INFO CreatUser.py(247) - *******************************************已完成修改WorldCheck的状态为FALSE*******************************************
+2021-11-04 13:34:58,363   10616     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:34:58,394   10616    ERROR result.py(175) - 测试产生错误： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建审批.py", line 55, in test_07_operatingWorkFlowAgaint提交锁
+    operatingWorkFlowAgaint = self.creatUser.operatingWorkFlowAgain提交锁()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 591, in operatingWorkFlowAgain提交锁
+    print("查询数据库cd_clnt_apply_info查询到applyId的值为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:34:58,394   10616     INFO result.py(90) - 测试结束： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:34:58,410   10616     INFO result.py(91) - 耗时： 6.061755657196045
+2021-11-04 13:34:58,426   10616     INFO result.py(69) - 开始测试： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:34:58,426   10616     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:35:01,688   16164     INFO CreatUser.py(286) - 当前token为:22B6DA631F1B297CED3CC99586F7704C7AC79FFD18F78973
+2021-11-04 13:35:01,720   16164     INFO CreatUser.py(294) - 提交审核获取到的手机号为：10524536831
+2021-11-04 13:35:04,450   10616     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:35:04,482   10616    ERROR result.py(175) - 测试产生错误： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建审批.py", line 62, in test_08_batchOperatingWorkFlow批量生成账号确定
+    batchOperatingWorkFlow = self.creatUser.batchOperatingWorkFlow批量生成账号确定()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 619, in batchOperatingWorkFlow批量生成账号确定
+    print("查询数据库cd_clnt_apply_info查询到applyId的值为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:35:04,482   10616     INFO result.py(90) - 测试结束： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:35:04,498   10616     INFO result.py(91) - 耗时： 6.056349992752075
+2021-11-04 13:35:04,514   10616     INFO result.py(69) - 开始测试： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:35:04,514   10616     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:35:04,514   10616     INFO CreatUser.py(651) - 提交审核获取到的手机号为：10524536831
+2021-11-04 13:35:07,746   16164     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:35:07,777   16164    ERROR result.py(175) - 测试产生错误： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建审批.py", line 28, in test_03_operatingWorkFlowFirst提交锁
+    operatingWorkFlowFirst = self.creatUser.operatingWorkFlowFirst提交锁()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 297, in operatingWorkFlowFirst提交锁
+    print("查询数据库cd_clnt_apply_info查询到applyId的值为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:35:07,777   16164     INFO result.py(90) - 测试结束： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:35:07,793   16164     INFO result.py(91) - 耗时： 41.11591839790344
+2021-11-04 13:35:07,793   16164     INFO result.py(69) - 开始测试： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:35:07,793   16164     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:35:07,794   16164     INFO CreatUser.py(680) - 提交审核获取到的手机号为：10524536831
+2021-11-04 13:35:10,546   10616     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:35:10,577   10616    ERROR result.py(175) - 测试产生错误： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建审批.py", line 69, in test_09_operatingWorkFlowThird提交锁
+    operatingWorkFlowThird = self.creatUser.operatingWorkFlowThird提交锁()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 655, in operatingWorkFlowThird提交锁
+    logging.info("当前applyId为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:35:10,577   10616     INFO result.py(90) - 测试结束： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:35:10,593   10616     INFO result.py(91) - 耗时： 6.062783479690552
+2021-11-04 13:35:10,593   10616     INFO result.py(69) - 开始测试： test_11_SQLCheckUser (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:35:10,593   10616     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:35:10,594   10616     INFO test_用户创建审批.py(85) - 从文本中读到的用户基本信息为：['10524536831', 'U2YnhpPq@163.com', 'ClintonH', 'Eonald', '胡承q', '230101195411081907', 'mr', 'securitiesMargin']
+2021-11-04 13:35:13,818   16164     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:35:13,850   16164    ERROR result.py(175) - 测试产生错误： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建审批.py", line 77, in test_10_batchOperatingWorkFlowEnd批量确认
+    batchOperatingWorkFlowEnd = self.creatUser.batchOperatingWorkFlowEnd批量确认()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 684, in batchOperatingWorkFlowEnd批量确认
+    logging.info("当前applyId为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:35:13,850   16164     INFO result.py(90) - 测试结束： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:35:13,850   16164     INFO result.py(91) - 耗时： 6.056952238082886
+2021-11-04 13:35:13,866   16164     INFO result.py(69) - 开始测试： test_01_createExchange创建换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-11-04 13:35:13,866   16164     INFO test_创建换汇申请单.py(13) - 初始化CreateExchange已完成
+2021-11-04 13:35:14,758   16164     INFO Creat创建换汇申请单.py(34) - 当前token为:22B6DA631F1B297C36EFAC7BBE53B95E7AC79FFD18F78973
+2021-11-04 13:35:14,803   16164     INFO Creat创建换汇申请单.py(39) - 当前获取到applyAmount的值为：75.55
+2021-11-04 13:35:14,803   16164     INFO Creat创建换汇申请单.py(40) - 查询数据库cd_ac查询到的换汇账号为114311110
+2021-11-04 13:35:14,879   16164     INFO Creat创建换汇申请单.py(53) - 记录数据的文件名为：exchorderinfor.txt，写入数据为:[11431, '114311110', 75.55, 7.768]
+2021-11-04 13:35:15,255   16164     INFO Creat创建换汇申请单.py(71) - 步骤1提交审核接口'http://sit-cdms.ynm3k.com//api/funds/createExchange';请求参数为:{'fromCurrency': 'HKD', 'toCurrency': 'USD', 'exchangeRate': 7.768, 'clientId': 11431, 'applyAmount': 75.55, 'accountId': '114311110', 'accountCategory': 'securitiesCash', 'applySource': 4};响应结果为:'{"code":"0000","msg":"操作成功","data":true}'
+2021-11-04 13:35:21,094   10616     INFO CreatUser.py(712) - 通过'10524536831'查询cd_enty表的结果为()
+2021-11-04 13:35:21,315   16164     INFO test_创建换汇申请单.py(51) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:35:21,315   16164     INFO result.py(156) - 测试执行通过： test_01_createExchange创建换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-11-04 13:35:21,315   16164     INFO result.py(90) - 测试结束： test_01_createExchange创建换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-11-04 13:35:21,331   16164     INFO result.py(91) - 耗时： 7.4491047859191895
+2021-11-04 13:35:21,331   16164     INFO result.py(69) - 开始测试： test_02_auditExchange提交审核换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-11-04 13:35:21,331   16164     INFO test_创建换汇申请单.py(13) - 初始化CreateExchange已完成
+2021-11-04 13:35:21,332   16164     INFO Creat创建换汇申请单.py(80) - 等待系统录入数据后再提交审批，等待时间15s
+2021-11-04 13:35:27,121   10616     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:35:27,153   10616    ERROR result.py(175) - 测试产生错误： test_11_SQLCheckUser (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建审批.py", line 88, in test_11_SQLCheckUser
+    self.assertEqual(userinf[0], SQLCheckUser[0][18])
+IndexError: tuple index out of range
+
+2021-11-04 13:35:27,153   10616     INFO result.py(90) - 测试结束： test_11_SQLCheckUser (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:35:27,169   10616     INFO result.py(91) - 耗时： 16.55989098548889
+2021-11-04 13:35:27,169   10616     INFO result.py(69) - 开始测试： test_03_SQLCheckexchorder (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-11-04 13:35:27,169   10616     INFO test_创建换汇申请单.py(13) - 初始化CreateExchange已完成
+2021-11-04 13:35:35,374   10616     INFO Creat创建换汇申请单.py(117) - 通过'11431'查询cd_exch表的结果为((3924, 'E00003713', '11431', '114311110', 'securitiesCash', 'HKD', 'USD', Decimal('7.76800000'), None, Decimal('75.55000000'), None, 4, None, datetime.datetime(2021, 11, 4, 13, 35, 19), 'ganjiexiang', None, 'ganjiexiang', 1),)
+2021-11-04 13:35:35,454   10616     INFO test_创建换汇申请单.py(34) - 从文本中读到的换汇单基本信息为：['11431', '114311110', '75.55', '7.768']
+2021-11-04 13:35:36,701   16164     INFO Creat创建换汇申请单.py(90) - 当前token为:22B6DA631F1B297CBD596CA29D268AC47AC79FFD18F78973
+2021-11-04 13:35:36,731   16164     INFO Creat创建换汇申请单.py(96) - 查询数据库cd_exch查询到applyid的值为：3924
+2021-11-04 13:35:37,013   16164     INFO Creat创建换汇申请单.py(109) - 步骤2提交审核接口'http://sit-cdms.ynm3k.com//api/funds/auditExchange';请求参数为:{'applyId': 3924, 'approvalResult': 'PASS', 'fileList': [], 'statusCode': 'SETL'};响应结果为:'{"code":"0000","msg":"操作成功","data":true}'
+2021-11-04 13:35:37,426   13268     INFO CreatUser.py(256) - 当前token为:22B6DA631F1B297CED3CC99586F7704C7AC79FFD18F78973
+2021-11-04 13:35:37,521   13268     INFO CreatUser.py(262) - 提交审核获取到的手机号为：10524536831
+2021-11-04 13:35:38,184   13268     INFO CreatUser.py(273) - 步骤2提交审核接口'http://sit-cdms.ynm3k.com//api/client/submitAudit';请求参数为:{'applyId': 1150051, 'clientSource': 'CDMS', 'workFlowCode': 'openClient'};响应结果为:'{"code":"0020","msg":"未登录:Login Timeout","data":""}'
+2021-11-04 13:35:41,474   10616     INFO test_创建换汇申请单.py(51) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:35:41,585   10616  WARNING result.py(190) - 测试未通过： test_03_SQLCheckexchorder (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建换汇申请单.py", line 39, in test_03_SQLCheckexchorder
+    self.assertEqual(2, SQLCheckexchorderinfor[0][-1])
+AssertionError: 2 != 1
+
+2021-11-04 13:35:41,585   10616     INFO result.py(90) - 测试结束： test_03_SQLCheckexchorder (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-11-04 13:35:41,585   10616     INFO result.py(91) - 耗时： 14.415995121002197
+2021-11-04 13:35:41,585   10616     INFO result.py(69) - 开始测试： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:35:41,585   10616     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:35:41,680   10616     INFO Creat没有结构性产品账号及申请结构性产品审批.py(56) - 记录数据的文件名为：userdatainf.txt，写入数据为:['19685763180', 'BfwcqqMJw@163.com', 'BrainW', 'Steven', '赵源V', '640101199608251898', 'miss']
+2021-11-04 13:35:41,887   10616     INFO Creat没有结构性产品账号及申请结构性产品审批.py(71) - 当前token为:22B6DA631F1B297CAF20677A310BF7427AC79FFD18F78973
+2021-11-04 13:35:41,903   10616     INFO Creat没有结构性产品账号及申请结构性产品审批.py(76) - 提交申请单时注册用户手机号码为：19685763180
+2021-11-04 13:35:42,172   10616     INFO Creat没有结构性产品账号及申请结构性产品审批.py(242) - 步骤1接口'http://sit-cdms.ynm3k.com//api/client/applyClient';请求参数为:{'infos': [{'title': 'miss', 'informationType': 1, 'firstName': 'BrainW', 'lastName': 'Steven', 'chName': '赵源V', 'usedCnName': 'Steven19685763180', 'usedChName': '赵源V接口自动化创建账号', 'email': 'BfwcqqMJw@163.com', 'phoneAreaCode': 'CHN', 'phoneNo': '19685763180', 'houseAddress': '中英街19685763180号', 'houseAddressPinYin': 'zhon19685763180hao', 'postAddress': '接口自动化', 'natnlty': 'TWN', 'idCardType': '1', 'idCardNo': '640101199608251898', 'otherCardType': '', 'otherCardNo': '', 'countryIssue': 'CHN', 'overCountry': 'CHN', 'birthday': '1993-11-01', 'idExpiresDate': '2025-09-30', 'birthdayPlace': 'CHN', 'employmentStatus': 'employed', 'post': 'director&president', 'workingYear': '11', 'companyName': '大苏打', 'businessNature': 'wholesale&retail', 'officeAddress': '大苏打大苏打', 'officePhone': '0258545478', 'registeredCompany': '', 'employmentRemark': '', 'totalIncomeYear': 'gt1000000', 'sourceOfIncome': ['selfOperatedBusinessIncome'], 'sourceOfIncomeRemake': '', 'totalCapital': 'gt8000000', 'sourceOfCapital': ['vehicleInvestment', 'salary'], 'sourceOfCapitalRemark': '', 'sourceOfMoney': ['savings'], 'sourceOfMoneyRemark': '', 'securitiesExperience': 'gt10Years', 'cbbcExperience': 'gt10Years', 'warrantExperience': 'gt10Years', 'futuresExperience': 'gt10Years', 'optionsExperience': 'gt10Years', 'foreignExchangExperience': 'gt10Years', 'metalExperience': 'gt10Years', 'autoTransationExperience': 'gt10Years', 'otherInvest': '', 'otherExperience': '', 'withDerivativesKnowledge': 'Y', 'withDerivativesWoking': 'Y', 'withDerivativesDeal': 'N', 'applicationOpenDerivatives': 'N', 'understandTheRisks': '', 'haveDeclaredBankruptcy': 'N', 'declaredBankruptcyDate': '', 'isInternalStaff': 'N', 'staffNameRelationship': '', 'relationshipWithInternalEmployees': 'N', 'employeesName': '', 'isRegisteredPerson': 'N', 'registeredPersonRemark': '', 'isUsPerson': 'N', 'taxNumber': '', 'isUsTaxPerson': 'N', 'taxNumberTwo': '', 'isPepPerson': 'N', 'pepPersonName': '', 'investmentObjective': ['speculation'], 'riskTolerance': 'high', 'throughChannels': ['advertising', 'lecture'], 'throughChannelRemark': '', 'isFinalBeneficiary': 'Y', 'finalBeneficiaryName': '', 'isFinalPrincipal': 'Y', 'finalPrincipalName': '', 'businessNatureRemark': ''}], 'marginAcctS': [], 'taxs': [], 'attachs': {'passportMaterial': ['/dinggg_20210908162346.jpg'], 'addressVerificationMaterials': ['/dinggg_20210908162349.jpg'], 'bankCardMaterials': ['/hzlc_20210908162353.jpg'], 'writtenApplicationMaterials': ['/APP_20200811142432_20210908162403.pdf'], 'proofOfIncome': ['/dinggg_20210908162404.jpg'], 'otherInformation': ['/hzlc_20210908162407.jpg'], 'bankruptcyProve': [], 'acquaintHighLevelInstructionsProve': [], 'tradingAuthorization': []}, 'settleAcctS': [], 'clientType': 'PERSONAL', 'openWay': 'visitingAccount', 'bankName': '', 'bankCardNo': '', 'elecNo': '', 'responsible': 'ryan.chan', 'emailLanguage': 'zh-hant', 'accts': ['securitiesCash'], 'promotionNumber': 'EDAA520', 'agreeToTheTerms': 'true', 'personalInfoDeclartion': 'true'};响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-11-04 13:35:43,067   16164     INFO test_创建换汇申请单.py(51) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:35:43,067   16164     INFO result.py(156) - 测试执行通过： test_02_auditExchange提交审核换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-11-04 13:35:43,067   16164     INFO result.py(90) - 测试结束： test_02_auditExchange提交审核换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-11-04 13:35:43,067   16164     INFO result.py(91) - 耗时： 21.736191034317017
+2021-11-04 13:35:43,068   16164     INFO result.py(69) - 开始测试： test_02_submitAudit提交审核 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:35:43,068   16164     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:35:43,068   16164     INFO Creat没有结构性产品账号及申请结构性产品审批.py(250) - 等待系统录入数据后再修改WorldCheck的状态，等待时间20s
+2021-11-04 13:35:44,225   13268     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:35:44,240   13268  WARNING result.py(190) - 测试未通过： test_02_submitAudit提交审核 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建审批.py", line 24, in test_02_submitAudit提交审核
+    self.assertEqual("操作成功", submitAudit.json().get("msg"))
+AssertionError: '操作成功' != '未登录:Login Timeout'
+- 操作成功
++ 未登录:Login Timeout
+
+
+2021-11-04 13:35:44,240   13268     INFO result.py(90) - 测试结束： test_02_submitAudit提交审核 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:35:44,240   13268     INFO result.py(91) - 耗时： 77.6080367565155
+2021-11-04 13:35:44,255   13268     INFO result.py(69) - 开始测试： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:35:44,255   13268     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:35:48,237   10616     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:35:48,237   10616     INFO result.py(156) - 测试执行通过： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:35:48,253   10616     INFO result.py(90) - 测试结束： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:35:48,253   10616     INFO result.py(91) - 耗时： 6.667412757873535
+2021-11-04 13:35:48,269   10616     INFO result.py(69) - 开始测试： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:35:48,269   10616     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:35:54,288   10616     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:35:54,478   10616    ERROR result.py(175) - 测试产生错误： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 35, in test_04_saveRiskAssessment风控评估提交
+    saveRiskAssessment = self.creatUser.saveRiskAssessment风控评估提交()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 331, in saveRiskAssessment风控评估提交
+    logging.info("当前applyId为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:35:54,478   10616     INFO result.py(90) - 测试结束： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:35:54,494   10616     INFO result.py(91) - 耗时： 6.209243059158325
+2021-11-04 13:35:54,494   10616     INFO result.py(69) - 开始测试： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:35:54,494   10616     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:35:54,494   10616     INFO Creat没有结构性产品账号及申请结构性产品审批.py(367) - 当前token为:22B6DA631F1B297CAF20677A310BF7427AC79FFD18F78973
+2021-11-04 13:36:00,513   10616     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:36:00,544   10616    ERROR result.py(175) - 测试产生错误： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 41, in test_05_operatingWorkFlow内部人员审核
+    operatingWorkFlow = self.creatUser.operatingWorkFlow内部人员审核()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 373, in operatingWorkFlow内部人员审核
+    print("当前的applyId的值为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:36:00,544   10616     INFO result.py(90) - 测试结束： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:00,544   10616     INFO result.py(91) - 耗时： 6.049367427825928
+2021-11-04 13:36:00,544   10616     INFO result.py(69) - 开始测试： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:00,545   10616     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:36:00,545   10616     INFO Creat没有结构性产品账号及申请结构性产品审批.py(478) - 当前token为:22B6DA631F1B297CAF20677A310BF7427AC79FFD18F78973
+2021-11-04 13:36:00,545   10616     INFO Creat没有结构性产品账号及申请结构性产品审批.py(484) - 提交审核获取到的手机号为：19685763180
+2021-11-04 13:36:06,572   10616     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:36:06,604   10616    ERROR result.py(175) - 测试产生错误： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 48, in test_06_operatingWorkFlowNo不用锁定审核通过
+    operatingWorkFlowNo = self.creatUser.operatingWorkFlowNo不用锁定审核通过()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 488, in operatingWorkFlowNo不用锁定审核通过
+    logging.info("当前applyId为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:36:06,604   10616     INFO result.py(90) - 测试结束： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:06,620   10616     INFO result.py(91) - 耗时： 6.058794260025024
+2021-11-04 13:36:06,620   10616     INFO result.py(69) - 开始测试： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:06,620   10616     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:36:06,620   10616     INFO Creat没有结构性产品账号及申请结构性产品审批.py(596) - 提交审核获取到的手机号为：19685763180
+2021-11-04 13:36:12,650   10616     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:36:12,682   10616    ERROR result.py(175) - 测试产生错误： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 55, in test_07_operatingWorkFlowAgaint提交锁
+    operatingWorkFlowAgaint = self.creatUser.operatingWorkFlowAgain提交锁()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 600, in operatingWorkFlowAgain提交锁
+    print("查询数据库cd_clnt_apply_info查询到applyId的值为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:36:12,682   10616     INFO result.py(90) - 测试结束： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:12,698   10616     INFO result.py(91) - 耗时： 6.062769412994385
+2021-11-04 13:36:12,699   10616     INFO result.py(69) - 开始测试： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:12,699   10616     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:36:13,965   16164     INFO Creat没有结构性产品账号及申请结构性产品审批.py(254) - *******************************************已完成修改WorldCheck的状态为FALSE*******************************************
+2021-11-04 13:36:14,283   13268     INFO Creat没有结构性产品账号及申请结构性产品审批.py(292) - 当前token为:22B6DA631F1B297CAF20677A310BF7427AC79FFD18F78973
+2021-11-04 13:36:14,315   13268     INFO Creat没有结构性产品账号及申请结构性产品审批.py(300) - 提交审核获取到的手机号为：19685763180
+2021-11-04 13:36:18,728   10616     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:36:18,760   10616    ERROR result.py(175) - 测试产生错误： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 62, in test_08_batchOperatingWorkFlow批量生成账号确定
+    batchOperatingWorkFlow = self.creatUser.batchOperatingWorkFlow批量生成账号确定()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 628, in batchOperatingWorkFlow批量生成账号确定
+    print("查询数据库cd_clnt_apply_info查询到applyId的值为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:36:18,760   10616     INFO result.py(90) - 测试结束： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:18,776   10616     INFO result.py(91) - 耗时： 6.061466693878174
+2021-11-04 13:36:18,776   10616     INFO result.py(69) - 开始测试： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:18,776   10616     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:36:18,776   10616     INFO Creat没有结构性产品账号及申请结构性产品审批.py(660) - 提交审核获取到的手机号为：19685763180
+2021-11-04 13:36:20,344   13268     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:36:20,376   13268    ERROR result.py(175) - 测试产生错误： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 28, in test_03_operatingWorkFlowFirst提交锁
+    operatingWorkFlowFirst = self.creatUser.operatingWorkFlowFirst提交锁()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 304, in operatingWorkFlowFirst提交锁
+    print("查询数据库cd_clnt_apply_info查询到applyId的值为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:36:20,376   13268     INFO result.py(90) - 测试结束： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:20,392   13268     INFO result.py(91) - 耗时： 36.12023949623108
+2021-11-04 13:36:20,392   13268     INFO result.py(69) - 开始测试： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:20,392   13268     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:36:20,392   13268     INFO Creat没有结构性产品账号及申请结构性产品审批.py(688) - 提交审核获取到的手机号为：19685763180
+2021-11-04 13:36:24,808   10616     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:36:24,839   10616    ERROR result.py(175) - 测试产生错误： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 69, in test_09_operatingWorkFlowThird提交锁
+    operatingWorkFlowThird = self.creatUser.operatingWorkFlowThird提交锁()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 663, in operatingWorkFlowThird提交锁
+    logging.info("当前applyId为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:36:24,839   10616     INFO result.py(90) - 测试结束： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:24,854   10616     INFO result.py(91) - 耗时： 6.062509775161743
+2021-11-04 13:36:24,870   10616     INFO result.py(69) - 开始测试： test_11_SQLCheckUser (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:24,870   10616     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:36:24,870   10616     INFO test_用户创建结构性产品账户及审批.py(86) - 从文本中读到的用户基本信息为：['19685763180', 'BfwcqqMJw@163.com', 'BrainW', 'Steven', '赵源V', '640101199608251898', 'miss']
+2021-11-04 13:36:26,413   13268     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:36:26,444   13268    ERROR result.py(175) - 测试产生错误： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 77, in test_10_batchOperatingWorkFlowEnd批量确认
+    batchOperatingWorkFlowEnd = self.creatUser.batchOperatingWorkFlowEnd批量确认()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 692, in batchOperatingWorkFlowEnd批量确认
+    logging.info("当前applyId为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:36:26,444   13268     INFO result.py(90) - 测试结束： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:26,459   13268     INFO result.py(91) - 耗时： 6.05165433883667
+2021-11-04 13:36:26,459   13268     INFO result.py(69) - 开始测试： test_12_addAccountStructure增加结构性产品 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:26,459   13268     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:36:26,459   13268     INFO Creat没有结构性产品账号及申请结构性产品审批.py(735) - 提交审核获取到的手机号为：19685763180
+2021-11-04 13:36:33,006   13268     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:36:33,038   13268    ERROR result.py(175) - 测试产生错误： test_12_addAccountStructure增加结构性产品 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 110, in test_12_addAccountStructure增加结构性产品
+    addAccountStructure = self.creatUser.addAccountStructure增加结构性产品()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 741, in addAccountStructure增加结构性产品
+    clnt_id=cd_clnt_joint_enty(cd_enty(phone)[0][0])[0][1]
+IndexError: tuple index out of range
+
+2021-11-04 13:36:33,038   13268     INFO result.py(90) - 测试结束： test_12_addAccountStructure增加结构性产品 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:33,054   13268     INFO result.py(91) - 耗时： 6.5794031620025635
+2021-11-04 13:36:33,054   13268     INFO result.py(69) - 开始测试： test_13_addAccountStructure结构性产品申请第一次审批 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:33,054   13268     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:36:33,054   13268     INFO Creat没有结构性产品账号及申请结构性产品审批.py(803) - 提交审核获取到的手机号为：19685763180
+2021-11-04 13:36:35,432   10616     INFO Creat没有结构性产品账号及申请结构性产品审批.py(720) - 通过'19685763180'查询cd_enty表的结果为()
+2021-11-04 13:36:39,082   13268     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:36:39,113   13268    ERROR result.py(175) - 测试产生错误： test_13_addAccountStructure结构性产品申请第一次审批 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 117, in test_13_addAccountStructure结构性产品申请第一次审批
+    addAccountStructurenN = self.creatUser.addAccountStructure第一次审批()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 807, in addAccountStructure第一次审批
+    Structureapplyid=cd_ac_struc_appl(clnt_id)[0][0]
+NameError: name 'clnt_id' is not defined
+
+2021-11-04 13:36:39,113   13268     INFO result.py(90) - 测试结束： test_13_addAccountStructure结构性产品申请第一次审批 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:39,128   13268     INFO result.py(91) - 耗时： 6.058706998825073
+2021-11-04 13:36:39,128   13268     INFO result.py(69) - 开始测试： test_14_addAccountStructure结构性产品申请第二次审批 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:39,128   13268     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:36:39,128   13268     INFO Creat没有结构性产品账号及申请结构性产品审批.py(837) - 提交审核获取到的手机号为：19685763180
+2021-11-04 13:36:41,455   10616     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:36:41,470   10616    ERROR result.py(175) - 测试产生错误： test_11_SQLCheckUser (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 89, in test_11_SQLCheckUser
+    self.assertEqual(userinf[0], SQLCheckUser[0][18])
+IndexError: tuple index out of range
+
+2021-11-04 13:36:41,470   10616     INFO result.py(90) - 测试结束： test_11_SQLCheckUser (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:41,470   10616     INFO result.py(91) - 耗时： 16.599892139434814
+2021-11-04 13:36:41,470   10616     INFO result.py(69) - 开始测试： test_15_SQLCheckcd_ac_struc_appl (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:41,471   10616     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:36:45,155   13268     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:36:45,186   13268    ERROR result.py(175) - 测试产生错误： test_14_addAccountStructure结构性产品申请第二次审批 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 124, in test_14_addAccountStructure结构性产品申请第二次审批
+    addAccountStructureT= self.creatUser.addAccountStructure第二次审批()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 839, in addAccountStructure第二次审批
+    Structureapplyid = cd_ac_struc_appl(clnt_id)[0][0]
+NameError: name 'clnt_id' is not defined
+
+2021-11-04 13:36:45,186   13268     INFO result.py(90) - 测试结束： test_14_addAccountStructure结构性产品申请第二次审批 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:45,202   13268     INFO result.py(91) - 耗时： 6.057921886444092
+2021-11-04 13:36:45,202   13268     INFO result.py(69) - 开始测试： test_01_createWithdrawal创建出金单 (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:36:45,202   13268     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-04 13:36:45,327   13268     INFO CreatEquitiesWithdrawal出金.py(34) - 当前token为:22B6DA631F1B297C63CB2E04CAB5B4567AC79FFD18F78973
+2021-11-04 13:36:45,579   13268     INFO CreatEquitiesWithdrawal出金.py(59) - 步骤1接口'http://sit-cdms.ynm3k.com//api/funds/createWithdrawal';请求参数为:{'clientId': 11431, 'actualAmountCurrency': 'HKD', 'withdrawalAmount': 53.25, 'accountId': 114311110, 'accountCategory': 'securitiesCash', 'clientBankAccountId': '1356', 'withdrawalType': 'LOCAL', 'applySource': 4, 'fileList': ['/hzlc_20211025162042.jpg'], 'serviceCurrency': 'HKD', 'serviceCharge': 0, 'actualAmount': 53.25, 'feeList': []};响应结果为：'{"code":"CDMS_05076","msg":"错误码：[CDMS_05076]，该账户已存在币种为HKD,未完成的出金申请,请先处理未完成的申请!","data":""}'
+2021-11-04 13:36:51,603   13268     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:36:51,666   13268  WARNING result.py(190) - 测试未通过： test_01_createWithdrawal创建出金单 (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建出金申请单.py", line 18, in test_01_createWithdrawal创建出金单
+    self.assertEqual("操作成功", auditWithdrawalNo.json().get("msg"))
+AssertionError: '操作成功' != '错误码：[CDMS_05076]，该账户已存在币种为HKD,未完成的出金申请,请先处理未完成的申请!'
+- 操作成功
++ 错误码：[CDMS_05076]，该账户已存在币种为HKD,未完成的出金申请,请先处理未完成的申请!
+
+
+2021-11-04 13:36:51,666   13268     INFO result.py(90) - 测试结束： test_01_createWithdrawal创建出金单 (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:36:51,682   13268     INFO result.py(91) - 耗时： 6.464191913604736
+2021-11-04 13:36:51,682   13268     INFO result.py(69) - 开始测试： test_02_operatingWorkFlowNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:36:51,682   13268     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-04 13:36:54,000   16164     INFO Creat没有结构性产品账号及申请结构性产品审批.py(263) - 当前token为:22B6DA631F1B297CAF20677A310BF7427AC79FFD18F78973
+2021-11-04 13:36:54,077   16164     INFO Creat没有结构性产品账号及申请结构性产品审批.py(269) - 提交审核获取到的手机号为：19685763180
+2021-11-04 13:36:54,485   16164     INFO Creat没有结构性产品账号及申请结构性产品审批.py(280) - 步骤2提交审核接口'http://sit-cdms.ynm3k.com//api/client/submitAudit';请求参数为:{'applyId': 1150052, 'clientSource': 'CDMS', 'workFlowCode': 'openClient'};响应结果为:'{"code":"0020","msg":"未登录:Login Timeout","data":""}'
+2021-11-04 13:36:55,513   10616     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:36:55,544   10616    ERROR result.py(175) - 测试产生错误： test_15_SQLCheckcd_ac_struc_appl (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 131, in test_15_SQLCheckcd_ac_struc_appl
+    SQLCheckcd_ac_struc_appl=self.creatUser.SQLCheckcd_ac_struc_appl()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 862, in SQLCheckcd_ac_struc_appl
+    Checkcd_ac_struc_appl = cd_ac_struc_appl(clnt_id)
+NameError: name 'clnt_id' is not defined
+
+2021-11-04 13:36:55,560   10616     INFO result.py(90) - 测试结束： test_15_SQLCheckcd_ac_struc_appl (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:36:55,576   10616     INFO result.py(91) - 耗时： 14.088813304901123
+2021-11-04 13:36:55,576   10616     INFO result.py(69) - 开始测试： test_03_auditWithdrawalNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:36:55,576   10616     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-04 13:36:55,576   10616     INFO CreatEquitiesWithdrawal出金.py(93) - 当前token为:22B6DA631F1B297C63CB2E04CAB5B4567AC79FFD18F78973
+2021-11-04 13:36:58,081   13268     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:36:58,191   13268    ERROR result.py(175) - 测试产生错误： test_02_operatingWorkFlowNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建出金申请单.py", line 22, in test_02_operatingWorkFlowNo
+    operatingWorkFlowNo = self.CreatEquitiesWithdrawal.operatingWorkFlowNo()
+  File "F:\python\EDDID_CDMS\Business\CreatEquitiesWithdrawal出金.py", line 65, in operatingWorkFlowNo
+    applyId = cd_withdrawal(clientId, withdrawalAmount)[0][0]
+IndexError: tuple index out of range
+
+2021-11-04 13:36:58,191   13268     INFO result.py(90) - 测试结束： test_02_operatingWorkFlowNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:36:58,206   13268     INFO result.py(91) - 耗时： 6.509573459625244
+2021-11-04 13:36:58,206   13268     INFO result.py(69) - 开始测试： test_04_operatingWorkFlowTO (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:36:58,206   13268     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-04 13:36:58,206   13268     INFO CreatEquitiesWithdrawal出金.py(122) - 当前token为:22B6DA631F1B297C63CB2E04CAB5B4567AC79FFD18F78973
+2021-11-04 13:37:00,569   16164     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:37:00,585   16164  WARNING result.py(190) - 测试未通过： test_02_submitAudit提交审核 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 24, in test_02_submitAudit提交审核
+    self.assertEqual("操作成功", submitAudit.json().get("msg"))
+AssertionError: '操作成功' != '未登录:Login Timeout'
+- 操作成功
++ 未登录:Login Timeout
+
+
+2021-11-04 13:37:00,585   16164     INFO result.py(90) - 测试结束： test_02_submitAudit提交审核 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:37:00,601   16164     INFO result.py(91) - 耗时： 77.5170385837555
+2021-11-04 13:37:00,601   16164     INFO result.py(69) - 开始测试： test_05_auditWithdrawalTo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:37:00,601   16164     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-04 13:37:00,601   16164     INFO CreatEquitiesWithdrawal出金.py(144) - 当前token为:22B6DA631F1B297C63CB2E04CAB5B4567AC79FFD18F78973
+2021-11-04 13:37:01,598   10616     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:37:01,630   10616    ERROR result.py(175) - 测试产生错误： test_03_auditWithdrawalNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建出金申请单.py", line 29, in test_03_auditWithdrawalNo
+    auditWithdrawalNo = self.CreatEquitiesWithdrawal.auditWithdrawalNo()
+  File "F:\python\EDDID_CDMS\Business\CreatEquitiesWithdrawal出金.py", line 100, in auditWithdrawalNo
+    "applyId": applyId,
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:37:01,630   10616     INFO result.py(90) - 测试结束： test_03_auditWithdrawalNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:37:01,630   10616     INFO result.py(91) - 耗时： 6.054803371429443
+2021-11-04 13:37:01,646   10616     INFO result.py(69) - 开始测试： test_06_get_current_state (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:37:01,662   10616     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-04 13:37:04,228   13268     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:37:04,260   13268    ERROR result.py(175) - 测试产生错误： test_04_operatingWorkFlowTO (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建出金申请单.py", line 35, in test_04_operatingWorkFlowTO
+    operatingWorkFlowTO = self.CreatEquitiesWithdrawal.operatingWorkFlowTO()
+  File "F:\python\EDDID_CDMS\Business\CreatEquitiesWithdrawal出金.py", line 129, in operatingWorkFlowTO
+    "applyId": applyId,
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:37:04,260   13268     INFO result.py(90) - 测试结束： test_04_operatingWorkFlowTO (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:37:04,260   13268     INFO result.py(91) - 耗时： 6.053808927536011
+2021-11-04 13:37:04,260   13268     INFO result.py(69) - 开始测试： test_07_operatingWorkFlowfourth (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:37:04,261   13268     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-04 13:37:04,261   13268     INFO CreatEquitiesWithdrawal出金.py(376) - 当前token为:22B6DA631F1B297C63CB2E04CAB5B4567AC79FFD18F78973
+2021-11-04 13:37:06,619   16164     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:37:06,651   16164    ERROR result.py(175) - 测试产生错误： test_05_auditWithdrawalTo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建出金申请单.py", line 42, in test_05_auditWithdrawalTo
+    auditWithdrawalTo = self.CreatEquitiesWithdrawal.auditWithdrawalTo()
+  File "F:\python\EDDID_CDMS\Business\CreatEquitiesWithdrawal出金.py", line 151, in auditWithdrawalTo
+    "applyId": applyId,
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:37:06,651   16164     INFO result.py(90) - 测试结束： test_05_auditWithdrawalTo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:37:06,651   16164     INFO result.py(91) - 耗时： 6.049848556518555
+2021-11-04 13:37:06,651   16164     INFO result.py(69) - 开始测试： test_08_auditWithdrawalAcctPass (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:37:06,652   16164     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-04 13:37:06,652   16164     INFO CreatEquitiesWithdrawal出金.py(400) - 当前token为:22B6DA631F1B297C63CB2E04CAB5B4567AC79FFD18F78973
+2021-11-04 13:37:07,680   10616     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:37:07,696   10616    ERROR result.py(175) - 测试产生错误： test_06_get_current_state (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建出金申请单.py", line 48, in test_06_get_current_state
+    get_current_state = self.CreatEquitiesWithdrawal.get_current_state()
+  File "F:\python\EDDID_CDMS\Business\CreatEquitiesWithdrawal出金.py", line 179, in get_current_state
+    "applyId": applyId,
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:37:07,696   10616     INFO result.py(90) - 测试结束： test_06_get_current_state (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:37:07,712   10616     INFO result.py(91) - 耗时： 6.033855199813843
+2021-11-04 13:37:07,712   10616     INFO result.py(69) - 开始测试： test_01_createDeposit创建入金单 (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-04 13:37:07,712   10616     INFO test_创建入金申请单.py(13) - 初始化CreatEquitiesDeposit入金已完成
+2021-11-04 13:37:07,823   10616     INFO CreatEquitiesDeposit入金.py(34) - 当前token为:22B6DA631F1B297C3B432B55272DF4277AC79FFD18F78973
+2021-11-04 13:37:08,202   10616     INFO CreatEquitiesDeposit入金.py(60) - 步骤1接口'http://sit-cdms.ynm3k.com//api/funds/createDeposit';请求参数为:{'clientId': 11431, 'depositType': 'online_bank_deposit', 'remittanceBankName': '渣打银行(香港)有限公司 003', 'remittanceBankCard': '32323232', 'sibMobile': 'null', 'depositAmount': 40.75, 'accountId': '114311110', 'accountCategory': 'securitiesCash', 'remittanceBankCode': '003', 'beneficiaryBankCode': '012', 'beneficiaryBankName': '中国银行（香港）有限公司', 'beneficiaryBankCard': '012-873-2-002063-5', 'depositCurrency': 'HKD', 'applySource': 4, 'fileList': ['/hzlc_20211101100818.jpg']};响应结果为：'{"code":"0000","msg":"操作成功","data":true}'
+2021-11-04 13:37:10,291   13268     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:37:10,323   13268    ERROR result.py(175) - 测试产生错误： test_07_operatingWorkFlowfourth (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建出金申请单.py", line 54, in test_07_operatingWorkFlowfourth
+    operatingWorkFlowfourth = self.CreatEquitiesWithdrawal.operatingWorkFlowfourth()
+  File "F:\python\EDDID_CDMS\Business\CreatEquitiesWithdrawal出金.py", line 383, in operatingWorkFlowfourth
+    "applyId": applyId,
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:37:10,323   13268     INFO result.py(90) - 测试结束： test_07_operatingWorkFlowfourth (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:37:10,323   13268     INFO result.py(91) - 耗时： 6.061814785003662
+2021-11-04 13:37:10,323   13268     INFO result.py(69) - 开始测试： test_02_operatingWorkFlowNo (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-04 13:37:10,323   13268     INFO test_创建入金申请单.py(13) - 初始化CreatEquitiesDeposit入金已完成
+2021-11-04 13:37:10,558   13268     INFO CreatEquitiesDeposit入金.py(72) - 当前token为:22B6DA631F1B297C3B432B55272DF4277AC79FFD18F78973
+2021-11-04 13:37:10,765   13268     INFO CreatEquitiesDeposit入金.py(84) - 步骤2接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 6209, 'workFlowCode': 'depositApply', 'controlCode': 'LOCK'};响应结果为：'{"code":"0000","msg":"操作成功","data":[{"applyId":"6209","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-11-04 13:37:12,673   16164     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:37:12,705   16164    ERROR result.py(175) - 测试产生错误： test_08_auditWithdrawalAcctPass (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建出金申请单.py", line 61, in test_08_auditWithdrawalAcctPass
+    auditWithdrawalAcctPass = self.CreatEquitiesWithdrawal.auditWithdrawalAcctPass()
+  File "F:\python\EDDID_CDMS\Business\CreatEquitiesWithdrawal出金.py", line 407, in auditWithdrawalAcctPass
+    "applyId": applyId,
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:37:12,705   16164     INFO result.py(90) - 测试结束： test_08_auditWithdrawalAcctPass (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:37:12,721   16164     INFO result.py(91) - 耗时： 6.052792549133301
+2021-11-04 13:37:12,737   16164     INFO result.py(69) - 开始测试： test_03_auditDepositNo (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-04 13:37:12,737   16164     INFO test_创建入金申请单.py(13) - 初始化CreatEquitiesDeposit入金已完成
+2021-11-04 13:37:12,737   16164     INFO CreatEquitiesDeposit入金.py(94) - 当前token为:22B6DA631F1B297C3B432B55272DF4277AC79FFD18F78973
+2021-11-04 13:37:12,880   16164     INFO CreatEquitiesDeposit入金.py(123) - 步骤3接口'http://sit-cdms.ynm3k.com//api/funds/auditDeposit';请求参数为:{'applyId': 6209, 'approvalResult': 'CS2_PASS_7', 'statusCode': 'CS2_7', 'fileList': [{'file': '/hzlc_20211101100818.jpg', 'type': 'user'}], 'depositType': 'online_bank_deposit', 'realAmount': 40.75, 'realBankCard': '012-873-2-002063-5', 'realBankCode': '016', 'realCurrency': 'HKD', 'valueDate': '2021-11-04 13:37:12'};响应结果为：'{"code":"0000","msg":"操作成功","data":true}'
+2021-11-04 13:37:14,226   10616     INFO test_创建入金申请单.py(47) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:37:14,226   10616     INFO result.py(156) - 测试执行通过： test_01_createDeposit创建入金单 (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-04 13:37:14,226   10616     INFO result.py(90) - 测试结束： test_01_createDeposit创建入金单 (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-04 13:37:14,226   10616     INFO result.py(91) - 耗时： 6.51357889175415
+2021-11-04 13:37:14,242   10616     INFO result.py(69) - 开始测试： test_04_get_current_state_deposit (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-04 13:37:14,242   10616     INFO test_创建入金申请单.py(13) - 初始化CreatEquitiesDeposit入金已完成
+2021-11-04 13:37:16,774   13268     INFO test_创建入金申请单.py(47) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:37:16,774   13268     INFO result.py(156) - 测试执行通过： test_02_operatingWorkFlowNo (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-04 13:37:16,774   13268     INFO result.py(90) - 测试结束： test_02_operatingWorkFlowNo (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-04 13:37:16,774   13268     INFO result.py(91) - 耗时： 6.450568437576294
+2021-11-04 13:46:29,632    1796     INFO test_runner.py(156) - 预计并发线程数：3
+2021-11-04 13:46:29,640   12912     INFO result.py(69) - 开始测试： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:46:29,640   12912     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:46:29,641   10140     INFO result.py(69) - 开始测试： test_02_submitAudit提交审核 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:46:29,641    7844     INFO result.py(69) - 开始测试： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:46:29,661   10140     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:46:29,676    7844     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:46:29,739   10140     INFO CreatUser.py(243) - 等待系统录入数据后再修改WorldCheck的状态，等待时间40s
+2021-11-04 13:46:29,755   12912     INFO CreatUser.py(51) - 记录数据的文件名为：userdatainf.txt，写入数据为:['12728241663', 'EGWnzRJK1@edd.com', 'Handh', 'Boyce', '冯白云q', '620101196311091208', 'mrs', 'futuresMargin']
+2021-11-04 13:46:30,466   12912     INFO CreatUser.py(61) - 当前token为:22B6DA631F1B297CF1380C09024CA97D7AC79FFD18F78973
+2021-11-04 13:46:30,466   12912     INFO CreatUser.py(66) - 提交申请单时注册用户手机号码为：12728241663
+2021-11-04 13:46:30,750   12912     INFO CreatUser.py(236) - 步骤1接口'http://sit-cdms.ynm3k.com//api/client/applyClient';请求参数为:{'infos': [{'title': 'mrs', 'informationType': 1, 'firstName': 'Handh', 'lastName': 'Boyce', 'chName': '冯白云q', 'usedCnName': 'Boyce12728241663', 'usedChName': '冯白云q接口自动化创建账号', 'email': 'EGWnzRJK1@edd.com', 'phoneAreaCode': 'CHN', 'phoneNo': '12728241663', 'houseAddress': '中英街12728241663号', 'houseAddressPinYin': 'zhon12728241663hao', 'postAddress': '接口自动化', 'natnlty': 'CHN', 'idCardType': '2', 'idCardNo': '620101196311091208', 'otherCardType': '', 'otherCardNo': '', 'countryIssue': 'CHN', 'overCountry': 'CHN', 'birthday': '1994-08-09', 'idExpiresDate': '2023-08-31', 'birthdayPlace': 'CHN', 'employmentStatus': 'self', 'post': 'businessOwner', 'workingYear': '11', 'companyName': '接口自动化12728241663', 'businessNature': 'wholesale&retail', 'officeAddress': '4784551224512728241663', 'officePhone': '0771-12728241663', 'registeredCompany': 'Y', 'employmentRemark': '', 'totalIncomeYear': 'gt1000000', 'sourceOfIncome': ['selfOperatedBusinessIncome', 'salary'], 'sourceOfIncomeRemake': '', 'totalCapital': 'gt8000000', 'sourceOfCapital': ['salary', 'savings', 'pension'], 'sourceOfCapitalRemark': '', 'sourceOfMoney': ['selfOperated'], 'sourceOfMoneyRemark': '', 'securitiesExperience': 'gt10Years', 'cbbcExperience': 'gt10Years', 'warrantExperience': 'gt10Years', 'futuresExperience': 'gt10Years', 'optionsExperience': 'gt10Years', 'foreignExchangExperience': 'gt10Years', 'metalExperience': 'gt10Years', 'autoTransationExperience': 'gt10Years', 'otherInvest': '', 'otherExperience': '', 'withDerivativesKnowledge': 'Y', 'withDerivativesWoking': 'Y', 'withDerivativesDeal': 'Y', 'applicationOpenDerivatives': 'Y', 'understandTheRisks': 'Y', 'haveDeclaredBankruptcy': 'N', 'declaredBankruptcyDate': '', 'isInternalStaff': 'N', 'staffNameRelationship': '', 'relationshipWithInternalEmployees': 'Y', 'employeesName': '11212', 'isRegisteredPerson': 'N', 'registeredPersonRemark': '', 'isUsPerson': 'N', 'taxNumber': '', 'isUsTaxPerson': 'N', 'taxNumberTwo': '', 'isPepPerson': 'N', 'pepPersonName': '', 'investmentObjective': ['asset', 'income'], 'riskTolerance': 'high', 'throughChannels': ['lecture'], 'throughChannelRemark': '', 'isFinalBeneficiary': 'Y', 'finalBeneficiaryName': '', 'isFinalPrincipal': 'Y', 'finalPrincipalName': '', 'businessNatureRemark': ''}], 'marginAcctS': [], 'taxs': [{'residencyJurisdiction': 'CHN', 'taxNumber': '', 'resonType': 'A', 'resonRemark': ''}], 'attachs': {'passportMaterial': ['/hzlc_20210819191744.jpg'], 'addressVerificationMaterials': ['/hzlc_20210819191748.jpg'], 'bankCardMaterials': ['/hzlc_20210819191751.jpg'], 'proofOfIncome': ['/hzlc_20210819191759.jpg'], 'writtenApplicationMaterials': ['/APP_20200811142432_20210819191759.pdf'], 'otherInformation': ['/dinggg_20210819191801.jpg'], 'bankruptcyProve': [], 'acquaintHighLevelInstructionsProve': [], 'tradingAuthorization': []}, 'settleAcctS': [], 'clientType': 'PERSONAL', 'openWay': 'visitingAccount', 'bankName': '', 'bankCardNo': '', 'elecNo': '', 'responsible': 'kwokwah.wong', 'emailLanguage': 'zh-hant', 'accts': ['leveragedForeignExchangeAccountMargin'], 'promotionNumber': 'EDAC520', 'agreeToTheTerms': 'true', 'personalInfoDeclartion': 'true'};响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-11-04 13:46:36,861   12912     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:46:36,861   12912     INFO result.py(156) - 测试执行通过： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:46:36,877   12912     INFO result.py(90) - 测试结束： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:46:36,877   12912     INFO result.py(91) - 耗时： 7.236980438232422
+2021-11-04 13:46:36,877   12912     INFO result.py(69) - 开始测试： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:46:36,877   12912     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:46:42,908   12912     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:46:43,064   12912    ERROR result.py(175) - 测试产生错误： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建审批.py", line 35, in test_04_saveRiskAssessment风控评估提交
+    saveRiskAssessment = self.creatUser.saveRiskAssessment风控评估提交()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 324, in saveRiskAssessment风控评估提交
+    logging.info("当前applyId为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:46:43,064   12912     INFO result.py(90) - 测试结束： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:46:43,080   12912     INFO result.py(91) - 耗时： 6.187450885772705
+2021-11-04 13:46:43,080   12912     INFO result.py(69) - 开始测试： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:46:43,080   12912     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:46:43,080   12912     INFO CreatUser.py(360) - 当前token为:22B6DA631F1B297CF1380C09024CA97D7AC79FFD18F78973
+2021-11-04 13:46:49,110   12912     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:46:49,156   12912    ERROR result.py(175) - 测试产生错误： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建审批.py", line 41, in test_05_operatingWorkFlow内部人员审核
+    operatingWorkFlow = self.creatUser.operatingWorkFlow内部人员审核()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 366, in operatingWorkFlow内部人员审核
+    print("当前的applyId的值为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:46:49,156   12912     INFO result.py(90) - 测试结束： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:46:49,156   12912     INFO result.py(91) - 耗时： 6.075738906860352
+2021-11-04 13:46:49,156   12912     INFO result.py(69) - 开始测试： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:46:49,157   12912     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:46:49,157   12912     INFO CreatUser.py(471) - 当前token为:22B6DA631F1B297CF1380C09024CA97D7AC79FFD18F78973
+2021-11-04 13:46:49,157   12912     INFO CreatUser.py(477) - 提交审核获取到的手机号为：12728241663
+2021-11-04 13:46:55,173   12912     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:46:55,205   12912    ERROR result.py(175) - 测试产生错误： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建审批.py", line 48, in test_06_operatingWorkFlowNo不用锁定审核通过
+    operatingWorkFlowNo = self.creatUser.operatingWorkFlowNo不用锁定审核通过()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 480, in operatingWorkFlowNo不用锁定审核通过
+    logging.info("当前applyId为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:46:55,205   12912     INFO result.py(90) - 测试结束： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:46:55,205   12912     INFO result.py(91) - 耗时： 6.048797369003296
+2021-11-04 13:46:55,221   12912     INFO result.py(69) - 开始测试： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:46:55,221   12912     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:46:55,221   12912     INFO CreatUser.py(588) - 提交审核获取到的手机号为：12728241663
+2021-11-04 13:47:00,601   10140     INFO CreatUser.py(247) - *******************************************已完成修改WorldCheck的状态为FALSE*******************************************
+2021-11-04 13:47:01,249   12912     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:47:01,281   12912    ERROR result.py(175) - 测试产生错误： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建审批.py", line 55, in test_07_operatingWorkFlowAgaint提交锁
+    operatingWorkFlowAgaint = self.creatUser.operatingWorkFlowAgain提交锁()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 591, in operatingWorkFlowAgain提交锁
+    print("查询数据库cd_clnt_apply_info查询到applyId的值为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:47:01,281   12912     INFO result.py(90) - 测试结束： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:47:01,297   12912     INFO result.py(91) - 耗时： 6.059763431549072
+2021-11-04 13:47:01,297   12912     INFO result.py(69) - 开始测试： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:47:01,297   12912     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:47:04,817    7844     INFO CreatUser.py(286) - 当前token为:22B6DA631F1B297CF1380C09024CA97D7AC79FFD18F78973
+2021-11-04 13:47:04,849    7844     INFO CreatUser.py(294) - 提交审核获取到的手机号为：12728241663
+2021-11-04 13:47:07,319   12912     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:47:07,351   12912    ERROR result.py(175) - 测试产生错误： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建审批.py", line 62, in test_08_batchOperatingWorkFlow批量生成账号确定
+    batchOperatingWorkFlow = self.creatUser.batchOperatingWorkFlow批量生成账号确定()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 619, in batchOperatingWorkFlow批量生成账号确定
+    print("查询数据库cd_clnt_apply_info查询到applyId的值为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:47:07,351   12912     INFO result.py(90) - 测试结束： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:47:07,351   12912     INFO result.py(91) - 耗时： 6.054804086685181
+2021-11-04 13:47:07,351   12912     INFO result.py(69) - 开始测试： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:47:07,351   12912     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:47:07,352   12912     INFO CreatUser.py(651) - 提交审核获取到的手机号为：12728241663
+2021-11-04 13:47:10,867    7844     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:47:10,899    7844    ERROR result.py(175) - 测试产生错误： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建审批.py", line 28, in test_03_operatingWorkFlowFirst提交锁
+    operatingWorkFlowFirst = self.creatUser.operatingWorkFlowFirst提交锁()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 297, in operatingWorkFlowFirst提交锁
+    print("查询数据库cd_clnt_apply_info查询到applyId的值为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:47:10,899    7844     INFO result.py(90) - 测试结束： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:47:10,899    7844     INFO result.py(91) - 耗时： 41.22301888465881
+2021-11-04 13:47:10,914    7844     INFO result.py(69) - 开始测试： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:47:10,914    7844     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:47:10,914    7844     INFO CreatUser.py(680) - 提交审核获取到的手机号为：12728241663
+2021-11-04 13:47:13,375   12912     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:47:13,406   12912    ERROR result.py(175) - 测试产生错误： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建审批.py", line 69, in test_09_operatingWorkFlowThird提交锁
+    operatingWorkFlowThird = self.creatUser.operatingWorkFlowThird提交锁()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 655, in operatingWorkFlowThird提交锁
+    logging.info("当前applyId为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:47:13,422   12912     INFO result.py(90) - 测试结束： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:47:13,438   12912     INFO result.py(91) - 耗时： 6.07076621055603
+2021-11-04 13:47:13,438   12912     INFO result.py(69) - 开始测试： test_11_SQLCheckUser (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:47:13,438   12912     INFO test_用户创建审批.py(13) - 初始化CreatUser
+2021-11-04 13:47:13,438   12912     INFO test_用户创建审批.py(85) - 从文本中读到的用户基本信息为：['12728241663', 'EGWnzRJK1@edd.com', 'Handh', 'Boyce', '冯白云q', '620101196311091208', 'mrs', 'futuresMargin']
+2021-11-04 13:47:16,939    7844     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:47:16,971    7844    ERROR result.py(175) - 测试产生错误： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建审批.py", line 77, in test_10_batchOperatingWorkFlowEnd批量确认
+    batchOperatingWorkFlowEnd = self.creatUser.batchOperatingWorkFlowEnd批量确认()
+  File "F:\python\EDDID_CDMS\Business\CreatUser.py", line 684, in batchOperatingWorkFlowEnd批量确认
+    logging.info("当前applyId为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:47:16,971    7844     INFO result.py(90) - 测试结束： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:47:16,987    7844     INFO result.py(91) - 耗时： 6.056832551956177
+2021-11-04 13:47:17,003    7844     INFO result.py(69) - 开始测试： test_01_createExchange创建换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-11-04 13:47:17,003    7844     INFO test_创建换汇申请单.py(13) - 初始化CreateExchange已完成
+2021-11-04 13:47:17,923    7844     INFO Creat创建换汇申请单.py(34) - 当前token为:22B6DA631F1B297CA93B1BCEC62632C47AC79FFD18F78973
+2021-11-04 13:47:17,939    7844     INFO Creat创建换汇申请单.py(39) - 当前获取到applyAmount的值为：34.56
+2021-11-04 13:47:17,955    7844     INFO Creat创建换汇申请单.py(40) - 查询数据库cd_ac查询到的换汇账号为114311110
+2021-11-04 13:47:18,047    7844     INFO Creat创建换汇申请单.py(53) - 记录数据的文件名为：exchorderinfor.txt，写入数据为:[11431, '114311110', 34.56, 7.768]
+2021-11-04 13:47:18,315    7844     INFO Creat创建换汇申请单.py(71) - 步骤1提交审核接口'http://sit-cdms.ynm3k.com//api/funds/createExchange';请求参数为:{'fromCurrency': 'HKD', 'toCurrency': 'USD', 'exchangeRate': 7.768, 'clientId': 11431, 'applyAmount': 34.56, 'accountId': '114311110', 'accountCategory': 'securitiesCash', 'applySource': 4};响应结果为:'{"code":"0000","msg":"操作成功","data":true}'
+2021-11-04 13:47:23,862   12912     INFO CreatUser.py(712) - 通过'12728241663'查询cd_enty表的结果为()
+2021-11-04 13:47:24,366    7844     INFO test_创建换汇申请单.py(51) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:47:24,382    7844     INFO result.py(156) - 测试执行通过： test_01_createExchange创建换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-11-04 13:47:24,382    7844     INFO result.py(90) - 测试结束： test_01_createExchange创建换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-11-04 13:47:24,382    7844     INFO result.py(91) - 耗时： 7.379528999328613
+2021-11-04 13:47:24,382    7844     INFO result.py(69) - 开始测试： test_02_auditExchange提交审核换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-11-04 13:47:24,383    7844     INFO test_创建换汇申请单.py(13) - 初始化CreateExchange已完成
+2021-11-04 13:47:24,383    7844     INFO Creat创建换汇申请单.py(80) - 等待系统录入数据后再提交审批，等待时间15s
+2021-11-04 13:47:29,902   12912     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:47:29,918   12912    ERROR result.py(175) - 测试产生错误： test_11_SQLCheckUser (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建审批.py", line 88, in test_11_SQLCheckUser
+    self.assertEqual(userinf[0], SQLCheckUser[0][18])
+IndexError: tuple index out of range
+
+2021-11-04 13:47:29,934   12912     INFO result.py(90) - 测试结束： test_11_SQLCheckUser (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:47:29,966   12912     INFO result.py(91) - 耗时： 16.496148109436035
+2021-11-04 13:47:29,966   12912     INFO result.py(69) - 开始测试： test_03_SQLCheckexchorder (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-11-04 13:47:29,967   12912     INFO test_创建换汇申请单.py(13) - 初始化CreateExchange已完成
+2021-11-04 13:47:38,296   12912     INFO Creat创建换汇申请单.py(117) - 通过'11431'查询cd_exch表的结果为((3925, 'E00003714', '11431', '114311110', 'securitiesCash', 'HKD', 'USD', Decimal('7.76800000'), None, Decimal('34.56000000'), None, 4, None, datetime.datetime(2021, 11, 4, 13, 47, 22), 'ganjiexiang', None, 'ganjiexiang', 1),)
+2021-11-04 13:47:38,392   12912     INFO test_创建换汇申请单.py(34) - 从文本中读到的换汇单基本信息为：['11431', '114311110', '34.56', '7.768']
+2021-11-04 13:47:39,809    7844     INFO Creat创建换汇申请单.py(90) - 当前token为:22B6DA631F1B297CAD7F7630A963BB087AC79FFD18F78973
+2021-11-04 13:47:39,873    7844     INFO Creat创建换汇申请单.py(96) - 查询数据库cd_exch查询到applyid的值为：3925
+2021-11-04 13:47:40,175    7844     INFO Creat创建换汇申请单.py(109) - 步骤2提交审核接口'http://sit-cdms.ynm3k.com//api/funds/auditExchange';请求参数为:{'applyId': 3925, 'approvalResult': 'PASS', 'fileList': [], 'statusCode': 'SETL'};响应结果为:'{"code":"0000","msg":"操作成功","data":true}'
+2021-11-04 13:47:40,627   10140     INFO CreatUser.py(256) - 当前token为:22B6DA631F1B297CF1380C09024CA97D7AC79FFD18F78973
+2021-11-04 13:47:40,659   10140     INFO CreatUser.py(262) - 提交审核获取到的手机号为：12728241663
+2021-11-04 13:47:41,033   10140     INFO CreatUser.py(273) - 步骤2提交审核接口'http://sit-cdms.ynm3k.com//api/client/submitAudit';请求参数为:{'applyId': 1150053, 'clientSource': 'CDMS', 'workFlowCode': 'openClient'};响应结果为:'{"code":"0020","msg":"未登录:Login Timeout","data":""}'
+2021-11-04 13:47:44,431   12912     INFO test_创建换汇申请单.py(51) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:47:44,510   12912  WARNING result.py(190) - 测试未通过： test_03_SQLCheckexchorder (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建换汇申请单.py", line 39, in test_03_SQLCheckexchorder
+    self.assertEqual(2, SQLCheckexchorderinfor[0][-1])
+AssertionError: 2 != 1
+
+2021-11-04 13:47:44,510   12912     INFO result.py(90) - 测试结束： test_03_SQLCheckexchorder (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-11-04 13:47:44,510   12912     INFO result.py(91) - 耗时： 14.543133974075317
+2021-11-04 13:47:44,510   12912     INFO result.py(69) - 开始测试： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:47:44,510   12912     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:47:44,605   12912     INFO Creat没有结构性产品账号及申请结构性产品审批.py(56) - 记录数据的文件名为：userdatainf.txt，写入数据为:['10993744211', '7tB6RuOW@edd.com', 'Cotton1', 'Owen', '胡午后l', '620101199312291213', 'miss']
+2021-11-04 13:47:44,764   12912     INFO Creat没有结构性产品账号及申请结构性产品审批.py(71) - 当前token为:22B6DA631F1B297CDA0F15B9CB86892F7AC79FFD18F78973
+2021-11-04 13:47:44,780   12912     INFO Creat没有结构性产品账号及申请结构性产品审批.py(76) - 提交申请单时注册用户手机号码为：10993744211
+2021-11-04 13:47:45,014   12912     INFO Creat没有结构性产品账号及申请结构性产品审批.py(242) - 步骤1接口'http://sit-cdms.ynm3k.com//api/client/applyClient';请求参数为:{'infos': [{'title': 'miss', 'informationType': 1, 'firstName': 'Cotton1', 'lastName': 'Owen', 'chName': '胡午后l', 'usedCnName': 'Owen10993744211', 'usedChName': '胡午后l接口自动化创建账号', 'email': '7tB6RuOW@edd.com', 'phoneAreaCode': 'CHN', 'phoneNo': '10993744211', 'houseAddress': '中英街10993744211号', 'houseAddressPinYin': 'zhon10993744211hao', 'postAddress': '接口自动化', 'natnlty': 'TWN', 'idCardType': '1', 'idCardNo': '620101199312291213', 'otherCardType': '', 'otherCardNo': '', 'countryIssue': 'CHN', 'overCountry': 'CHN', 'birthday': '1993-11-01', 'idExpiresDate': '2025-09-30', 'birthdayPlace': 'CHN', 'employmentStatus': 'employed', 'post': 'director&president', 'workingYear': '11', 'companyName': '大苏打', 'businessNature': 'wholesale&retail', 'officeAddress': '大苏打大苏打', 'officePhone': '0258545478', 'registeredCompany': '', 'employmentRemark': '', 'totalIncomeYear': 'gt1000000', 'sourceOfIncome': ['selfOperatedBusinessIncome'], 'sourceOfIncomeRemake': '', 'totalCapital': 'gt8000000', 'sourceOfCapital': ['vehicleInvestment', 'salary'], 'sourceOfCapitalRemark': '', 'sourceOfMoney': ['savings'], 'sourceOfMoneyRemark': '', 'securitiesExperience': 'gt10Years', 'cbbcExperience': 'gt10Years', 'warrantExperience': 'gt10Years', 'futuresExperience': 'gt10Years', 'optionsExperience': 'gt10Years', 'foreignExchangExperience': 'gt10Years', 'metalExperience': 'gt10Years', 'autoTransationExperience': 'gt10Years', 'otherInvest': '', 'otherExperience': '', 'withDerivativesKnowledge': 'Y', 'withDerivativesWoking': 'Y', 'withDerivativesDeal': 'N', 'applicationOpenDerivatives': 'N', 'understandTheRisks': '', 'haveDeclaredBankruptcy': 'N', 'declaredBankruptcyDate': '', 'isInternalStaff': 'N', 'staffNameRelationship': '', 'relationshipWithInternalEmployees': 'N', 'employeesName': '', 'isRegisteredPerson': 'N', 'registeredPersonRemark': '', 'isUsPerson': 'N', 'taxNumber': '', 'isUsTaxPerson': 'N', 'taxNumberTwo': '', 'isPepPerson': 'N', 'pepPersonName': '', 'investmentObjective': ['speculation'], 'riskTolerance': 'high', 'throughChannels': ['advertising', 'lecture'], 'throughChannelRemark': '', 'isFinalBeneficiary': 'Y', 'finalBeneficiaryName': '', 'isFinalPrincipal': 'Y', 'finalPrincipalName': '', 'businessNatureRemark': ''}], 'marginAcctS': [], 'taxs': [], 'attachs': {'passportMaterial': ['/dinggg_20210908162346.jpg'], 'addressVerificationMaterials': ['/dinggg_20210908162349.jpg'], 'bankCardMaterials': ['/hzlc_20210908162353.jpg'], 'writtenApplicationMaterials': ['/APP_20200811142432_20210908162403.pdf'], 'proofOfIncome': ['/dinggg_20210908162404.jpg'], 'otherInformation': ['/hzlc_20210908162407.jpg'], 'bankruptcyProve': [], 'acquaintHighLevelInstructionsProve': [], 'tradingAuthorization': []}, 'settleAcctS': [], 'clientType': 'PERSONAL', 'openWay': 'visitingAccount', 'bankName': '', 'bankCardNo': '', 'elecNo': '', 'responsible': 'ryan.chan', 'emailLanguage': 'zh-hant', 'accts': ['securitiesCash'], 'promotionNumber': 'EDAA520', 'agreeToTheTerms': 'true', 'personalInfoDeclartion': 'true'};响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-11-04 13:47:46,237    7844     INFO test_创建换汇申请单.py(51) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:47:46,252    7844     INFO result.py(156) - 测试执行通过： test_02_auditExchange提交审核换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-11-04 13:47:46,267    7844     INFO result.py(90) - 测试结束： test_02_auditExchange提交审核换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+2021-11-04 13:47:46,283    7844     INFO result.py(91) - 耗时： 21.884053230285645
+2021-11-04 13:47:46,283    7844     INFO result.py(69) - 开始测试： test_02_submitAudit提交审核 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:47:46,283    7844     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:47:46,283    7844     INFO Creat没有结构性产品账号及申请结构性产品审批.py(250) - 等待系统录入数据后再修改WorldCheck的状态，等待时间20s
+2021-11-04 13:47:47,060   10140     INFO test_用户创建审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:47:47,076   10140  WARNING result.py(190) - 测试未通过： test_02_submitAudit提交审核 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建审批.py", line 24, in test_02_submitAudit提交审核
+    self.assertEqual("操作成功", submitAudit.json().get("msg"))
+AssertionError: '操作成功' != '未登录:Login Timeout'
+- 操作成功
++ 未登录:Login Timeout
+
+
+2021-11-04 13:47:47,076   10140     INFO result.py(90) - 测试结束： test_02_submitAudit提交审核 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+2021-11-04 13:47:47,092   10140     INFO result.py(91) - 耗时： 77.41504883766174
+2021-11-04 13:47:47,092   10140     INFO result.py(69) - 开始测试： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:47:47,092   10140     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:47:51,054   12912     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:47:51,054   12912     INFO result.py(156) - 测试执行通过： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:47:51,070   12912     INFO result.py(90) - 测试结束： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:47:51,070   12912     INFO result.py(91) - 耗时： 6.560277462005615
+2021-11-04 13:47:51,070   12912     INFO result.py(69) - 开始测试： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:47:51,070   12912     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:47:57,091   12912     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:47:57,202   12912    ERROR result.py(175) - 测试产生错误： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 35, in test_04_saveRiskAssessment风控评估提交
+    saveRiskAssessment = self.creatUser.saveRiskAssessment风控评估提交()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 331, in saveRiskAssessment风控评估提交
+    logging.info("当前applyId为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:47:57,202   12912     INFO result.py(90) - 测试结束： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:47:57,217   12912     INFO result.py(91) - 耗时： 6.131506681442261
+2021-11-04 13:47:57,217   12912     INFO result.py(69) - 开始测试： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:47:57,217   12912     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:47:57,217   12912     INFO Creat没有结构性产品账号及申请结构性产品审批.py(367) - 当前token为:22B6DA631F1B297CDA0F15B9CB86892F7AC79FFD18F78973
+2021-11-04 13:48:03,241   12912     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:48:03,273   12912    ERROR result.py(175) - 测试产生错误： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 41, in test_05_operatingWorkFlow内部人员审核
+    operatingWorkFlow = self.creatUser.operatingWorkFlow内部人员审核()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 373, in operatingWorkFlow内部人员审核
+    print("当前的applyId的值为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:48:03,273   12912     INFO result.py(90) - 测试结束： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:03,273   12912     INFO result.py(91) - 耗时： 6.056736707687378
+2021-11-04 13:48:03,289   12912     INFO result.py(69) - 开始测试： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:03,289   12912     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:48:03,289   12912     INFO Creat没有结构性产品账号及申请结构性产品审批.py(478) - 当前token为:22B6DA631F1B297CDA0F15B9CB86892F7AC79FFD18F78973
+2021-11-04 13:48:03,289   12912     INFO Creat没有结构性产品账号及申请结构性产品审批.py(484) - 提交审核获取到的手机号为：10993744211
+2021-11-04 13:48:09,319   12912     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:48:09,351   12912    ERROR result.py(175) - 测试产生错误： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 48, in test_06_operatingWorkFlowNo不用锁定审核通过
+    operatingWorkFlowNo = self.creatUser.operatingWorkFlowNo不用锁定审核通过()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 488, in operatingWorkFlowNo不用锁定审核通过
+    logging.info("当前applyId为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:48:09,351   12912     INFO result.py(90) - 测试结束： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:09,367   12912     INFO result.py(91) - 耗时： 6.061790704727173
+2021-11-04 13:48:09,383   12912     INFO result.py(69) - 开始测试： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:09,383   12912     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:48:09,383   12912     INFO Creat没有结构性产品账号及申请结构性产品审批.py(596) - 提交审核获取到的手机号为：10993744211
+2021-11-04 13:48:15,403   12912     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:48:15,418   12912    ERROR result.py(175) - 测试产生错误： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 55, in test_07_operatingWorkFlowAgaint提交锁
+    operatingWorkFlowAgaint = self.creatUser.operatingWorkFlowAgain提交锁()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 600, in operatingWorkFlowAgain提交锁
+    print("查询数据库cd_clnt_apply_info查询到applyId的值为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:48:15,418   12912     INFO result.py(90) - 测试结束： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:15,434   12912     INFO result.py(91) - 耗时： 6.034682273864746
+2021-11-04 13:48:15,434   12912     INFO result.py(69) - 开始测试： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:15,434   12912     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:48:16,999    7844     INFO Creat没有结构性产品账号及申请结构性产品审批.py(254) - *******************************************已完成修改WorldCheck的状态为FALSE*******************************************
+2021-11-04 13:48:17,110   10140     INFO Creat没有结构性产品账号及申请结构性产品审批.py(292) - 当前token为:22B6DA631F1B297CDA0F15B9CB86892F7AC79FFD18F78973
+2021-11-04 13:48:17,142   10140     INFO Creat没有结构性产品账号及申请结构性产品审批.py(300) - 提交审核获取到的手机号为：10993744211
+2021-11-04 13:48:21,455   12912     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:48:21,486   12912    ERROR result.py(175) - 测试产生错误： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 62, in test_08_batchOperatingWorkFlow批量生成账号确定
+    batchOperatingWorkFlow = self.creatUser.batchOperatingWorkFlow批量生成账号确定()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 628, in batchOperatingWorkFlow批量生成账号确定
+    print("查询数据库cd_clnt_apply_info查询到applyId的值为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:48:21,501   12912     INFO result.py(90) - 测试结束： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:21,501   12912     INFO result.py(91) - 耗时： 6.067180871963501
+2021-11-04 13:48:21,518   12912     INFO result.py(69) - 开始测试： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:21,518   12912     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:48:21,518   12912     INFO Creat没有结构性产品账号及申请结构性产品审批.py(660) - 提交审核获取到的手机号为：10993744211
+2021-11-04 13:48:23,162   10140     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:48:23,194   10140    ERROR result.py(175) - 测试产生错误： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 28, in test_03_operatingWorkFlowFirst提交锁
+    operatingWorkFlowFirst = self.creatUser.operatingWorkFlowFirst提交锁()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 304, in operatingWorkFlowFirst提交锁
+    print("查询数据库cd_clnt_apply_info查询到applyId的值为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:48:23,194   10140     INFO result.py(90) - 测试结束： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:23,210   10140     INFO result.py(91) - 耗时： 36.10186171531677
+2021-11-04 13:48:23,210   10140     INFO result.py(69) - 开始测试： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:23,210   10140     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:48:23,210   10140     INFO Creat没有结构性产品账号及申请结构性产品审批.py(688) - 提交审核获取到的手机号为：10993744211
+2021-11-04 13:48:27,544   12912     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:48:27,576   12912    ERROR result.py(175) - 测试产生错误： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 69, in test_09_operatingWorkFlowThird提交锁
+    operatingWorkFlowThird = self.creatUser.operatingWorkFlowThird提交锁()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 663, in operatingWorkFlowThird提交锁
+    logging.info("当前applyId为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:48:27,576   12912     INFO result.py(90) - 测试结束： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:27,592   12912     INFO result.py(91) - 耗时： 6.058157682418823
+2021-11-04 13:48:27,592   12912     INFO result.py(69) - 开始测试： test_11_SQLCheckUser (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:27,592   12912     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:48:27,592   12912     INFO test_用户创建结构性产品账户及审批.py(86) - 从文本中读到的用户基本信息为：['10993744211', '7tB6RuOW@edd.com', 'Cotton1', 'Owen', '胡午后l', '620101199312291213', 'miss']
+2021-11-04 13:48:29,231   10140     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:48:29,263   10140    ERROR result.py(175) - 测试产生错误： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 77, in test_10_batchOperatingWorkFlowEnd批量确认
+    batchOperatingWorkFlowEnd = self.creatUser.batchOperatingWorkFlowEnd批量确认()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 692, in batchOperatingWorkFlowEnd批量确认
+    logging.info("当前applyId为：{}".format(applyId))
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:48:29,263   10140     INFO result.py(90) - 测试结束： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:29,277   10140     INFO result.py(91) - 耗时： 6.052842140197754
+2021-11-04 13:48:29,293   10140     INFO result.py(69) - 开始测试： test_12_addAccountStructure增加结构性产品 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:29,293   10140     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:48:29,293   10140     INFO Creat没有结构性产品账号及申请结构性产品审批.py(735) - 提交审核获取到的手机号为：10993744211
+2021-11-04 13:48:35,828   10140     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:48:35,860   10140    ERROR result.py(175) - 测试产生错误： test_12_addAccountStructure增加结构性产品 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 110, in test_12_addAccountStructure增加结构性产品
+    addAccountStructure = self.creatUser.addAccountStructure增加结构性产品()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 741, in addAccountStructure增加结构性产品
+    clnt_id=cd_clnt_joint_enty(cd_enty(phone)[0][0])[0][1]
+IndexError: tuple index out of range
+
+2021-11-04 13:48:35,860   10140     INFO result.py(90) - 测试结束： test_12_addAccountStructure增加结构性产品 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:35,876   10140     INFO result.py(91) - 耗时： 6.566412448883057
+2021-11-04 13:48:35,892   10140     INFO result.py(69) - 开始测试： test_13_addAccountStructure结构性产品申请第一次审批 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:35,892   10140     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:48:35,892   10140     INFO Creat没有结构性产品账号及申请结构性产品审批.py(803) - 提交审核获取到的手机号为：10993744211
+2021-11-04 13:48:38,127   12912     INFO Creat没有结构性产品账号及申请结构性产品审批.py(720) - 通过'10993744211'查询cd_enty表的结果为()
+2021-11-04 13:48:41,915   10140     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:48:41,946   10140    ERROR result.py(175) - 测试产生错误： test_13_addAccountStructure结构性产品申请第一次审批 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 117, in test_13_addAccountStructure结构性产品申请第一次审批
+    addAccountStructurenN = self.creatUser.addAccountStructure第一次审批()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 807, in addAccountStructure第一次审批
+    Structureapplyid=cd_ac_struc_appl(clnt_id)[0][0]
+NameError: name 'clnt_id' is not defined
+
+2021-11-04 13:48:41,946   10140     INFO result.py(90) - 测试结束： test_13_addAccountStructure结构性产品申请第一次审批 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:41,946   10140     INFO result.py(91) - 耗时： 6.053818702697754
+2021-11-04 13:48:41,962   10140     INFO result.py(69) - 开始测试： test_14_addAccountStructure结构性产品申请第二次审批 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:41,962   10140     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:48:41,962   10140     INFO Creat没有结构性产品账号及申请结构性产品审批.py(837) - 提交审核获取到的手机号为：10993744211
+2021-11-04 13:48:44,150   12912     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:48:44,166   12912    ERROR result.py(175) - 测试产生错误： test_11_SQLCheckUser (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 89, in test_11_SQLCheckUser
+    self.assertEqual(userinf[0], SQLCheckUser[0][18])
+IndexError: tuple index out of range
+
+2021-11-04 13:48:44,166   12912     INFO result.py(90) - 测试结束： test_11_SQLCheckUser (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:44,182   12912     INFO result.py(91) - 耗时： 16.573625802993774
+2021-11-04 13:48:44,182   12912     INFO result.py(69) - 开始测试： test_15_SQLCheckcd_ac_struc_appl (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:44,182   12912     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:48:47,987   10140     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:48:48,019   10140    ERROR result.py(175) - 测试产生错误： test_14_addAccountStructure结构性产品申请第二次审批 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 124, in test_14_addAccountStructure结构性产品申请第二次审批
+    addAccountStructureT= self.creatUser.addAccountStructure第二次审批()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 839, in addAccountStructure第二次审批
+    Structureapplyid = cd_ac_struc_appl(clnt_id)[0][0]
+NameError: name 'clnt_id' is not defined
+
+2021-11-04 13:48:48,035   10140     INFO result.py(90) - 测试结束： test_14_addAccountStructure结构性产品申请第二次审批 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:48,050   10140     INFO result.py(91) - 耗时： 6.073725700378418
+2021-11-04 13:48:48,050   10140     INFO result.py(69) - 开始测试： test_01_createWithdrawal创建出金单 (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:48:48,050   10140     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-04 13:48:48,194   10140     INFO CreatEquitiesWithdrawal出金.py(34) - 当前token为:22B6DA631F1B297C3C9329074BCFD25C7AC79FFD18F78973
+2021-11-04 13:48:48,289   10140     INFO CreatEquitiesWithdrawal出金.py(59) - 步骤1接口'http://sit-cdms.ynm3k.com//api/funds/createWithdrawal';请求参数为:{'clientId': 11431, 'actualAmountCurrency': 'HKD', 'withdrawalAmount': 22.12, 'accountId': 114311110, 'accountCategory': 'securitiesCash', 'clientBankAccountId': '1356', 'withdrawalType': 'LOCAL', 'applySource': 4, 'fileList': ['/hzlc_20211025162042.jpg'], 'serviceCurrency': 'HKD', 'serviceCharge': 0, 'actualAmount': 22.12, 'feeList': []};响应结果为：'{"code":"CDMS_05076","msg":"错误码：[CDMS_05076]，该账户已存在币种为HKD,未完成的出金申请,请先处理未完成的申请!","data":""}'
+2021-11-04 13:48:54,327   10140     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:48:54,372   10140  WARNING result.py(190) - 测试未通过： test_01_createWithdrawal创建出金单 (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建出金申请单.py", line 18, in test_01_createWithdrawal创建出金单
+    self.assertEqual("操作成功", auditWithdrawalNo.json().get("msg"))
+AssertionError: '操作成功' != '错误码：[CDMS_05076]，该账户已存在币种为HKD,未完成的出金申请,请先处理未完成的申请!'
+- 操作成功
++ 错误码：[CDMS_05076]，该账户已存在币种为HKD,未完成的出金申请,请先处理未完成的申请!
+
+
+2021-11-04 13:48:54,372   10140     INFO result.py(90) - 测试结束： test_01_createWithdrawal创建出金单 (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:48:54,388   10140     INFO result.py(91) - 耗时： 6.322093486785889
+2021-11-04 13:48:54,403   10140     INFO result.py(69) - 开始测试： test_02_operatingWorkFlowNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:48:54,403   10140     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-04 13:48:57,025    7844     INFO Creat没有结构性产品账号及申请结构性产品审批.py(263) - 当前token为:22B6DA631F1B297CDA0F15B9CB86892F7AC79FFD18F78973
+2021-11-04 13:48:57,040    7844     INFO Creat没有结构性产品账号及申请结构性产品审批.py(269) - 提交审核获取到的手机号为：10993744211
+2021-11-04 13:48:57,438    7844     INFO Creat没有结构性产品账号及申请结构性产品审批.py(280) - 步骤2提交审核接口'http://sit-cdms.ynm3k.com//api/client/submitAudit';请求参数为:{'applyId': 1150054, 'clientSource': 'CDMS', 'workFlowCode': 'openClient'};响应结果为:'{"code":"0020","msg":"未登录:Login Timeout","data":""}'
+2021-11-04 13:48:58,244   12912     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:48:58,276   12912    ERROR result.py(175) - 测试产生错误： test_15_SQLCheckcd_ac_struc_appl (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 131, in test_15_SQLCheckcd_ac_struc_appl
+    SQLCheckcd_ac_struc_appl=self.creatUser.SQLCheckcd_ac_struc_appl()
+  File "F:\python\EDDID_CDMS\Business\Creat没有结构性产品账号及申请结构性产品审批.py", line 862, in SQLCheckcd_ac_struc_appl
+    Checkcd_ac_struc_appl = cd_ac_struc_appl(clnt_id)
+NameError: name 'clnt_id' is not defined
+
+2021-11-04 13:48:58,276   12912     INFO result.py(90) - 测试结束： test_15_SQLCheckcd_ac_struc_appl (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:48:58,291   12912     INFO result.py(91) - 耗时： 14.093885898590088
+2021-11-04 13:48:58,291   12912     INFO result.py(69) - 开始测试： test_03_auditWithdrawalNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:48:58,291   12912     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-04 13:48:58,291   12912     INFO CreatEquitiesWithdrawal出金.py(93) - 当前token为:22B6DA631F1B297C3C9329074BCFD25C7AC79FFD18F78973
+2021-11-04 13:49:00,897   10140     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:49:00,990   10140    ERROR result.py(175) - 测试产生错误： test_02_operatingWorkFlowNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建出金申请单.py", line 22, in test_02_operatingWorkFlowNo
+    operatingWorkFlowNo = self.CreatEquitiesWithdrawal.operatingWorkFlowNo()
+  File "F:\python\EDDID_CDMS\Business\CreatEquitiesWithdrawal出金.py", line 65, in operatingWorkFlowNo
+    applyId = cd_withdrawal(clientId, withdrawalAmount)[0][0]
+IndexError: tuple index out of range
+
+2021-11-04 13:49:00,990   10140     INFO result.py(90) - 测试结束： test_02_operatingWorkFlowNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:49:00,990   10140     INFO result.py(91) - 耗时： 6.587019443511963
+2021-11-04 13:49:00,991   10140     INFO result.py(69) - 开始测试： test_04_operatingWorkFlowTO (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:49:00,991   10140     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-04 13:49:00,991   10140     INFO CreatEquitiesWithdrawal出金.py(122) - 当前token为:22B6DA631F1B297C3C9329074BCFD25C7AC79FFD18F78973
+2021-11-04 13:49:03,454    7844     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:49:03,484    7844  WARNING result.py(190) - 测试未通过： test_02_submitAudit提交审核 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建结构性产品账户及审批.py", line 24, in test_02_submitAudit提交审核
+    self.assertEqual("操作成功", submitAudit.json().get("msg"))
+AssertionError: '操作成功' != '未登录:Login Timeout'
+- 操作成功
++ 未登录:Login Timeout
+
+
+2021-11-04 13:49:03,500    7844     INFO result.py(90) - 测试结束： test_02_submitAudit提交审核 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-04 13:49:03,500    7844     INFO result.py(91) - 耗时： 77.21729135513306
+2021-11-04 13:49:03,501    7844     INFO result.py(69) - 开始测试： test_05_auditWithdrawalTo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:49:03,501    7844     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-04 13:49:03,501    7844     INFO CreatEquitiesWithdrawal出金.py(144) - 当前token为:22B6DA631F1B297C3C9329074BCFD25C7AC79FFD18F78973
+2021-11-04 13:49:04,323   12912     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:49:04,355   12912    ERROR result.py(175) - 测试产生错误： test_03_auditWithdrawalNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建出金申请单.py", line 29, in test_03_auditWithdrawalNo
+    auditWithdrawalNo = self.CreatEquitiesWithdrawal.auditWithdrawalNo()
+  File "F:\python\EDDID_CDMS\Business\CreatEquitiesWithdrawal出金.py", line 100, in auditWithdrawalNo
+    "applyId": applyId,
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:49:04,355   12912     INFO result.py(90) - 测试结束： test_03_auditWithdrawalNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:49:04,371   12912     INFO result.py(91) - 耗时： 6.063100099563599
+2021-11-04 13:49:04,371   12912     INFO result.py(69) - 开始测试： test_06_get_current_state (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:49:04,371   12912     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-04 13:49:07,010   10140     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:49:07,042   10140    ERROR result.py(175) - 测试产生错误： test_04_operatingWorkFlowTO (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建出金申请单.py", line 35, in test_04_operatingWorkFlowTO
+    operatingWorkFlowTO = self.CreatEquitiesWithdrawal.operatingWorkFlowTO()
+  File "F:\python\EDDID_CDMS\Business\CreatEquitiesWithdrawal出金.py", line 129, in operatingWorkFlowTO
+    "applyId": applyId,
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:49:07,042   10140     INFO result.py(90) - 测试结束： test_04_operatingWorkFlowTO (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:49:07,042   10140     INFO result.py(91) - 耗时： 6.051254749298096
+2021-11-04 13:49:07,042   10140     INFO result.py(69) - 开始测试： test_07_operatingWorkFlowfourth (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:49:07,043   10140     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-04 13:49:07,043   10140     INFO CreatEquitiesWithdrawal出金.py(376) - 当前token为:22B6DA631F1B297C3C9329074BCFD25C7AC79FFD18F78973
+2021-11-04 13:49:09,518    7844     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:49:09,550    7844    ERROR result.py(175) - 测试产生错误： test_05_auditWithdrawalTo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建出金申请单.py", line 42, in test_05_auditWithdrawalTo
+    auditWithdrawalTo = self.CreatEquitiesWithdrawal.auditWithdrawalTo()
+  File "F:\python\EDDID_CDMS\Business\CreatEquitiesWithdrawal出金.py", line 151, in auditWithdrawalTo
+    "applyId": applyId,
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:49:09,550    7844     INFO result.py(90) - 测试结束： test_05_auditWithdrawalTo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:49:09,550    7844     INFO result.py(91) - 耗时： 6.04885196685791
+2021-11-04 13:49:09,551    7844     INFO result.py(69) - 开始测试： test_08_auditWithdrawalAcctPass (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:49:09,551    7844     INFO test_创建出金申请单.py(13) - 初始化CreatEquitiesWithdrawal已完成
+2021-11-04 13:49:09,551    7844     INFO CreatEquitiesWithdrawal出金.py(400) - 当前token为:22B6DA631F1B297C3C9329074BCFD25C7AC79FFD18F78973
+2021-11-04 13:49:10,398   12912     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:49:10,430   12912    ERROR result.py(175) - 测试产生错误： test_06_get_current_state (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建出金申请单.py", line 48, in test_06_get_current_state
+    get_current_state = self.CreatEquitiesWithdrawal.get_current_state()
+  File "F:\python\EDDID_CDMS\Business\CreatEquitiesWithdrawal出金.py", line 179, in get_current_state
+    "applyId": applyId,
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:49:10,430   12912     INFO result.py(90) - 测试结束： test_06_get_current_state (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:49:10,446   12912     INFO result.py(91) - 耗时： 6.059791803359985
+2021-11-04 13:49:10,446   12912     INFO result.py(69) - 开始测试： test_01_createDeposit创建入金单 (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-04 13:49:10,446   12912     INFO test_创建入金申请单.py(13) - 初始化CreatEquitiesDeposit入金已完成
+2021-11-04 13:49:10,588   12912     INFO CreatEquitiesDeposit入金.py(34) - 当前token为:22B6DA631F1B297CF4814C846307AA027AC79FFD18F78973
+2021-11-04 13:49:10,983   12912     INFO CreatEquitiesDeposit入金.py(60) - 步骤1接口'http://sit-cdms.ynm3k.com//api/funds/createDeposit';请求参数为:{'clientId': 11431, 'depositType': 'online_bank_deposit', 'remittanceBankName': '渣打银行(香港)有限公司 003', 'remittanceBankCard': '32323232', 'sibMobile': 'null', 'depositAmount': 5.61, 'accountId': '114311110', 'accountCategory': 'securitiesCash', 'remittanceBankCode': '003', 'beneficiaryBankCode': '012', 'beneficiaryBankName': '中国银行（香港）有限公司', 'beneficiaryBankCard': '012-873-2-002063-5', 'depositCurrency': 'HKD', 'applySource': 4, 'fileList': ['/hzlc_20211101100818.jpg']};响应结果为：'{"code":"0000","msg":"操作成功","data":true}'
+2021-11-04 13:49:13,064   10140     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:49:13,128   10140    ERROR result.py(175) - 测试产生错误： test_07_operatingWorkFlowfourth (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建出金申请单.py", line 54, in test_07_operatingWorkFlowfourth
+    operatingWorkFlowfourth = self.CreatEquitiesWithdrawal.operatingWorkFlowfourth()
+  File "F:\python\EDDID_CDMS\Business\CreatEquitiesWithdrawal出金.py", line 383, in operatingWorkFlowfourth
+    "applyId": applyId,
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:49:13,144   10140     INFO result.py(90) - 测试结束： test_07_operatingWorkFlowfourth (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:49:13,176   10140     INFO result.py(91) - 耗时： 6.100463390350342
+2021-11-04 13:49:13,208   10140     INFO result.py(69) - 开始测试： test_02_operatingWorkFlowNo (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-04 13:49:13,208   10140     INFO test_创建入金申请单.py(13) - 初始化CreatEquitiesDeposit入金已完成
+2021-11-04 13:49:13,704   10140     INFO CreatEquitiesDeposit入金.py(72) - 当前token为:22B6DA631F1B297CF4814C846307AA027AC79FFD18F78973
+2021-11-04 13:49:13,847   10140     INFO CreatEquitiesDeposit入金.py(84) - 步骤2接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 6210, 'workFlowCode': 'depositApply', 'controlCode': 'LOCK'};响应结果为：'{"code":"0000","msg":"操作成功","data":[{"applyId":"6210","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-11-04 13:49:15,571    7844     INFO test_创建出金申请单.py(70) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:49:15,603    7844    ERROR result.py(175) - 测试产生错误： test_08_auditWithdrawalAcctPass (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建出金申请单.py", line 61, in test_08_auditWithdrawalAcctPass
+    auditWithdrawalAcctPass = self.CreatEquitiesWithdrawal.auditWithdrawalAcctPass()
+  File "F:\python\EDDID_CDMS\Business\CreatEquitiesWithdrawal出金.py", line 407, in auditWithdrawalAcctPass
+    "applyId": applyId,
+NameError: name 'applyId' is not defined
+
+2021-11-04 13:49:15,619    7844     INFO result.py(90) - 测试结束： test_08_auditWithdrawalAcctPass (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+2021-11-04 13:49:15,619    7844     INFO result.py(91) - 耗时： 6.0685484409332275
+2021-11-04 13:49:15,620    7844     INFO result.py(69) - 开始测试： test_03_auditDepositNo (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-04 13:49:15,620    7844     INFO test_创建入金申请单.py(13) - 初始化CreatEquitiesDeposit入金已完成
+2021-11-04 13:49:15,620    7844     INFO CreatEquitiesDeposit入金.py(94) - 当前token为:22B6DA631F1B297CF4814C846307AA027AC79FFD18F78973
+2021-11-04 13:49:15,794    7844     INFO CreatEquitiesDeposit入金.py(123) - 步骤3接口'http://sit-cdms.ynm3k.com//api/funds/auditDeposit';请求参数为:{'applyId': 6210, 'approvalResult': 'CS2_PASS_7', 'statusCode': 'CS2_7', 'fileList': [{'file': '/hzlc_20211101100818.jpg', 'type': 'user'}], 'depositType': 'online_bank_deposit', 'realAmount': 5.61, 'realBankCard': '012-873-2-002063-5', 'realBankCode': '016', 'realCurrency': 'HKD', 'valueDate': '2021-11-04 13:49:15'};响应结果为：'{"code":"0000","msg":"操作成功","data":true}'
+2021-11-04 13:49:17,007   12912     INFO test_创建入金申请单.py(47) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:49:17,007   12912     INFO result.py(156) - 测试执行通过： test_01_createDeposit创建入金单 (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-04 13:49:17,007   12912     INFO result.py(90) - 测试结束： test_01_createDeposit创建入金单 (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-04 13:49:17,023   12912     INFO result.py(91) - 耗时： 6.560779333114624
+2021-11-04 13:49:17,023   12912     INFO result.py(69) - 开始测试： test_04_get_current_state_deposit (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-04 13:49:17,023   12912     INFO test_创建入金申请单.py(13) - 初始化CreatEquitiesDeposit入金已完成
+2021-11-04 13:49:19,868   10140     INFO test_创建入金申请单.py(47) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:49:19,884   10140     INFO result.py(156) - 测试执行通过： test_02_operatingWorkFlowNo (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-04 13:49:19,900   10140     INFO result.py(90) - 测试结束： test_02_operatingWorkFlowNo (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-04 13:49:19,900   10140     INFO result.py(91) - 耗时： 6.692648649215698
+2021-11-04 13:49:19,916   10140     INFO result.py(69) - 开始测试： test_01_createDeposit创建入金单 (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+2021-11-04 13:49:19,916   10140     INFO test_创建大额入金申请单.py(11) - 初始化CreatEquitiesDeposit入金已完成
+2021-11-04 13:49:20,028   10140     INFO CreatEquitiesDeposit大额入金.py(25) - 当前token为:22B6DA631F1B297C7593931A7DBAE6077AC79FFD18F78973
+2021-11-04 13:49:20,425   10140     INFO CreatEquitiesDeposit大额入金.py(51) - 步骤1接口'http://sit-cdms.ynm3k.com//api/funds/createDeposit';请求参数为:{'clientId': 11431, 'depositType': 'online_bank_deposit', 'remittanceBankName': '渣打银行(香港)有限公司 003', 'remittanceBankCard': '32323232', 'sibMobile': 'null', 'depositAmount': 1000000, 'accountId': '114311110', 'accountCategory': 'securitiesCash', 'remittanceBankCode': '003', 'beneficiaryBankCode': '012', 'beneficiaryBankName': '中国银行（香港）有限公司', 'beneficiaryBankCard': '012-873-2-002063-5', 'depositCurrency': 'HKD', 'applySource': 4, 'fileList': ['/hzlc_20211101100818.jpg']};响应结果为：'{"code":"0000","msg":"操作成功","data":true}'
+2021-11-04 13:49:21,818    7844     INFO test_创建入金申请单.py(47) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:49:21,818    7844     INFO result.py(156) - 测试执行通过： test_03_auditDepositNo (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-04 13:49:21,834    7844     INFO result.py(90) - 测试结束： test_03_auditDepositNo (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-04 13:49:21,834    7844     INFO result.py(91) - 耗时： 6.214409112930298
+2021-11-04 13:49:21,850    7844     INFO result.py(69) - 开始测试： test_02_operatingWorkFlowNo (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+2021-11-04 13:49:21,850    7844     INFO test_创建大额入金申请单.py(11) - 初始化CreatEquitiesDeposit入金已完成
+2021-11-04 13:49:22,037    7844     INFO CreatEquitiesDeposit大额入金.py(63) - 当前token为:22B6DA631F1B297C7593931A7DBAE6077AC79FFD18F78973
+2021-11-04 13:49:22,260    7844     INFO CreatEquitiesDeposit大额入金.py(75) - 步骤2接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 6211, 'workFlowCode': 'depositApply', 'controlCode': 'LOCK'};响应结果为：'{"code":"0000","msg":"操作成功","data":[{"applyId":"6211","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-11-04 13:49:26,463   10140     INFO test_创建大额入金申请单.py(57) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:49:26,478   10140     INFO result.py(156) - 测试执行通过： test_01_createDeposit创建入金单 (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+2021-11-04 13:49:26,478   10140     INFO result.py(90) - 测试结束： test_01_createDeposit创建入金单 (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+2021-11-04 13:49:26,494   10140     INFO result.py(91) - 耗时： 6.561450481414795
+2021-11-04 13:49:26,494   10140     INFO result.py(69) - 开始测试： test_03_auditDepositNo (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+2021-11-04 13:49:26,494   10140     INFO test_创建大额入金申请单.py(11) - 初始化CreatEquitiesDeposit入金已完成
+2021-11-04 13:49:26,494   10140     INFO CreatEquitiesDeposit大额入金.py(85) - 当前token为:22B6DA631F1B297C7593931A7DBAE6077AC79FFD18F78973
+2021-11-04 13:49:26,637   10140     INFO CreatEquitiesDeposit大额入金.py(114) - 步骤3接口'http://sit-cdms.ynm3k.com//api/funds/auditDeposit';请求参数为:{'applyId': 6211, 'approvalResult': 'CS2_PASS_7', 'statusCode': 'CS2_7', 'fileList': [{'file': '/hzlc_20211101100818.jpg', 'type': 'user'}], 'depositType': 'online_bank_deposit', 'realAmount': 1000000, 'realBankCard': '016-478-783313006', 'realBankCode': '016', 'realCurrency': 'HKD', 'valueDate': '2021-11-04 13:49:26'};响应结果为：'{"code":"0000","msg":"操作成功","data":true}'
+2021-11-04 13:49:28,349    7844     INFO test_创建大额入金申请单.py(57) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:49:28,349    7844     INFO result.py(156) - 测试执行通过： test_02_operatingWorkFlowNo (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+2021-11-04 13:49:28,365    7844     INFO result.py(90) - 测试结束： test_02_operatingWorkFlowNo (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+2021-11-04 13:49:28,381    7844     INFO result.py(91) - 耗时： 6.514575958251953
+2021-11-04 13:49:28,381    7844     INFO result.py(69) - 开始测试： test_04_operatingWorkFlowTo (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+2021-11-04 13:49:28,381    7844     INFO test_创建大额入金申请单.py(11) - 初始化CreatEquitiesDeposit入金已完成
+2021-11-04 13:49:28,381    7844     INFO CreatEquitiesDeposit大额入金.py(126) - 当前token为:22B6DA631F1B297C7593931A7DBAE6077AC79FFD18F78973
+2021-11-04 13:49:28,443    7844     INFO CreatEquitiesDeposit大额入金.py(138) - 步骤4接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 6211, 'workFlowCode': 'depositApply', 'controlCode': 'LOCK'};响应结果为：'{"code":"0000","msg":"操作成功","data":[{"applyId":"6211","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-11-04 13:49:32,691   10140     INFO test_创建大额入金申请单.py(57) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:49:32,707   10140     INFO result.py(156) - 测试执行通过： test_03_auditDepositNo (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+2021-11-04 13:49:32,707   10140     INFO result.py(90) - 测试结束： test_03_auditDepositNo (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+2021-11-04 13:49:32,723   10140     INFO result.py(91) - 耗时： 6.213352203369141
+2021-11-04 13:49:32,723   10140     INFO result.py(69) - 开始测试： test_05_auditDeposit_comp_p (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+2021-11-04 13:49:32,723   10140     INFO test_创建大额入金申请单.py(11) - 初始化CreatEquitiesDeposit入金已完成
+2021-11-04 13:49:32,723   10140     INFO CreatEquitiesDeposit大额入金.py(148) - 当前token为:22B6DA631F1B297C7593931A7DBAE6077AC79FFD18F78973
+2021-11-04 13:49:32,833   10140     INFO CreatEquitiesDeposit大额入金.py(169) - 步骤5接口'http://sit-cdms.ynm3k.com//api/funds/auditDeposit';请求参数为:{'applyId': 6211, 'approvalResult': 'COMP_PASS_7', 'statusCode': 'COMP_7', 'fileList': [{'file': '/hzlc_20211102180038.jpg', 'type': 'user'}], 'depositType': 'bank_transfer_deposit'};响应结果为：'{"code":"0000","msg":"操作成功","data":true}'
+2021-11-04 13:49:34,469    7844     INFO test_创建大额入金申请单.py(57) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:49:34,469    7844     INFO result.py(156) - 测试执行通过： test_04_operatingWorkFlowTo (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+2021-11-04 13:49:34,469    7844     INFO result.py(90) - 测试结束： test_04_operatingWorkFlowTo (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+2021-11-04 13:49:34,469    7844     INFO result.py(91) - 耗时： 6.088028430938721
+2021-11-04 13:49:34,470    7844     INFO result.py(69) - 开始测试： test_06_get_current_state_deposit (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+2021-11-04 13:49:34,470    7844     INFO test_创建大额入金申请单.py(11) - 初始化CreatEquitiesDeposit入金已完成
+2021-11-04 13:49:38,860   10140     INFO test_创建大额入金申请单.py(57) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:49:38,860   10140     INFO result.py(156) - 测试执行通过： test_05_auditDeposit_comp_p (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+2021-11-04 13:49:38,860   10140     INFO result.py(90) - 测试结束： test_05_auditDeposit_comp_p (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+2021-11-04 13:49:38,875   10140     INFO result.py(91) - 耗时： 6.136617422103882
+2021-11-04 13:49:38,875   10140     INFO result.py(69) - 开始测试： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:49:38,875   10140     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:49:38,938   10140     INFO CreatUser开通所有交易账户.py(51) - 记录数据的文件名为：userdatainf.txt，写入数据为:['16736862861', 'KKEYOlgru@edd.com', 'Smithp', 'Abbott', '于悠悠r', '150101199210021439', 'miss']
+2021-11-04 13:49:39,144   10140     INFO CreatUser开通所有交易账户.py(61) - 当前token为:22B6DA631F1B297C85EA2C7B126D9BD97AC79FFD18F78973
+2021-11-04 13:49:39,208   10140     INFO CreatUser开通所有交易账户.py(66) - 提交申请单时注册用户手机号码为：16736862861
+2021-11-04 13:49:39,509   10140     INFO CreatUser开通所有交易账户.py(236) - 步骤1接口'http://sit-cdms.ynm3k.com//api/client/applyClient';请求参数为:{'infos': [{'title': 'miss', 'informationType': 1, 'firstName': 'Smithp', 'lastName': 'Abbott', 'chName': '于悠悠r', 'usedCnName': 'Abbott16736862861', 'usedChName': '于悠悠r接口自动化创建账号', 'email': 'KKEYOlgru@edd.com', 'phoneAreaCode': 'CHN', 'phoneNo': '16736862861', 'houseAddress': '中英街16736862861号', 'houseAddressPinYin': 'zhon16736862861hao', 'postAddress': '接口自动化', 'natnlty': 'CHN', 'idCardType': '2', 'idCardNo': '150101199210021439', 'otherCardType': '', 'otherCardNo': '', 'countryIssue': 'CHN', 'overCountry': 'CHN', 'birthday': '1994-08-09', 'idExpiresDate': '2023-08-31', 'birthdayPlace': 'CHN', 'employmentStatus': 'self', 'post': 'businessOwner', 'workingYear': '11', 'companyName': '接口自动化16736862861', 'businessNature': 'wholesale&retail', 'officeAddress': '4784551224516736862861', 'officePhone': '0771-16736862861', 'registeredCompany': 'Y', 'employmentRemark': '', 'totalIncomeYear': 'gt1000000', 'sourceOfIncome': ['selfOperatedBusinessIncome', 'salary'], 'sourceOfIncomeRemake': '', 'totalCapital': 'gt8000000', 'sourceOfCapital': ['salary', 'savings', 'pension'], 'sourceOfCapitalRemark': '', 'sourceOfMoney': ['selfOperated'], 'sourceOfMoneyRemark': '', 'securitiesExperience': 'gt10Years', 'cbbcExperience': 'gt10Years', 'warrantExperience': 'gt10Years', 'futuresExperience': 'gt10Years', 'optionsExperience': 'gt10Years', 'foreignExchangExperience': 'gt10Years', 'metalExperience': 'gt10Years', 'autoTransationExperience': 'gt10Years', 'otherInvest': '', 'otherExperience': '', 'withDerivativesKnowledge': 'Y', 'withDerivativesWoking': 'Y', 'withDerivativesDeal': 'Y', 'applicationOpenDerivatives': 'Y', 'understandTheRisks': 'Y', 'haveDeclaredBankruptcy': 'N', 'declaredBankruptcyDate': '', 'isInternalStaff': 'N', 'staffNameRelationship': '', 'relationshipWithInternalEmployees': 'Y', 'employeesName': '11212', 'isRegisteredPerson': 'N', 'registeredPersonRemark': '', 'isUsPerson': 'N', 'taxNumber': '', 'isUsTaxPerson': 'N', 'taxNumberTwo': '', 'isPepPerson': 'N', 'pepPersonName': '', 'investmentObjective': ['asset', 'income'], 'riskTolerance': 'high', 'throughChannels': ['lecture'], 'throughChannelRemark': '', 'isFinalBeneficiary': 'Y', 'finalBeneficiaryName': '', 'isFinalPrincipal': 'Y', 'finalPrincipalName': '', 'businessNatureRemark': ''}], 'marginAcctS': [], 'taxs': [{'residencyJurisdiction': 'CHN', 'taxNumber': '', 'resonType': 'A', 'resonRemark': ''}], 'attachs': {'passportMaterial': ['/hzlc_20210819191744.jpg'], 'addressVerificationMaterials': ['/hzlc_20210819191748.jpg'], 'bankCardMaterials': ['/hzlc_20210819191751.jpg'], 'proofOfIncome': ['/hzlc_20210819191759.jpg'], 'writtenApplicationMaterials': ['/APP_20200811142432_20210819191759.pdf'], 'otherInformation': ['/dinggg_20210819191801.jpg'], 'bankruptcyProve': [], 'acquaintHighLevelInstructionsProve': [], 'tradingAuthorization': []}, 'settleAcctS': [], 'clientType': 'PERSONAL', 'openWay': 'visitingAccount', 'bankName': '', 'bankCardNo': '', 'elecNo': '', 'responsible': 'kwokwah.wong', 'emailLanguage': 'zh-hant', 'accts': ['securitiesCash', 'securitiesMargin', 'futuresMargin', 'leveragedForeignExchangeAccountMargin', 'securitiesAyersCash'], 'promotionNumber': 'EDAC520', 'agreeToTheTerms': 'true', 'personalInfoDeclartion': 'true'};响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-11-04 13:49:45,576   10140     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:49:45,576   10140     INFO result.py(156) - 测试执行通过： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:49:45,592   10140     INFO result.py(90) - 测试结束： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:49:45,592   10140     INFO result.py(91) - 耗时： 6.717034339904785
+2021-11-04 13:49:45,592   10140     INFO result.py(69) - 开始测试： test_02_submitAudit提交审核 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:49:45,593   10140     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:49:45,593   10140     INFO CreatUser开通所有交易账户.py(243) - 等待系统录入数据后再修改WorldCheck的状态，等待时间40s
+2021-11-04 13:50:16,331   10140     INFO CreatUser开通所有交易账户.py(247) - *******************************************已完成修改WorldCheck的状态为FALSE*******************************************
+2021-11-04 13:50:56,348   10140     INFO CreatUser开通所有交易账户.py(256) - 当前token为:22B6DA631F1B297C85EA2C7B126D9BD97AC79FFD18F78973
+2021-11-04 13:50:56,427   10140     INFO CreatUser开通所有交易账户.py(262) - 提交审核获取到的手机号为：16736862861
+2021-11-04 13:50:56,866   10140     INFO CreatUser开通所有交易账户.py(273) - 步骤2提交审核接口'http://sit-cdms.ynm3k.com//api/client/submitAudit';请求参数为:{'applyId': 1150055, 'clientSource': 'CDMS', 'workFlowCode': 'openClient'};响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-11-04 13:51:02,898   10140     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:51:02,898   10140     INFO result.py(156) - 测试执行通过： test_02_submitAudit提交审核 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:51:02,898   10140     INFO result.py(90) - 测试结束： test_02_submitAudit提交审核 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:51:02,914   10140     INFO result.py(91) - 耗时： 77.30568146705627
+2021-11-04 13:51:02,930   10140     INFO result.py(69) - 开始测试： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:51:02,931   10140     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:51:37,951   10140     INFO CreatUser开通所有交易账户.py(286) - 当前token为:22B6DA631F1B297C85EA2C7B126D9BD97AC79FFD18F78973
+2021-11-04 13:51:37,983   10140     INFO CreatUser开通所有交易账户.py(294) - 提交审核获取到的手机号为：16736862861
+2021-11-04 13:51:38,140   10140     INFO CreatUser开通所有交易账户.py(305) - 步骤3提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 1150055, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150055","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-11-04 13:51:44,157   10140     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:51:44,157   10140     INFO result.py(156) - 测试执行通过： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:51:44,173   10140     INFO result.py(90) - 测试结束： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:51:44,173   10140     INFO result.py(91) - 耗时： 41.24272155761719
+2021-11-04 13:51:44,189   10140     INFO result.py(69) - 开始测试： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:51:44,189   10140     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:51:44,189   10140     INFO CreatUser开通所有交易账户.py(324) - 当前applyId为：1150055
+2021-11-04 13:51:44,269   10140     INFO CreatUser开通所有交易账户.py(348) - 步骤4提交审核接口'http://sit-cdms.ynm3k.com//api/client/saveRiskAssessment';请求参数为:{'applyId': 1150055, 'riskAssessmentInfoDTO': {'isAmlOrCft': 'true', 'isPeb': None, 'isPolice': None, 'isIcac': None, 'isHighRiskBusiness': None, 'isJfiu': None, 'isCorruption': None, 'isOtherInformation': None, 'nonFaceToFace': None, 'isUnemployed': None, 'isNonFatf': None, 'isNonFinancial': None, 'isTemporaryAddr': None, 'residence': '新西兰', 'otherInformation': '', 'riskAssessmentLevel': 'TERMINATE'}};响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-11-04 13:51:50,326   10140     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:51:50,326   10140     INFO result.py(156) - 测试执行通过： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:51:50,342   10140     INFO result.py(90) - 测试结束： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:51:50,358   10140     INFO result.py(91) - 耗时： 6.152544260025024
+2021-11-04 13:51:50,373   10140     INFO result.py(69) - 开始测试： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:51:50,373   10140     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:51:50,373   10140     INFO CreatUser开通所有交易账户.py(360) - 当前token为:22B6DA631F1B297C85EA2C7B126D9BD97AC79FFD18F78973
+2021-11-04 13:51:50,580   10140     INFO CreatUser开通所有交易账户.py(459) - 步骤5提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 1150055, 'checkItemList': [{'itemId': '1', 'itemCde': 'Application Form', 'itemDesc': 'Application Form', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '2', 'itemCde': 'Fee schedule', 'itemDesc': 'Fee schedule', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '3', 'itemCde': 'ID card Copy', 'itemDesc': 'ID card Copy', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '4', 'itemCde': 'SFC search', 'itemDesc': 'SFC search', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '5', 'itemCde': 'Worldcheck', 'itemDesc': 'Worldcheck', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '6', 'itemCde': 'Address Proof (if any)', 'itemDesc': 'Address Proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '7', 'itemCde': 'Bank proof (if any)', 'itemDesc': 'Bank proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '8', 'itemCde': 'Source of Fund (if any)', 'itemDesc': 'Source of Fund (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '9', 'itemCde': 'Source of Wealth (if any)', 'itemDesc': 'Source of Wealth (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '10', 'itemCde': 'Other', 'itemDesc': 'Other', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}], 'workFlowCode': 'openClient', 'controlCode': 'PASS', 'isStaff': 'false', 'lockBy': 'ED_RO', 'licensedPersonSign': ''};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150055","applyNo":null,"result":true,"operatingMessage":""}]}'
+2021-11-04 13:51:56,612   10140     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:51:56,612   10140     INFO result.py(156) - 测试执行通过： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:51:56,628   10140     INFO result.py(90) - 测试结束： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:51:56,628   10140     INFO result.py(91) - 耗时： 6.255262851715088
+2021-11-04 13:51:56,628   10140     INFO result.py(69) - 开始测试： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:51:56,628   10140     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:51:56,628   10140     INFO CreatUser开通所有交易账户.py(471) - 当前token为:22B6DA631F1B297C85EA2C7B126D9BD97AC79FFD18F78973
+2021-11-04 13:51:56,628   10140     INFO CreatUser开通所有交易账户.py(477) - 提交审核获取到的手机号为：16736862861
+2021-11-04 13:51:56,628   10140     INFO CreatUser开通所有交易账户.py(480) - 当前applyId为：1150055
+2021-11-04 13:51:56,931   10140     INFO CreatUser开通所有交易账户.py(570) - 步骤6提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 1150055, 'checkItemList': [{'itemId': '1', 'itemCde': 'Application Form', 'itemDesc': 'Application Form', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '2', 'itemCde': 'Fee schedule', 'itemDesc': 'Fee schedule', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '3', 'itemCde': 'ID card Copy', 'itemDesc': 'ID card Copy', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '4', 'itemCde': 'SFC search', 'itemDesc': 'SFC search', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '5', 'itemCde': 'Worldcheck', 'itemDesc': 'Worldcheck', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '6', 'itemCde': 'Address Proof (if any)', 'itemDesc': 'Address Proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '7', 'itemCde': 'Bank proof (if any)', 'itemDesc': 'Bank proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '8', 'itemCde': 'Source of Fund (if any)', 'itemDesc': 'Source of Fund (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '9', 'itemCde': 'Source of Wealth (if any)', 'itemDesc': 'Source of Wealth (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '10', 'itemCde': 'Other', 'itemDesc': 'Other', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}], 'workFlowCode': 'openClient', 'controlCode': 'PASS'};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150055","applyNo":null,"result":true,"operatingMessage":""}]}'
+2021-11-04 13:52:02,956   10140     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:52:02,956   10140     INFO result.py(156) - 测试执行通过： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:52:02,971   10140     INFO result.py(90) - 测试结束： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:52:02,971   10140     INFO result.py(91) - 耗时： 6.343065023422241
+2021-11-04 13:52:02,971   10140     INFO result.py(69) - 开始测试： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:52:02,971   10140     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:52:02,971   10140     INFO CreatUser开通所有交易账户.py(588) - 提交审核获取到的手机号为：16736862861
+2021-11-04 13:52:03,146   10140     INFO CreatUser开通所有交易账户.py(599) - 提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow';请求参数为:{'applyId': 1150055, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150055","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-11-04 13:52:09,162   10140     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:52:09,162   10140     INFO result.py(156) - 测试执行通过： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:52:09,177   10140     INFO result.py(90) - 测试结束： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:52:09,177   10140     INFO result.py(91) - 耗时： 6.205405235290527
+2021-11-04 13:52:09,192   10140     INFO result.py(69) - 开始测试： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:52:09,192   10140     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:52:09,341   10140     INFO CreatUser开通所有交易账户.py(634) - 提交审核接口'http://sit-cdms.ynm3k.com//api/common/batchOperatingWorkFlow';请求参数为:{'applyIds': [1150055], 'workFlowCode': 'openClient', 'controlCode': 'GENERATEACCTNO', 'workFlowOperatingDTOList': [{'applyId': 1150055}]};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150055","applyNo":null,"result":true,"operatingMessage":null}]}'
+2021-11-04 13:52:15,370   10140     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:52:15,370   10140     INFO result.py(156) - 测试执行通过： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:52:15,385   10140     INFO result.py(90) - 测试结束： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:52:15,385   10140     INFO result.py(91) - 耗时： 6.193411111831665
+2021-11-04 13:52:15,400   10140     INFO result.py(69) - 开始测试： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:52:15,400   10140     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:52:15,400   10140     INFO CreatUser开通所有交易账户.py(651) - 提交审核获取到的手机号为：16736862861
+2021-11-04 13:52:15,400   10140     INFO CreatUser开通所有交易账户.py(655) - 当前applyId为：1150055
+2021-11-04 13:52:15,490   10140     INFO CreatUser开通所有交易账户.py(663) - 提交审核接口'http://sit-cdms.ynm3k.com//api/common/operatingWorkFlow',请求参数为：{'applyId': 1150055, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'},的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150055","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-11-04 13:52:21,519   10140     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:52:21,534   10140     INFO result.py(156) - 测试执行通过： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:52:21,534   10140     INFO result.py(90) - 测试结束： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:52:21,549   10140     INFO result.py(91) - 耗时： 6.133594989776611
+2021-11-04 13:52:21,549   10140     INFO result.py(69) - 开始测试： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:52:21,549   10140     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:52:21,549   10140     INFO CreatUser开通所有交易账户.py(680) - 提交审核获取到的手机号为：16736862861
+2021-11-04 13:52:21,550   10140     INFO CreatUser开通所有交易账户.py(684) - 当前applyId为：1150055
+2021-11-04 13:52:22,401   10140     INFO CreatUser开通所有交易账户.py(700) - 提交审核接口'http://sit-cdms.ynm3k.com//api/common/batchOperatingWorkFlow';请求参数为:{'applyIds': [1150055], 'workFlowCode': 'openClient', 'controlCode': 'PASS', 'workFlowOperatingDTOList': [{'applyId': 1150055}]};的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1150055","applyNo":null,"result":false,"operatingMessage":"创建MT5账户失败"}]}'
+2021-11-04 13:52:28,430   10140     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:52:28,490   10140  WARNING result.py(190) - 测试未通过： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建全类型交易账户及审批.py", line 80, in test_10_batchOperatingWorkFlowEnd批量确认
+    self.assertEqual(True, batchOperatingWorkFlowEnd.json().get("data")[0].get("result"))
+AssertionError: True != False
+
+2021-11-04 13:52:28,490   10140     INFO result.py(90) - 测试结束： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:52:28,505   10140     INFO result.py(91) - 耗时： 6.941433429718018
+2021-11-04 13:52:28,505   10140     INFO result.py(69) - 开始测试： test_11_SQLCheckUser (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:52:28,505   10140     INFO test_用户创建全类型交易账户及审批.py(13) - 初始化CreatUser
+2021-11-04 13:52:28,506   10140     INFO test_用户创建全类型交易账户及审批.py(85) - 从文本中读到的用户基本信息为：['16736862861', 'KKEYOlgru@edd.com', 'Smithp', 'Abbott', '于悠悠r', '150101199210021439', 'miss']
+2021-11-04 13:52:38,832   10140     INFO CreatUser开通所有交易账户.py(712) - 通过'16736862861'查询cd_enty表的结果为()
+2021-11-04 13:52:44,835   10140     INFO test_用户创建全类型交易账户及审批.py(112) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:52:44,835   10140    ERROR result.py(175) - 测试产生错误： test_11_SQLCheckUser (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_用户创建全类型交易账户及审批.py", line 88, in test_11_SQLCheckUser
+    self.assertEqual(userinf[0], SQLCheckUser[0][18])
+IndexError: tuple index out of range
+
+2021-11-04 13:52:44,835   10140     INFO result.py(90) - 测试结束： test_11_SQLCheckUser (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+2021-11-04 13:52:44,835   10140     INFO result.py(91) - 耗时： 16.33005690574646
+2021-11-04 13:54:47,242   12912     INFO CreatEquitiesDeposit入金.py(148) - 当前token为:22B6DA631F1B297CF4814C846307AA027AC79FFD18F78973
+2021-11-04 13:54:47,324   12912     INFO CreatEquitiesDeposit入金.py(176) - 步骤4接口'http://sit-cdms.ynm3k.com//api/funds/auditDeposit';请求参数为:{'applyId': 6210, 'approvalResult': 'SYS_ERROR_PASS_7', 'statusCode': 'SYS_ERROR_7', 'fileList': [{'file': '/hzlc_20211101100818.jpg', 'type': 'user'}], 'depositType': 'online_bank_deposit'};响应结果为：'{"code":"0020","msg":"未登录:Login Timeout","data":""}'
+2021-11-04 13:54:53,338   12912     INFO test_创建入金申请单.py(47) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:54:53,351   12912  WARNING result.py(190) - 测试未通过： test_04_get_current_state_deposit (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建入金申请单.py", line 38, in test_04_get_current_state_deposit
+    self.assertEqual("操作成功", get_current_state_deposit.json().get("msg"))
+AssertionError: '操作成功' != '未登录:Login Timeout'
+- 操作成功
++ 未登录:Login Timeout
+
+
+2021-11-04 13:54:53,351   12912     INFO result.py(90) - 测试结束： test_04_get_current_state_deposit (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+2021-11-04 13:54:53,351   12912     INFO result.py(91) - 耗时： 336.32790088653564
+2021-11-04 13:55:04,607    7844     INFO CreatEquitiesDeposit大额入金.py(193) - 当前token为:22B6DA631F1B297C7593931A7DBAE6077AC79FFD18F78973
+2021-11-04 13:55:04,673    7844     INFO CreatEquitiesDeposit大额入金.py(221) - 步骤6接口'http://sit-cdms.ynm3k.com//api/funds/auditDeposit';请求参数为:{'applyId': 6211, 'approvalResult': 'SYS_ERROR_PASS_7', 'statusCode': 'SYS_ERROR_7', 'fileList': [{'file': '/hzlc_20211101100818.jpg', 'type': 'user'}], 'depositType': 'online_bank_deposit'};响应结果为：'{"code":"0020","msg":"未登录:Login Timeout","data":""}'
+2021-11-04 13:55:10,682    7844     INFO test_创建大额入金申请单.py(57) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-04 13:55:10,694    7844  WARNING result.py(190) - 测试未通过： test_06_get_current_state_deposit (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建大额入金申请单.py", line 49, in test_06_get_current_state_deposit
+    self.assertEqual("操作成功", get_current_state_deposit.json().get("msg"))
+AssertionError: '操作成功' != '未登录:Login Timeout'
+- 操作成功
++ 未登录:Login Timeout
+
+
+2021-11-04 13:55:10,694    7844     INFO result.py(90) - 测试结束： test_06_get_current_state_deposit (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+2021-11-04 13:55:10,694    7844     INFO result.py(91) - 耗时： 336.2243158817291
+2021-11-04 13:55:10,694    1796     INFO test_runner.py(193) - 
+Pass	test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Pass	test_01_createExchange创建换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+Pass	test_02_auditExchange提交审核换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+Pass	test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Pass	test_01_createDeposit创建入金单 (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+Pass	test_02_operatingWorkFlowNo (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+Pass	test_03_auditDepositNo (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+Pass	test_01_createDeposit创建入金单 (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+Pass	test_02_operatingWorkFlowNo (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+Pass	test_03_auditDepositNo (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+Pass	test_04_operatingWorkFlowTo (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+Pass	test_05_auditDeposit_comp_p (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+Pass	test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Pass	test_02_submitAudit提交审核 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Pass	test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Pass	test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Pass	test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Pass	test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Pass	test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Pass	test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Pass	test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+
+2021-11-04 13:55:10,694    1796    ERROR test_runner.py(195) - 
+Error	test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Error	test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Error	test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Error	test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Error	test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Error	test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Error	test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Error	test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Error	test_11_SQLCheckUser (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Fail	test_03_SQLCheckexchorder (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
+Fail	test_02_submitAudit提交审核 (Test_Case.test_用户创建审批.Test_creatUser新建用户)
+Error	test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Error	test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Error	test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Error	test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Error	test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Error	test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Error	test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Error	test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Error	test_12_addAccountStructure增加结构性产品 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Error	test_13_addAccountStructure结构性产品申请第一次审批 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Error	test_11_SQLCheckUser (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Error	test_14_addAccountStructure结构性产品申请第二次审批 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Fail	test_01_createWithdrawal创建出金单 (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Error	test_15_SQLCheckcd_ac_struc_appl (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Error	test_02_operatingWorkFlowNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Fail	test_02_submitAudit提交审核 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+Error	test_03_auditWithdrawalNo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Error	test_04_operatingWorkFlowTO (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Error	test_05_auditWithdrawalTo (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Error	test_06_get_current_state (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Error	test_07_operatingWorkFlowfourth (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Error	test_08_auditWithdrawalAcctPass (Test_Case.test_创建出金申请单.Test_CreatEquitiesWithdrawal出金)
+Fail	test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Error	test_11_SQLCheckUser (Test_Case.test_用户创建全类型交易账户及审批.Test_creatUser新建用户创建所有类型账户)
+Fail	test_04_get_current_state_deposit (Test_Case.test_创建入金申请单.Test_CreatEquitiesDeposit入金)
+Fail	test_06_get_current_state_deposit (Test_Case.test_创建大额入金申请单.Test_CreatEquitiesDeposit大额入金)
+
+2021-11-04 13:55:10,701    1796     INFO test_runner.py(213) - 
+测试结束！
+运行时间: 0:08:41.245937
+共计执行用例数量：58
+执行成功用例数量：21
+执行失败用例数量：7
+跳过执行用例数量：0
+产生异常用例数量：30
+

@@ -12,7 +12,7 @@ from Common.data_文本读写 import *
 
 
 
-class CreatUser():
+class CreatUser所有类型交易账户():
     # 步骤1
     def ApplyClinet资料提交(self):
         global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo
@@ -31,7 +31,7 @@ class CreatUser():
         #生成称谓（性别）
         ctitle=Randoms().choice_title()
         # 获取随机的账户类型
-        caccts=Randoms().choice_accts()
+        # caccts=Randoms().choice_accts()
 
         Language=Randoms().choice_Language()
         #新列表用来存放用户基本信息
@@ -43,7 +43,7 @@ class CreatUser():
         userinformationList.append(rchName)
         userinformationList.append(idCardNo)
         userinformationList.append(ctitle)
-        userinformationList.append(caccts)
+        # userinformationList.append(caccts)
         print("userinformationList:",userinformationList)
         # 将userinformationList写入文本
         data_write('F:\\python\\EDDID_CDMS\\Data\\userdatainf.txt',userinformationList)
@@ -217,15 +217,15 @@ class CreatUser():
             # 繁体
             "accts": [
                 # caccts
-                # "securitiesCash",
+                "securitiesCash",
                 # 证券现金
-                # "securitiesMargin",
+                "securitiesMargin",
                 # 证券保证金
-                # "futuresMargin",
+                "futuresMargin",
                 # 期货保证金
                 "leveragedForeignExchangeAccountMargin",
                 # 杠杆式外汇账户(保证金)
-                # "securitiesAyersCash"
+                "securitiesAyersCash"
                 # #全权委托证券（现金）账户
             ],
             "promotionNumber": "EDAC520",

@@ -15,24 +15,35 @@ from Common.data_文本读写 import *
 class CreatUser():
     # 步骤1
     def ApplyClinet资料提交(self):
-        global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo
+        global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo,cookfront
         # 生成电话号
-        phone = Randoms().telephone()
+        # phone = Randoms().telephone()
+        # print("phone数据类型************************************************",type(phone))
+        phone="65824188"
         # 生成新邮箱
         cremail = Randoms.RandomEmail()
+        # cremail="schelin.xie@eddid.com.hk"
         # 英文名firstName
         rfirstName = Randoms().creat_EFName()
-        # 英文名lastName
+        # rfirstName = "Schelin"
+        # 英文姓lastName
         rlastName = Randoms().creat_ELName()
+        rlastName = "test"
         # 中文名chName
         rchName = Randoms().creat_CHName()
         # 生成身份证号
         idCardNo = Randoms().ident_generator()
+        # idCardNo="M7636666"
+        #国籍
+        cantrCode="HKG"
+        # 身份证类型 香港为"1" 大陆为"2"
+        idCardT="1"
+        #cookies的前缀
+        cookfront=cookfr
         #生成称谓（性别）
         ctitle=Randoms().choice_title()
         # 获取随机的账户类型
         caccts=Randoms().choice_accts()
-
         Language=Randoms().choice_Language()
         #新列表用来存放用户基本信息
         userinformationList=[]
@@ -56,7 +67,7 @@ class CreatUser():
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
-            "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
+            "Cookie": cookfront + token
         }
         logging.info("当前token为:{}".format(token))
         print("当前token为:{}".format(token))
@@ -69,35 +80,35 @@ class CreatUser():
                 {
                     "title": ctitle,
                     "informationType": 1,
-                    "firstName": rfirstName,
+                    "firstName":rfirstName,
                     "lastName": rlastName,
                     "chName": rchName,
-                    "usedCnName": rlastName + phone,
+                    "usedCnName": rlastName + caccts,
                     "usedChName": rchName + "接口自动化创建账号",
-                    # "email": "544162008@qq.com",
                     "email": cremail,
-                    "phoneAreaCode": "CHN",
+                    "phoneAreaCode": cantrCode,
                     "phoneNo": phone,
-                    "houseAddress": "中英街" + phone + "号",
-                    "houseAddressPinYin": "zhon" + phone + "hao",
+                    "houseAddress": "中英街" + caccts + "号",
+                    "houseAddressPinYin": "zhon" + caccts + "hao",
                     "postAddress": "接口自动化",
-                    "natnlty": "CHN",
-                    "idCardType": "2",
+                    "natnlty": cantrCode,
+
+                    "idCardType": idCardT,
                     "idCardNo": idCardNo,
                     "otherCardType": "",
                     "otherCardNo": "",
-                    "countryIssue": "CHN",
-                    "overCountry": "CHN",
+                    "countryIssue": cantrCode,
+                    "overCountry": cantrCode,
                     "birthday": "1994-08-09",
                     "idExpiresDate": "2023-08-31",
-                    "birthdayPlace": "CHN",
+                    "birthdayPlace": cantrCode,
                     "employmentStatus": "self",
                     "post": "businessOwner",
                     "workingYear": "11",
-                    "companyName": "接口自动化" + phone,
+                    "companyName": "接口自动化" + caccts,
                     "businessNature": "wholesale&retail",
-                    "officeAddress": "47845512245" + phone,
-                    "officePhone": "0771-" + phone,
+                    "officeAddress": "47845512245" + caccts,
+                    "officePhone": "0771-" + caccts,
                     "registeredCompany": "Y",
                     "employmentRemark": "",
                     "totalIncomeYear": "gt1000000",
@@ -221,9 +232,9 @@ class CreatUser():
                 # 证券现金
                 # "securitiesMargin",
                 # 证券保证金
-                # "futuresMargin",
+                "futuresMargin",
                 # 期货保证金
-                "leveragedForeignExchangeAccountMargin",
+                # "leveragedForeignExchangeAccountMargin",
                 # 杠杆式外汇账户(保证金)
                 # "securitiesAyersCash"
                 # #全权委托证券（现金）账户
@@ -238,27 +249,24 @@ class CreatUser():
         return applyClientResp
     # 步骤2
     def SubmitAudit提交审核(self):
-
         print("等待系统录入数据后再修改WorldCheck的状态，等待时间40s")
         logging.info("等待系统录入数据后再修改WorldCheck的状态，等待时间40s")
         time.sleep(30)
         cd_clnt_wc_match(phone)
         print("*******************************************已完成修改WorldCheck的状态为FALSE*******************************************")
         logging.info("*******************************************已完成修改WorldCheck的状态为FALSE*******************************************")
-
         # 必须要等待修改完成后才能提交审核
         time.sleep(40)
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
-            "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
+            "Cookie": cookfront + token
         }
         logging.info("当前token为:{}".format(token))
         print("当前token为:{}".format(token))
         print("headers", headers)
         submitAuditurl = eddidhost + "/api/client/submitAudit"
         print("submitAuditurl为:", submitAuditurl)
-
         logging.info("提交审核获取到的手机号为：{}".format(phone))
         global applyId
         applyId = cd_clnt_apply_info(phone)[0][0]
@@ -282,15 +290,11 @@ class CreatUser():
             "Connection": "keep-alive",
             "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
         }
-
         logging.info("当前token为:{}".format(token))
-
         print("当前token为:{}".format(token))
         print("headers", headers)
         operatingWorkFlowFirsturl = eddidhost + "/api/common/operatingWorkFlow"
-
         print("submitAuditurl为:", operatingWorkFlowFirsturl)
-
         logging.info("提交审核获取到的手机号为：{}".format(phone))
         # global applyId
         # applyId = cd_clnt_apply_info(phone)[0][0]
@@ -307,19 +311,17 @@ class CreatUser():
         print("步骤3提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowFirsturl, data,
                                                          operatingWorkFlowFirstResp.text))
         return operatingWorkFlowFirstResp
-
     # 步骤4
     def saveRiskAssessment风控评估提交(self):
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
-            "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
+            "Cookie": cookfront + token
         }
         # logging.info("当前token为:{}".format(token))
         print("当前token为:{}".format(token))
         print("headers", headers)
         saveRiskAssessmenturl = eddidhost + "/api/client/saveRiskAssessment"
-
         print("submitAuditurl为:", saveRiskAssessmenturl)
         logging.info("当前applyId为：{}".format(applyId))
         data = {
@@ -349,13 +351,12 @@ class CreatUser():
             "步骤4提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(saveRiskAssessmenturl, data, saveRiskAssessmentResp.text))
         print("步骤4提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(saveRiskAssessmenturl, data, saveRiskAssessmentResp.text))
         return saveRiskAssessmentResp
-
     # 步骤5
     def operatingWorkFlow内部人员审核(self):
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
-            "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
+            "Cookie": cookfront + token
         }
         logging.info("当前token为:{}".format(token))
         print("当前token为:{}".format(token))
@@ -466,7 +467,7 @@ class CreatUser():
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
-            "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
+            "Cookie": cookfront + token
         }
         logging.info("当前token为:{}".format(token))
         print("当前token为:{}".format(token))
@@ -577,7 +578,7 @@ class CreatUser():
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
-            "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
+            "Cookie": cookfront + token
         }
         # logging.info("当前token为:{}".format(token))
         print("当前token为:{}".format(token))
@@ -607,7 +608,7 @@ class CreatUser():
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
-            "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
+            "Cookie": cookfront + token
         }
         print("当前token为:{}".format(token))
         print("headers", headers)
@@ -641,7 +642,7 @@ class CreatUser():
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
-            "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
+            "Cookie": cookfront + token
         }
         # logging.info("当前token为:{}".format(token))
         print("当前token为:{}".format(token))
@@ -671,7 +672,7 @@ class CreatUser():
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
-            "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
+            "Cookie": cookfront + token
         }
         # logging.info("当前token为:{}".format(token))
         print("当前token为:{}".format(token))
@@ -712,8 +713,6 @@ class CreatUser():
         logging.info("通过'{}'查询cd_enty表的结果为{}".format(phone, CheckUsers))
         return CheckUsers
 
-
-
 # ”if __name__=="__main__":“的作用在当前文件run时会执行下面的代码，如果时外部调用就不会执行if里面的代码
 if __name__ == "__main__":
     a = 1
@@ -742,7 +741,6 @@ if __name__ == "__main__":
         time.sleep(4)
         print("=====================================步骤11：", CreatUser.SQLCheckUser())
         time.sleep(4)
-
 
 
 # if __name__=="__main__":

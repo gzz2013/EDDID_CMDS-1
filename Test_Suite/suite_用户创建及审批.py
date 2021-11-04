@@ -1,5 +1,5 @@
 import unittest
-from Test_Case.test_运营用户创建审批 import Test_creatUser新建用户
+from Test_Case.test_用户创建审批 import Test_creatUser新建用户
 
 
 def get_suite_creatUser新建用户():
