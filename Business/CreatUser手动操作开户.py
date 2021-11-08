@@ -17,9 +17,9 @@ class CreatUser():
     def ApplyClinet资料提交(self):
         global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo,cookfront
         # 生成电话号
-        # phone = Randoms().telephone()
+        phone = Randoms().telephone()
         # print("phone数据类型************************************************",type(phone))
-        phone="65824188"
+        # phone="65824188"
         # 生成新邮箱
         cremail = Randoms.RandomEmail()
         # cremail="schelin.xie@eddid.com.hk"
@@ -28,7 +28,7 @@ class CreatUser():
         # rfirstName = "Schelin"
         # 英文姓lastName
         rlastName = Randoms().creat_ELName()
-        rlastName = "test"
+        # rlastName = "test"
         # 中文名chName
         rchName = Randoms().creat_CHName()
         # 生成身份证号
@@ -228,15 +228,15 @@ class CreatUser():
             # 繁体
             "accts": [
                 # caccts
-                # "securitiesCash",
+                "securitiesCash",
                 # 证券现金
-                # "securitiesMargin",
+                "securitiesMargin",
                 # 证券保证金
                 "futuresMargin",
                 # 期货保证金
-                # "leveragedForeignExchangeAccountMargin",
+                "leveragedForeignExchangeAccountMargin",
                 # 杠杆式外汇账户(保证金)
-                # "securitiesAyersCash"
+                "securitiesAyersCash"
                 # #全权委托证券（现金）账户
             ],
             "promotionNumber": "EDAC520",

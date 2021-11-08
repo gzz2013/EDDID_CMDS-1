@@ -15,7 +15,7 @@ class CreatEquitiesDeposit入金():
         token = cdms_获取token()
         s = requests.Session()
         # Randoms实例化
-        clientId =11431
+        clientId =100861
         # clientId = Randoms().choice_clientId()
         # accountId因clientId而变化
         # if clientId == 11431:
@@ -44,7 +44,7 @@ class CreatEquitiesDeposit入金():
             "remittanceBankCard":"32323232",
             "sibMobile":'null',
             "depositAmount":depositAmount,
-            "accountId":"114311110",
+            "accountId":"1008611230",
             "accountCategory":"securitiesCash",
             "remittanceBankCode":"003",
             "beneficiaryBankCode":"012",

@@ -1,7 +1,7 @@
 import unittest
 import time
 import logging
-from Business.Creat没有结构性产品账号及申请结构性产品审批 import CreatUser
+from Business.Creat没有结构性产品账号及申请结构性产品审批 import CreatUser无结构性产品用户创建
 from Common.com_sql import *
 from Common.data_文本读写 import *
 
@@ -9,7 +9,7 @@ from Common.data_文本读写 import *
 class Test_creatUser没有结构性产品账号及申请结构性产品审批(unittest.TestCase):
 
     def setUp(self):
-        self.creatUser = CreatUser()
+        self.creatUser = CreatUser无结构性产品用户创建()
         logging.info("初始化CreatUser")
 
     def test_01_applyClient用户资料提交用例校验(self):

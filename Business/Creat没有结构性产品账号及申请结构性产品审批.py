@@ -12,7 +12,7 @@ from Common.data_文本读写 import *
 
 
 # Randoms=Randoms()
-class CreatUser():
+class CreatUser无结构性产品用户创建():
     # 步骤1
     def ApplyClinet资料提交(self):
         global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo
@@ -720,7 +720,6 @@ class CreatUser():
         logging.info("通过'{}'查询cd_enty表的结果为{}".format(phone, CheckUsers))
         return CheckUsers
 
-
    # 步骤12
     def addAccountStructure增加结构性产品(self):
         headers = {
@@ -864,12 +863,10 @@ class CreatUser():
         logging.info("通过'{}'查询cd_ac_struc_appl表的结果为{}".format(clnt_id, Checkcd_ac_struc_appl))
         return Checkcd_ac_struc_appl
 
-
-
 # ”if __name__=="__main__":“的作用在当前文件run时会执行下面的代码，如果时外部调用就不会执行if里面的代码
 if __name__ == "__main__":
     a = 1
-    CreatUser = CreatUser()
+    CreatUser = CreatUser无结构性产品用户创建()
     for i in range(a):
         # 实例化CreatUser
         print("=====================================步骤1：", CreatUser.ApplyClinet资料提交().text)
@@ -891,15 +888,12 @@ if __name__ == "__main__":
         print("=====================================步骤9：", CreatUser.operatingWorkFlowThird提交锁().text)
         time.sleep(4)
         print("=====================================步骤10：", CreatUser.batchOperatingWorkFlowEnd批量确认().text)
-
         time.sleep(10)
-        print("=====================================步骤11：", CreatUser.addAccountStructure增加结构性产品())
-        time.sleep(4)
-        print("=====================================步骤12：", CreatUser.addAccountStructure结构性产品申请第一次审批().text)
-        time.sleep(4)
-        print("=====================================步骤13：", CreatUser.addAccountStructure结构性产品申请第二次审批().text)
-
-
+        print("=====================================步骤11：", CreatUser.addAccountStructure增加结构性产品().text)
+        # time.sleep(4)
+        # print("=====================================步骤12：", CreatUser.addAccountStructure第一次审批().text)
+        # time.sleep(4)
+        # print("=====================================步骤13：", CreatUser.addAccountStructure第二次审批().text)
 
         # time.sleep(4)
         # print("步骤11：", CreatUser.SQLCheckUser())
