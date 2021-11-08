@@ -12,7 +12,7 @@ suite.addTests(suite_用户创建结构性产品及审批.get_suite_creatUser没
 suite.addTests(suite_出金申请单.get_suite_CreatEquitiesWithdrawal出金())
 suite.addTests(suite_入金申请单.get_suite_CreatEquitiesDeposit入金())
 suite.addTests(suite_大额入金申请单.get_suite_CreatEquitiesDeposit大额入金())
-# suite.addTests(suite_用户创建全类型交易账户及审批.get_suite_creatUser新建所有类型用户())
+suite.addTests(suite_用户创建全类型交易账户及审批.get_suite_creatUser新建所有类型用户())
 
 
 
