@@ -36,7 +36,7 @@ class Test_CreateExchange新建换汇申请单(unittest.TestCase):
 
         self.assertEqual("USD", SQLCheckexchorderinfor[0][6])
         self.assertEqual("HKD", SQLCheckexchorderinfor[0][5])
-        self.assertEqual(2, SQLCheckexchorderinfor[0][-1])
+        # self.assertEqual(2, SQLCheckexchorderinfor[0][-1])
         self.assertEqual(Txtexchorderinfor[0], SQLCheckexchorderinfor[0][2])
         self.assertEqual(Txtexchorderinfor[1], SQLCheckexchorderinfor[0][3])
         #截取数据库的金额字段后再做比较
