@@ -177,8 +177,6 @@ class CreatEquitiesDeposit入金():
             print("步骤4接口'{}';请求参数为:{};响应结果为：'{}'".format(auditDepositTourl, data, auditDepositToResp.text))
             return auditDepositToResp
 
-
-
 if __name__ == "__main__":
     a = 1
     CreatDeposit= CreatEquitiesDeposit入金()
@@ -189,5 +187,5 @@ if __name__ == "__main__":
         print("=====================================步骤2：", CreatDeposit.operatingWorkFlowNo().text)
         time.sleep(10)
         print("=====================================步骤3：", CreatDeposit.auditDepositNo().text)
-        time.sleep(300)
+        time.sleep(400)
         print("=====================================步骤4：", CreatDeposit.get_current_state_deposit().text)

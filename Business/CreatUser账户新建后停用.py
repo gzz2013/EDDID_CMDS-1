@@ -12,10 +12,10 @@ from Common.data_文本读写 import *
 
 
 
-class CreatUser():
+class CreatUser账户新建后停用():
     # 步骤1
     def ApplyClinet资料提交(self):
-        global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo,cookfront
+        global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo,cookfront,userinformationList
         # 生成电话号
         phone = Randoms().telephone()
         # 生成新邮箱
@@ -34,7 +34,7 @@ class CreatUser():
         caccts=Randoms().choice_accts()
         #cookies的前缀
         cookfront=cookfr
-
+        #随机选择语言
         Language=Randoms().choice_Language()
         #新列表用来存放用户基本信息
         userinformationList=[]
@@ -218,7 +218,7 @@ class CreatUser():
             # "emailLanguage": "zh-hant",
             # 繁体
             "accts": [
-                # caccts
+                caccts
                 # "securitiesCash",
                 # 证券现金
                 # "securitiesMargin",
@@ -227,7 +227,7 @@ class CreatUser():
                 # 期货保证金
                 # "leveragedForeignExchangeAccountMargin",
                 # 杠杆式外汇账户(保证金)
-                "securitiesAyersCash"
+                # "securitiesAyersCash"
                 # #全权委托证券（现金）账户
             ],
             "promotionNumber": "EDAC520",
@@ -710,16 +710,52 @@ class CreatUser():
         time.sleep(10)
         # 通过直接调用cd_enty表查询
         CheckUsers = cd_enty(phone)
-        print("通过phone='{}'查询cd_enty表的结果为{}".format(phone, CheckUsers))
+        print("步骤11执行完成，通过phone='{}'查询cd_enty表的结果为{}".format(phone, CheckUsers))
         logging.info("通过'{}'查询cd_enty表的结果为{}".format(phone, CheckUsers))
         return CheckUsers
 
+    def unableAcct(self):
+        global clnt
 
+        clnt=get_clnt_id(phone)[0][0]
+        userinformationList.append(clnt)
+        data_write('F:\\python\\EDDID_CDMS\\Data\\userdatainf.txt', userinformationList)
+        headers = {
+            "Accept": "application/x-www-form-urlencoded, text/javascript, */*; q=0.01",
+            "Connection": "keep-alive",
+            "Cookie": cookfront + token
+        }
+        # logging.info("当前token为:{}".format(token))
+        print("当前token为:{}".format(token))
+        print("headers", headers)
+        unableAccturl = eddidhost + "/api/acct/unableAcct"
+        logging.info("提交审核获取到的手机号为：{}".format(phone))
+        print("提交审核获取到的手机号为：{}".format(phone))
+        # global applyId
+        # applyId = cd_clnt_apply_info(phone)
+        logging.info("当前applyId为：{}".format(applyId))
+        data = {
+            "accountId":clnt,
+            "suspendReason":"zidonghuatijiao"
+        }
+        print("data=", data)
+        unableAcctResp = s.post(url=unableAccturl, headers=headers, data=data)
+        logging.info("步骤12提交接口'{}';请求参数为:{};的响应结果为:'{}'".format(unableAccturl,data,unableAcctResp.text))
+        print("步骤12提交接口'{}';请求参数为:{};响应结果为:'{}'".format(unableAccturl,data,unableAcctResp.text))
+        return unableAcctResp
+
+    def SQLCheck_ac_stat(self):
+        time.sleep(5)
+        # 通过交易账户直接调用cd_ac表查询
+        Check_ac_stat = cd_ac_id(clnt)
+        print("步骤13执行完成，通过clnt='{}'查询cd_ac表的结果为{}".format(clnt, Check_ac_stat))
+        logging.info("步骤13执行完成，通过clnt='{}'查询cd_ac表的结果为{}".format(clnt, Check_ac_stat))
+        return Check_ac_stat
 
 # ”if __name__=="__main__":“的作用在当前文件run时会执行下面的代码，如果时外部调用就不会执行if里面的代码
 if __name__ == "__main__":
     a = 1
-    CreatUser = CreatUser()
+    CreatUser = CreatUser账户新建后停用()
     for i in range(a):
         # 实例化CreatUser
         print("=====================================步骤1：", CreatUser.ApplyClinet资料提交().text)
@@ -743,6 +779,10 @@ if __name__ == "__main__":
         print("=====================================步骤10：", CreatUser.batchOperatingWorkFlowEnd批量确认().text)
         time.sleep(4)
         print("=====================================步骤11：", CreatUser.SQLCheckUser())
+        time.sleep(4)
+        print("=====================================步骤12：", CreatUser.unableAcct().text)
+        time.sleep(4)
+        print("=====================================步骤13：", CreatUser.SQLCheck_ac_stat())
         time.sleep(4)
 
 

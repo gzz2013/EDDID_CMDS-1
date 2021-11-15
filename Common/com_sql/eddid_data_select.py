@@ -87,6 +87,21 @@ def  get_newrate():
                                      sql="select * from cd_exch_rate ORDER BY init_time DESC LIMIT 1;")
     return gs_wrkflw_log
 
+
+#根据手机号码查询账户申请后的clnt_id
+def  get_clnt_id(phone_no):
+    clnt_id=SQL_Check.eddid_gfss_sit(database=sqldata,
+                                     sql="select * from cd_ac where clnt_id =(select clnt_id from cd_clnt_apply_basisinfo WHERE apply_id=(select apply_id from cd_clnt_apply_info WHERE phone_no={})) LIMIT 1".format(phone_no))
+    return clnt_id
+
+
+#根据ac_id查询状态交易账户信息
+def  cd_ac_id(ac_id):
+    cd_ac_id = SQL_Check.eddid_gfss_sit(database=sqldata,
+                                     sql="select * from cd_ac WHERE ac_id={}".format(ac_id))
+    return cd_ac_id
+
+
 if __name__=="__main__":
     # a=cd_ac('NORMAL','CASH','EQUITIES',11431)
     # print(a)
@@ -103,6 +118,7 @@ if __name__=="__main__":
     # print("gs_wrkflw_log",gs_wrkflw_log(52154))
     # print("get_newrate",get_newrate())
     # print("cd_deposit++++++++++++++",cd_deposit(11431,46.41))
-    #
+    print("get_clnt_id:",get_clnt_id(13480701220))
+    print("cd_ac_id:",cd_ac_id(5007805216))
 
 

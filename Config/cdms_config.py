@@ -36,7 +36,6 @@ eddid_gfss_shhpasswd=''
 # eddid_gfss_port=3306
 # eddid_gfss_user="admin"
 # eddid_gfss_passwd='9$96f#b4tZy5m'
-#
 # eddid_gfss_shhhost="192.168.57.20"
 # eddid_gfss_shhport=22
 # eddid_gfss_shhuser="dev"
@@ -49,6 +48,7 @@ cdmsuser="ganjiexiang"
 cdmsuserp="111111"
 # cdmsuser="admin"
 # cdmsuserp="admin123uat"
+
 # ————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 #新增换汇申请单的账户配置
 # 交易账户

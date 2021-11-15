@@ -17,18 +17,18 @@ class CreatUser():
     def ApplyClinet资料提交(self):
         global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo,cookfront
         # 生成电话号
-        phone = Randoms().telephone()
+        # phone = Randoms().telephone()
         # print("phone数据类型************************************************",type(phone))
-        # phone="65824188"
+        phone="67653815"
         # 生成新邮箱
-        cremail = Randoms.RandomEmail()
-        # cremail="schelin.xie@eddid.com.hk"
+        # cremail = Randoms.RandomEmail()
+        cremail="margaret.li@eddid.com.hk"
         # 英文名firstName
-        rfirstName = Randoms().creat_EFName()
-        # rfirstName = "Schelin"
+        # rfirstName = Randoms().creat_EFName()
+        rfirstName = "Margaret"
         # 英文姓lastName
-        rlastName = Randoms().creat_ELName()
-        # rlastName = "test"
+        # rlastName = Randoms().creat_ELName()
+        rlastName = "test"
         # 中文名chName
         rchName = Randoms().creat_CHName()
         # 生成身份证号
@@ -228,15 +228,15 @@ class CreatUser():
             # 繁体
             "accts": [
                 # caccts
-                "securitiesCash",
+                # "securitiesCash",
                 # 证券现金
-                "securitiesMargin",
+                # "securitiesMargin",
                 # 证券保证金
                 "futuresMargin",
                 # 期货保证金
-                "leveragedForeignExchangeAccountMargin",
+                # "leveragedForeignExchangeAccountMargin",
                 # 杠杆式外汇账户(保证金)
-                "securitiesAyersCash"
+                # "securitiesAyersCash"
                 # #全权委托证券（现金）账户
             ],
             "promotionNumber": "EDAC520",
@@ -288,7 +288,7 @@ class CreatUser():
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
-            "Cookie": "LANGUAGE=zh_CN;GB-SYS-SID-SIT=" + token
+            "Cookie": cookfront + token
         }
         logging.info("当前token为:{}".format(token))
         print("当前token为:{}".format(token))
