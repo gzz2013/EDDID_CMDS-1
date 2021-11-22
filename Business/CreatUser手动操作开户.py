@@ -17,18 +17,18 @@ class CreatUser():
     def ApplyClinet资料提交(self):
         global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo,cookfront
         # 生成电话号
-        # phone = Randoms().telephone()
+        phone = Randoms().telephone()
         # print("phone数据类型************************************************",type(phone))
-        phone="67653815"
+        # phone="91318614"
         # 生成新邮箱
-        # cremail = Randoms.RandomEmail()
-        cremail="margaret.li@eddid.com.hk"
+        cremail = Randoms.RandomEmail()
+        # cremail="leo.leung@eddidfintech.com"
         # 英文名firstName
-        # rfirstName = Randoms().creat_EFName()
-        rfirstName = "Margaret"
+        rfirstName = Randoms().creat_EFName()
+        # rfirstName = "Margaret"
         # 英文姓lastName
-        # rlastName = Randoms().creat_ELName()
-        rlastName = "test"
+        rlastName = Randoms().creat_ELName()
+        # rlastName = "test"
         # 中文名chName
         rchName = Randoms().creat_CHName()
         # 生成身份证号
@@ -37,7 +37,7 @@ class CreatUser():
         #国籍
         cantrCode="HKG"
         # 身份证类型 香港为"1" 大陆为"2"
-        idCardT="1"
+        idCardT="2"
         #cookies的前缀
         cookfront=cookfr
         #生成称谓（性别）
@@ -228,13 +228,13 @@ class CreatUser():
             # 繁体
             "accts": [
                 # caccts
-                # "securitiesCash",
+                "securitiesCash",
                 # 证券现金
                 # "securitiesMargin",
                 # 证券保证金
                 "futuresMargin",
                 # 期货保证金
-                # "leveragedForeignExchangeAccountMargin",
+                "leveragedForeignExchangeAccountMargin",
                 # 杠杆式外汇账户(保证金)
                 # "securitiesAyersCash"
                 # #全权委托证券（现金）账户

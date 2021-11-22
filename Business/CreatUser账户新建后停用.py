@@ -715,11 +715,18 @@ class CreatUser账户新建后停用():
         return CheckUsers
 
     def unableAcct(self):
-        global clnt
 
+        global clnt
         clnt=get_clnt_id(phone)[0][0]
         userinformationList.append(clnt)
         data_write('F:\\python\\EDDID_CDMS\\Data\\userdatainf.txt', userinformationList)
+
+        data_write('F:\\python\\EDDID_CDMS\\Data\\unableAcct.txt', clnt)
+        print("=======已经将{}写入unableAcct.txt".format(clnt))
+        #将账号写到指定文档
+        unableA=[]
+        unableA.append(clnt)
+        data_write('F:\\python\\EDDID_CDMS\\Data\\unableAcct.txt', unableA)
         headers = {
             "Accept": "application/x-www-form-urlencoded, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
@@ -736,7 +743,7 @@ class CreatUser账户新建后停用():
         logging.info("当前applyId为：{}".format(applyId))
         data = {
             "accountId":clnt,
-            "suspendReason":"zidonghuatijiao"
+            "suspendReason":"自动化测试账号暂停"
         }
         print("data=", data)
         unableAcctResp = s.post(url=unableAccturl, headers=headers, data=data)
