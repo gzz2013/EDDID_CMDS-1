@@ -17,9 +17,9 @@ class CreatUser():
     def ApplyClinet资料提交(self):
         global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo,cookfront
         # 生成电话号
-        phone = Randoms().telephone()
+        # phone = Randoms().telephone()
         # print("phone数据类型************************************************",type(phone))
-        # phone="91318614"
+        phone="18682252487"
         # 生成新邮箱
         cremail = Randoms.RandomEmail()
         # cremail="leo.leung@eddidfintech.com"
@@ -30,12 +30,13 @@ class CreatUser():
         rlastName = Randoms().creat_ELName()
         # rlastName = "test"
         # 中文名chName
-        rchName = Randoms().creat_CHName()
+        # rchName = Randoms().creat_CHName()
+        rchName = "JLJ勿动"
         # 生成身份证号
         idCardNo = Randoms().ident_generator()
         # idCardNo="M7636666"
         #国籍
-        cantrCode="HKG"
+        cantrCode="CHN"
         # 身份证类型 香港为"1" 大陆为"2"
         idCardT="2"
         #cookies的前缀
@@ -232,9 +233,9 @@ class CreatUser():
                 # 证券现金
                 # "securitiesMargin",
                 # 证券保证金
-                "futuresMargin",
+                # "futuresMargin",
                 # 期货保证金
-                "leveragedForeignExchangeAccountMargin",
+                # "leveragedForeignExchangeAccountMargin",
                 # 杠杆式外汇账户(保证金)
                 # "securitiesAyersCash"
                 # #全权委托证券（现金）账户
@@ -683,7 +684,6 @@ class CreatUser():
         # global applyId
         # applyId = cd_clnt_apply_info(phone)
         logging.info("当前applyId为：{}".format(applyId))
-
         data = {
             "applyIds": [
                 applyId
@@ -743,26 +743,3 @@ if __name__ == "__main__":
         time.sleep(4)
 
 
-# if __name__=="__main__":
-#     CreatUser = CreatUser()
-#     # 实例化CreatUser
-#     print("步骤1：", CreatUser.ApplyClinet资料提交().text)
-#     time.sleep(4)
-#     print("步骤2：", CreatUser.SubmitAudit提交审核().text)
-#     time.sleep(4)
-#     print("步骤3：", CreatUser.operatingWorkFlowFirst提交锁().text)
-#     time.sleep(4)
-#     print("步骤4：", CreatUser.saveRiskAssessment风控评估提交().text)
-#     time.sleep(4)
-#     print("步骤5：", CreatUser.operatingWorkFlow内部人员审核().text)
-#     time.sleep(4)
-#     print("步骤6：", CreatUser.operatingWorkFlowNo不用锁定审核通过().text)
-#     time.sleep(4)
-#     print("步骤7：", CreatUser.operatingWorkFlowAgain提交锁().text)
-#     time.sleep(4)
-#     print("步骤8：", CreatUser.batchOperatingWorkFlow批量生成账号确定().text)
-#     time.sleep(4)
-#     print("步骤9：", CreatUser.operatingWorkFlowThird提交锁().text)
-#     time.sleep(4)
-#     print("步骤10：", CreatUser.batchOperatingWorkFlowEnd批量确认().text)
-#     time.sleep(4)

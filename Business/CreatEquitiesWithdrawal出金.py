@@ -22,9 +22,7 @@ class CreatEquitiesWithdrawal出金():
             accountId = 114311110
         else:
             accountId = 120711110
-
         print("================================获取到clientId为：{}，accountId为：{}".format(clientId, accountId))
-
         withdrawalAmount = Randoms().randomAmount()
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
@@ -162,10 +160,27 @@ class CreatEquitiesWithdrawal出金():
         auditWithdrawalToResp = s.post(url=auditWithdrawalTourl, headers=headers, json=data)
         logging.info("步骤5接口'{}';请求参数为:{};响应结果为：'{}'".format(auditWithdrawalTourl, data, auditWithdrawalToResp.text))
         print("步骤5接口'{}';请求参数为:{};响应结果为：'{}'".format(auditWithdrawalTourl, data, auditWithdrawalToResp.text))
-        time.sleep(480)
+        time.sleep(20)
         return auditWithdrawalToResp
 
     def get_current_state(self):
+
+
+        cstate = gs_wrkflw_log(applyId)[0][3]
+        print("数据库查询到cstate的值为{}".format(cstate))
+
+        b = 20
+        while cstate == "SYS_HANDLEING_8":
+            time.sleep(20)
+            # 获取当前时间时分秒
+            # a = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+            print("当前状态为：系统处理中，流程等待！当前时间为：{},剩余等待{}次！".format(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), b))
+            cstate = gs_wrkflw_log(applyId)[0][3]
+            print("数据库查询到cstate的值为{}".format(cstate))
+            b -= 1
+            if b < 0:
+                print("系统处理时间过长，不再等待，进程结束！")
+                break
 
         # 系统处理出金返回结果后，首先提交锁
         headers = {
@@ -184,9 +199,7 @@ class CreatEquitiesWithdrawal出金():
         time.sleep(10)
         print("系统处理出金返回结果后，首先提交锁++++++++++++++++++++++++++++")
 
-        cstate = gs_wrkflw_log(applyId)[0][3]
 
-        print("数据库查询到cstate的值为{}".format(cstate))
 
         # 如果返回的是系统处理失败，就审批通过
         if cstate == 'SYS_ERROR_8':
@@ -213,6 +226,8 @@ class CreatEquitiesWithdrawal出金():
                 "statusCode": "SYS_ERROR_8",
                 "clientBankAccountName": "521423"
             }
+
+            time.sleep(15)
             s.post(url=auditWithdrawalErrorPassurl, headers=headers, json=data)
 
             print("如果返回的是系统处理失败，就审批通过++++++++++++++++++++++++++++")
@@ -228,8 +243,8 @@ class CreatEquitiesWithdrawal出金():
                 "controlCode": "LOCK"
             }
             s.post(url=operatingWorkFlowsurl, headers=headers, json=dataT)
-            time.sleep(10)
 
+            time.sleep(15)
             auditWithdrawalRoPassurl = eddidhost + "/api/funds/auditWithdrawal"
             print("applyClienturl:", auditWithdrawalRoPassurl)
             # logging.info("提交申请单时注册用户手机号码为：{}".format(clientId))
@@ -275,6 +290,7 @@ class CreatEquitiesWithdrawal出金():
                 "statusCode": "RO_8",
                 "clientBankAccountName": "521423"
             }
+            time.sleep(20)
             auditWithdrawalPassResp = s.post(url=auditWithdrawalRoPassurl, headers=headers, json=data)
             print("系统处理成功时到”待RO审批“，审批通过++++++++++++++++++++++++++++")
 
