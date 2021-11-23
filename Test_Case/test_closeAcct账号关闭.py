@@ -1,35 +1,35 @@
 import unittest
 import time
 import logging
-from Business.enableAcct_停用账号开启 import enableAcct停用后开启
+from Business.closeAcct_关闭账号 import CloseAcct账号关闭
 # from Common.com_sql import *
 # from Common.data_文本读写 import *
 
 
-class Test_enableAcct停用后开启(unittest.TestCase):
+class Test_closeAcct账号关闭(unittest.TestCase):
 
     def setUp(self):
-        self.enableAcct = enableAcct停用后开启()
+        self.closeAcct = CloseAcct账号关闭()
         logging.info("enableAcct停用后开启")
 
 
     #开启之前先校验账号状态
     def test_01_SQLCheck_ac_stat_front(self):
-        ac_stat_front = self.enableAcct.SQLCheck_ac_stat_front()
-        self.assertEqual("SUSPENDED", ac_stat_front[0][13])
+        ac_stat_front = self.closeAcct.SQLCheck_ac_stat_front()
+        self.assertEqual("NORMAL", ac_stat_front[0][13])
         # self.assertEqual("操作成功", applyClient.json().get("msg"))
         print("已执行用例1===============================================================")
 
     def test_02_enableAcct账号停用(self):
-        enableAcct = self.enableAcct.enableAcct账号停用()
+        enableAcct = self.closeAcct.closeAcct账号关闭()
         self.assertEqual(200, enableAcct.status_code)
         self.assertEqual("操作成功", enableAcct.json().get("msg"))
         print("已执行用例2===============================================================")
 
-    # 操作开启后校验账号状态
+    # 操作关闭后校验账号状态
     def test_03_SQLCheckUser(self):
-        ac_stat_after = self.enableAcct.SQLCheck_ac_stat_after()
-        self.assertEqual("NORMAL", ac_stat_after[0][13])
+        ac_stat_after = self.closeAcct.SQLCheck_ac_stat_after()
+        self.assertEqual("CLOSED", ac_stat_after[0][13])
         # self.assertEqual("操作成功", applyClient.json().get("msg"))
 
         logging.info("已执行用例03，数据库校验已完成")
