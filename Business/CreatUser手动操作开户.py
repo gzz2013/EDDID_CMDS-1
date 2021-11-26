@@ -10,16 +10,14 @@ from Config.cdms_config import *
 from Common.data_文本读写 import *
 
 
-
-
 class CreatUser():
     # 步骤1
     def ApplyClinet资料提交(self):
-        global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo,cookfront
+        global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo, cookfront
         # 生成电话号
-        # phone = Randoms().telephone()
+        phone = Randoms().telephone()
         # print("phone数据类型************************************************",type(phone))
-        phone="18682252487"
+        # phone = "18682252487"
         # 生成新邮箱
         cremail = Randoms.RandomEmail()
         # cremail="leo.leung@eddidfintech.com"
@@ -30,24 +28,24 @@ class CreatUser():
         rlastName = Randoms().creat_ELName()
         # rlastName = "test"
         # 中文名chName
-        # rchName = Randoms().creat_CHName()
-        rchName = "JLJ勿动"
+        rchName = Randoms().creat_CHName()
+        # rchName = "JLJ勿动"
         # 生成身份证号
         idCardNo = Randoms().ident_generator()
         # idCardNo="M7636666"
-        #国籍
-        cantrCode="CHN"
+        # 国籍
+        cantrCode = "CHN"
         # 身份证类型 香港为"1" 大陆为"2"
-        idCardT="2"
-        #cookies的前缀
-        cookfront=cookfr
-        #生成称谓（性别）
-        ctitle=Randoms().choice_title()
+        idCardT = "2"
+        # cookies的前缀
+        cookfront = cookfr
+        # 生成称谓（性别）
+        ctitle = Randoms().choice_title()
         # 获取随机的账户类型
-        caccts=Randoms().choice_accts()
-        Language=Randoms().choice_Language()
-        #新列表用来存放用户基本信息
-        userinformationList=[]
+        caccts = Randoms().choice_accts()
+        Language = Randoms().choice_Language()
+        # 新列表用来存放用户基本信息
+        userinformationList = []
         userinformationList.append(phone)
         userinformationList.append(cremail)
         userinformationList.append(rfirstName)
@@ -56,9 +54,9 @@ class CreatUser():
         userinformationList.append(idCardNo)
         userinformationList.append(ctitle)
         userinformationList.append(caccts)
-        print("userinformationList:",userinformationList)
+        print("userinformationList:", userinformationList)
         # 将userinformationList写入文本
-        data_write('F:\\python\\EDDID_CDMS\\Data\\userdatainf.txt',userinformationList)
+        data_write('F:\\python\\EDDID_CDMS\\Data\\userdatainf.txt', userinformationList)
         print("记录数据的文件名为：userdatainf.txt，写入数据为:{}".format(userinformationList))
         logging.info("记录数据的文件名为：userdatainf.txt，写入数据为:{}".format(userinformationList))
         # 配置文件cdms_config中引入host
@@ -81,7 +79,7 @@ class CreatUser():
                 {
                     "title": ctitle,
                     "informationType": 1,
-                    "firstName":rfirstName,
+                    "firstName": rfirstName,
                     "lastName": rlastName,
                     "chName": rchName,
                     "usedCnName": rlastName + caccts,
@@ -178,7 +176,7 @@ class CreatUser():
             ],
             "taxs": [
                 {
-                    #居住地
+                    # 居住地
                     "residencyJurisdiction": "CHN",
                     "taxNumber": "",
                     "resonType": "A",
@@ -222,8 +220,8 @@ class CreatUser():
             "bankCardNo": "",
             "elecNo": "",
             "responsible": "kwokwah.wong",
-            "emailLanguage":Language,
-            # "emailLanguage": "zh-hans",
+            # "emailLanguage": Language,
+            "emailLanguage": "zh-hans",
             # 简体
             # "emailLanguage": "zh-hant",
             # 繁体
@@ -248,14 +246,17 @@ class CreatUser():
         logging.info("步骤1接口'{}';请求参数为:{};响应结果为：'{}'".format(applyClienturl, data, applyClientResp.text))
         print("步骤1接口'{}';请求参数为:{};响应结果为：'{}'".format(applyClienturl, data, applyClientResp.text))
         return applyClientResp
+
     # 步骤2
     def SubmitAudit提交审核(self):
         print("等待系统录入数据后再修改WorldCheck的状态，等待时间40s")
         logging.info("等待系统录入数据后再修改WorldCheck的状态，等待时间40s")
         time.sleep(30)
         cd_clnt_wc_match(phone)
-        print("*******************************************已完成修改WorldCheck的状态为FALSE*******************************************")
-        logging.info("*******************************************已完成修改WorldCheck的状态为FALSE*******************************************")
+        print(
+            "*******************************************已完成修改WorldCheck的状态为FALSE*******************************************")
+        logging.info(
+            "*******************************************已完成修改WorldCheck的状态为FALSE*******************************************")
         # 必须要等待修改完成后才能提交审核
         time.sleep(40)
         headers = {
@@ -312,6 +313,7 @@ class CreatUser():
         print("步骤3提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(operatingWorkFlowFirsturl, data,
                                                          operatingWorkFlowFirstResp.text))
         return operatingWorkFlowFirstResp
+
     # 步骤4
     def saveRiskAssessment风控评估提交(self):
         headers = {
@@ -352,6 +354,7 @@ class CreatUser():
             "步骤4提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(saveRiskAssessmenturl, data, saveRiskAssessmentResp.text))
         print("步骤4提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(saveRiskAssessmenturl, data, saveRiskAssessmentResp.text))
         return saveRiskAssessmentResp
+
     # 步骤5
     def operatingWorkFlow内部人员审核(self):
         headers = {
@@ -704,7 +707,6 @@ class CreatUser():
                                                           batchOperatingWorkFlowEndResp.text))
         return batchOperatingWorkFlowEndResp
 
-
     def SQLCheckUser(self):
         time.sleep(10)
         # 通过直接调用cd_enty表查询
@@ -712,6 +714,7 @@ class CreatUser():
         print("通过phone='{}'查询cd_enty表的结果为{}".format(phone, CheckUsers))
         logging.info("通过'{}'查询cd_enty表的结果为{}".format(phone, CheckUsers))
         return CheckUsers
+
 
 # ”if __name__=="__main__":“的作用在当前文件run时会执行下面的代码，如果时外部调用就不会执行if里面的代码
 if __name__ == "__main__":
@@ -741,5 +744,3 @@ if __name__ == "__main__":
         time.sleep(4)
         print("=====================================步骤11：", CreatUser.SQLCheckUser())
         time.sleep(4)
-
-

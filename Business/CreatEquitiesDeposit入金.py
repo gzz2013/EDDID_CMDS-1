@@ -127,16 +127,17 @@ class CreatEquitiesDeposit入金():
     def get_current_state_deposit(self):
 
         cstate = gs_wrkflw_log(applyId)[0][3]
-        print("数据库查询到cstate的值为{}".format(cstate))
+        print("数据库查询到当前流程状态cstate的值为{}".format(cstate))
         # 如果系统处理中，一直循环不中断
         b = 20
         while cstate == "SYS_HANDLEING_7":
             time.sleep(20)
-
             print("当前状态为：系统处理中，流程等待！当前时间为：{},剩余等待{}次！".format(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), b))
+            logging.info(
+                "当前状态为：系统处理中，流程等待！当前时间为：{},剩余等待{}次！".format(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), b))
             cstate = gs_wrkflw_log(applyId)[0][3]
-            print("数据库查询到cstate的值为{}".format(cstate))
-
+            print("数据库查询到当前流程状态cstate的值为{}".format(cstate))
+            logging.info("数据库查询到当前流程状态cstate的值为{}".format(cstate))
             b -= 1
             if b < 0:
                 print("系统处理时间过长，不再等待，进程结束！")

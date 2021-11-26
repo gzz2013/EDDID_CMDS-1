@@ -7,7 +7,7 @@ from Business.CreatEquitiesDeposit大额入金 import CreatEquitiesDeposit大额
 class Test_CreatEquitiesDeposit大额入金(unittest.TestCase):
 
     def setUp(self):
-        self.CreatEquitiesDeposit =CreatEquitiesDeposit大额入金()
+        self.CreatEquitiesDeposit = CreatEquitiesDeposit大额入金()
         logging.info("初始化CreatEquitiesDeposit入金已完成")
 
     def test_01_createDeposit创建入金单(self):
@@ -43,7 +43,6 @@ class Test_CreatEquitiesDeposit大额入金(unittest.TestCase):
         print("已执行用例5===============================================================")
 
     def test_06_get_current_state_deposit(self):
-        time.sleep(300)
         get_current_state_deposit = self.CreatEquitiesDeposit.get_current_state_deposit()
         self.assertEqual(200, get_current_state_deposit.status_code)
         self.assertEqual("操作成功", get_current_state_deposit.json().get("msg"))

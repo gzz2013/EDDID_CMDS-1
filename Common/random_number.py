@@ -197,6 +197,11 @@ class Randoms():
         rAmount=float(random.randint(1,100))+float('%.2f'%(random.random()))
         return rAmount
 
+    #生成随机金额
+    def randomlargeAmount(self):
+        rAmount=float(random.randint(10000,39999))+float('%.2f'%(random.random()))
+        return rAmount
+
     #生成邮箱
     # -*- coding:utf-8 -*-
     def RandomEmail(emailType=None, rang=None):
@@ -284,5 +289,6 @@ if __name__ == '__main__':
 
     print(Randoms.RandomEmail())
     print(Randoms().creat_CHName())
+    print(Randoms().randomlargeAmount())
 
 # 42 9004 19940327 117 5

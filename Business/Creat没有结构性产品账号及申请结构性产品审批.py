@@ -35,12 +35,10 @@ class CreatUser无结构性产品用户创建():
         # 生成身份证号
         idCardNo = Randoms().ident_generator()
 
-
-
-        #生成称谓（性别）
-        ctitle=Randoms().choice_title()
-        #新列表用来存放用户基本信息
-        userinformationList=[]
+        # 生成称谓（性别）
+        ctitle = Randoms().choice_title()
+        # 新列表用来存放用户基本信息
+        userinformationList = []
         userinformationList.append(phone)
         userinformationList.append(cremail)
         userinformationList.append(rfirstName)
@@ -48,14 +46,12 @@ class CreatUser无结构性产品用户创建():
         userinformationList.append(rchName)
         userinformationList.append(idCardNo)
         userinformationList.append(ctitle)
-        print("userinformationList:",userinformationList)
+        print("userdatainf_1.txt:", userinformationList)
 
         # 将userinformationList写入文本
-        data_write('F:\\python\\EDDID_CDMS\\Data\\userdatainf.txt',userinformationList)
+        data_write('F:\\python\\EDDID_CDMS\\Data\\userdatainf_1.txt', userinformationList)
         print("记录数据的文件名为：userdatainf.txt，写入数据为:{}".format(userinformationList))
         logging.info("记录数据的文件名为：userdatainf.txt，写入数据为:{}".format(userinformationList))
-
-
 
         # 配置文件cdms_config中引入host
         eddidhost = url
@@ -75,149 +71,149 @@ class CreatUser无结构性产品用户创建():
         print("applyClienturl:", applyClienturl)
         logging.info("提交申请单时注册用户手机号码为：{}".format(phone))
         data = {
-            "infos":[
+            "infos": [
                 {
-                    "title":ctitle,
-                    "informationType":1,
-                    "firstName":rfirstName,
-                    "lastName":rlastName,
-                    "chName":rchName,
-                    "usedCnName":rlastName + phone,
-                    "usedChName":rchName + "接口自动化创建账号",
-                    "email":cremail,
-                    "phoneAreaCode":"CHN",
-                    "phoneNo":phone,
-                    "houseAddress":"中英街" + phone + "号",
-                    "houseAddressPinYin":"zhon" + phone + "hao",
-                    "postAddress":"接口自动化",
-                    "natnlty":"TWN",
-                    "idCardType":"1",
-                    "idCardNo":idCardNo,
-                    "otherCardType":"",
-                    "otherCardNo":"",
-                    "countryIssue":"CHN",
-                    "overCountry":"CHN",
-                    "birthday":"1993-11-01",
-                    "idExpiresDate":"2025-09-30",
-                    "birthdayPlace":"CHN",
-                    "employmentStatus":"employed",
-                    "post":"director&president",
-                    "workingYear":"11",
-                    "companyName":"大苏打",
-                    "businessNature":"wholesale&retail",
-                    "officeAddress":"大苏打大苏打",
-                    "officePhone":"0258545478",
-                    "registeredCompany":"",
-                    "employmentRemark":"",
-                    "totalIncomeYear":"gt1000000",
-                    "sourceOfIncome":[
+                    "title": ctitle,
+                    "informationType": 1,
+                    "firstName": rfirstName,
+                    "lastName": rlastName,
+                    "chName": rchName,
+                    "usedCnName": rlastName + phone,
+                    "usedChName": rchName + "接口自动化创建账号",
+                    "email": cremail,
+                    "phoneAreaCode": "CHN",
+                    "phoneNo": phone,
+                    "houseAddress": "中英街" + phone + "号",
+                    "houseAddressPinYin": "zhon" + phone + "hao",
+                    "postAddress": "接口自动化",
+                    "natnlty": "TWN",
+                    "idCardType": "1",
+                    "idCardNo": idCardNo,
+                    "otherCardType": "",
+                    "otherCardNo": "",
+                    "countryIssue": "CHN",
+                    "overCountry": "CHN",
+                    "birthday": "1993-11-01",
+                    "idExpiresDate": "2025-09-30",
+                    "birthdayPlace": "CHN",
+                    "employmentStatus": "employed",
+                    "post": "director&president",
+                    "workingYear": "11",
+                    "companyName": "大苏打",
+                    "businessNature": "wholesale&retail",
+                    "officeAddress": "大苏打大苏打",
+                    "officePhone": "0258545478",
+                    "registeredCompany": "",
+                    "employmentRemark": "",
+                    "totalIncomeYear": "gt1000000",
+                    "sourceOfIncome": [
                         "selfOperatedBusinessIncome"
                     ],
-                    "sourceOfIncomeRemake":"",
-                    "totalCapital":"gt8000000",
-                    "sourceOfCapital":[
+                    "sourceOfIncomeRemake": "",
+                    "totalCapital": "gt8000000",
+                    "sourceOfCapital": [
                         "vehicleInvestment",
                         "salary"
                     ],
-                    "sourceOfCapitalRemark":"",
-                    "sourceOfMoney":[
+                    "sourceOfCapitalRemark": "",
+                    "sourceOfMoney": [
                         "savings"
                     ],
-                    "sourceOfMoneyRemark":"",
-                    "securitiesExperience":"gt10Years",
-                    "cbbcExperience":"gt10Years",
-                    "warrantExperience":"gt10Years",
-                    "futuresExperience":"gt10Years",
-                    "optionsExperience":"gt10Years",
-                    "foreignExchangExperience":"gt10Years",
-                    "metalExperience":"gt10Years",
-                    "autoTransationExperience":"gt10Years",
-                    "otherInvest":"",
-                    "otherExperience":"",
-                    "withDerivativesKnowledge":"Y",
-                    "withDerivativesWoking":"Y",
-                    "withDerivativesDeal":"N",
-                    "applicationOpenDerivatives":"N",
-                    "understandTheRisks":"",
-                    "haveDeclaredBankruptcy":"N",
-                    "declaredBankruptcyDate":"",
-                    "isInternalStaff":"N",
-                    "staffNameRelationship":"",
-                    "relationshipWithInternalEmployees":"N",
-                    "employeesName":"",
-                    "isRegisteredPerson":"N",
-                    "registeredPersonRemark":"",
-                    "isUsPerson":"N",
-                    "taxNumber":"",
-                    "isUsTaxPerson":"N",
-                    "taxNumberTwo":"",
-                    "isPepPerson":"N",
-                    "pepPersonName":"",
-                    "investmentObjective":[
+                    "sourceOfMoneyRemark": "",
+                    "securitiesExperience": "gt10Years",
+                    "cbbcExperience": "gt10Years",
+                    "warrantExperience": "gt10Years",
+                    "futuresExperience": "gt10Years",
+                    "optionsExperience": "gt10Years",
+                    "foreignExchangExperience": "gt10Years",
+                    "metalExperience": "gt10Years",
+                    "autoTransationExperience": "gt10Years",
+                    "otherInvest": "",
+                    "otherExperience": "",
+                    "withDerivativesKnowledge": "Y",
+                    "withDerivativesWoking": "Y",
+                    "withDerivativesDeal": "N",
+                    "applicationOpenDerivatives": "N",
+                    "understandTheRisks": "",
+                    "haveDeclaredBankruptcy": "N",
+                    "declaredBankruptcyDate": "",
+                    "isInternalStaff": "N",
+                    "staffNameRelationship": "",
+                    "relationshipWithInternalEmployees": "N",
+                    "employeesName": "",
+                    "isRegisteredPerson": "N",
+                    "registeredPersonRemark": "",
+                    "isUsPerson": "N",
+                    "taxNumber": "",
+                    "isUsTaxPerson": "N",
+                    "taxNumberTwo": "",
+                    "isPepPerson": "N",
+                    "pepPersonName": "",
+                    "investmentObjective": [
                         "speculation"
                     ],
-                    "riskTolerance":"high",
-                    "throughChannels":[
+                    "riskTolerance": "high",
+                    "throughChannels": [
                         "advertising",
                         "lecture"
                     ],
-                    "throughChannelRemark":"",
-                    "isFinalBeneficiary":"Y",
-                    "finalBeneficiaryName":"",
-                    "isFinalPrincipal":"Y",
-                    "finalPrincipalName":"",
-                    "businessNatureRemark":""
+                    "throughChannelRemark": "",
+                    "isFinalBeneficiary": "Y",
+                    "finalBeneficiaryName": "",
+                    "isFinalPrincipal": "Y",
+                    "finalPrincipalName": "",
+                    "businessNatureRemark": ""
                 }
             ],
-            "marginAcctS":[
+            "marginAcctS": [
 
             ],
-            "taxs":[
+            "taxs": [
 
             ],
-            "attachs":{
-                "passportMaterial":[
+            "attachs": {
+                "passportMaterial": [
                     "/dinggg_20210908162346.jpg"
                 ],
-                "addressVerificationMaterials":[
+                "addressVerificationMaterials": [
                     "/dinggg_20210908162349.jpg"
                 ],
-                "bankCardMaterials":[
+                "bankCardMaterials": [
                     "/hzlc_20210908162353.jpg"
                 ],
-                "writtenApplicationMaterials":[
+                "writtenApplicationMaterials": [
                     "/APP_20200811142432_20210908162403.pdf"
                 ],
-                "proofOfIncome":[
+                "proofOfIncome": [
                     "/dinggg_20210908162404.jpg"
                 ],
-                "otherInformation":[
+                "otherInformation": [
                     "/hzlc_20210908162407.jpg"
                 ],
-                "bankruptcyProve":[
+                "bankruptcyProve": [
 
                 ],
-                "acquaintHighLevelInstructionsProve":[
+                "acquaintHighLevelInstructionsProve": [
 
                 ],
-                "tradingAuthorization":[
+                "tradingAuthorization": [
 
                 ]
             },
-            "settleAcctS":[
+            "settleAcctS": [
 
             ],
-            "clientType":"PERSONAL",
-            "openWay":"visitingAccount",
-            "bankName":"",
-            "bankCardNo":"",
-            "elecNo":"",
-            "responsible":"ryan.chan",
+            "clientType": "PERSONAL",
+            "openWay": "visitingAccount",
+            "bankName": "",
+            "bankCardNo": "",
+            "elecNo": "",
+            "responsible": "ryan.chan",
             # "emailLanguage": "zh-hans",
             # 简体
             "emailLanguage": "zh-hant",
             # 繁体
-            "accts":[
+            "accts": [
                 "securitiesCash",
                 # 证券现金
 
@@ -233,9 +229,9 @@ class CreatUser无结构性产品用户创建():
                 # "securitiesAyersCash"
                 # #全权委托证券（现金）账户
             ],
-            "promotionNumber":"EDAA520",
-            "agreeToTheTerms":"true",
-            "personalInfoDeclartion":"true"
+            "promotionNumber": "EDAA520",
+            "agreeToTheTerms": "true",
+            "personalInfoDeclartion": "true"
         }
 
         applyClientResp = s.post(url=applyClienturl, headers=headers, json=data)
@@ -245,13 +241,14 @@ class CreatUser无结构性产品用户创建():
 
     # 步骤2
     def SubmitAudit提交审核(self):
-
         print("等待系统录入数据后再修改WorldCheck的状态，等待时间20s")
         logging.info("等待系统录入数据后再修改WorldCheck的状态，等待时间20s")
         time.sleep(30)
         cd_clnt_wc_match(phone)
-        print("*******************************************已完成修改WorldCheck的状态为FALSE*******************************************")
-        logging.info("*******************************************已完成修改WorldCheck的状态为FALSE*******************************************")
+        print(
+            "*******************************************已完成修改WorldCheck的状态为FALSE*******************************************")
+        logging.info(
+            "*******************************************已完成修改WorldCheck的状态为FALSE*******************************************")
 
         # 必须要等待修改完成后才能提交审核
         time.sleep(40)
@@ -720,7 +717,7 @@ class CreatUser无结构性产品用户创建():
         logging.info("通过'{}'查询cd_enty表的结果为{}".format(phone, CheckUsers))
         return CheckUsers
 
-   # 步骤12
+    # 步骤12
     def addAccountStructure增加结构性产品(self):
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
@@ -735,47 +732,47 @@ class CreatUser无结构性产品用户创建():
         print("提交审核获取到的手机号为：{}".format(phone))
         # global applyId
         # clnt_id = cd_clnt_apply_info(phone)[0][0]
-        global clnt_id,accountId,eddidId
+        global clnt_id, accountId, eddidId
 
-        clnt_id=cd_clnt_joint_enty(cd_enty(phone)[0][0])[0][1]
+        clnt_id = cd_clnt_joint_enty(cd_enty(phone)[0][0])[0][1]
 
-        accountId=cd_ac(clnt_id)[0][0]
+        accountId = cd_ac(clnt_id)[0][0]
 
-        eddidId=cd_clnt(clnt_id)[0][3]
+        eddidId = cd_clnt(clnt_id)[0][3]
 
-        logging.info("获取到结构性产品的客户编号clnt_id为：{}，交易账户accountId为：{}，eddidId为：{}".format(clnt_id,accountId,eddidId))
-        print("获取到结构性产品的客户编号clnt_id为：{}，交易账户accountId为：{}，eddidId为：{}".format(clnt_id,accountId,eddidId))
+        logging.info("获取到结构性产品的客户编号clnt_id为：{}，交易账户accountId为：{}，eddidId为：{}".format(clnt_id, accountId, eddidId))
+        print("获取到结构性产品的客户编号clnt_id为：{}，交易账户accountId为：{}，eddidId为：{}".format(clnt_id, accountId, eddidId))
 
         data = {
-            "accountId":accountId,
-            "firstName":None,
-            "lastName":None,
-            "chineseName":rchName,
-            "eddidId":eddidId,
-            "accountCash":accountId,
-            "accountMargin":None,
-            "idUrlList":[
+            "accountId": accountId,
+            "firstName": None,
+            "lastName": None,
+            "chineseName": rchName,
+            "eddidId": eddidId,
+            "accountCash": accountId,
+            "accountMargin": None,
+            "idUrlList": [
                 "/dinggg_20210908162346.jpg"
             ],
-            "isOpenFuturesAcc":"false",
-            "cbbcExperience":"gt10Years",
-            "warrantExperience":"gt10Years",
-            "futuresExperience":"gt10Years",
-            "optionsExperience":"gt10Years",
-            "securitiesExperience":"gt10Years",
-            "otherInvest":"",
-            "otherExperience":"",
-            "isDerivativesKnowledge":"Y",
-            "isDerivativesWork":"Y",
-            "isDerivativesDeal":"N",
-            "exchInvestTargetList":[
+            "isOpenFuturesAcc": "false",
+            "cbbcExperience": "gt10Years",
+            "warrantExperience": "gt10Years",
+            "futuresExperience": "gt10Years",
+            "optionsExperience": "gt10Years",
+            "securitiesExperience": "gt10Years",
+            "otherInvest": "",
+            "otherExperience": "",
+            "isDerivativesKnowledge": "Y",
+            "isDerivativesWork": "Y",
+            "isDerivativesDeal": "N",
+            "exchInvestTargetList": [
                 "speculation"
             ],
-            "exchRiskAppetite":"high",
-            "clientId":clnt_id,
-            "isStruc":"Y",
-            "isOpenClnt":"Y",
-            "applySource":"4"
+            "exchRiskAppetite": "high",
+            "clientId": clnt_id,
+            "isStruc": "Y",
+            "isOpenClnt": "Y",
+            "applySource": "4"
         }
 
         print("data=", data)
@@ -786,10 +783,8 @@ class CreatUser无结构性产品用户创建():
                                                           addAccountStructureResp.text))
         return addAccountStructureResp
 
-   # 步骤13
+    # 步骤13
     def addAccountStructure第一次审批(self):
-
-
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
@@ -803,15 +798,15 @@ class CreatUser无结构性产品用户创建():
         print("提交审核获取到的手机号为：{}".format(phone))
         global Structureapplyid
 
-        Structureapplyid=cd_ac_struc_appl(clnt_id)[0][0]
+        Structureapplyid = cd_ac_struc_appl(clnt_id)[0][0]
 
         logging.info("获取到结构性产品的申请单编号为：{}".format(Structureapplyid))
         print("获取到结构性产品的申请单编号为：{}".format(Structureapplyid))
 
         data = {
-            "id":Structureapplyid,
-            "approvalResult":"PASS",
-            "attachUrlList":[
+            "id": Structureapplyid,
+            "approvalResult": "PASS",
+            "attachUrlList": [
             ]
         }
         print("data=", data)
@@ -840,9 +835,9 @@ class CreatUser无结构性产品用户创建():
         logging.info("获取到结构性产品的申请单编号为：{}".format(Structureapplyid))
         print("获取到结构性产品的申请单编号为：{}".format(Structureapplyid))
         data = {
-            "id":Structureapplyid,
-            "approvalResult":"PASS",
-            "attachUrlList":[
+            "id": Structureapplyid,
+            "approvalResult": "PASS",
+            "attachUrlList": [
 
             ]
         }
@@ -862,6 +857,7 @@ class CreatUser无结构性产品用户创建():
         print("Structureapplyid='{}'查询cd_ac_struc_appl表的结果为{}".format(clnt_id, Checkcd_ac_struc_appl))
         logging.info("通过'{}'查询cd_ac_struc_appl表的结果为{}".format(clnt_id, Checkcd_ac_struc_appl))
         return Checkcd_ac_struc_appl
+
 
 # ”if __name__=="__main__":“的作用在当前文件run时会执行下面的代码，如果时外部调用就不会执行if里面的代码
 if __name__ == "__main__":
@@ -898,8 +894,6 @@ if __name__ == "__main__":
         # time.sleep(4)
         # print("步骤11：", CreatUser.SQLCheckUser())
         # time.sleep(4)
-
-
 
 # if __name__=="__main__":
 #     CreatUser = CreatUser()

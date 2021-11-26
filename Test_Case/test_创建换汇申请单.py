@@ -24,7 +24,6 @@ class Test_CreateExchange新建换汇申请单(unittest.TestCase):
         self.assertEqual("操作成功", auditExchange.json().get("msg"))
         print("已执行用例2===============================================================")
 
-
     def test_03_SQLCheckexchorder(self):
         #数据库查询出数据
         SQLCheckexchorderinfor = self.CreateExchange.SQLCheckexchorder()

@@ -82,7 +82,7 @@ class Test_creatUser没有结构性产品账号及申请结构性产品审批(un
 
     def test_11_SQLCheckUser(self):
         global userinf
-        userinf=datahandle(data_read('F:\\python\\EDDID_CDMS\\Data\\userdatainf.txt'))
+        userinf=datahandle(data_read('F:\\python\\EDDID_CDMS\\Data\\userdatainf_1.txt'))
         logging.info("从文本中读到的用户基本信息为：{}".format(userinf))
         SQLCheckUser=self.creatUser.SQLCheckUser()
         # 检验电话

@@ -241,8 +241,8 @@ tr {
 }
 </style>
     <script language="javascript" type="text/javascript">
-var chartData_cn = [[3, '#1c965b', '通过']];
-var chartData_en = [[3, '#1c965b', 'Passed']];
+var chartData_cn = [[15, '#1c965b', '通过']];
+var chartData_en = [[15, '#1c965b', 'Passed']];
 
 function addClass(e, c) {
   if (!isClass(e, c)) {
@@ -653,19 +653,19 @@ goChart(chartData_cn);
     <strong>
       <span class="lang-cn">启动时间：</span>
       <span class="lang-en">Start Time:</span>
-    </strong> 2021-11-23 16:08:34
+    </strong> 2021-11-24 10:34:02
   </p>
   <p class='attribute'>
     <strong>
       <span class="lang-cn">结束时间：</span>
       <span class="lang-en">End Time:</span>
-    </strong> 2021-11-23 16:08:54
+    </strong> 2021-11-24 10:37:41
   </p>
   <p class='attribute'>
     <strong>
       <span class="lang-cn">运行时长：</span>
       <span class="lang-en">Duration:</span>
-    </strong> 0:00:20.006454
+    </strong> 0:03:38.291782
   </p>
   <p class='attribute'>
     <strong>
@@ -673,9 +673,9 @@ goChart(chartData_cn);
       <span class="lang-en">Status:</span>
     </strong>
     <span class="lang-cn">合计：</span>
-    <span class="lang-en">Total:</span>3&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="lang-en">Total:</span>15&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">通过：</span>
-    <span class="lang-en">Passed:</span>3&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="lang-en">Passed:</span>15&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">失败：</span>
     <span class="lang-en">Failed:</span>0&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">错误：</span>
@@ -767,16 +767,16 @@ goChart(chartData_cn);
     </tr>
     <tr class='passClass'>
     <td>c1</td>
-    <td>Test_Case.test_closeAcct账号关闭.Test_closeAcct账号关闭</td>
-    <td>3</td>
-    <td class="passCase">3</td>
+    <td>Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批</td>
+    <td>15</td>
+    <td class="passCase">15</td>
     <td class="failCase">0</td>
     <td class="errorCase">0</td>
     <td class="skipCase">0</td>
     <td style="text-align:right;">100.00%</td>
     <td>0</td>
     <td>
-        <a href="javascript:showClassDetail('c1',3)">
+        <a href="javascript:showClassDetail('c1',15)">
             <span class="lang-cn">细节</span>
             <span class="lang-en">Detail</span>
         </a>
@@ -785,7 +785,7 @@ goChart(chartData_cn);
 <tr id='pt1.1'>
 <td>pt1.1</td>
     <td class='passCase' colspan='7'>
-        <div class='testcase'>test_01_SQLCheck_ac_stat_front</div>
+        <div class='testcase'>test_01_applyClient用户资料提交用例校验</div>
     </td>
     <td class='passCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
@@ -805,13 +805,16 @@ goChart(chartData_cn);
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.1.1:
-2021-11-23 16:08:35,131    8036     INFO result.py(69) - 开始测试： test_01_SQLCheck_ac_stat_front (Test_Case.test_closeAcct账号关闭.Test_closeAcct账号关闭)
-2021-11-23 16:08:35,131    8036     INFO test_closeAcct账号关闭.py(13) - enableAcct停用后开启
-2021-11-23 16:08:35,714    8036     INFO closeAcct_关闭账号.py(24) - 步骤1查询账号当前状态执行完成，通过clnt='5008641110'查询cd_ac表的结果为(('5008641110', '500864', 'PERSONAL', 'CLIENT', 'EQUITIES', 'CASH', 'S000', 'admin', 'EDDID', None, datetime.date(2021, 11, 23), None, datetime.date(2021, 11, 23), 'NORMAL', datetime.date(2021, 11, 23), 'Y', 'Y', 'Y', 'N', 'N', 'N', 'N', 'N', 12, datetime.datetime(2021, 11, 23, 15, 25, 20), 'ganjiexiang', datetime.datetime(2021, 11, 23, 15, 26, 6), 'ganjiexiang', 3),)
-2021-11-23 16:08:41,731    8036     INFO test_closeAcct账号关闭.py(41) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-11-23 16:08:41,731    8036     INFO result.py(156) - 测试执行通过： test_01_SQLCheck_ac_stat_front (Test_Case.test_closeAcct账号关闭.Test_closeAcct账号关闭)
-2021-11-23 16:08:41,747    8036     INFO result.py(90) - 测试结束： test_01_SQLCheck_ac_stat_front (Test_Case.test_closeAcct账号关闭.Test_closeAcct账号关闭)
-2021-11-23 16:08:41,747    8036     INFO result.py(91) - 耗时： 6.615730047225952
+2021-11-24 10:34:03,104   14520     INFO result.py(69) - 开始测试： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:34:03,104   14520     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-24 10:34:03,232   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(54) - 记录数据的文件名为：userdatainf.txt，写入数据为:['16225564984', 'jUnShKBdTy@189.com', 'HandE', 'Kirby', '秦大山h', '150101196106141226', 'mrs']
+2021-11-24 10:34:03,579   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(67) - 当前token为:573A475E5A7023BD0594A6CDB3E98F627AC79FFD18F78973
+2021-11-24 10:34:03,579   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(72) - 提交申请单时注册用户手机号码为：16225564984
+2021-11-24 10:34:04,255   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(238) - 步骤1接口'http://sit-cdms.ynm3k.com/api/client/applyClient';请求参数为:{'infos': [{'title': 'mrs', 'informationType': 1, 'firstName': 'HandE', 'lastName': 'Kirby', 'chName': '秦大山h', 'usedCnName': 'Kirby16225564984', 'usedChName': '秦大山h接口自动化创建账号', 'email': 'jUnShKBdTy@189.com', 'phoneAreaCode': 'CHN', 'phoneNo': '16225564984', 'houseAddress': '中英街16225564984号', 'houseAddressPinYin': 'zhon16225564984hao', 'postAddress': '接口自动化', 'natnlty': 'TWN', 'idCardType': '1', 'idCardNo': '150101196106141226', 'otherCardType': '', 'otherCardNo': '', 'countryIssue': 'CHN', 'overCountry': 'CHN', 'birthday': '1993-11-01', 'idExpiresDate': '2025-09-30', 'birthdayPlace': 'CHN', 'employmentStatus': 'employed', 'post': 'director&amp;president', 'workingYear': '11', 'companyName': '大苏打', 'businessNature': 'wholesale&amp;retail', 'officeAddress': '大苏打大苏打', 'officePhone': '0258545478', 'registeredCompany': '', 'employmentRemark': '', 'totalIncomeYear': 'gt1000000', 'sourceOfIncome': ['selfOperatedBusinessIncome'], 'sourceOfIncomeRemake': '', 'totalCapital': 'gt8000000', 'sourceOfCapital': ['vehicleInvestment', 'salary'], 'sourceOfCapitalRemark': '', 'sourceOfMoney': ['savings'], 'sourceOfMoneyRemark': '', 'securitiesExperience': 'gt10Years', 'cbbcExperience': 'gt10Years', 'warrantExperience': 'gt10Years', 'futuresExperience': 'gt10Years', 'optionsExperience': 'gt10Years', 'foreignExchangExperience': 'gt10Years', 'metalExperience': 'gt10Years', 'autoTransationExperience': 'gt10Years', 'otherInvest': '', 'otherExperience': '', 'withDerivativesKnowledge': 'Y', 'withDerivativesWoking': 'Y', 'withDerivativesDeal': 'N', 'applicationOpenDerivatives': 'N', 'understandTheRisks': '', 'haveDeclaredBankruptcy': 'N', 'declaredBankruptcyDate': '', 'isInternalStaff': 'N', 'staffNameRelationship': '', 'relationshipWithInternalEmployees': 'N', 'employeesName': '', 'isRegisteredPerson': 'N', 'registeredPersonRemark': '', 'isUsPerson': 'N', 'taxNumber': '', 'isUsTaxPerson': 'N', 'taxNumberTwo': '', 'isPepPerson': 'N', 'pepPersonName': '', 'investmentObjective': ['speculation'], 'riskTolerance': 'high', 'throughChannels': ['advertising', 'lecture'], 'throughChannelRemark': '', 'isFinalBeneficiary': 'Y', 'finalBeneficiaryName': '', 'isFinalPrincipal': 'Y', 'finalPrincipalName': '', 'businessNatureRemark': ''}], 'marginAcctS': [], 'taxs': [], 'attachs': {'passportMaterial': ['/dinggg_20210908162346.jpg'], 'addressVerificationMaterials': ['/dinggg_20210908162349.jpg'], 'bankCardMaterials': ['/hzlc_20210908162353.jpg'], 'writtenApplicationMaterials': ['/APP_20200811142432_20210908162403.pdf'], 'proofOfIncome': ['/dinggg_20210908162404.jpg'], 'otherInformation': ['/hzlc_20210908162407.jpg'], 'bankruptcyProve': [], 'acquaintHighLevelInstructionsProve': [], 'tradingAuthorization': []}, 'settleAcctS': [], 'clientType': 'PERSONAL', 'openWay': 'visitingAccount', 'bankName': '', 'bankCardNo': '', 'elecNo': '', 'responsible': 'ryan.chan', 'emailLanguage': 'zh-hant', 'accts': ['securitiesCash'], 'promotionNumber': 'EDAA520', 'agreeToTheTerms': 'true', 'personalInfoDeclartion': 'true'};响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-11-24 10:34:10,301   14520     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-24 10:34:10,301   14520     INFO result.py(156) - 测试执行通过： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:34:10,301   14520     INFO result.py(90) - 测试结束： test_01_applyClient用户资料提交用例校验 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:34:10,301   14520     INFO result.py(91) - 耗时： 7.196781396865845
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -820,7 +823,7 @@ goChart(chartData_cn);
 </tr><tr id='pt1.2'>
 <td>pt1.2</td>
     <td class='passCase' colspan='7'>
-        <div class='testcase'>test_02_enableAcct账号停用</div>
+        <div class='testcase'>test_02_submitAudit提交审核</div>
     </td>
     <td class='passCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
@@ -840,14 +843,17 @@ goChart(chartData_cn);
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.2.1:
-2021-11-23 16:08:41,763    8036     INFO result.py(69) - 开始测试： test_02_enableAcct账号停用 (Test_Case.test_closeAcct账号关闭.Test_closeAcct账号关闭)
-2021-11-23 16:08:41,763    8036     INFO test_closeAcct账号关闭.py(13) - enableAcct停用后开启
-2021-11-23 16:08:42,094    8036     INFO closeAcct_关闭账号.py(44) - 提交开启的交易账号为：['5008641110']
-2021-11-23 16:08:42,631    8036     INFO closeAcct_关闭账号.py(52) - 步骤2提交接口'http://sit-cdms.ynm3k.com/api/acct/closeAcct';请求参数为:{'accountId': ['5008641110'], 'suspendReason': '自动化测试账号开启'};的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
-2021-11-23 16:08:48,661    8036     INFO test_closeAcct账号关闭.py(41) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-11-23 16:08:48,661    8036     INFO result.py(156) - 测试执行通过： test_02_enableAcct账号停用 (Test_Case.test_closeAcct账号关闭.Test_closeAcct账号关闭)
-2021-11-23 16:08:48,661    8036     INFO result.py(90) - 测试结束： test_02_enableAcct账号停用 (Test_Case.test_closeAcct账号关闭.Test_closeAcct账号关闭)
-2021-11-23 16:08:48,661    8036     INFO result.py(91) - 耗时： 6.897627353668213
+2021-11-24 10:34:10,317   14520     INFO result.py(69) - 开始测试： test_02_submitAudit提交审核 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:34:10,317   14520     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-24 10:34:10,317   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(245) - 等待系统录入数据后再修改WorldCheck的状态，等待时间20s
+2021-11-24 10:34:41,415   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(250) - *******************************************已完成修改WorldCheck的状态为FALSE*******************************************
+2021-11-24 10:35:21,438   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(260) - 当前token为:573A475E5A7023BD0594A6CDB3E98F627AC79FFD18F78973
+2021-11-24 10:35:21,450   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(266) - 提交审核获取到的手机号为：16225564984
+2021-11-24 10:35:22,593   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(277) - 步骤2提交审核接口'http://sit-cdms.ynm3k.com/api/client/submitAudit';请求参数为:{'applyId': 1151231, 'clientSource': 'CDMS', 'workFlowCode': 'openClient'};响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-11-24 10:35:28,606   14520     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-24 10:35:28,606   14520     INFO result.py(156) - 测试执行通过： test_02_submitAudit提交审核 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:35:28,606   14520     INFO result.py(90) - 测试结束： test_02_submitAudit提交审核 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:35:28,611   14520     INFO result.py(91) - 耗时： 78.28841876983643
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -856,7 +862,7 @@ goChart(chartData_cn);
 </tr><tr id='pt1.3'>
 <td>pt1.3</td>
     <td class='passCase' colspan='7'>
-        <div class='testcase'>test_03_SQLCheckUser</div>
+        <div class='testcase'>test_03_operatingWorkFlowFirst提交锁</div>
     </td>
     <td class='passCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
@@ -876,14 +882,454 @@ goChart(chartData_cn);
                 <a onfocus='this.blur();'>[x]</a>
             </div>
             <pre>pt1.3.1:
-2021-11-23 16:08:48,676    8036     INFO result.py(69) - 开始测试： test_03_SQLCheckUser (Test_Case.test_closeAcct账号关闭.Test_closeAcct账号关闭)
-2021-11-23 16:08:48,676    8036     INFO test_closeAcct账号关闭.py(13) - enableAcct停用后开启
-2021-11-23 16:08:48,872    8036     INFO closeAcct_关闭账号.py(61) - 步骤3执行完成，通过clnt='['5008641110']'查询cd_ac表的结果为(('5008641110', '500864', 'PERSONAL', 'CLIENT', 'EQUITIES', 'CASH', 'S000', 'admin', 'EDDID', None, datetime.date(2021, 11, 23), None, datetime.date(2021, 11, 23), 'CLOSED', datetime.date(2021, 11, 23), 'Y', 'Y', 'Y', 'N', 'N', 'N', 'N', 'N', 12, datetime.datetime(2021, 11, 23, 15, 25, 20), 'ganjiexiang', datetime.datetime(2021, 11, 23, 15, 26, 6), 'ganjiexiang', 4),)
-2021-11-23 16:08:48,872    8036     INFO test_closeAcct账号关闭.py(35) - 已执行用例03，数据库校验已完成
-2021-11-23 16:08:54,885    8036     INFO test_closeAcct账号关闭.py(41) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-11-23 16:08:54,885    8036     INFO result.py(156) - 测试执行通过： test_03_SQLCheckUser (Test_Case.test_closeAcct账号关闭.Test_closeAcct账号关闭)
-2021-11-23 16:08:54,885    8036     INFO result.py(90) - 测试结束： test_03_SQLCheckUser (Test_Case.test_closeAcct账号关闭.Test_closeAcct账号关闭)
-2021-11-23 16:08:54,885    8036     INFO result.py(91) - 耗时： 6.20902681350708
+2021-11-24 10:35:28,611   14520     INFO result.py(69) - 开始测试： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:35:28,611   14520     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-24 10:35:58,619   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(289) - 当前token为:573A475E5A7023BD0594A6CDB3E98F627AC79FFD18F78973
+2021-11-24 10:35:58,631   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(297) - 提交审核获取到的手机号为：16225564984
+2021-11-24 10:35:58,730   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(309) - 步骤3提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow';请求参数为:{'applyId': 1151231, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1151231","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-11-24 10:36:04,748   14520     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-24 10:36:04,748   14520     INFO result.py(156) - 测试执行通过： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:04,748   14520     INFO result.py(90) - 测试结束： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:04,754   14520     INFO result.py(91) - 耗时： 36.13668942451477
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='pt1.4'>
+<td>pt1.4</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_04_saveRiskAssessment风控评估提交</div>
+    </td>
+    <td class='passCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_pt1.4.1' name='div_pt1.4.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_pt1.4.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>pt1.4.1:
+2021-11-24 10:36:04,760   14520     INFO result.py(69) - 开始测试： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:04,760   14520     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-24 10:36:04,760   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(328) - 当前applyId为：1151231
+2021-11-24 10:36:04,819   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(352) - 步骤4提交审核接口'http://sit-cdms.ynm3k.com/api/client/saveRiskAssessment';请求参数为:{'applyId': 1151231, 'riskAssessmentInfoDTO': {'isAmlOrCft': 'true', 'isPeb': None, 'isPolice': None, 'isIcac': None, 'isHighRiskBusiness': None, 'isJfiu': None, 'isCorruption': None, 'isOtherInformation': None, 'nonFaceToFace': None, 'isUnemployed': None, 'isNonFatf': None, 'isNonFinancial': None, 'isTemporaryAddr': None, 'residence': '新西兰', 'otherInformation': '', 'riskAssessmentLevel': 'TERMINATE'}};响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-11-24 10:36:10,826   14520     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-24 10:36:10,826   14520     INFO result.py(156) - 测试执行通过： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:10,832   14520     INFO result.py(90) - 测试结束： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:10,832   14520     INFO result.py(91) - 耗时： 6.072479009628296
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='pt1.5'>
+<td>pt1.5</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_05_operatingWorkFlow内部人员审核</div>
+    </td>
+    <td class='passCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_pt1.5.1' name='div_pt1.5.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_pt1.5.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>pt1.5.1:
+2021-11-24 10:36:10,832   14520     INFO result.py(69) - 开始测试： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:10,833   14520     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-24 10:36:10,833   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(364) - 当前token为:573A475E5A7023BD0594A6CDB3E98F627AC79FFD18F78973
+2021-11-24 10:36:11,488   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(463) - 步骤5提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow';请求参数为:{'applyId': 1151231, 'checkItemList': [{'itemId': '1', 'itemCde': 'Application Form', 'itemDesc': 'Application Form', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '2', 'itemCde': 'Fee schedule', 'itemDesc': 'Fee schedule', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '3', 'itemCde': 'ID card Copy', 'itemDesc': 'ID card Copy', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '4', 'itemCde': 'SFC search', 'itemDesc': 'SFC search', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '5', 'itemCde': 'Worldcheck', 'itemDesc': 'Worldcheck', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '6', 'itemCde': 'Address Proof (if any)', 'itemDesc': 'Address Proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '7', 'itemCde': 'Bank proof (if any)', 'itemDesc': 'Bank proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '8', 'itemCde': 'Source of Fund (if any)', 'itemDesc': 'Source of Fund (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '9', 'itemCde': 'Source of Wealth (if any)', 'itemDesc': 'Source of Wealth (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '10', 'itemCde': 'Other', 'itemDesc': 'Other', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}], 'workFlowCode': 'openClient', 'controlCode': 'PASS', 'isStaff': 'false', 'lockBy': 'ED_RO', 'licensedPersonSign': ''};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1151231","applyNo":null,"result":true,"operatingMessage":""}]}'
+2021-11-24 10:36:17,506   14520     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-24 10:36:17,506   14520     INFO result.py(156) - 测试执行通过： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:17,511   14520     INFO result.py(90) - 测试结束： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:17,517   14520     INFO result.py(91) - 耗时： 6.679020166397095
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='pt1.6'>
+<td>pt1.6</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_06_operatingWorkFlowNo不用锁定审核通过</div>
+    </td>
+    <td class='passCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_pt1.6.1' name='div_pt1.6.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_pt1.6.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>pt1.6.1:
+2021-11-24 10:36:17,517   14520     INFO result.py(69) - 开始测试： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:17,517   14520     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-24 10:36:17,517   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(475) - 当前token为:573A475E5A7023BD0594A6CDB3E98F627AC79FFD18F78973
+2021-11-24 10:36:17,517   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(481) - 提交审核获取到的手机号为：16225564984
+2021-11-24 10:36:17,523   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(485) - 当前applyId为：1151231
+2021-11-24 10:36:17,725   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(575) - 步骤6提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow';请求参数为:{'applyId': 1151231, 'checkItemList': [{'itemId': '1', 'itemCde': 'Application Form', 'itemDesc': 'Application Form', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '2', 'itemCde': 'Fee schedule', 'itemDesc': 'Fee schedule', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '3', 'itemCde': 'ID card Copy', 'itemDesc': 'ID card Copy', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '4', 'itemCde': 'SFC search', 'itemDesc': 'SFC search', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '5', 'itemCde': 'Worldcheck', 'itemDesc': 'Worldcheck', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '6', 'itemCde': 'Address Proof (if any)', 'itemDesc': 'Address Proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '7', 'itemCde': 'Bank proof (if any)', 'itemDesc': 'Bank proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '8', 'itemCde': 'Source of Fund (if any)', 'itemDesc': 'Source of Fund (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '9', 'itemCde': 'Source of Wealth (if any)', 'itemDesc': 'Source of Wealth (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '10', 'itemCde': 'Other', 'itemDesc': 'Other', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}], 'workFlowCode': 'openClient', 'controlCode': 'PASS'};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1151231","applyNo":null,"result":true,"operatingMessage":""}]}'
+2021-11-24 10:36:23,732   14520     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-24 10:36:23,732   14520     INFO result.py(156) - 测试执行通过： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:23,732   14520     INFO result.py(90) - 测试结束： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:23,737   14520     INFO result.py(91) - 耗时： 6.214492321014404
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='pt1.7'>
+<td>pt1.7</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_07_operatingWorkFlowAgaint提交锁</div>
+    </td>
+    <td class='passCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.7.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_pt1.7.1' name='div_pt1.7.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_pt1.7.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>pt1.7.1:
+2021-11-24 10:36:23,737   14520     INFO result.py(69) - 开始测试： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:23,737   14520     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-24 10:36:23,737   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(593) - 提交审核获取到的手机号为：16225564984
+2021-11-24 10:36:23,819   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(605) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow';请求参数为:{'applyId': 1151231, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1151231","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-11-24 10:36:29,825   14520     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-24 10:36:29,825   14520     INFO result.py(156) - 测试执行通过： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:29,831   14520     INFO result.py(90) - 测试结束： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:29,831   14520     INFO result.py(91) - 耗时： 6.093557834625244
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='pt1.8'>
+<td>pt1.8</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_08_batchOperatingWorkFlow批量生成账号确定</div>
+    </td>
+    <td class='passCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.8.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_pt1.8.1' name='div_pt1.8.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_pt1.8.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>pt1.8.1:
+2021-11-24 10:36:29,837   14520     INFO result.py(69) - 开始测试： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:29,837   14520     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-24 10:36:30,455   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(640) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/batchOperatingWorkFlow';请求参数为:{'applyIds': [1151231], 'workFlowCode': 'openClient', 'controlCode': 'GENERATEACCTNO', 'workFlowOperatingDTOList': [{'applyId': 1151231}]};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1151231","applyNo":null,"result":true,"operatingMessage":null}]}'
+2021-11-24 10:36:36,467   14520     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-24 10:36:36,467   14520     INFO result.py(156) - 测试执行通过： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:36,473   14520     INFO result.py(90) - 测试结束： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:36,473   14520     INFO result.py(91) - 耗时： 6.636446237564087
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='pt1.9'>
+<td>pt1.9</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_09_operatingWorkFlowThird提交锁</div>
+    </td>
+    <td class='passCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.9.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_pt1.9.1' name='div_pt1.9.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_pt1.9.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>pt1.9.1:
+2021-11-24 10:36:36,473   14520     INFO result.py(69) - 开始测试： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:36,473   14520     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-24 10:36:36,473   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(657) - 提交审核获取到的手机号为：16225564984
+2021-11-24 10:36:36,473   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(660) - 当前applyId为：1151231
+2021-11-24 10:36:36,537   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(668) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow',请求参数为：{'applyId': 1151231, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'},的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1151231","applyNo":null,"result":true,"operatingMessage":"操作成功"}]}'
+2021-11-24 10:36:42,544   14520     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-24 10:36:42,544   14520     INFO result.py(156) - 测试执行通过： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:42,550   14520     INFO result.py(90) - 测试结束： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:42,550   14520     INFO result.py(91) - 耗时： 6.0766143798828125
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='pt1.10'>
+<td>pt1.10</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_10_batchOperatingWorkFlowEnd批量确认</div>
+    </td>
+    <td class='passCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.10.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_pt1.10.1' name='div_pt1.10.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_pt1.10.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>pt1.10.1:
+2021-11-24 10:36:42,556   14520     INFO result.py(69) - 开始测试： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:42,556   14520     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-24 10:36:42,556   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(685) - 提交审核获取到的手机号为：16225564984
+2021-11-24 10:36:42,556   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(689) - 当前applyId为：1151231
+2021-11-24 10:36:42,912   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(705) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/batchOperatingWorkFlow';请求参数为:{'applyIds': [1151231], 'workFlowCode': 'openClient', 'controlCode': 'PASS', 'workFlowOperatingDTOList': [{'applyId': 1151231}]};的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1151231","applyNo":null,"result":true,"operatingMessage":null}]}'
+2021-11-24 10:36:48,924   14520     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-24 10:36:48,924   14520     INFO result.py(156) - 测试执行通过： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:48,924   14520     INFO result.py(90) - 测试结束： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:48,930   14520     INFO result.py(91) - 耗时： 6.368384122848511
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='pt1.11'>
+<td>pt1.11</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_11_SQLCheckUser</div>
+    </td>
+    <td class='passCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.11.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_pt1.11.1' name='div_pt1.11.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_pt1.11.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>pt1.11.1:
+2021-11-24 10:36:48,930   14520     INFO result.py(69) - 开始测试： test_11_SQLCheckUser (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:36:48,930   14520     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-24 10:36:48,930   14520     INFO test_用户创建结构性产品账户及审批.py(86) - 从文本中读到的用户基本信息为：['16225564984', 'jUnShKBdTy@189.com', 'HandE', 'Kirby', '秦大山h', '150101196106141226', 'mrs']
+2021-11-24 10:36:59,450   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(717) - 通过'16225564984'查询cd_enty表的结果为((293044, None, 'PERSONAL', 'TWN', '150101196106141226', '1', datetime.date(2025, 9, 30), 'CHN', 'mrs', 'HandE', 'Kirby', 'Kirby16225564984', '秦大山h接口自动化创建账号', '秦大山h', 'F', 'jUnShKBdTy@189.com', None, 'CHN', '16225564984', None, '中英街16225564984号', 'zhon16225564984hao', '接口自动化', None, None, None, 'TWN', 'CHN', datetime.date(1993, 11, 1), 'CHN', '', 'employed', '', 'director&amp;president', '11', '大苏打', 'wholesale&amp;retail', '', '大苏打大苏打', None, '0258545478', None, None, None, None, 'N', None, None, datetime.datetime(2021, 11, 24, 10, 36, 47), 'ganjiexiang', datetime.datetime(2021, 11, 24, 10, 36, 47), '', 1),)
+2021-11-24 10:36:59,450   14520     INFO test_用户创建结构性产品账户及审批.py(106) - 已执行用例11，数据库校验已完成
+2021-11-24 10:37:05,462   14520     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-24 10:37:05,462   14520     INFO result.py(156) - 测试执行通过： test_11_SQLCheckUser (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:37:05,468   14520     INFO result.py(90) - 测试结束： test_11_SQLCheckUser (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:37:05,468   14520     INFO result.py(91) - 耗时： 16.538238763809204
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='pt1.12'>
+<td>pt1.12</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_12_addAccountStructure增加结构性产品</div>
+    </td>
+    <td class='passCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.12.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_pt1.12.1' name='div_pt1.12.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_pt1.12.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>pt1.12.1:
+2021-11-24 10:37:05,468   14520     INFO result.py(69) - 开始测试： test_12_addAccountStructure增加结构性产品 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:37:05,468   14520     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-24 10:37:05,468   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(731) - 提交审核获取到的手机号为：16225564984
+2021-11-24 10:37:07,246   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(743) - 获取到结构性产品的客户编号clnt_id为：12136，交易账户accountId为：121361110，eddidId为：eb47b0ce-e59c-4f73-9bca-f7fa306ef13f
+2021-11-24 10:37:07,530   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(780) - 提交审核接口'http://sit-cdms.ynm3k.com/api/cdms/struc/addAccountStructure';请求参数为:{'accountId': '121361110', 'firstName': None, 'lastName': None, 'chineseName': '秦大山h', 'eddidId': 'eb47b0ce-e59c-4f73-9bca-f7fa306ef13f', 'accountCash': '121361110', 'accountMargin': None, 'idUrlList': ['/dinggg_20210908162346.jpg'], 'isOpenFuturesAcc': 'false', 'cbbcExperience': 'gt10Years', 'warrantExperience': 'gt10Years', 'futuresExperience': 'gt10Years', 'optionsExperience': 'gt10Years', 'securitiesExperience': 'gt10Years', 'otherInvest': '', 'otherExperience': '', 'isDerivativesKnowledge': 'Y', 'isDerivativesWork': 'Y', 'isDerivativesDeal': 'N', 'exchInvestTargetList': ['speculation'], 'exchRiskAppetite': 'high', 'clientId': '12136', 'isStruc': 'Y', 'isOpenClnt': 'Y', 'applySource': '4'};的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-11-24 10:37:13,543   14520     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-24 10:37:13,543   14520     INFO result.py(156) - 测试执行通过： test_12_addAccountStructure增加结构性产品 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:37:13,549   14520     INFO result.py(90) - 测试结束： test_12_addAccountStructure增加结构性产品 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:37:13,549   14520     INFO result.py(91) - 耗时： 8.080252647399902
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='pt1.13'>
+<td>pt1.13</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_13_addAccountStructure结构性产品申请第一次审批</div>
+    </td>
+    <td class='passCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.13.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_pt1.13.1' name='div_pt1.13.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_pt1.13.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>pt1.13.1:
+2021-11-24 10:37:13,554   14520     INFO result.py(69) - 开始测试： test_13_addAccountStructure结构性产品申请第一次审批 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:37:13,554   14520     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-24 10:37:13,554   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(797) - 提交审核获取到的手机号为：16225564984
+2021-11-24 10:37:14,037   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(803) - 获取到结构性产品的申请单编号为：341
+2021-11-24 10:37:14,246   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(814) - 提交审核接口'http://sit-cdms.ynm3k.com/api/cdms/struc/auditAccountStructure';请求参数为:{'id': 341, 'approvalResult': 'PASS', 'attachUrlList': []};的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-11-24 10:37:20,276   14520     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-24 10:37:20,276   14520     INFO result.py(156) - 测试执行通过： test_13_addAccountStructure结构性产品申请第一次审批 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:37:20,282   14520     INFO result.py(90) - 测试结束： test_13_addAccountStructure结构性产品申请第一次审批 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:37:20,288   14520     INFO result.py(91) - 耗时： 6.727330207824707
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='pt1.14'>
+<td>pt1.14</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_14_addAccountStructure结构性产品申请第二次审批</div>
+    </td>
+    <td class='passCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.14.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_pt1.14.1' name='div_pt1.14.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_pt1.14.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>pt1.14.1:
+2021-11-24 10:37:20,288   14520     INFO result.py(69) - 开始测试： test_14_addAccountStructure结构性产品申请第二次审批 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:37:20,288   14520     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-24 10:37:20,288   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(831) - 提交审核获取到的手机号为：16225564984
+2021-11-24 10:37:20,571   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(835) - 获取到结构性产品的申请单编号为：341
+2021-11-24 10:37:20,951   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(846) - 提交审核接口'http://sit-cdms.ynm3k.com/api/cdms/struc/auditAccountStructure';请求参数为:{'id': 341, 'approvalResult': 'PASS', 'attachUrlList': []};的响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-11-24 10:37:26,959   14520     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-24 10:37:26,959   14520     INFO result.py(156) - 测试执行通过： test_14_addAccountStructure结构性产品申请第二次审批 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:37:26,959   14520     INFO result.py(90) - 测试结束： test_14_addAccountStructure结构性产品申请第二次审批 (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:37:26,959   14520     INFO result.py(91) - 耗时： 6.670939207077026
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='pt1.15'>
+<td>pt1.15</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_15_SQLCheckcd_ac_struc_appl</div>
+    </td>
+    <td class='passCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.15.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_pt1.15.1' name='div_pt1.15.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_pt1.15.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>pt1.15.1:
+2021-11-24 10:37:26,959   14520     INFO result.py(69) - 开始测试： test_15_SQLCheckcd_ac_struc_appl (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:37:26,959   14520     INFO test_用户创建结构性产品账户及审批.py(13) - 初始化CreatUser
+2021-11-24 10:37:35,147   14520     INFO Creat没有结构性产品账号及申请结构性产品审批.py(858) - 通过'12136'查询cd_ac_struc_appl表的结果为((341, '12136', '121361110', 'R00000204', 4, '秦大山h', 40, 'Y', 'Y', None, None, datetime.datetime(2021, 11, 24, 10, 37, 18), None, 'N', 'gt10Years', 'gt10Years', 'gt10Years', 'gt10Years', 'gt10Years', '', '', 'Y', 'Y', 'N', 'speculation', 'high', datetime.datetime(2021, 11, 24, 10, 37, 12), 'ganjiexiang', datetime.datetime(2021, 11, 24, 10, 37, 12), 'ganjiexiang', 3),)
+2021-11-24 10:37:35,147   14520     INFO test_用户创建结构性产品账户及审批.py(150) - 已执行用例15，数据库校验已完成
+2021-11-24 10:37:41,148   14520     INFO test_用户创建结构性产品账户及审批.py(157) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-11-24 10:37:41,148   14520     INFO result.py(156) - 测试执行通过： test_15_SQLCheckcd_ac_struc_appl (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:37:41,148   14520     INFO result.py(90) - 测试结束： test_15_SQLCheckcd_ac_struc_appl (Test_Case.test_用户创建结构性产品账户及审批.Test_creatUser没有结构性产品账号及申请结构性产品审批)
+2021-11-24 10:37:41,148   14520     INFO result.py(91) - 耗时： 14.189271926879883
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -896,8 +1342,8 @@ goChart(chartData_cn);
             <span class="lang-cn">合计</span>
             <span class="lang-en">Total</span>
         </td>
-        <td>3</td>
-        <td class="passCase">3</td>
+        <td>15</td>
+        <td class="passCase">15</td>
         <td class="failCase">0</td>
         <td class="errorCase">0</td>
         <td class="skipCase">0</td>

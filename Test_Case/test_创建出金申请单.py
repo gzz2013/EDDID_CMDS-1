@@ -5,11 +5,10 @@ from Business.CreatEquitiesWithdrawal出金 import CreatEquitiesWithdrawal出金
 from Common.data_文本读写 import *
 
 
-
 class Test_CreatEquitiesWithdrawal出金(unittest.TestCase):
 
     def setUp(self):
-        self.CreatEquitiesWithdrawal =CreatEquitiesWithdrawal出金()
+        self.CreatEquitiesWithdrawal = CreatEquitiesWithdrawal出金()
         logging.info("初始化CreatEquitiesWithdrawal已完成")
 
     def test_01_createWithdrawal创建出金单(self):

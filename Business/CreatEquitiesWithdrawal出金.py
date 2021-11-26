@@ -18,7 +18,7 @@ class CreatEquitiesWithdrawal出金():
         clientId = Randoms().choice_clientId()
         # accountId因clientId而变化
         if clientId == 11431:
-            #证券现金账户
+            # 证券现金账户
             accountId = 114311110
         else:
             accountId = 120711110
@@ -165,9 +165,8 @@ class CreatEquitiesWithdrawal出金():
 
     def get_current_state(self):
 
-
         cstate = gs_wrkflw_log(applyId)[0][3]
-        print("数据库查询到cstate的值为{}".format(cstate))
+        print("数据库查询到当前流程状态cstate的值为{}".format(cstate))
 
         b = 20
         while cstate == "SYS_HANDLEING_8":
@@ -175,8 +174,11 @@ class CreatEquitiesWithdrawal出金():
             # 获取当前时间时分秒
             # a = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
             print("当前状态为：系统处理中，流程等待！当前时间为：{},剩余等待{}次！".format(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), b))
+            logging.info(
+                "当前状态为：系统处理中，流程等待！当前时间为：{},剩余等待{}次！".format(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), b))
             cstate = gs_wrkflw_log(applyId)[0][3]
-            print("数据库查询到cstate的值为{}".format(cstate))
+            print("数据库查询到当前流程状态cstate的值为{}".format(cstate))
+            logging.info("数据库查询到当前流程状态cstate的值为{}".format(cstate))
             b -= 1
             if b < 0:
                 print("系统处理时间过长，不再等待，进程结束！")
@@ -198,8 +200,6 @@ class CreatEquitiesWithdrawal出金():
         s.post(url=operatingWorkFlowsurl, headers=headers, json=dataT)
         time.sleep(10)
         print("系统处理出金返回结果后，首先提交锁++++++++++++++++++++++++++++")
-
-
 
         # 如果返回的是系统处理失败，就审批通过
         if cstate == 'SYS_ERROR_8':

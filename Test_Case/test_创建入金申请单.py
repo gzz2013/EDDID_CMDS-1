@@ -32,7 +32,6 @@ class Test_CreatEquitiesDeposit入金(unittest.TestCase):
         print("已执行用例3===============================================================")
 
     def test_04_get_current_state_deposit(self):
-        time.sleep(300)
         get_current_state_deposit = self.CreatEquitiesDeposit.get_current_state_deposit()
         self.assertEqual(200, get_current_state_deposit.status_code)
         self.assertEqual("操作成功", get_current_state_deposit.json().get("msg"))

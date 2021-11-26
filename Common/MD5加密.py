@@ -1,4 +1,3 @@
-
 import hashlib
 def MD5_Encrypt(str):
     # 创建md5对象
@@ -17,8 +16,6 @@ def MD5_Encrypt(str):
     # str_md5 = hashlib.md5(b'this is a md5 test.').hexdigest()
     # # print('MD5加密后为 ：' + str_md5)
     return str_MD5
-
-
 
 # if __name__=="__main__":
 #     # a=AES_Encrypt(data="91110105MA01QLYL5A")
