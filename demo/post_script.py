@@ -1,0 +1,1 @@
+print("ganjiexiang12345")
