@@ -10,40 +10,29 @@ from Config.cdms_config import *
 from Common.data_文本读写 import *
 
 
-class CreatUser():
+class CreatUser_创建其他类型交易账号():
     # 步骤1
     def ApplyClinet资料提交(self):
-        global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo, cookfront
+        global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo, cookfront,rchName
         # 生成电话号
         phone = Randoms().telephone()
-        # print("phone数据类型************************************************",type(phone))
-        # phone = "18682252487"
         # 生成新邮箱
         cremail = Randoms.RandomEmail()
-        # cremail="zack.gan@edsz9.com"
         # 英文名firstName
         rfirstName = Randoms().creat_EFName()
-        # rfirstName = "WEI"
-        # 英文姓lastName
+        # 英文名lastName
         rlastName = Randoms().creat_ELName()
-        # rlastName = "WANG"
         # 中文名chName
         rchName = Randoms().creat_CHName()
-        # rchName = "王偉"
         # 生成身份证号
         idCardNo = Randoms().ident_generator()
-        # idCardNo="320301198808103293"
-        # 国籍
-        cantrCode = "CHN"
-        # cantrCode = "HKG"
-        # 身份证类型 香港为"1" 大陆为"2"
-        idCardT = "2"
-        # cookies的前缀
-        cookfront = cookfr
         # 生成称谓（性别）
         ctitle = Randoms().choice_title()
         # 获取随机的账户类型
-        caccts = Randoms().choice_accts()
+        caccts = Randoms().choice_accts_nofutures()
+        # cookies的前缀
+        cookfront = cookfr
+
         Language = Randoms().choice_Language()
         # 新列表用来存放用户基本信息
         userinformationList = []
@@ -83,32 +72,32 @@ class CreatUser():
                     "firstName": rfirstName,
                     "lastName": rlastName,
                     "chName": rchName,
-                    "usedCnName": rlastName + caccts,
+                    "usedCnName": rlastName + phone,
                     "usedChName": rchName + "接口自动化创建账号",
+                    # "email": "544162008@qq.com",
                     "email": cremail,
-                    "phoneAreaCode": cantrCode,
+                    "phoneAreaCode": "CHN",
                     "phoneNo": phone,
-                    "houseAddress": "中英街" + caccts + "号",
-                    "houseAddressPinYin": "zhon" + caccts + "hao",
+                    "houseAddress": "中英街" + phone + "号",
+                    "houseAddressPinYin": "zhon" + phone + "hao",
                     "postAddress": "接口自动化",
-                    "natnlty": cantrCode,
-
-                    "idCardType": idCardT,
+                    "natnlty": "CHN",
+                    "idCardType": "2",
                     "idCardNo": idCardNo,
                     "otherCardType": "",
                     "otherCardNo": "",
-                    "countryIssue": cantrCode,
-                    "overCountry": cantrCode,
+                    "countryIssue": "CHN",
+                    "overCountry": "CHN",
                     "birthday": "1994-08-09",
                     "idExpiresDate": "2023-08-31",
-                    "birthdayPlace": cantrCode,
+                    "birthdayPlace": "CHN",
                     "employmentStatus": "self",
                     "post": "businessOwner",
                     "workingYear": "11",
-                    "companyName": "接口自动化" + caccts,
+                    "companyName": "接口自动化" + phone,
                     "businessNature": "wholesale&retail",
-                    "officeAddress": "47845512245" + caccts,
-                    "officePhone": "0771-" + caccts,
+                    "officeAddress": "47845512245" + phone,
+                    "officePhone": "0771-" + phone,
                     "registeredCompany": "Y",
                     "employmentRemark": "",
                     "totalIncomeYear": "gt1000000",
@@ -221,20 +210,20 @@ class CreatUser():
             "bankCardNo": "",
             "elecNo": "",
             "responsible": "kwokwah.wong",
-            # "emailLanguage": Language,
+            "emailLanguage": Language,
             # "emailLanguage": "zh-hans",
             # 简体
-            "emailLanguage": "zh-hant",
+            # "emailLanguage": "zh-hant",
             # 繁体
             "accts": [
-                # caccts
-                "securitiesCash",
+                caccts
+                # "securitiesCash",
                 # 证券现金
                 # "securitiesMargin",
                 # 证券保证金
                 # "futuresMargin",
                 # 期货保证金
-                "leveragedForeignExchangeAccountMargin",
+                # "leveragedForeignExchangeAccountMargin",
                 # 杠杆式外汇账户(保证金)
                 # "securitiesAyersCash"
                 # #全权委托证券（现金）账户
@@ -258,6 +247,7 @@ class CreatUser():
             "*******************************************已完成修改WorldCheck的状态为FALSE*******************************************")
         logging.info(
             "*******************************************已完成修改WorldCheck的状态为FALSE*******************************************")
+
         # 必须要等待修改完成后才能提交审核
         time.sleep(40)
         headers = {
@@ -270,6 +260,7 @@ class CreatUser():
         print("headers", headers)
         submitAuditurl = eddidhost + "/api/client/submitAudit"
         print("submitAuditurl为:", submitAuditurl)
+
         logging.info("提交审核获取到的手机号为：{}".format(phone))
         global applyId
         applyId = cd_clnt_apply_info(phone)[0][0]
@@ -293,11 +284,15 @@ class CreatUser():
             "Connection": "keep-alive",
             "Cookie": cookfront + token
         }
+
         logging.info("当前token为:{}".format(token))
+
         print("当前token为:{}".format(token))
         print("headers", headers)
         operatingWorkFlowFirsturl = eddidhost + "/api/common/operatingWorkFlow"
+
         print("submitAuditurl为:", operatingWorkFlowFirsturl)
+
         logging.info("提交审核获取到的手机号为：{}".format(phone))
         # global applyId
         # applyId = cd_clnt_apply_info(phone)[0][0]
@@ -326,6 +321,7 @@ class CreatUser():
         print("当前token为:{}".format(token))
         print("headers", headers)
         saveRiskAssessmenturl = eddidhost + "/api/client/saveRiskAssessment"
+
         print("submitAuditurl为:", saveRiskAssessmenturl)
         logging.info("当前applyId为：{}".format(applyId))
         data = {
@@ -688,6 +684,7 @@ class CreatUser():
         # global applyId
         # applyId = cd_clnt_apply_info(phone)
         logging.info("当前applyId为：{}".format(applyId))
+
         data = {
             "applyIds": [
                 applyId
@@ -708,6 +705,201 @@ class CreatUser():
                                                           batchOperatingWorkFlowEndResp.text))
         return batchOperatingWorkFlowEndResp
 
+    # 步骤11
+    def addAccountTrading新增交易账号(self):
+
+        global clnt_id
+        clnt_id=get_clnt_id(phone)[0][1]
+        eddid_id=cd_clnt(clnt_id)[0][3]
+        headers = {
+            "Accept": "application/json, text/javascript, */*; q=0.01",
+            "Connection": "keep-alive",
+            "Cookie": cookfront + token
+        }
+        # logging.info("当前token为:{}".format(token))
+        print("当前token为:{}".format(token))
+        print("headers", headers)
+        addAccountTradingurl = eddidhost + "/api/cdms/trading/addAccountTrading"
+        logging.info("获取到的客户id为：{}".format(clnt_id))
+        print("获取到的客户id为：{}".format(clnt_id))
+        # global applyId
+        data = {
+            "clientId":clnt_id,
+            "applyAcTyp":"20",
+            "tradingAcTyp":"21",
+            "isOpenClnt":"Y",
+            "applySource":"4",
+            "idUrlList":[
+
+            ],
+            "creditCardUrlList":[
+
+            ],
+            "applyFileUrlList":[
+
+            ],
+            "isHoldEddidMrgn":"N",
+            "isEddidRightsMrgn":"N",
+            "isClntEddidMrgn":"N",
+            "holdEddidMrgnAc":{
+                "accountNo":"",
+                "clientName":""
+            },
+            "eddidRightsMrgnAc":{
+                "accountNo":"",
+                "clientName":""
+            },
+            "clntEddidMrgnAc":{
+                "accountNo":"",
+                "clientName":""
+            },
+            "isReadTradTerms":"Y",
+            "isDayTrad":"Y",
+            "isReadLeverage":"Y",
+            "exchExperience":"",
+            "exchInvestTarget":[
+                "asset",
+                "income"
+            ],
+            "exchRiskAppetite":"high",
+            "isDerivativesKnowledge":"Y",
+            "isDerivativesWork":"Y",
+            "isDerivativesDeal":"Y",
+            "eddidId":eddid_id,
+            "chineseNam":rchName,
+            "companyName":"接口自动化" + phone,
+            "workingYear":"11",
+            "securitiesExperience":"gt10Years",
+            "cbbcExperience":"gt10Years",
+            "warrantExperience":"gt10Years",
+            "futuresExperience":"gt10Years",
+            "optionsExperience":"gt10Years",
+            "otherInvest":"",
+            "otherExperience":""
+        }
+        print("data=", data)
+        addAccountTradingResp = s.post(url=addAccountTradingurl, headers=headers, json=data)
+        logging.info("提交审核接口'{}';请求参数为:{};的响应结果为:'{}'".format(addAccountTradingurl, data,
+                                                              addAccountTradingResp.text))
+        print("步骤11提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(addAccountTradingurl, data,
+                                                          addAccountTradingResp.text))
+        return addAccountTradingResp
+
+    # 步骤12
+    def auditAccountTradingno(self):
+        global AccountT_apply_no
+        AccountT_apply_no = cd_ac_trading_apply(clnt_id)[0][0]
+        print("当前applyId为：{}".format(AccountT_apply_no))
+        logging.info("当前applyId为：{}".format(AccountT_apply_no))
+
+        headers = {
+            "Accept": "application/json, text/javascript, */*; q=0.01",
+            "Connection": "keep-alive",
+            "Cookie": cookfront + token
+        }
+        # logging.info("当前token为:{}".format(token))
+        print("当前token为:{}".format(token))
+        print("headers", headers)
+        auditAccountTradingurl = eddidhost + "/api/cdms/trading/auditAccountTrading"
+        logging.info("提交审核获取到的手机号为：{}".format(phone))
+        print("提交审核获取到的手机号为：{}".format(phone))
+        # global applyId
+        # applyId = cd_clnt_apply_info(phone)
+        logging.info("当前applyId为：{}".format(AccountT_apply_no))
+
+        data = {
+            "id":AccountT_apply_no,
+            "approvalResult":"PASS",
+            "creditCardUrlList":[],
+            "applyFileUrlList":[],
+            "approveUser":"ED_RO"
+        }
+        print("data=", data)
+        auditAccountTradingResp = s.post(url=auditAccountTradingurl, headers=headers, json=data)
+        logging.info("提交审核接口'{}';请求参数为:{};的响应结果为:'{}'".format(auditAccountTradingurl, data,
+                                                              auditAccountTradingResp.text))
+        print("步骤12提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(auditAccountTradingurl, data,
+                                                          auditAccountTradingResp.text))
+        return auditAccountTradingResp
+
+    # 步骤13
+    def auditAccountTradingto(self):
+        # AccountT_apply_no = cd_ac_trading_apply(clnt_id)
+        print("当前applyId为：{}".format(AccountT_apply_no))
+        logging.info("当前applyId为：{}".format(AccountT_apply_no))
+
+        headers = {
+            "Accept": "application/json, text/javascript, */*; q=0.01",
+            "Connection": "keep-alive",
+            "Cookie": cookfront + token
+        }
+        # logging.info("当前token为:{}".format(token))
+        print("当前token为:{}".format(token))
+        print("headers", headers)
+        auditAccountTradingurl = eddidhost + "/api/cdms/trading/auditAccountTrading"
+        # logging.info("提交审核获取到的手机号为：{}".format(phone))
+        # print("提交审核获取到的手机号为：{}".format(phone))
+        # global applyId
+        # applyId = cd_clnt_apply_info(phone)
+        # logging.info("当前applyId为：{}".format(applyId))
+        data = {
+            "id":AccountT_apply_no,
+            "approvalResult":"PASS",
+            "creditCardUrlList":[
+
+            ],
+            "applyFileUrlList":[
+
+            ]
+        }
+        print("data=", data)
+        auditAccountTradingResp = s.post(url=auditAccountTradingurl, headers=headers, json=data)
+        logging.info("提交审核接口'{}';请求参数为:{};的响应结果为:'{}'".format(auditAccountTradingurl, data,
+                                                              auditAccountTradingResp.text))
+        print("步骤13提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(auditAccountTradingurl, data,
+                                                          auditAccountTradingResp.text))
+        return auditAccountTradingResp
+
+    # 步骤14
+    def auditAccountTradingth(self):
+        # AccountT_apply_no = cd_ac_trading_apply(clnt_id)
+        print("当前applyId为：{}".format(AccountT_apply_no))
+        logging.info("当前applyId为：{}".format(AccountT_apply_no))
+
+        headers = {
+            "Accept": "application/json, text/javascript, */*; q=0.01",
+            "Connection": "keep-alive",
+            "Cookie": cookfront + token
+        }
+        # logging.info("当前token为:{}".format(token))
+        print("当前token为:{}".format(token))
+        print("headers", headers)
+        auditAccountTradingthurl = eddidhost + "/api/cdms/trading/auditAccountTrading"
+        # logging.info("提交审核获取到的手机号为：{}".format(phone))
+        # print("提交审核获取到的手机号为：{}".format(phone))
+        # global applyId
+        # applyId = cd_clnt_apply_info(phone)
+        # logging.info("当前applyId为：{}".format(applyId))
+        data = {
+            "id":AccountT_apply_no,
+            "approvalResult": "PASS",
+            "accountId": clnt_id + '3210',
+            "creditCardUrlList": [
+
+            ],
+            "applyFileUrlList":[
+
+            ]
+        }
+        print("data=", data)
+        auditAccountTradingthResp = s.post(url=auditAccountTradingthurl, headers=headers, json=data)
+        logging.info("提交审核接口'{}';请求参数为:{};的响应结果为:'{}'".format(auditAccountTradingthurl, data,
+                                                              auditAccountTradingthResp.text))
+        print("步骤14提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(auditAccountTradingthurl, data,
+                                                          auditAccountTradingthResp.text))
+        return auditAccountTradingthResp
+
+    # 步骤15
     def SQLCheckUser(self):
         time.sleep(10)
         # 通过直接调用cd_enty表查询
@@ -720,7 +912,7 @@ class CreatUser():
 # ”if __name__=="__main__":“的作用在当前文件run时会执行下面的代码，如果时外部调用就不会执行if里面的代码
 if __name__ == "__main__":
     a = 1
-    CreatUser = CreatUser()
+    CreatUser = CreatUser_创建其他类型交易账号()
     for i in range(a):
         # 实例化CreatUser
         print("=====================================步骤1：", CreatUser.ApplyClinet资料提交().text)
@@ -743,5 +935,37 @@ if __name__ == "__main__":
         time.sleep(4)
         print("=====================================步骤10：", CreatUser.batchOperatingWorkFlowEnd批量确认().text)
         time.sleep(4)
-        print("=====================================步骤11：", CreatUser.SQLCheckUser())
+        print("=====================================步骤11：", CreatUser.addAccountTrading新增交易账号().text)
         time.sleep(4)
+        print("=====================================步骤12：", CreatUser.auditAccountTradingno().text)
+        time.sleep(4)
+        print("=====================================步骤13：", CreatUser.auditAccountTradingto().text)
+        time.sleep(4)
+        print("=====================================步骤14：", CreatUser.auditAccountTradingth().text)
+        time.sleep(4)
+        print("=====================================步骤15：", CreatUser.SQLCheckUser())
+        time.sleep(4)
+
+# if __name__=="__main__":
+#     CreatUser = CreatUser()
+#     # 实例化CreatUser
+#     print("步骤1：", CreatUser.ApplyClinet资料提交().text)
+#     time.sleep(4)
+#     print("步骤2：", CreatUser.SubmitAudit提交审核().text)
+#     time.sleep(4)
+#     print("步骤3：", CreatUser.operatingWorkFlowFirst提交锁().text)
+#     time.sleep(4)
+#     print("步骤4：", CreatUser.saveRiskAssessment风控评估提交().text)
+#     time.sleep(4)
+#     print("步骤5：", CreatUser.operatingWorkFlow内部人员审核().text)
+#     time.sleep(4)
+#     print("步骤6：", CreatUser.operatingWorkFlowNo不用锁定审核通过().text)
+#     time.sleep(4)
+#     print("步骤7：", CreatUser.operatingWorkFlowAgain提交锁().text)
+#     time.sleep(4)
+#     print("步骤8：", CreatUser.batchOperatingWorkFlow批量生成账号确定().text)
+#     time.sleep(4)
+#     print("步骤9：", CreatUser.operatingWorkFlowThird提交锁().text)
+#     time.sleep(4)
+#     print("步骤10：", CreatUser.batchOperatingWorkFlowEnd批量确认().text)
+#     time.sleep(4)

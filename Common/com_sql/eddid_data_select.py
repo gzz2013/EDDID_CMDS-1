@@ -12,8 +12,6 @@ def cd_clnt_apply_info(phone):
     applyid = SQL_Check.eddid_gfss_sit(database=sqldata,
                                sql="select apply_id from cd_clnt_apply_info where phone_no='{}'".format(
                                   phone))
-    # applyid=apply_id[0][0]
-    # return applyid
     return applyid
 
 #在cd_ac表查询符合条件的交易账号
@@ -101,6 +99,12 @@ def  cd_ac_id(ac_id):
                                      sql="select * from cd_ac WHERE ac_id={}".format(ac_id))
     return cd_ac_id
 
+#其他交易账户申请审批单
+def  cd_ac_trading_apply(clnt_id):
+    cd_ac_trading_apply = SQL_Check.eddid_gfss_sit(database=sqldata,
+                                     sql="select * from cd_ac_trading_apply WHERE clnt_id={}".format(clnt_id))
+    return cd_ac_trading_apply
+
 
 if __name__=="__main__":
     # a=cd_ac('NORMAL','CASH','EQUITIES',11431)
@@ -111,7 +115,7 @@ if __name__=="__main__":
     # print("cd_enty2:::",cd_enty(16847802102)[0][0])
     # print("cd_clnt_joint_enty:::",cd_clnt_joint_enty(cd_enty(16847802102)[0][0])[0][1])
     # print("cd_ac:::", cd_ac(cd_clnt_joint_enty(cd_enty(16847802102)[0][0])[0][1])[0][0])
-    # print("cd_clnt:::", cd_clnt(500533)[0][3])
+    print("cd_clnt:::", cd_clnt(500533)[0][3])
     # print("cd_ac:::1111",cd_ac(11431))
     # print("cd_withdrawal",cd_withdrawal(12071,14.45))
     # print("gs_wrkflw_log",gs_wrkflw_log(52155))
@@ -120,5 +124,6 @@ if __name__=="__main__":
     # print("cd_deposit++++++++++++++",cd_deposit(11431,46.41))
     print("get_clnt_id:",get_clnt_id(13480701220))
     print("cd_ac_id:",cd_ac_id(5007805216))
+    print("cd_ac_trading_apply:",cd_ac_trading_apply(88060))
 
 

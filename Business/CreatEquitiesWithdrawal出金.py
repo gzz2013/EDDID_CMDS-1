@@ -15,7 +15,8 @@ class CreatEquitiesWithdrawal出金():
         token = cdms_获取token()
         s = requests.Session()
         # Randoms实例化
-        clientId = Randoms().choice_clientId()
+        # clientId = Randoms().choice_clientId()
+        clientId=11431
         # accountId因clientId而变化
         if clientId == 11431:
             # 证券现金账户

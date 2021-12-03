@@ -40,7 +40,6 @@ eddid_gfss_shhpasswd=''
 # eddid_gfss_shhport=22
 # eddid_gfss_shhuser="dev"
 # eddid_gfss_shhpasswd='dev2021DEV'
-
 # ————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 #运营人员登录账户
 # cdmsuser="cdmstest"

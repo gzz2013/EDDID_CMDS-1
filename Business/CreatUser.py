@@ -32,7 +32,6 @@ class CreatUser():
         caccts = Randoms().choice_accts()
         # cookies的前缀
         cookfront = cookfr
-
         Language = Randoms().choice_Language()
         # 新列表用来存放用户基本信息
         userinformationList = []

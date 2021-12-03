@@ -260,6 +260,12 @@ class Randoms():
         accts = random.choice(T)
         return accts
 
+    #随机选择账户类型
+    def choice_accts_nofutures(self):
+        T=["securitiesCash","securitiesMargin","leveragedForeignExchangeAccountMargin","securitiesAyersCash",]
+        accts = random.choice(T)
+        return accts
+
     #随机账户
     def choice_clientId(self):
         T=[11431,12071]

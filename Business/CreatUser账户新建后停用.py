@@ -717,10 +717,11 @@ class CreatUser账户新建后停用():
         global clnt
         clnt = get_clnt_id(phone)[0][0]
         userinformationList.append(clnt)
-        data_write('F:\\python\\EDDID_CDMS\\Data\\userdatainf.txt', userinformationList)
+        # data_write('F:\\python\\EDDID_CDMS\\Data\\userdatainf.txt', userinformationList)
 
-        data_write('F:\\python\\EDDID_CDMS\\Data\\unableAcct.txt', clnt)
-        print("=======已经将{}写入unableAcct.txt".format(clnt))
+        # data_write('F:\\python\\EDDID_CDMS\\Data\\unableAcct.txt', clnt)
+
+        # print("=======已经将{}写入unableAcct.txt".format(clnt))
         # 将账号写到指定文档
         unableA = []
         unableA.append(clnt)
