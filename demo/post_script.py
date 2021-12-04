@@ -1,7 +1,6 @@
 import requests
 import time
 
-
 #tokenid为机器人的token，text为关键字
 def send2robot(tokenid, text):
     s = requests.Session()
@@ -36,6 +35,8 @@ def send2robot(tokenid, text):
     print("send2robotre::",send2robotre.text)
     return send2robotre
 
+send2robot("fb8e9870d1a020b0e0b4c139b9455c399d39c80030545c7ced062afa5b5dac6a","CMDS自动化测试报告")
+
 # if __name__ == "__main__":
 #     # result=send2robot(sys.argv[1], sys.argv[2])
 #     token='fb8e9870d1a020b0e0b4c139b9455c399d39c80030545c7ced062afa5b5dac6a'
@@ -43,4 +44,3 @@ def send2robot(tokenid, text):
 #     send2robot(token,text)
 #     #print(result)
 #
-send2robot("fb8e9870d1a020b0e0b4c139b9455c399d39c80030545c7ced062afa5b5dac6a","CMDS项目自动化测试报告")
