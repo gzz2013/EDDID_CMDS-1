@@ -198,7 +198,7 @@ class CreatUser():
                     "/hzlc_20210819191759.jpg"
                 ],
                 "writtenApplicationMaterials": [
-                    "/APP_20200811142432_20210819191759.pdf"
+                    # "/APP_20200811142432_20210819191759.pdf"
                 ],
                 "otherInformation": [
                     "/dinggg_20210819191801.jpg"
@@ -234,7 +234,7 @@ class CreatUser():
                 # 证券保证金
                 # "futuresMargin",
                 # 期货保证金
-                "leveragedForeignExchangeAccountMargin",
+                # "leveragedForeignExchangeAccountMargin",
                 # 杠杆式外汇账户(保证金)
                 # "securitiesAyersCash"
                 # #全权委托证券（现金）账户
