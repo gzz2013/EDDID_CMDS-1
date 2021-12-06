@@ -1,23 +1,9 @@
 
 #环境配置
 # sit的url和数据库
-# cookfr="LANGUAGE=zh_CN;GB-SYS-SID-SIT="
-# url = "http://sit-cdms.ynm3k.com"
-# uatdatabase="eddid_gfss_sit"
-# eddid_gfss_host="192.168.57.25"
-# eddid_gfss_port=3306
-# eddid_gfss_user="devsit"
-# eddid_gfss_passwd="devSIT2021pwd"
-# eddid_gfss_shhhost=""
-# eddid_gfss_shhport=''
-# eddid_gfss_shhuser=""
-# eddid_gfss_shhpasswd=''
-
-# ***************************************
-# sit2的url和数据库
 cookfr="LANGUAGE=zh_CN;GB-SYS-SID-SIT="
-url="http://sit-cdms2.ynm3k.com"
-uatdatabase="eddid_gfss_sit2"
+url = "http://sit-cdms.ynm3k.com"
+uatdatabase="eddid_gfss_sit"
 eddid_gfss_host="192.168.57.25"
 eddid_gfss_port=3306
 eddid_gfss_user="devsit"
@@ -26,6 +12,20 @@ eddid_gfss_shhhost=""
 eddid_gfss_shhport=''
 eddid_gfss_shhuser=""
 eddid_gfss_shhpasswd=''
+
+# ***************************************
+# sit2的url和数据库
+# cookfr="LANGUAGE=zh_CN;GB-SYS-SID-SIT="
+# url="http://sit-cdms2.ynm3k.com"
+# uatdatabase="eddid_gfss_sit2"
+# eddid_gfss_host="192.168.57.25"
+# eddid_gfss_port=3306
+# eddid_gfss_user="devsit"
+# eddid_gfss_passwd="devSIT2021pwd"
+# eddid_gfss_shhhost=""
+# eddid_gfss_shhport=''
+# eddid_gfss_shhuser=""
+# eddid_gfss_shhpasswd=''
 # ***************************************
 # uat的url和数据库
 # cookfr="LANGUAGE=zh_CN;GB-SYS-SID-UAT="

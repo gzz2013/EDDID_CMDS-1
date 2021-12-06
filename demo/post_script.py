@@ -35,7 +35,10 @@ def send2robot(tokenid, text):
     print("send2robotre::",send2robotre.text)
     return send2robotre
 
-send2robot("fb8e9870d1a020b0e0b4c139b9455c399d39c80030545c7ced062afa5b5dac6a","CMDS自动化测试报告")
+
+#tokenid为机器人的token，text为关键字
+# send2robot("fb8e9870d1a020b0e0b4c139b9455c399d39c80030545c7ced062afa5b5dac6a","CMDS自动化测试报告")
+send2robot("38f7002387ae37a28bac18bd3b3fe6289de0703cf66994f65288a2b1fb9d35a1","CMDS自动化测试报告")
 
 # if __name__ == "__main__":
 #     # result=send2robot(sys.argv[1], sys.argv[2])
