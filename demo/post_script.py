@@ -75,7 +75,7 @@ def post_Email(username):
 # 公司群
 send2robot("38f7002387ae37a28bac18bd3b3fe6289de0703cf66994f65288a2b1fb9d35a1","CMDS自动化测试报告")
 #添加收件邮箱用”,“隔开
-post_Email("jira@edsz9.com,Jenny.zhang@edsz9.com,zack.gan@edsz9.com,jiazhen.sun@edsz9.com,dongping.chen@edsz9.com")
+post_Email("guixiang.wang@edsz9.com,Jenny.zhang@edsz9.com,zack.gan@edsz9.com,jiazhen.sun@edsz9.com,dongping.chen@edsz9.com")
 # if __name__ == "__main__":
 #     # result=send2robot(sys.argv[1], sys.argv[2])
 #     token='fb8e9870d1a020b0e0b4c139b9455c399d39c80030545c7ced062afa5b5dac6a'
