@@ -36,12 +36,14 @@ def send2robot(tokenid, text):
             "title": text,
             "picUrl": "",
             #自动化测试报告URL
-            "messageUrl": "http://192.168.57.23:8080/job/cdm_automated_testing/HTML_20Report/"
+            "messageUrl": "http://192.168.57.23:8080/job/cdms/HTML_20Report/"
         }
     }
     send2robotre=s.post(url=oapi_url, headers=headers, json=data)
     print("send2robotre::",send2robotre.text)
     return send2robotre
+
+
 
 def post_Email(username):
 
@@ -50,9 +52,8 @@ def post_Email(username):
     password = 'W9d7Dd48tC76xeMC'   #邮箱密码：需要使用授权码
     # username_recv = "ganjiexiang@qq.com,544162008@qq.com"#收件人，多个收件人用逗号隔开
     username_recv = username
-
     message = '''
-    <p><a href="http://192.168.57.23:8080/job/cdm_automated_testing/HTML_20Report/">自动化测试报告传送门</a></p>
+    <p><a href="http://192.168.57.23:8080/job/cdms/HTML_20Report/">自动化测试报告传送门</a></p>
     <p>-----如有疑问可咨询：甘杰祥</p>
     '''
     mail = MIMEText(message, 'html', _charset="utf-8")
@@ -74,7 +75,7 @@ def post_Email(username):
 # 公司群
 send2robot("38f7002387ae37a28bac18bd3b3fe6289de0703cf66994f65288a2b1fb9d35a1","CMDS自动化测试报告")
 #添加收件邮箱用”,“隔开
-post_Email("ganjiexiang@qq.com,jira@edsz9.com,Jenny.zhang@edsz9.com,zack.gan@edsz9.com")
+post_Email("jira@edsz9.com,Jenny.zhang@edsz9.com,zack.gan@edsz9.com,jiazhen.sun@edsz9.com,dongping.chen@edsz9.com")
 # if __name__ == "__main__":
 #     # result=send2robot(sys.argv[1], sys.argv[2])
 #     token='fb8e9870d1a020b0e0b4c139b9455c399d39c80030545c7ced062afa5b5dac6a'
