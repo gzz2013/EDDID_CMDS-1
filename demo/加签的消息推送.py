@@ -59,6 +59,39 @@ class DingtalkRobot(object):
         logging.debug('text类型：%s' % data)
         return self.__post(data)
 
+    # def send_text(self, msg, is_at_all=False, at_mobiles=[]):
+    #     # data = {"msgtype": "text", "at": {}}
+    #     localtime = time.strftime("%Y-%m-%d %H:%M", time.localtime())
+    #     data = {
+    #         "msgtype": "link",
+    #         "link": {
+    #             "text": localtime,
+    #             # 钉钉机器人签名
+    #             "title": {},
+    #             "picUrl": "",
+    #             # 自动化测试报告URL
+    #             "messageUrl":at_mobiles
+    #             # "messageUrl": "http://192.168.57.23:8080/job/cdm_automated_testing/HTML_20Report/"
+    #         }
+    #     }
+    #     if is_not_null_and_blank_str(msg):
+    #         data["link"] = {"content": msg}
+    #     else:
+    #         logging.error("text类型，消息内容不能为空！")
+    #         raise ValueError("text类型，消息内容不能为空！")
+    #
+    #     if is_at_all:
+    #         data["at"]["isAtAll"] = is_at_all
+    #
+    #     if at_mobiles:
+    #         at_mobiles = list(map(str, at_mobiles))
+    #         data["link"]["messageUrl"] = at_mobiles
+    #
+    #     logging.debug('text类型：%s' % data)
+    #     return self.__post(data)
+
+
+
     def __post(self, data):
         """
         发送消息（内容UTF-8编码）
@@ -104,7 +137,8 @@ class DingtalkRobot(object):
 
 
 if __name__ == '__main__':
+    gg="http://192.168.57.23:8080/job/cdm_automated_testing/HTML_20Report/"
     URL = "https://oapi.dingtalk.com/robot/send?access_token=fb8e9870d1a020b0e0b4c139b9455c399d39c80030545c7ced062afa5b5dac6a"
-    SIGN = "gzz123"
+    SIGN = "SEC9a6de92ce7dd912a35823cce657a94320f1e28d9282bcafbd26afd199ed8b8de"
     ding = DingtalkRobot(URL, SIGN)
-    print(ding.send_text("Hello World"))
+    print(ding.send_text("Hello World",gg))

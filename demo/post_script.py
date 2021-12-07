@@ -7,7 +7,7 @@ from email.mime.text import MIMEText
 
 
 
-localtime = time.strftime("%Y-%m-%d %H:%M", time.localtime())
+# localtime = time.strftime("%Y-%m-%d %H:%M", time.localtime())
 def send2robot(tokenid, text):
     s = requests.Session()
     global localtime
