@@ -272,8 +272,8 @@ class CreatEquitiesDeposit大额入金():
                 "depositType": "online_bank_deposit"
             }
             auditDepositToResp = s.post(url=auditDepositTourl, headers=headers, json=data)
-            logging.info("步骤6接口'{}';请求参数为:{};响应结果为：'{}'".format(auditDepositTourl, data, auditDepositToResp.text))
-            print("步骤6接口'{}';请求参数为:{};响应结果为：'{}'".format(auditDepositTourl, data, auditDepositToResp.text))
+            logging.info("步骤4接口'{}';请求参数为:{};响应结果为：'{}'".format(auditDepositTourl, data, auditDepositToResp.text))
+            print("步骤4接口'{}';请求参数为:{};响应结果为：'{}'".format(auditDepositTourl, data, auditDepositToResp.text))
             return auditDepositToResp
 
 
@@ -287,9 +287,9 @@ if __name__ == "__main__":
         print("=====================================步骤2：", CreatDeposit.operatingWorkFlowNo().text)
         time.sleep(10)
         print("=====================================步骤3：", CreatDeposit.auditDepositNo().text)
+        # time.sleep(10)
+        # print("=====================================步骤4：", CreatDeposit.operatingWorkFlowTo().text)
+        # time.sleep(10)
+        # print("=====================================步骤5：", CreatDeposit.auditDeposit_comp_p().text)
         time.sleep(10)
-        print("=====================================步骤4：", CreatDeposit.operatingWorkFlowTo().text)
-        time.sleep(10)
-        print("=====================================步骤5：", CreatDeposit.auditDeposit_comp_p().text)
-        time.sleep(10)
-        print("=====================================步骤6：", CreatDeposit.get_current_state_deposit().text)
+        print("=====================================步骤4：", CreatDeposit.get_current_state_deposit().text)

@@ -22,7 +22,6 @@ def send2robot(tokenid, text):
     # }
     # 获取当前时间
     # 有超链接的data
-
     print("当前时间为：", localtime)
     data = {
         "msgtype": "link",
@@ -37,6 +36,7 @@ def send2robot(tokenid, text):
     }
     send2robotre = s.post(url=oapi_url, headers=headers, json=data)
     print("send2robotre::", send2robotre.text)
+    print('success')
     return send2robotre
 
 

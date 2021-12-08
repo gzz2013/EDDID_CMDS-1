@@ -10,11 +10,13 @@ from Config.cdms_config import *
 from Common.data_文本读写 import *
 
 
-class CreatUser_创建其他类型交易账号():
+class CreatUser创建其他类型交易账号():
     # 步骤1
+    # global phone
+    # phone = Randoms().telephone()
     def ApplyClinet资料提交(self):
-        global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo, cookfront,rchName
-        # 生成电话号
+        global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo, cookfront, rchName
+        # # 生成电话号
         phone = Randoms().telephone()
         # 生成新邮箱
         cremail = Randoms.RandomEmail()
@@ -34,6 +36,10 @@ class CreatUser_创建其他类型交易账号():
         cookfront = cookfr
 
         Language = Randoms().choice_Language()
+
+
+
+
         # 新列表用来存放用户基本信息
         userinformationList = []
         userinformationList.append(phone)
@@ -706,16 +712,18 @@ class CreatUser_创建其他类型交易账号():
         return batchOperatingWorkFlowEndResp
 
     # 步骤11
-    def addAccountTrading新增交易账号(self):
+    def addAccountTrading(self):
 
-        global clnt_id
-        clnt_id=get_clnt_id(phone)[0][1]
-        eddid_id=cd_clnt(clnt_id)[0][3]
+        global clnt_id,eddid_id
+        phone = datahandle(data_read('F:\\python\\EDDID_CDMS\\Data\\userdatainf.txt'))[0]
+        clnt_id = get_clnt_id(phone)[0][1]
+        eddid_id = cd_clnt(clnt_id)[0][3]
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
             "Cookie": cookfront + token
         }
+
         # logging.info("当前token为:{}".format(token))
         print("当前token为:{}".format(token))
         print("headers", headers)
@@ -724,58 +732,57 @@ class CreatUser_创建其他类型交易账号():
         print("获取到的客户id为：{}".format(clnt_id))
         # global applyId
         data = {
-            "clientId":clnt_id,
-            "applyAcTyp":"20",
-            "tradingAcTyp":"21",
-            "isOpenClnt":"Y",
-            "applySource":"4",
-            "idUrlList":[
+            "clientId": clnt_id,
+            "applyAcTyp": "20",
+            "tradingAcTyp": "21",
+            "isOpenClnt": "Y",
+            "applySource": "4",
+            "idUrlList": [
 
             ],
-            "creditCardUrlList":[
+            "creditCardUrlList": [
 
             ],
-            "applyFileUrlList":[
-
+            "applyFileUrlList": [
             ],
-            "isHoldEddidMrgn":"N",
-            "isEddidRightsMrgn":"N",
-            "isClntEddidMrgn":"N",
-            "holdEddidMrgnAc":{
-                "accountNo":"",
-                "clientName":""
+            "isHoldEddidMrgn": "N",
+            "isEddidRightsMrgn": "N",
+            "isClntEddidMrgn": "N",
+            "holdEddidMrgnAc": {
+                "accountNo": "",
+                "clientName": ""
             },
-            "eddidRightsMrgnAc":{
-                "accountNo":"",
-                "clientName":""
+            "eddidRightsMrgnAc": {
+                "accountNo": "",
+                "clientName": ""
             },
-            "clntEddidMrgnAc":{
-                "accountNo":"",
-                "clientName":""
+            "clntEddidMrgnAc": {
+                "accountNo": "",
+                "clientName": ""
             },
-            "isReadTradTerms":"Y",
-            "isDayTrad":"Y",
-            "isReadLeverage":"Y",
-            "exchExperience":"",
-            "exchInvestTarget":[
+            "isReadTradTerms": "Y",
+            "isDayTrad": "Y",
+            "isReadLeverage": "Y",
+            "exchExperience": "",
+            "exchInvestTarget": [
                 "asset",
                 "income"
             ],
-            "exchRiskAppetite":"high",
-            "isDerivativesKnowledge":"Y",
-            "isDerivativesWork":"Y",
-            "isDerivativesDeal":"Y",
-            "eddidId":eddid_id,
-            "chineseNam":rchName,
-            "companyName":"接口自动化" + phone,
-            "workingYear":"11",
-            "securitiesExperience":"gt10Years",
-            "cbbcExperience":"gt10Years",
-            "warrantExperience":"gt10Years",
-            "futuresExperience":"gt10Years",
-            "optionsExperience":"gt10Years",
-            "otherInvest":"",
-            "otherExperience":""
+            "exchRiskAppetite": "high",
+            "isDerivativesKnowledge": "Y",
+            "isDerivativesWork": "Y",
+            "isDerivativesDeal": "Y",
+            "eddidId": eddid_id,
+            "chineseNam": rchName,
+            "companyName": "接口自动化" + phone,
+            "workingYear": "11",
+            "securitiesExperience": "gt10Years",
+            "cbbcExperience": "gt10Years",
+            "warrantExperience": "gt10Years",
+            "futuresExperience": "gt10Years",
+            "optionsExperience": "gt10Years",
+            "otherInvest": "",
+            "otherExperience": ""
         }
         print("data=", data)
         addAccountTradingResp = s.post(url=addAccountTradingurl, headers=headers, json=data)
@@ -808,11 +815,11 @@ class CreatUser_创建其他类型交易账号():
         logging.info("当前applyId为：{}".format(AccountT_apply_no))
 
         data = {
-            "id":AccountT_apply_no,
-            "approvalResult":"PASS",
-            "creditCardUrlList":[],
-            "applyFileUrlList":[],
-            "approveUser":"ED_RO"
+            "id": AccountT_apply_no,
+            "approvalResult": "PASS",
+            "creditCardUrlList": [],
+            "applyFileUrlList": [],
+            "approveUser": "ED_RO"
         }
         print("data=", data)
         auditAccountTradingResp = s.post(url=auditAccountTradingurl, headers=headers, json=data)
@@ -843,12 +850,12 @@ class CreatUser_创建其他类型交易账号():
         # applyId = cd_clnt_apply_info(phone)
         # logging.info("当前applyId为：{}".format(applyId))
         data = {
-            "id":AccountT_apply_no,
-            "approvalResult":"PASS",
-            "creditCardUrlList":[
+            "id": AccountT_apply_no,
+            "approvalResult": "PASS",
+            "creditCardUrlList": [
 
             ],
-            "applyFileUrlList":[
+            "applyFileUrlList": [
 
             ]
         }
@@ -865,7 +872,6 @@ class CreatUser_创建其他类型交易账号():
         # AccountT_apply_no = cd_ac_trading_apply(clnt_id)
         print("当前applyId为：{}".format(AccountT_apply_no))
         logging.info("当前applyId为：{}".format(AccountT_apply_no))
-
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
@@ -881,13 +887,13 @@ class CreatUser_创建其他类型交易账号():
         # applyId = cd_clnt_apply_info(phone)
         # logging.info("当前applyId为：{}".format(applyId))
         data = {
-            "id":AccountT_apply_no,
+            "id": AccountT_apply_no,
             "approvalResult": "PASS",
             "accountId": clnt_id + '3210',
             "creditCardUrlList": [
 
             ],
-            "applyFileUrlList":[
+            "applyFileUrlList": [
 
             ]
         }
@@ -900,6 +906,7 @@ class CreatUser_创建其他类型交易账号():
         return auditAccountTradingthResp
 
     # 步骤15
+    # 校验原来账号
     def SQLCheckUser(self):
         time.sleep(10)
         # 通过直接调用cd_enty表查询
@@ -912,7 +919,7 @@ class CreatUser_创建其他类型交易账号():
 # ”if __name__=="__main__":“的作用在当前文件run时会执行下面的代码，如果时外部调用就不会执行if里面的代码
 if __name__ == "__main__":
     a = 1
-    CreatUser = CreatUser_创建其他类型交易账号()
+    CreatUser = CreatUser创建其他类型交易账号()
     for i in range(a):
         # 实例化CreatUser
         print("=====================================步骤1：", CreatUser.ApplyClinet资料提交().text)
@@ -935,7 +942,7 @@ if __name__ == "__main__":
         time.sleep(4)
         print("=====================================步骤10：", CreatUser.batchOperatingWorkFlowEnd批量确认().text)
         time.sleep(4)
-        print("=====================================步骤11：", CreatUser.addAccountTrading新增交易账号().text)
+        print("=====================================步骤11：", CreatUser.addAccountTrading().text)
         time.sleep(4)
         print("=====================================步骤12：", CreatUser.auditAccountTradingno().text)
         time.sleep(4)

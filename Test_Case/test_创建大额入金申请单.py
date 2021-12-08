@@ -29,18 +29,18 @@ class Test_CreatEquitiesDeposit大额入金(unittest.TestCase):
         self.assertEqual("操作成功", auditDepositNo.json().get("msg"))
         print("已执行用例3===============================================================")
 
-    def test_04_operatingWorkFlowTo(self):
-        operatingWorkFlowNo = self.CreatEquitiesDeposit.operatingWorkFlowTo()
-        self.assertEqual(200, operatingWorkFlowNo.status_code)
-        self.assertEqual("操作成功", operatingWorkFlowNo.json().get("msg"))
-        self.assertEqual("操作成功", operatingWorkFlowNo.json().get("data")[0].get("operatingMessage"))
-        print("已执行用例4===============================================================")
+    # def test_04_operatingWorkFlowTo(self):
+    #     operatingWorkFlowNo = self.CreatEquitiesDeposit.operatingWorkFlowTo()
+    #     self.assertEqual(200, operatingWorkFlowNo.status_code)
+    #     self.assertEqual("操作成功", operatingWorkFlowNo.json().get("msg"))
+    #     self.assertEqual("操作成功", operatingWorkFlowNo.json().get("data")[0].get("operatingMessage"))
+    #     print("已执行用例4===============================================================")
 
-    def test_05_auditDeposit_comp_p(self):
-        auditDeposit_comp_p = self.CreatEquitiesDeposit.auditDeposit_comp_p()
-        self.assertEqual(200, auditDeposit_comp_p.status_code)
-        self.assertEqual("操作成功", auditDeposit_comp_p.json().get("msg"))
-        print("已执行用例5===============================================================")
+    # def test_05_auditDeposit_comp_p(self):
+    #     auditDeposit_comp_p = self.CreatEquitiesDeposit.auditDeposit_comp_p()
+    #     self.assertEqual(200, auditDeposit_comp_p.status_code)
+    #     self.assertEqual("操作成功", auditDeposit_comp_p.json().get("msg"))
+    #     print("已执行用例5===============================================================")
 
     def test_06_get_current_state_deposit(self):
         get_current_state_deposit = self.CreatEquitiesDeposit.get_current_state_deposit()

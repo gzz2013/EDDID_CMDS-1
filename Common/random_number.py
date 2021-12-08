@@ -199,7 +199,7 @@ class Randoms():
 
     #生成随机金额
     def randomlargeAmount(self):
-        rAmount=float(random.randint(10000,39999))+float('%.2f'%(random.random()))
+        rAmount=float(random.randint(10000,19999))+float('%.2f'%(random.random()))
         return rAmount
 
     #生成邮箱

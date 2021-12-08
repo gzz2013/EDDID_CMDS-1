@@ -198,7 +198,7 @@ class CreatUser():
                     "/hzlc_20210819191759.jpg"
                 ],
                 "writtenApplicationMaterials": [
-                    # "/APP_20200811142432_20210819191759.pdf"
+                    "/APP_20200811142432_20210819191759.pdf"
                 ],
                 "otherInformation": [
                     "/dinggg_20210819191801.jpg"
@@ -227,8 +227,8 @@ class CreatUser():
             "emailLanguage": "zh-hant",
             # 繁体
             "accts": [
-                # caccts
-                "securitiesCash",
+                caccts
+                # "securitiesCash",
                 # 证券现金
                 # "securitiesMargin",
                 # 证券保证金
