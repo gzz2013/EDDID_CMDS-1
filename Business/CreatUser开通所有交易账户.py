@@ -49,7 +49,7 @@ class CreatUser所有类型交易账户():
         logging.info("记录数据的文件名为：userdatainf.txt，写入数据为:{}".format(userinformationList))
         # 配置文件cdms_config中引入host
         eddidhost = url
-        token = cdms_获取token()
+        token=data_read('F:\\python\\EDDID_CDMS\\Data\\token.txt')
         s = requests.Session()
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",

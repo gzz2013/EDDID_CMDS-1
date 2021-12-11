@@ -41,7 +41,9 @@ class CreatUser():
         # cookies的前缀
         cookfront = cookfr
         # 生成称谓（性别）
-        ctitle = Randoms().choice_title()
+        #"miss", "mr", "mrs"
+        ctitle = "mr"
+        # ctitle = Randoms().choice_title()
         # 获取随机的账户类型
         caccts = Randoms().choice_accts()
         Language = Randoms().choice_Language()
@@ -62,7 +64,7 @@ class CreatUser():
         logging.info("记录数据的文件名为：userdatainf.txt，写入数据为:{}".format(userinformationList))
         # 配置文件cdms_config中引入host
         eddidhost = url
-        token = cdms_获取token()
+        token=data_read('F:\\python\\EDDID_CDMS\\Data\\token.txt')
         s = requests.Session()
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
@@ -222,21 +224,21 @@ class CreatUser():
             "elecNo": "",
             "responsible": "kwokwah.wong",
             # "emailLanguage": Language,
-            # "emailLanguage": "zh-hans",
+            "emailLanguage": "zh-hans",
             # 简体
-            "emailLanguage": "zh-hant",
+            # "emailLanguage": "zh-hant",
             # 繁体
             "accts": [
-                caccts
-                # "securitiesCash",
+                # caccts
+                "securitiesCash",
                 # 证券现金
-                # "securitiesMargin",
+                "securitiesMargin",
                 # 证券保证金
-                # "futuresMargin",
+                "futuresMargin",
                 # 期货保证金
-                # "leveragedForeignExchangeAccountMargin",
+                "leveragedForeignExchangeAccountMargin",
                 # 杠杆式外汇账户(保证金)
-                # "securitiesAyersCash"
+                "securitiesAyersCash"
                 # #全权委托证券（现金）账户
             ],
             "promotionNumber": "EDAC520",
@@ -721,6 +723,9 @@ class CreatUser():
 if __name__ == "__main__":
     a = 1
     CreatUser = CreatUser()
+    token = cdms_获取token()
+    # 将token写入文本
+    data_write('F:\\python\\EDDID_CDMS\\Data\\token.txt', token)
     for i in range(a):
         # 实例化CreatUser
         print("=====================================步骤1：", CreatUser.ApplyClinet资料提交().text)

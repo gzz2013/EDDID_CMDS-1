@@ -5,6 +5,7 @@ import logging
 import time
 from Common.com_sql.eddid_data_select import *
 from Config.cdms_config import *
+from Common.data_文本读写 import *
 
 
 class CreatEquitiesDeposit入金():
@@ -12,7 +13,7 @@ class CreatEquitiesDeposit入金():
     def createDeposit创建入金单(self):
         global clientId, depositAmount, eddidhost, token, s
         eddidhost = url
-        token = cdms_获取token()
+        token = data_read('F:\\python\\EDDID_CDMS\\Data\\token.txt')
         s = requests.Session()
         # Randoms实例化
         clientId = 100861

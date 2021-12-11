@@ -12,8 +12,6 @@ from Common.data_文本读写 import *
 
 class CreatUser创建其他类型交易账号():
     # 步骤1
-    # global phone
-    # phone = Randoms().telephone()
     def ApplyClinet资料提交(self):
         global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo, cookfront, rchName
         # # 生成电话号

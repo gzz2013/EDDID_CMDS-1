@@ -14,12 +14,14 @@ class CreateExchange():
         global clientId, applyAmount, eddidhost
         clientId = CreateExchangeclientId
         applyAmount = Randoms().randomAmount()
-
         # 从数据库中读取到的最新汇率数据库小数类型转化成python的浮点型
         newrate = float('%.3f' % (get_newrate()[0][2]))
         # 查询符合条件的换汇账号
         comp_account = cd_ac(clientId)[0][0]
-        token = cdms_获取token()
+        #从token.txt文档中获取token
+        token=data_read('F:\\python\\EDDID_CDMS\\Data\\token.txt')
+        # print("token-------------",token)
+        # token = cdms_获取token()
         s = requests.Session()
         # 引入url
         eddidhost = url
