@@ -27,5 +27,7 @@ def datahandle(data):
 
 if __name__=='__main__':
     # data_write(file="F:\python\EDDID_CDMS\Data\userdatainf.txt", d='222')
-    q=data_read("/Data/userdatainf.txt")
+    q=data_read('F:\\python\\EDDID_CDMS\\Data\\userdatainf.txt')
     print("datahandle(q)",datahandle(q),type(datahandle(q)))
+    phone = datahandle(data_read('F:\\python\\EDDID_CDMS\\Data\\userdatainf.txt'))[0]
+    print(phone)

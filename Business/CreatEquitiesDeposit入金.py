@@ -13,7 +13,8 @@ class CreatEquitiesDeposit入金():
     def createDeposit创建入金单(self):
         global clientId, depositAmount, eddidhost, token, s
         eddidhost = url
-        token = data_read('F:\\python\\EDDID_CDMS\\Data\\token.txt')
+        token = cdms_获取token()
+        # token = data_read('F:\\python\\EDDID_CDMS\\Data\\token.txt')
         s = requests.Session()
         # Randoms实例化
         clientId = 100861

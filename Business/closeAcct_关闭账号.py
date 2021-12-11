@@ -28,7 +28,8 @@ class CloseAcct账号关闭():
         global token, eddidhost, s, cookfront
         # 生成新邮箱
         eddidhost = url
-        token = data_read('F:\\python\\EDDID_CDMS\\Data\\token.txt')
+        token=cdms_获取token()
+        # token = data_read('F:\\python\\EDDID_CDMS\\Data\\token.txt')
         s = requests.Session()
         # cookies的前缀
         cookfront = cookfr

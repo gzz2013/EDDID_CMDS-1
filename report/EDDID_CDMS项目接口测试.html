@@ -241,8 +241,8 @@ tr {
 }
 </style>
     <script language="javascript" type="text/javascript">
-var chartData_cn = [[3, '#1c965b', '通过']];
-var chartData_en = [[3, '#1c965b', 'Passed']];
+var chartData_cn = [[2, '#1c965b', '通过'], [8, '#ff5722', '失败'], [5, '#ff9800', '错误']];
+var chartData_en = [[2, '#1c965b', 'Passed'], [8, '#ff5722', 'Failed'], [5, '#ff9800', 'Error']];
 
 function addClass(e, c) {
   if (!isClass(e, c)) {
@@ -653,19 +653,19 @@ goChart(chartData_cn);
     <strong>
       <span class="lang-cn">启动时间：</span>
       <span class="lang-en">Start Time:</span>
-    </strong> 2021-12-11 11:45:18
+    </strong> 2021-12-11 14:50:37
   </p>
   <p class='attribute'>
     <strong>
       <span class="lang-cn">结束时间：</span>
       <span class="lang-en">End Time:</span>
-    </strong> 2021-12-11 11:46:03
+    </strong> 2021-12-11 14:54:08
   </p>
   <p class='attribute'>
     <strong>
       <span class="lang-cn">运行时长：</span>
       <span class="lang-en">Duration:</span>
-    </strong> 0:00:45.186614
+    </strong> 0:03:31.491977
   </p>
   <p class='attribute'>
     <strong>
@@ -673,13 +673,13 @@ goChart(chartData_cn);
       <span class="lang-en">Status:</span>
     </strong>
     <span class="lang-cn">合计：</span>
-    <span class="lang-en">Total:</span>3&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="lang-en">Total:</span>15&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">通过：</span>
-    <span class="lang-en">Passed:</span>3&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="lang-en">Passed:</span>2&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">失败：</span>
-    <span class="lang-en">Failed:</span>0&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="lang-en">Failed:</span>8&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">错误：</span>
-    <span class="lang-en">Error:</span>0&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="lang-en">Error:</span>5&nbsp;&nbsp;&nbsp;&nbsp;
     <span class="lang-cn">跳过：</span>
     <span class="lang-en">Skipped:</span>0&nbsp;&nbsp;&nbsp;&nbsp;
   </p>
@@ -765,131 +765,650 @@ goChart(chartData_cn);
             <span class="lang-en">View</span>
         </th>
     </tr>
-    <tr class='passClass'>
+    <tr class='errorClass'>
     <td>c1</td>
-    <td>Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单</td>
-    <td>3</td>
-    <td class="passCase">3</td>
-    <td class="failCase">0</td>
-    <td class="errorCase">0</td>
+    <td>Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号</td>
+    <td>15</td>
+    <td class="passCase">2</td>
+    <td class="failCase">8</td>
+    <td class="errorCase">5</td>
     <td class="skipCase">0</td>
-    <td style="text-align:right;">100.00%</td>
+    <td style="text-align:right;">13.33%</td>
     <td>0</td>
     <td>
-        <a href="javascript:showClassDetail('c1',3)">
+        <a href="javascript:showClassDetail('c1',15)">
             <span class="lang-cn">细节</span>
             <span class="lang-en">Detail</span>
         </a>
     </td>
 </tr>
-<tr id='pt1.1'>
-<td>pt1.1</td>
-    <td class='passCase' colspan='7'>
-        <div class='testcase'>test_01_createExchange创建换汇申请单</div>
+<tr id='et1.1'>
+<td>et1.1</td>
+    <td class='errorCase' colspan='7'>
+        <div class='testcase'>test_011_addAccountTrading</div>
     </td>
-    <td class='passCase'>
+    <td class='errorCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
     </td>
-    <td class='passCase' align='center'>
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.1',1, false)">
-            <span class="lang-cn">通过</span>
-            <span class="lang-en">pass</span>
+    <td class='errorCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.1.1',1, false)">
+            <span class="lang-cn">错误</span>
+            <span class="lang-en">error</span>
         </a>
     </td>
 </tr>
-<tr id='div_S_pt1.1.1' name='div_pt1.1.1' class="hiddenRow">
+<tr id='div_S_et1.1.1' name='div_et1.1.1' class="hiddenRow">
     <td colspan='10'>
         <div class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'
-                 onclick="document.getElementById('div_S_pt1.1.1').className = 'hiddenRow'">
+                 onclick="document.getElementById('div_S_et1.1.1').className = 'hiddenRow'">
                 <a onfocus='this.blur();'>[x]</a>
             </div>
-            <pre>pt1.1.1:
-2021-12-11 11:45:18,698    9648     INFO result.py(69) - 开始测试： test_01_createExchange创建换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
-2021-12-11 11:45:18,698    9648     INFO test_创建换汇申请单.py(13) - 初始化CreateExchange已完成
-2021-12-11 11:45:19,716    9648     INFO Creat创建换汇申请单.py(33) - 当前token为:D1418E4FC592C74664273AB7F508A2197AC79FFD18F78973
-2021-12-11 11:45:19,748    9648     INFO Creat创建换汇申请单.py(38) - 当前获取到applyAmount的值为：33.94
-2021-12-11 11:45:19,748    9648     INFO Creat创建换汇申请单.py(39) - 查询数据库cd_ac查询到的换汇账号为114311110
-2021-12-11 11:45:19,876    9648     INFO Creat创建换汇申请单.py(52) - 记录数据的文件名为：exchorderinfor.txt，写入数据为:[11431, '114311110', 33.94, 7.768]
-2021-12-11 11:45:20,315    9648     INFO Creat创建换汇申请单.py(70) - 步骤1提交审核接口'http://sit-cdms.ynm3k.com/api/funds/createExchange';请求参数为:{'fromCurrency': 'HKD', 'toCurrency': 'USD', 'exchangeRate': 7.768, 'clientId': 11431, 'applyAmount': 33.94, 'accountId': '114311110', 'accountCategory': 'securitiesCash', 'applySource': 4};响应结果为:'{"code":"0000","msg":"操作成功","data":true}'
-2021-12-11 11:45:26,371    9648     INFO test_创建换汇申请单.py(50) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-12-11 11:45:26,371    9648     INFO result.py(156) - 测试执行通过： test_01_createExchange创建换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
-2021-12-11 11:45:26,371    9648     INFO result.py(90) - 测试结束： test_01_createExchange创建换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
-2021-12-11 11:45:26,371    9648     INFO result.py(91) - 耗时： 7.673600673675537
+            <pre>et1.1.1:
+2021-12-11 14:50:37,511   12332     INFO result.py(69) - 开始测试： test_011_addAccountTrading (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:50:37,511   12332     INFO test_创建其他类型交易账号.py(14) - CreatUser创建其他类型交易账号
+2021-12-11 14:50:43,877   12332     INFO test_创建其他类型交易账号.py(142) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-12-11 14:50:44,053   12332    ERROR result.py(175) - 测试产生错误： test_011_addAccountTrading (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建其他类型交易账号.py", line 87, in test_011_addAccountTrading
+    addAccountTrading = self.CreatUseraddAccountTrading.addAccountTrading()
+  File "F:\python\EDDID_CDMS\Business\CreatUser_创建其他交易类型账号.py", line 715, in addAccountTrading
+    clnt_id = get_clnt_id(phone)[0][1]
+IndexError: tuple index out of range
+
+2021-12-11 14:50:44,053   12332     INFO result.py(90) - 测试结束： test_011_addAccountTrading (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:50:44,068   12332     INFO result.py(91) - 耗时： 6.54153037071228
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
         </div>
     </td>
-</tr><tr id='pt1.2'>
-<td>pt1.2</td>
-    <td class='passCase' colspan='7'>
-        <div class='testcase'>test_02_auditExchange提交审核换汇申请单</div>
+</tr><tr id='et1.2'>
+<td>et1.2</td>
+    <td class='errorCase' colspan='7'>
+        <div class='testcase'>test_012_auditAccountTradingno</div>
     </td>
-    <td class='passCase'>
+    <td class='errorCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
     </td>
-    <td class='passCase' align='center'>
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.1',1, false)">
-            <span class="lang-cn">通过</span>
-            <span class="lang-en">pass</span>
+    <td class='errorCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.2.1',1, false)">
+            <span class="lang-cn">错误</span>
+            <span class="lang-en">error</span>
         </a>
     </td>
 </tr>
-<tr id='div_S_pt1.2.1' name='div_pt1.2.1' class="hiddenRow">
+<tr id='div_S_et1.2.1' name='div_et1.2.1' class="hiddenRow">
     <td colspan='10'>
         <div class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'
-                 onclick="document.getElementById('div_S_pt1.2.1').className = 'hiddenRow'">
+                 onclick="document.getElementById('div_S_et1.2.1').className = 'hiddenRow'">
                 <a onfocus='this.blur();'>[x]</a>
             </div>
-            <pre>pt1.2.1:
-2021-12-11 11:45:26,371    9648     INFO result.py(69) - 开始测试： test_02_auditExchange提交审核换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
-2021-12-11 11:45:26,371    9648     INFO test_创建换汇申请单.py(13) - 初始化CreateExchange已完成
-2021-12-11 11:45:26,372    9648     INFO Creat创建换汇申请单.py(78) - 等待系统录入数据后再提交审批，等待时间15s
-2021-12-11 11:45:41,968    9648     INFO Creat创建换汇申请单.py(88) - 当前token为:D1418E4FC592C746DEAA6FFDCC059C327AC79FFD18F78973
-2021-12-11 11:45:42,093    9648     INFO Creat创建换汇申请单.py(94) - 查询数据库cd_exch查询到applyid的值为：4011
-2021-12-11 11:45:43,429    9648     INFO Creat创建换汇申请单.py(107) - 步骤2提交审核接口'http://sit-cdms.ynm3k.com/api/funds/auditExchange';请求参数为:{'applyId': 4011, 'approvalResult': 'PASS', 'fileList': [], 'statusCode': 'SETL'};响应结果为:'{"code":"0000","msg":"操作成功","data":true}'
-2021-12-11 11:45:49,486    9648     INFO test_创建换汇申请单.py(50) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-12-11 11:45:49,486    9648     INFO result.py(156) - 测试执行通过： test_02_auditExchange提交审核换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
-2021-12-11 11:45:49,486    9648     INFO result.py(90) - 测试结束： test_02_auditExchange提交审核换汇申请单 (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
-2021-12-11 11:45:49,502    9648     INFO result.py(91) - 耗时： 23.114196300506592
+            <pre>et1.2.1:
+2021-12-11 14:50:44,099   12332     INFO result.py(69) - 开始测试： test_012_auditAccountTradingno (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:50:44,099   12332     INFO test_创建其他类型交易账号.py(14) - CreatUser创建其他类型交易账号
+2021-12-11 14:50:50,118   12332     INFO test_创建其他类型交易账号.py(142) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-12-11 14:50:50,148   12332    ERROR result.py(175) - 测试产生错误： test_012_auditAccountTradingno (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建其他类型交易账号.py", line 94, in test_012_auditAccountTradingno
+    auditAccountTradingno = self.CreatUseraddAccountTrading.auditAccountTradingno()
+  File "F:\python\EDDID_CDMS\Business\CreatUser_创建其他交易类型账号.py", line 794, in auditAccountTradingno
+    AccountT_apply_no = cd_ac_trading_apply(clnt_id)[0][0]
+NameError: name 'clnt_id' is not defined
+
+2021-12-11 14:50:50,148   12332     INFO result.py(90) - 测试结束： test_012_auditAccountTradingno (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:50:50,163   12332     INFO result.py(91) - 耗时： 6.048833847045898
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
         </div>
     </td>
-</tr><tr id='pt1.3'>
-<td>pt1.3</td>
+</tr><tr id='et1.3'>
+<td>et1.3</td>
+    <td class='errorCase' colspan='7'>
+        <div class='testcase'>test_013_auditAccountTradingto</div>
+    </td>
+    <td class='errorCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='errorCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.3.1',1, false)">
+            <span class="lang-cn">错误</span>
+            <span class="lang-en">error</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_et1.3.1' name='div_et1.3.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_et1.3.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>et1.3.1:
+2021-12-11 14:50:50,178   12332     INFO result.py(69) - 开始测试： test_013_auditAccountTradingto (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:50:50,178   12332     INFO test_创建其他类型交易账号.py(14) - CreatUser创建其他类型交易账号
+2021-12-11 14:50:56,206   12332     INFO test_创建其他类型交易账号.py(142) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-12-11 14:50:56,268   12332    ERROR result.py(175) - 测试产生错误： test_013_auditAccountTradingto (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建其他类型交易账号.py", line 101, in test_013_auditAccountTradingto
+    auditAccountTradingto = self.CreatUseraddAccountTrading.auditAccountTradingto()
+  File "F:\python\EDDID_CDMS\Business\CreatUser_创建其他交易类型账号.py", line 831, in auditAccountTradingto
+    print("当前applyId为：{}".format(AccountT_apply_no))
+NameError: name 'AccountT_apply_no' is not defined
+
+2021-12-11 14:50:56,283   12332     INFO result.py(90) - 测试结束： test_013_auditAccountTradingto (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:50:56,283   12332     INFO result.py(91) - 耗时： 6.1057116985321045
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='et1.4'>
+<td>et1.4</td>
+    <td class='errorCase' colspan='7'>
+        <div class='testcase'>test_014_auditAccountTradingth</div>
+    </td>
+    <td class='errorCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='errorCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.4.1',1, false)">
+            <span class="lang-cn">错误</span>
+            <span class="lang-en">error</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_et1.4.1' name='div_et1.4.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_et1.4.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>et1.4.1:
+2021-12-11 14:50:56,283   12332     INFO result.py(69) - 开始测试： test_014_auditAccountTradingth (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:50:56,283   12332     INFO test_创建其他类型交易账号.py(14) - CreatUser创建其他类型交易账号
+2021-12-11 14:51:02,307   12332     INFO test_创建其他类型交易账号.py(142) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-12-11 14:51:02,339   12332    ERROR result.py(175) - 测试产生错误： test_014_auditAccountTradingth (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建其他类型交易账号.py", line 108, in test_014_auditAccountTradingth
+    auditAccountTradingth = self.CreatUseraddAccountTrading.auditAccountTradingth()
+  File "F:\python\EDDID_CDMS\Business\CreatUser_创建其他交易类型账号.py", line 869, in auditAccountTradingth
+    print("当前applyId为：{}".format(AccountT_apply_no))
+NameError: name 'AccountT_apply_no' is not defined
+
+2021-12-11 14:51:02,339   12332     INFO result.py(90) - 测试结束： test_014_auditAccountTradingth (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:51:02,339   12332     INFO result.py(91) - 耗时： 6.055815935134888
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='pt1.5'>
+<td>pt1.5</td>
     <td class='passCase' colspan='7'>
-        <div class='testcase'>test_03_SQLCheckexchorder</div>
+        <div class='testcase'>test_01_applyClient用户资料提交用例校验</div>
     </td>
     <td class='passCase'>
         <div class='testcase' style="margin-left: auto;">0</div>
     </td>
     <td class='passCase' align='center'>
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3.1',1, false)">
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5.1',1, false)">
             <span class="lang-cn">通过</span>
             <span class="lang-en">pass</span>
         </a>
     </td>
 </tr>
-<tr id='div_S_pt1.3.1' name='div_pt1.3.1' class="hiddenRow">
+<tr id='div_S_pt1.5.1' name='div_pt1.5.1' class="hiddenRow">
     <td colspan='10'>
         <div class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'
-                 onclick="document.getElementById('div_S_pt1.3.1').className = 'hiddenRow'">
+                 onclick="document.getElementById('div_S_pt1.5.1').className = 'hiddenRow'">
                 <a onfocus='this.blur();'>[x]</a>
             </div>
-            <pre>pt1.3.1:
-2021-12-11 11:45:49,502    9648     INFO result.py(69) - 开始测试： test_03_SQLCheckexchorder (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
-2021-12-11 11:45:49,502    9648     INFO test_创建换汇申请单.py(13) - 初始化CreateExchange已完成
-2021-12-11 11:45:57,583    9648     INFO Creat创建换汇申请单.py(116) - 通过'11431'查询cd_exch表的结果为((4011, 'E00003788', '11431', '114311110', 'securitiesCash', 'HKD', 'USD', Decimal('7.76800000'), None, Decimal('33.94000000'), None, 4, None, datetime.datetime(2021, 12, 11, 11, 45, 25), 'cdmstest', datetime.datetime(2021, 12, 11, 11, 45, 48), 'cdmstest', 2),)
-2021-12-11 11:45:57,583    9648     INFO test_创建换汇申请单.py(33) - 从文本中读到的换汇单基本信息为：['11431', '114311110', '33.94', '7.768']
-2021-12-11 11:46:03,587    9648     INFO test_创建换汇申请单.py(50) - 接口请求完成后，等待系统处理数据，等待6秒
-2021-12-11 11:46:03,587    9648     INFO result.py(156) - 测试执行通过： test_03_SQLCheckexchorder (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
-2021-12-11 11:46:03,587    9648     INFO result.py(90) - 测试结束： test_03_SQLCheckexchorder (Test_Case.test_创建换汇申请单.Test_CreateExchange新建换汇申请单)
-2021-12-11 11:46:03,587    9648     INFO result.py(91) - 耗时： 14.085634469985962
+            <pre>pt1.5.1:
+2021-12-11 14:51:02,339   12332     INFO result.py(69) - 开始测试： test_01_applyClient用户资料提交用例校验 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:51:02,339   12332     INFO test_创建其他类型交易账号.py(14) - CreatUser创建其他类型交易账号
+2021-12-11 14:51:02,435   12332     INFO CreatUser_创建其他交易类型账号.py(52) - 记录数据的文件名为：userdatainf.txt，写入数据为:['11339703532', '9LTlUwW9@163.com', 'Fingerv', 'Wden', '袁承Y', '340101196909081023', 'mrs', 'securitiesAyersCash']
+2021-12-11 14:51:02,513   12332     INFO CreatUser_创建其他交易类型账号.py(63) - 当前token为:D1418E4FC592C74693E482B1397A41827AC79FFD18F78973
+2021-12-11 14:51:02,513   12332     INFO CreatUser_创建其他交易类型账号.py(68) - 提交申请单时注册用户手机号码为：11339703532
+2021-12-11 14:51:02,843   12332     INFO CreatUser_创建其他交易类型账号.py(238) - 步骤1接口'http://sit-cdms.ynm3k.com/api/client/applyClient';请求参数为:{'infos': [{'title': 'mrs', 'informationType': 1, 'firstName': 'Fingerv', 'lastName': 'Wden', 'chName': '袁承Y', 'usedCnName': 'Wden11339703532', 'usedChName': '袁承Y接口自动化创建账号', 'email': '9LTlUwW9@163.com', 'phoneAreaCode': 'CHN', 'phoneNo': '11339703532', 'houseAddress': '中英街11339703532号', 'houseAddressPinYin': 'zhon11339703532hao', 'postAddress': '接口自动化', 'natnlty': 'CHN', 'idCardType': '2', 'idCardNo': '340101196909081023', 'otherCardType': '', 'otherCardNo': '', 'countryIssue': 'CHN', 'overCountry': 'CHN', 'birthday': '1994-08-09', 'idExpiresDate': '2023-08-31', 'birthdayPlace': 'CHN', 'employmentStatus': 'self', 'post': 'businessOwner', 'workingYear': '11', 'companyName': '接口自动化11339703532', 'businessNature': 'wholesale&amp;retail', 'officeAddress': '4784551224511339703532', 'officePhone': '0771-11339703532', 'registeredCompany': 'Y', 'employmentRemark': '', 'totalIncomeYear': 'gt1000000', 'sourceOfIncome': ['selfOperatedBusinessIncome', 'salary'], 'sourceOfIncomeRemake': '', 'totalCapital': 'gt8000000', 'sourceOfCapital': ['salary', 'savings', 'pension'], 'sourceOfCapitalRemark': '', 'sourceOfMoney': ['selfOperated'], 'sourceOfMoneyRemark': '', 'securitiesExperience': 'gt10Years', 'cbbcExperience': 'gt10Years', 'warrantExperience': 'gt10Years', 'futuresExperience': 'gt10Years', 'optionsExperience': 'gt10Years', 'foreignExchangExperience': 'gt10Years', 'metalExperience': 'gt10Years', 'autoTransationExperience': 'gt10Years', 'otherInvest': '', 'otherExperience': '', 'withDerivativesKnowledge': 'Y', 'withDerivativesWoking': 'Y', 'withDerivativesDeal': 'Y', 'applicationOpenDerivatives': 'Y', 'understandTheRisks': 'Y', 'haveDeclaredBankruptcy': 'N', 'declaredBankruptcyDate': '', 'isInternalStaff': 'N', 'staffNameRelationship': '', 'relationshipWithInternalEmployees': 'Y', 'employeesName': '11212', 'isRegisteredPerson': 'N', 'registeredPersonRemark': '', 'isUsPerson': 'N', 'taxNumber': '', 'isUsTaxPerson': 'N', 'taxNumberTwo': '', 'isPepPerson': 'N', 'pepPersonName': '', 'investmentObjective': ['asset', 'income'], 'riskTolerance': 'high', 'throughChannels': ['lecture'], 'throughChannelRemark': '', 'isFinalBeneficiary': 'Y', 'finalBeneficiaryName': '', 'isFinalPrincipal': 'Y', 'finalPrincipalName': '', 'businessNatureRemark': ''}], 'marginAcctS': [], 'taxs': [{'residencyJurisdiction': 'CHN', 'taxNumber': '', 'resonType': 'A', 'resonRemark': ''}], 'attachs': {'passportMaterial': ['/hzlc_20210819191744.jpg'], 'addressVerificationMaterials': ['/hzlc_20210819191748.jpg'], 'bankCardMaterials': ['/hzlc_20210819191751.jpg'], 'proofOfIncome': ['/hzlc_20210819191759.jpg'], 'writtenApplicationMaterials': ['/APP_20200811142432_20210819191759.pdf'], 'otherInformation': ['/dinggg_20210819191801.jpg'], 'bankruptcyProve': [], 'acquaintHighLevelInstructionsProve': [], 'tradingAuthorization': []}, 'settleAcctS': [], 'clientType': 'PERSONAL', 'openWay': 'visitingAccount', 'bankName': '', 'bankCardNo': '', 'elecNo': '', 'responsible': 'kwokwah.wong', 'emailLanguage': 'zh-hans', 'accts': ['securitiesAyersCash'], 'promotionNumber': 'EDAC520', 'agreeToTheTerms': 'true', 'personalInfoDeclartion': 'true'};响应结果为：'{"code":"0000","msg":"操作成功","data":null}'
+2021-12-11 14:51:08,908   12332     INFO test_创建其他类型交易账号.py(142) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-12-11 14:51:08,908   12332     INFO result.py(156) - 测试执行通过： test_01_applyClient用户资料提交用例校验 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:51:08,923   12332     INFO result.py(90) - 测试结束： test_01_applyClient用户资料提交用例校验 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:51:08,937   12332     INFO result.py(91) - 耗时： 6.583407163619995
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='ft1.6'>
+<td>ft1.6</td>
+    <td class='failCase' colspan='7'>
+        <div class='testcase'>test_02_submitAudit提交审核</div>
+    </td>
+    <td class='failCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='failCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.6.1',1, false)">
+            <span class="lang-cn">失败</span>
+            <span class="lang-en">fail</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_ft1.6.1' name='div_ft1.6.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_ft1.6.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>ft1.6.1:
+2021-12-11 14:51:08,937   12332     INFO result.py(69) - 开始测试： test_02_submitAudit提交审核 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:51:08,937   12332     INFO test_创建其他类型交易账号.py(14) - CreatUser创建其他类型交易账号
+2021-12-11 14:51:08,937   12332     INFO CreatUser_创建其他交易类型账号.py(245) - 等待系统录入数据后再修改WorldCheck的状态，等待时间40s
+2021-12-11 14:51:41,246   12332     INFO CreatUser_创建其他交易类型账号.py(250) - *******************************************已完成修改WorldCheck的状态为FALSE*******************************************
+2021-12-11 14:52:21,276   12332     INFO CreatUser_创建其他交易类型账号.py(260) - 当前token为:D1418E4FC592C74693E482B1397A41827AC79FFD18F78973
+2021-12-11 14:52:21,324   12332     INFO CreatUser_创建其他交易类型账号.py(266) - 提交审核获取到的手机号为：11339703532
+2021-12-11 14:52:21,709   12332     INFO CreatUser_创建其他交易类型账号.py(277) - 步骤2提交审核接口'http://sit-cdms.ynm3k.com/api/client/submitAudit';请求参数为:{'applyId': 1151660, 'clientSource': 'CDMS', 'workFlowCode': 'openClient'};响应结果为:'{"code":"CDMS_04040","msg":"用户没有创建worldCheck或未关联，请检查，稍后操作","data":""}'
+2021-12-11 14:52:27,741   12332     INFO test_创建其他类型交易账号.py(142) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-12-11 14:52:27,757   12332  WARNING result.py(190) - 测试未通过： test_02_submitAudit提交审核 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建其他类型交易账号.py", line 26, in test_02_submitAudit提交审核
+    self.assertEqual("操作成功", submitAudit.json().get("msg"))
+AssertionError: '操作成功' != '用户没有创建worldCheck或未关联，请检查，稍后操作'
+- 操作成功
++ 用户没有创建worldCheck或未关联，请检查，稍后操作
+
+
+2021-12-11 14:52:27,757   12332     INFO result.py(90) - 测试结束： test_02_submitAudit提交审核 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:52:27,757   12332     INFO result.py(91) - 耗时： 78.81954169273376
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='ft1.7'>
+<td>ft1.7</td>
+    <td class='failCase' colspan='7'>
+        <div class='testcase'>test_03_operatingWorkFlowFirst提交锁</div>
+    </td>
+    <td class='failCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='failCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.7.1',1, false)">
+            <span class="lang-cn">失败</span>
+            <span class="lang-en">fail</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_ft1.7.1' name='div_ft1.7.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_ft1.7.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>ft1.7.1:
+2021-12-11 14:52:27,773   12332     INFO result.py(69) - 开始测试： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:52:27,773   12332     INFO test_创建其他类型交易账号.py(14) - CreatUser创建其他类型交易账号
+2021-12-11 14:53:02,793   12332     INFO CreatUser_创建其他交易类型账号.py(290) - 当前token为:D1418E4FC592C74693E482B1397A41827AC79FFD18F78973
+2021-12-11 14:53:02,838   12332     INFO CreatUser_创建其他交易类型账号.py(298) - 提交审核获取到的手机号为：11339703532
+2021-12-11 14:53:02,944   12332     INFO CreatUser_创建其他交易类型账号.py(309) - 步骤3提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow';请求参数为:{'applyId': 1151660, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1151660","applyNo":null,"result":false,"operatingMessage":"当前用户没有权限锁定/解锁该记录"}]}'
+2021-12-11 14:53:08,971   12332     INFO test_创建其他类型交易账号.py(142) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-12-11 14:53:08,987   12332  WARNING result.py(190) - 测试未通过： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建其他类型交易账号.py", line 33, in test_03_operatingWorkFlowFirst提交锁
+    self.assertEqual("操作成功", operatingWorkFlowFirst.json().get("data")[0].get("operatingMessage"))
+AssertionError: '操作成功' != '当前用户没有权限锁定/解锁该记录'
+- 操作成功
++ 当前用户没有权限锁定/解锁该记录
+
+
+2021-12-11 14:53:08,987   12332     INFO result.py(90) - 测试结束： test_03_operatingWorkFlowFirst提交锁 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:53:09,003   12332     INFO result.py(91) - 耗时： 41.21385478973389
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='pt1.8'>
+<td>pt1.8</td>
+    <td class='passCase' colspan='7'>
+        <div class='testcase'>test_04_saveRiskAssessment风控评估提交</div>
+    </td>
+    <td class='passCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='passCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.8.1',1, false)">
+            <span class="lang-cn">通过</span>
+            <span class="lang-en">pass</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_pt1.8.1' name='div_pt1.8.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_pt1.8.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>pt1.8.1:
+2021-12-11 14:53:09,035   12332     INFO result.py(69) - 开始测试： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:53:09,035   12332     INFO test_创建其他类型交易账号.py(14) - CreatUser创建其他类型交易账号
+2021-12-11 14:53:09,035   12332     INFO CreatUser_创建其他交易类型账号.py(328) - 当前applyId为：1151660
+2021-12-11 14:53:09,141   12332     INFO CreatUser_创建其他交易类型账号.py(352) - 步骤4提交审核接口'http://sit-cdms.ynm3k.com/api/client/saveRiskAssessment';请求参数为:{'applyId': 1151660, 'riskAssessmentInfoDTO': {'isAmlOrCft': 'true', 'isPeb': None, 'isPolice': None, 'isIcac': None, 'isHighRiskBusiness': None, 'isJfiu': None, 'isCorruption': None, 'isOtherInformation': None, 'nonFaceToFace': None, 'isUnemployed': None, 'isNonFatf': None, 'isNonFinancial': None, 'isTemporaryAddr': None, 'residence': '新西兰', 'otherInformation': '', 'riskAssessmentLevel': 'TERMINATE'}};响应结果为:'{"code":"0000","msg":"操作成功","data":null}'
+2021-12-11 14:53:15,245   12332     INFO test_创建其他类型交易账号.py(142) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-12-11 14:53:15,245   12332     INFO result.py(156) - 测试执行通过： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:53:15,245   12332     INFO result.py(90) - 测试结束： test_04_saveRiskAssessment风控评估提交 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:53:15,260   12332     INFO result.py(91) - 耗时： 6.210371017456055
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='ft1.9'>
+<td>ft1.9</td>
+    <td class='failCase' colspan='7'>
+        <div class='testcase'>test_05_operatingWorkFlow内部人员审核</div>
+    </td>
+    <td class='failCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='failCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.9.1',1, false)">
+            <span class="lang-cn">失败</span>
+            <span class="lang-en">fail</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_ft1.9.1' name='div_ft1.9.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_ft1.9.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>ft1.9.1:
+2021-12-11 14:53:15,276   12332     INFO result.py(69) - 开始测试： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:53:15,276   12332     INFO test_创建其他类型交易账号.py(14) - CreatUser创建其他类型交易账号
+2021-12-11 14:53:15,276   12332     INFO CreatUser_创建其他交易类型账号.py(364) - 当前token为:D1418E4FC592C74693E482B1397A41827AC79FFD18F78973
+2021-12-11 14:53:15,369   12332     INFO CreatUser_创建其他交易类型账号.py(463) - 步骤5提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow';请求参数为:{'applyId': 1151660, 'checkItemList': [{'itemId': '1', 'itemCde': 'Application Form', 'itemDesc': 'Application Form', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '2', 'itemCde': 'Fee schedule', 'itemDesc': 'Fee schedule', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '3', 'itemCde': 'ID card Copy', 'itemDesc': 'ID card Copy', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '4', 'itemCde': 'SFC search', 'itemDesc': 'SFC search', 'cscheckFlag': 'true', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '5', 'itemCde': 'Worldcheck', 'itemDesc': 'Worldcheck', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '6', 'itemCde': 'Address Proof (if any)', 'itemDesc': 'Address Proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '7', 'itemCde': 'Bank proof (if any)', 'itemDesc': 'Bank proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '8', 'itemCde': 'Source of Fund (if any)', 'itemDesc': 'Source of Fund (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '9', 'itemCde': 'Source of Wealth (if any)', 'itemDesc': 'Source of Wealth (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '10', 'itemCde': 'Other', 'itemDesc': 'Other', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}], 'workFlowCode': 'openClient', 'controlCode': 'PASS', 'isStaff': 'false', 'lockBy': 'ED_RO', 'licensedPersonSign': ''};响应结果为:'{"code":"CDMS_04010","msg":"错误码：[CDMS_04010]，您当前没权限进行此操作。","data":""}'
+2021-12-11 14:53:21,394   12332     INFO test_创建其他类型交易账号.py(142) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-12-11 14:53:21,410   12332  WARNING result.py(190) - 测试未通过： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建其他类型交易账号.py", line 45, in test_05_operatingWorkFlow内部人员审核
+    self.assertEqual("操作成功", operatingWorkFlow.json().get("msg"))
+AssertionError: '操作成功' != '错误码：[CDMS_04010]，您当前没权限进行此操作。'
+- 操作成功
++ 错误码：[CDMS_04010]，您当前没权限进行此操作。
+
+
+2021-12-11 14:53:21,425   12332     INFO result.py(90) - 测试结束： test_05_operatingWorkFlow内部人员审核 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:53:21,441   12332     INFO result.py(91) - 耗时： 6.148568630218506
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='ft1.10'>
+<td>ft1.10</td>
+    <td class='failCase' colspan='7'>
+        <div class='testcase'>test_06_operatingWorkFlowNo不用锁定审核通过</div>
+    </td>
+    <td class='failCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='failCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.10.1',1, false)">
+            <span class="lang-cn">失败</span>
+            <span class="lang-en">fail</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_ft1.10.1' name='div_ft1.10.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_ft1.10.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>ft1.10.1:
+2021-12-11 14:53:21,471   12332     INFO result.py(69) - 开始测试： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:53:21,471   12332     INFO test_创建其他类型交易账号.py(14) - CreatUser创建其他类型交易账号
+2021-12-11 14:53:21,471   12332     INFO CreatUser_创建其他交易类型账号.py(475) - 当前token为:D1418E4FC592C74693E482B1397A41827AC79FFD18F78973
+2021-12-11 14:53:21,471   12332     INFO CreatUser_创建其他交易类型账号.py(481) - 提交审核获取到的手机号为：11339703532
+2021-12-11 14:53:21,471   12332     INFO CreatUser_创建其他交易类型账号.py(484) - 当前applyId为：1151660
+2021-12-11 14:53:21,563   12332     INFO CreatUser_创建其他交易类型账号.py(574) - 步骤6提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow';请求参数为:{'applyId': 1151660, 'checkItemList': [{'itemId': '1', 'itemCde': 'Application Form', 'itemDesc': 'Application Form', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '2', 'itemCde': 'Fee schedule', 'itemDesc': 'Fee schedule', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '3', 'itemCde': 'ID card Copy', 'itemDesc': 'ID card Copy', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '4', 'itemCde': 'SFC search', 'itemDesc': 'SFC search', 'cscheckFlag': 'true', 'rocheckFlag': 'true', 'opscheckFlag': 'false'}, {'itemId': '5', 'itemCde': 'Worldcheck', 'itemDesc': 'Worldcheck', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '6', 'itemCde': 'Address Proof (if any)', 'itemDesc': 'Address Proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '7', 'itemCde': 'Bank proof (if any)', 'itemDesc': 'Bank proof (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '8', 'itemCde': 'Source of Fund (if any)', 'itemDesc': 'Source of Fund (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '9', 'itemCde': 'Source of Wealth (if any)', 'itemDesc': 'Source of Wealth (if any)', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}, {'itemId': '10', 'itemCde': 'Other', 'itemDesc': 'Other', 'cscheckFlag': 'false', 'rocheckFlag': 'false', 'opscheckFlag': 'false'}], 'workFlowCode': 'openClient', 'controlCode': 'PASS'};响应结果为:'{"code":"CDMS_04010","msg":"错误码：[CDMS_04010]，您当前没权限进行此操作。","data":""}'
+2021-12-11 14:53:27,643   12332     INFO test_创建其他类型交易账号.py(142) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-12-11 14:53:27,659   12332  WARNING result.py(190) - 测试未通过： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建其他类型交易账号.py", line 52, in test_06_operatingWorkFlowNo不用锁定审核通过
+    self.assertEqual("操作成功", operatingWorkFlowNo.json().get("msg"))
+AssertionError: '操作成功' != '错误码：[CDMS_04010]，您当前没权限进行此操作。'
+- 操作成功
++ 错误码：[CDMS_04010]，您当前没权限进行此操作。
+
+
+2021-12-11 14:53:27,659   12332     INFO result.py(90) - 测试结束： test_06_operatingWorkFlowNo不用锁定审核通过 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:53:27,675   12332     INFO result.py(91) - 耗时： 6.187463045120239
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='ft1.11'>
+<td>ft1.11</td>
+    <td class='failCase' colspan='7'>
+        <div class='testcase'>test_07_operatingWorkFlowAgaint提交锁</div>
+    </td>
+    <td class='failCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='failCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.11.1',1, false)">
+            <span class="lang-cn">失败</span>
+            <span class="lang-en">fail</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_ft1.11.1' name='div_ft1.11.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_ft1.11.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>ft1.11.1:
+2021-12-11 14:53:27,675   12332     INFO result.py(69) - 开始测试： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:53:27,675   12332     INFO test_创建其他类型交易账号.py(14) - CreatUser创建其他类型交易账号
+2021-12-11 14:53:27,675   12332     INFO CreatUser_创建其他交易类型账号.py(592) - 提交审核获取到的手机号为：11339703532
+2021-12-11 14:53:27,801   12332     INFO CreatUser_创建其他交易类型账号.py(603) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow';请求参数为:{'applyId': 1151660, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1151660","applyNo":null,"result":false,"operatingMessage":"当前用户没有权限锁定/解锁该记录"}]}'
+2021-12-11 14:53:33,821   12332     INFO test_创建其他类型交易账号.py(142) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-12-11 14:53:33,837   12332  WARNING result.py(190) - 测试未通过： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建其他类型交易账号.py", line 60, in test_07_operatingWorkFlowAgaint提交锁
+    self.assertEqual("操作成功", operatingWorkFlowAgaint.json().get("data")[0].get("operatingMessage"))
+AssertionError: '操作成功' != '当前用户没有权限锁定/解锁该记录'
+- 操作成功
++ 当前用户没有权限锁定/解锁该记录
+
+
+2021-12-11 14:53:33,837   12332     INFO result.py(90) - 测试结束： test_07_operatingWorkFlowAgaint提交锁 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:53:33,853   12332     INFO result.py(91) - 耗时： 6.162530183792114
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='ft1.12'>
+<td>ft1.12</td>
+    <td class='failCase' colspan='7'>
+        <div class='testcase'>test_08_batchOperatingWorkFlow批量生成账号确定</div>
+    </td>
+    <td class='failCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='failCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.12.1',1, false)">
+            <span class="lang-cn">失败</span>
+            <span class="lang-en">fail</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_ft1.12.1' name='div_ft1.12.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_ft1.12.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>ft1.12.1:
+2021-12-11 14:53:33,869   12332     INFO result.py(69) - 开始测试： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:53:33,869   12332     INFO test_创建其他类型交易账号.py(14) - CreatUser创建其他类型交易账号
+2021-12-11 14:53:33,931   12332     INFO CreatUser_创建其他交易类型账号.py(638) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/batchOperatingWorkFlow';请求参数为:{'applyIds': [1151660], 'workFlowCode': 'openClient', 'controlCode': 'GENERATEACCTNO', 'workFlowOperatingDTOList': [{'applyId': 1151660}]};响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1151660","applyNo":null,"result":false,"operatingMessage":"您当前没权限进行此操作"}]}'
+2021-12-11 14:53:39,964   12332     INFO test_创建其他类型交易账号.py(142) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-12-11 14:53:39,979   12332  WARNING result.py(190) - 测试未通过： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建其他类型交易账号.py", line 67, in test_08_batchOperatingWorkFlow批量生成账号确定
+    self.assertEqual(True, batchOperatingWorkFlow.json().get("data")[0].get("result"))
+AssertionError: True != False
+
+2021-12-11 14:53:39,979   12332     INFO result.py(90) - 测试结束： test_08_batchOperatingWorkFlow批量生成账号确定 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:53:39,995   12332     INFO result.py(91) - 耗时： 6.109673261642456
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='ft1.13'>
+<td>ft1.13</td>
+    <td class='failCase' colspan='7'>
+        <div class='testcase'>test_09_operatingWorkFlowThird提交锁</div>
+    </td>
+    <td class='failCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='failCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.13.1',1, false)">
+            <span class="lang-cn">失败</span>
+            <span class="lang-en">fail</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_ft1.13.1' name='div_ft1.13.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_ft1.13.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>ft1.13.1:
+2021-12-11 14:53:39,995   12332     INFO result.py(69) - 开始测试： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:53:39,995   12332     INFO test_创建其他类型交易账号.py(14) - CreatUser创建其他类型交易账号
+2021-12-11 14:53:39,995   12332     INFO CreatUser_创建其他交易类型账号.py(655) - 提交审核获取到的手机号为：11339703532
+2021-12-11 14:53:39,995   12332     INFO CreatUser_创建其他交易类型账号.py(659) - 当前applyId为：1151660
+2021-12-11 14:53:40,135   12332     INFO CreatUser_创建其他交易类型账号.py(667) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/operatingWorkFlow',请求参数为：{'applyId': 1151660, 'workFlowCode': 'openClient', 'controlCode': 'LOCK'},的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1151660","applyNo":null,"result":false,"operatingMessage":"当前用户没有权限锁定/解锁该记录"}]}'
+2021-12-11 14:53:46,155   12332     INFO test_创建其他类型交易账号.py(142) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-12-11 14:53:46,187   12332  WARNING result.py(190) - 测试未通过： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建其他类型交易账号.py", line 74, in test_09_operatingWorkFlowThird提交锁
+    self.assertEqual("操作成功", operatingWorkFlowThird.json().get("data")[0].get("operatingMessage"))
+AssertionError: '操作成功' != '当前用户没有权限锁定/解锁该记录'
+- 操作成功
++ 当前用户没有权限锁定/解锁该记录
+
+
+2021-12-11 14:53:46,187   12332     INFO result.py(90) - 测试结束： test_09_operatingWorkFlowThird提交锁 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:53:46,187   12332     INFO result.py(91) - 耗时： 6.192450761795044
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='ft1.14'>
+<td>ft1.14</td>
+    <td class='failCase' colspan='7'>
+        <div class='testcase'>test_10_batchOperatingWorkFlowEnd批量确认</div>
+    </td>
+    <td class='failCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='failCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.14.1',1, false)">
+            <span class="lang-cn">失败</span>
+            <span class="lang-en">fail</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_ft1.14.1' name='div_ft1.14.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_ft1.14.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>ft1.14.1:
+2021-12-11 14:53:46,203   12332     INFO result.py(69) - 开始测试： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:53:46,203   12332     INFO test_创建其他类型交易账号.py(14) - CreatUser创建其他类型交易账号
+2021-12-11 14:53:46,203   12332     INFO CreatUser_创建其他交易类型账号.py(684) - 提交审核获取到的手机号为：11339703532
+2021-12-11 14:53:46,203   12332     INFO CreatUser_创建其他交易类型账号.py(688) - 当前applyId为：1151660
+2021-12-11 14:53:46,296   12332     INFO CreatUser_创建其他交易类型账号.py(704) - 提交审核接口'http://sit-cdms.ynm3k.com/api/common/batchOperatingWorkFlow';请求参数为:{'applyIds': [1151660], 'workFlowCode': 'openClient', 'controlCode': 'PASS', 'workFlowOperatingDTOList': [{'applyId': 1151660}]};的响应结果为:'{"code":"0000","msg":"操作成功","data":[{"applyId":"1151660","applyNo":null,"result":false,"operatingMessage":"您当前没权限进行此操作"}]}'
+2021-12-11 14:53:52,328   12332     INFO test_创建其他类型交易账号.py(142) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-12-11 14:53:52,343   12332  WARNING result.py(190) - 测试未通过： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建其他类型交易账号.py", line 82, in test_10_batchOperatingWorkFlowEnd批量确认
+    self.assertEqual(True, batchOperatingWorkFlowEnd.json().get("data")[0].get("result"))
+AssertionError: True != False
+
+2021-12-11 14:53:52,359   12332     INFO result.py(90) - 测试结束： test_10_batchOperatingWorkFlowEnd批量确认 (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:53:52,374   12332     INFO result.py(91) - 耗时： 6.155550003051758
+
+</pre>
+            <div><ul class='figure_ul'><ul></div>
+        </div>
+    </td>
+</tr><tr id='et1.15'>
+<td>et1.15</td>
+    <td class='errorCase' colspan='7'>
+        <div class='testcase'>test_15_SQLCheckUser</div>
+    </td>
+    <td class='errorCase'>
+        <div class='testcase' style="margin-left: auto;">0</div>
+    </td>
+    <td class='errorCase' align='center'>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_et1.15.1',1, false)">
+            <span class="lang-cn">错误</span>
+            <span class="lang-en">error</span>
+        </a>
+    </td>
+</tr>
+<tr id='div_S_et1.15.1' name='div_et1.15.1' class="hiddenRow">
+    <td colspan='10'>
+        <div class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'
+                 onclick="document.getElementById('div_S_et1.15.1').className = 'hiddenRow'">
+                <a onfocus='this.blur();'>[x]</a>
+            </div>
+            <pre>et1.15.1:
+2021-12-11 14:53:52,390   12332     INFO result.py(69) - 开始测试： test_15_SQLCheckUser (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:53:52,390   12332     INFO test_创建其他类型交易账号.py(14) - CreatUser创建其他类型交易账号
+2021-12-11 14:53:52,390   12332     INFO test_创建其他类型交易账号.py(116) - 从文本中读到的用户基本信息为：['11339703532', '9LTlUwW9@163.com', 'Fingerv', 'Wden', '袁承Y', '340101196909081023', 'mrs', 'securitiesAyersCash']
+2021-12-11 14:54:02,678   12332     INFO CreatUser_创建其他交易类型账号.py(911) - 通过'11339703532'查询cd_enty表的结果为()
+2021-12-11 14:54:08,685   12332     INFO test_创建其他类型交易账号.py(142) - 接口请求完成后，等待系统处理数据，等待6秒
+2021-12-11 14:54:08,685   12332    ERROR result.py(175) - 测试产生错误： test_15_SQLCheckUser (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+Traceback (most recent call last):
+  File "F:\python\EDDID_CDMS\Test_Case\test_创建其他类型交易账号.py", line 119, in test_15_SQLCheckUser
+    self.assertEqual(userinf[0], SQLCheckUser[0][18])
+IndexError: tuple index out of range
+
+2021-12-11 14:54:08,685   12332     INFO result.py(90) - 测试结束： test_15_SQLCheckUser (Test_Case.test_创建其他类型交易账号.Test_CreatUser创建其他类型交易账号)
+2021-12-11 14:54:08,685   12332     INFO result.py(91) - 耗时： 16.295451402664185
 
 </pre>
             <div><ul class='figure_ul'><ul></div>
@@ -902,12 +1421,12 @@ goChart(chartData_cn);
             <span class="lang-cn">合计</span>
             <span class="lang-en">Total</span>
         </td>
-        <td>3</td>
-        <td class="passCase">3</td>
-        <td class="failCase">0</td>
-        <td class="errorCase">0</td>
+        <td>15</td>
+        <td class="passCase">2</td>
+        <td class="failCase">8</td>
+        <td class="errorCase">5</td>
         <td class="skipCase">0</td>
-        <td style="text-align:right;">100.00%</td>
+        <td style="text-align:right;">13.33%</td>
         <td>0</td>
         <td>&nbsp;</td>
     </tr>

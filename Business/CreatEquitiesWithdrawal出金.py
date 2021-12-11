@@ -12,7 +12,8 @@ class CreatEquitiesWithdrawal出金():
     def createWithdrawal创建出金单(self):
         global clientId, withdrawalAmount, eddidhost, token, s
         eddidhost = url
-        token=data_read('F:\\python\\EDDID_CDMS\\Data\\token.txt')
+        # token=data_read('F:\\python\\EDDID_CDMS\\Data\\token.txt')
+        token = cdms_获取token()
         s = requests.Session()
         # Randoms实例化
         # clientId = Randoms().choice_clientId()

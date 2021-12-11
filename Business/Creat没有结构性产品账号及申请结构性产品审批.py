@@ -56,7 +56,8 @@ class CreatUser无结构性产品用户创建():
         # 配置文件cdms_config中引入host
         eddidhost = url
 
-        token=data_read('F:\\python\\EDDID_CDMS\\Data\\token.txt')
+        # token=data_read('F:\\python\\EDDID_CDMS\\Data\\token.txt')
+        token = cdms_获取token()
         s = requests.Session()
 
         headers = {

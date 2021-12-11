@@ -122,7 +122,8 @@ if __name__=="__main__":
     # print("gs_wrkflw_log",gs_wrkflw_log(52154))
     # print("get_newrate",get_newrate())
     # print("cd_deposit++++++++++++++",cd_deposit(11431,46.41))
-    print("get_clnt_id:",get_clnt_id(13480701220))
+    print("get_clnt_id:",get_clnt_id(13480701220)[0][1])
+    print("get_clnt_id:",get_clnt_id(11339703532)[0][1])
     print("cd_ac_id:",cd_ac_id(5007805216))
     print("cd_ac_trading_apply:",cd_ac_trading_apply(88060))
 

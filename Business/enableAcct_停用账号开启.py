@@ -28,7 +28,8 @@ class enableAcct停用后开启():
         global token, eddidhost, s, cookfront
         # 生成新邮箱
         eddidhost = url
-        token=data_read('F:\\python\\EDDID_CDMS\\Data\\token.txt')
+        # token=data_read('F:\\python\\EDDID_CDMS\\Data\\token.txt')
+        token = cdms_获取token()
         s = requests.Session()
         # cookies的前缀
         cookfront = cookfr

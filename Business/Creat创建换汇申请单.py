@@ -19,9 +19,9 @@ class CreateExchange():
         # 查询符合条件的换汇账号
         comp_account = cd_ac(clientId)[0][0]
         #从token.txt文档中获取token
-        token=data_read('F:\\python\\EDDID_CDMS\\Data\\token.txt')
+        # token=data_read('F:\\python\\EDDID_CDMS\\Data\\token.txt')
         # print("token-------------",token)
-        # token = cdms_获取token()
+        token = cdms_获取token()
         s = requests.Session()
         # 引入url
         eddidhost = url

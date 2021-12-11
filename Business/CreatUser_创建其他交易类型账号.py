@@ -35,9 +35,6 @@ class CreatUser创建其他类型交易账号():
 
         Language = Randoms().choice_Language()
 
-
-
-
         # 新列表用来存放用户基本信息
         userinformationList = []
         userinformationList.append(phone)
@@ -56,6 +53,7 @@ class CreatUser创建其他类型交易账号():
         # 配置文件cdms_config中引入host
         eddidhost = url
         token = cdms_获取token()
+        # token = data_read('F:\\python\\EDDID_CDMS\\Data\\token.txt')
         s = requests.Session()
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
@@ -711,11 +709,13 @@ class CreatUser创建其他类型交易账号():
 
     # 步骤11
     def addAccountTrading(self):
-
         global clnt_id,eddid_id
         phone = datahandle(data_read('F:\\python\\EDDID_CDMS\\Data\\userdatainf.txt'))[0]
+        print("phone88888887777777:",phone)
         clnt_id = get_clnt_id(phone)[0][1]
+        print("clnt_id888887777777:",clnt_id)
         eddid_id = cd_clnt(clnt_id)[0][3]
+        print("eddid_id:",eddid_id)
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "Connection": "keep-alive",
