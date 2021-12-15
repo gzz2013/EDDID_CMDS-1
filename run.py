@@ -8,9 +8,9 @@ from Test_Suite import suite_用户创建及审批, suite_用户创建结构性�
 
 
 #收集用例之前先把token写到对应文件
-token = cdms_获取token()
+# token = cdms_获取token()
 # 将token写入文本
-data_write('F:\\python\\EDDID_CDMS\\Data\\token.txt', token)
+# data_write('F:\\python\\EDDID_CDMS\\Data\\token.txt', token)
 
 suite = unittest.TestSuite()
 suite.addTests(suite_用户创建及审批.get_suite_creatUser新建用户())
