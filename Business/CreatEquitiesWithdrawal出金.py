@@ -17,8 +17,11 @@ class CreatEquitiesWithdrawal出金():
         s = requests.Session()
         # Randoms实例化
         # clientId = Randoms().choice_clientId()
-        clientId=11431
-        # accountId因clientId而变化
+        # clientId=11431
+        clientId = 12071
+        # accountId=120711110
+        # accountId因cli
+        # entId而变化
         if clientId == 11431:
             # 证券现金账户
             accountId = 114311110

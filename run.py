@@ -1,16 +1,16 @@
 import unittest
 import HTMLReport
-# from Business.login import cdms_获取token
-# from Common.data_文本读写 import *
+from Business.login import cdms_获取token
+from Common.data_文本读写 import *
 
 from Test_Suite import suite_用户创建及审批, suite_用户创建结构性产品及审批, suite_换汇申请单, suite_出金申请单, suite_入金申请单, suite_大额入金申请单, \
     suite_用户创建全类型交易账户及审批, suite_用户创建及审批后停用, suite_停用账号操作开启, suite_账号关闭,suite_创建其他类型交易账号
 
 
 #收集用例之前先把token写到对应文件
-# token = cdms_获取token()
+token = cdms_获取token()
 # 将token写入文本
-# data_write('F:\\python\\EDDID_CDMS\\Data\\token.txt', token)
+data_write('F:\\python\\EDDID_CDMS\\Data\\token.txt', token)
 
 suite = unittest.TestSuite()
 suite.addTests(suite_用户创建及审批.get_suite_creatUser新建用户())
@@ -23,7 +23,7 @@ suite.addTests(suite_用户创建全类型交易账户及审批.get_suite_creatU
 suite.addTests(suite_用户创建及审批后停用.get_suite_creatUser新建用户后停用())
 suite.addTests(suite_停用账号操作开启.get_suite_enableAcct停用后开启())
 suite.addTests(suite_账号关闭.get_suite_closeAcct账号关闭())
-# suite.addTests(suite_创建其他类型交易账号.get_suite_CreatUser创建其他类型交易账号())
+suite.addTests(suite_创建其他类型交易账号.get_suite_CreatUser创建其他类型交易账号())
 
 if __name__ == '__main__':
     HTMLReport.TestRunner(

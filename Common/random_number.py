@@ -194,7 +194,7 @@ class Randoms():
 
     #生成随机金额
     def randomAmount(self):
-        rAmount=float(random.randint(1,100))+float('%.2f'%(random.random()))
+        rAmount=float(random.randint(0,1))+float('%.2f'%(random.random()))
         return rAmount
 
     #生成随机金额

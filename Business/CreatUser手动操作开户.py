@@ -225,9 +225,9 @@ class CreatUser():
             "elecNo": "",
             "responsible": "kwokwah.wong",
             # "emailLanguage": Language,
-            "emailLanguage": "zh-hans",
+            # "emailLanguage": "zh-hans",
             # 简体
-            # "emailLanguage": "zh-hant",
+            "emailLanguage": "zh-hant",
             # 繁体
             "accts": [
                 # caccts
@@ -724,9 +724,9 @@ class CreatUser():
 if __name__ == "__main__":
     a = 1
     CreatUser = CreatUser()
-    token = cdms_获取token()
-    # 将token写入文本
-    data_write('F:\\python\\EDDID_CDMS\\Data\\token.txt', token)
+    # token = cdms_获取token()
+    # # 将token写入文本
+    # data_write('F:\\python\\EDDID_CDMS\\Data\\token.txt', token)
     for i in range(a):
         # 实例化CreatUser
         print("=====================================步骤1：", CreatUser.ApplyClinet资料提交().text)

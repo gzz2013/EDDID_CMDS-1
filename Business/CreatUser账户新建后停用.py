@@ -29,7 +29,8 @@ class CreatUser账户新建后停用():
         # 生成称谓（性别）
         ctitle = Randoms().choice_title()
         # 获取随机的账户类型
-        caccts = Randoms().choice_accts()
+        # caccts = Randoms().choice_accts()
+        caccts = Randoms().choice_accts_nofutures()
         # cookies的前缀
         cookfront = cookfr
         # 随机选择语言
@@ -715,15 +716,22 @@ class CreatUser账户新建后停用():
         return CheckUsers
 
     def unableAcct(self):
-        global clnt
-        clnt = get_clnt_id(phone)[0][0]
-        userinformationList.append(clnt)
+        global ac_id
+        ac_id = get_clnt_id(phone)[0][0]
+        clnt_id=get_clnt_id(phone)[0][1]
+
+        # userinformationList.append(ac_id)
+        # userinformationList.append(clnt_id)
         # data_write('F:\\python\\EDDID_CDMS\\Data\\userdatainf.txt', userinformationList)
-        # data_write('F:\\python\\EDDID_CDMS\\Data\\unableAcct.txt', clnt)
-        # print("=======已经将{}写入unableAcct.txt".format(clnt))
+        # data_write('F:\\python\\EDDID_CDMS\\Data\\unableAcct.txt', ac_id)
+        # print("=======已经将{}写入unableAcct.txt".format(ac_id))
         # 将账号写到指定文档
         unableA = []
-        unableA.append(clnt)
+        unableA.append(ac_id)
+        unableA.append(clnt_id)
+        unableA.append(phone)
+        unableA.append(rfirstName)
+        unableA.append(rlastName)
         data_write('F:\\python\\EDDID_CDMS\\Data\\unableAcct.txt', unableA)
         headers = {
             "Accept": "application/x-www-form-urlencoded, text/javascript, */*; q=0.01",
@@ -740,7 +748,7 @@ class CreatUser账户新建后停用():
         # applyId = cd_clnt_apply_info(phone)
         logging.info("当前applyId为：{}".format(applyId))
         data = {
-            "accountId": clnt,
+            "accountId": ac_id,
             "suspendReason": "自动化测试账号暂停"
         }
         print("data=", data)
@@ -752,9 +760,9 @@ class CreatUser账户新建后停用():
     def SQLCheck_ac_stat(self):
         time.sleep(5)
         # 通过交易账户直接调用cd_ac表查询
-        Check_ac_stat = cd_ac_id(clnt)
-        print("步骤13执行完成，通过clnt='{}'查询cd_ac表的结果为{}".format(clnt, Check_ac_stat))
-        logging.info("步骤13执行完成，通过clnt='{}'查询cd_ac表的结果为{}".format(clnt, Check_ac_stat))
+        Check_ac_stat = cd_ac_id(ac_id)
+        print("步骤13执行完成，通过clnt='{}'查询cd_ac表的结果为{}".format(ac_id, Check_ac_stat))
+        logging.info("步骤13执行完成，通过clnt='{}'查询cd_ac表的结果为{}".format(ac_id, Check_ac_stat))
         return Check_ac_stat
 
 

@@ -9,8 +9,11 @@ from Common.com_sql.eddid_data_select import *
 from Config.cdms_config import *
 from Common.data_文本读写 import *
 
-
+#依赖于停用账号关闭账号用到账号
 class CreatUser创建其他类型交易账号():
+
+    #注释新建的账号
+    '''
     # 步骤1
     def ApplyClinet资料提交(self):
         global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo, cookfront, rchName
@@ -52,8 +55,8 @@ class CreatUser创建其他类型交易账号():
         logging.info("记录数据的文件名为：userdatainf.txt，写入数据为:{}".format(userinformationList))
         # 配置文件cdms_config中引入host
         eddidhost = url
-        token = cdms_获取token()
-        # token = data_read('F:\\python\\EDDID_CDMS\\Data\\token.txt')
+        # token = cdms_获取token()
+        token = data_read('F:\\python\\EDDID_CDMS\\Data\\token.txt')
         s = requests.Session()
         headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
@@ -706,13 +709,20 @@ class CreatUser创建其他类型交易账号():
         print("步骤10提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(batchOperatingWorkFlowEndurl, data,
                                                           batchOperatingWorkFlowEndResp.text))
         return batchOperatingWorkFlowEndResp
-
-    # 步骤11
+    '''
+    # 步骤1
     def addAccountTrading(self):
-        global clnt_id,eddid_id
-        phone = datahandle(data_read('F:\\python\\EDDID_CDMS\\Data\\userdatainf.txt'))[0]
-        print("phone88888887777777:",phone)
-        clnt_id = get_clnt_id(phone)[0][1]
+        global clnt_id,eddid_id,cookfront,token,eddidhost,s,phone
+
+        s=requests.session()
+        token=cdms_获取token()
+        cookfront=cookfr
+        eddidhost=url
+        ac_id_l = datahandle(data_read('F:\\python\\EDDID_CDMS\\Data\\unableAcct.txt'))
+        clnt_id = ac_id_l[1]
+        phone=ac_id_l[2]
+        rfirstName=ac_id_l[3]
+        rlastName=ac_id_l[4]
         print("clnt_id888887777777:",clnt_id)
         eddid_id = cd_clnt(clnt_id)[0][3]
         print("eddid_id:",eddid_id)
@@ -771,8 +781,8 @@ class CreatUser创建其他类型交易账号():
             "isDerivativesWork": "Y",
             "isDerivativesDeal": "Y",
             "eddidId": eddid_id,
-            "chineseNam": rchName,
-            "companyName": "接口自动化" + phone,
+            "chineseNam": rfirstName + rlastName,
+            "companyName": "接口自动化",
             "workingYear": "11",
             "securitiesExperience": "gt10Years",
             "cbbcExperience": "gt10Years",
@@ -784,13 +794,13 @@ class CreatUser创建其他类型交易账号():
         }
         print("data=", data)
         addAccountTradingResp = s.post(url=addAccountTradingurl, headers=headers, json=data)
-        logging.info("提交审核接口'{}';请求参数为:{};的响应结果为:'{}'".format(addAccountTradingurl, data,
+        logging.info("步骤01提交审核接口'{}';请求参数为:{};的响应结果为:'{}'".format(addAccountTradingurl, data,
                                                               addAccountTradingResp.text))
-        print("步骤11提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(addAccountTradingurl, data,
+        print("步骤01提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(addAccountTradingurl, data,
                                                           addAccountTradingResp.text))
         return addAccountTradingResp
 
-    # 步骤12
+    # 步骤2
     def auditAccountTradingno(self):
         global AccountT_apply_no
         AccountT_apply_no = cd_ac_trading_apply(clnt_id)[0][0]
@@ -806,8 +816,8 @@ class CreatUser创建其他类型交易账号():
         print("当前token为:{}".format(token))
         print("headers", headers)
         auditAccountTradingurl = eddidhost + "/api/cdms/trading/auditAccountTrading"
-        logging.info("提交审核获取到的手机号为：{}".format(phone))
-        print("提交审核获取到的手机号为：{}".format(phone))
+        # logging.info("提交审核获取到的手机号为：{}".format(phone))
+        # print("提交审核获取到的手机号为：{}".format(phone))
         # global applyId
         # applyId = cd_clnt_apply_info(phone)
         logging.info("当前applyId为：{}".format(AccountT_apply_no))
@@ -821,13 +831,13 @@ class CreatUser创建其他类型交易账号():
         }
         print("data=", data)
         auditAccountTradingResp = s.post(url=auditAccountTradingurl, headers=headers, json=data)
-        logging.info("提交审核接口'{}';请求参数为:{};的响应结果为:'{}'".format(auditAccountTradingurl, data,
+        logging.info("步骤02提交审核接口'{}';请求参数为:{};的响应结果为:'{}'".format(auditAccountTradingurl, data,
                                                               auditAccountTradingResp.text))
-        print("步骤12提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(auditAccountTradingurl, data,
+        print("步骤02提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(auditAccountTradingurl, data,
                                                           auditAccountTradingResp.text))
         return auditAccountTradingResp
 
-    # 步骤13
+    # 步骤3
     def auditAccountTradingto(self):
         # AccountT_apply_no = cd_ac_trading_apply(clnt_id)
         print("当前applyId为：{}".format(AccountT_apply_no))
@@ -859,13 +869,13 @@ class CreatUser创建其他类型交易账号():
         }
         print("data=", data)
         auditAccountTradingResp = s.post(url=auditAccountTradingurl, headers=headers, json=data)
-        logging.info("提交审核接口'{}';请求参数为:{};的响应结果为:'{}'".format(auditAccountTradingurl, data,
+        logging.info("步骤03提交审核接口'{}';请求参数为:{};的响应结果为:'{}'".format(auditAccountTradingurl, data,
                                                               auditAccountTradingResp.text))
-        print("步骤13提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(auditAccountTradingurl, data,
+        print("步骤03提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(auditAccountTradingurl, data,
                                                           auditAccountTradingResp.text))
         return auditAccountTradingResp
 
-    # 步骤14
+    # 步骤4
     def auditAccountTradingth(self):
         # AccountT_apply_no = cd_ac_trading_apply(clnt_id)
         print("当前applyId为：{}".format(AccountT_apply_no))
@@ -897,20 +907,21 @@ class CreatUser创建其他类型交易账号():
         }
         print("data=", data)
         auditAccountTradingthResp = s.post(url=auditAccountTradingthurl, headers=headers, json=data)
-        logging.info("提交审核接口'{}';请求参数为:{};的响应结果为:'{}'".format(auditAccountTradingthurl, data,
+        logging.info("步骤04提交审核接口'{}';请求参数为:{};的响应结果为:'{}'".format(auditAccountTradingthurl, data,
                                                               auditAccountTradingthResp.text))
-        print("步骤14提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(auditAccountTradingthurl, data,
+        print("步骤04提交审核接口'{}';请求参数为:{};响应结果为:'{}'".format(auditAccountTradingthurl, data,
                                                           auditAccountTradingthResp.text))
         return auditAccountTradingthResp
 
-    # 步骤15
+    # 步骤5
     # 校验原来账号
     def SQLCheckUser(self):
         time.sleep(10)
         # 通过直接调用cd_enty表查询
+
         CheckUsers = cd_enty(phone)
-        print("通过phone='{}'查询cd_enty表的结果为{}".format(phone, CheckUsers))
-        logging.info("通过'{}'查询cd_enty表的结果为{}".format(phone, CheckUsers))
+        print("步骤05通过phone='{}'查询cd_enty表的结果为{}".format(phone, CheckUsers))
+        logging.info("步骤05通过'{}'查询cd_enty表的结果为{}".format(phone, CheckUsers))
         return CheckUsers
 
 
@@ -920,26 +931,26 @@ if __name__ == "__main__":
     CreatUser = CreatUser创建其他类型交易账号()
     for i in range(a):
         # 实例化CreatUser
-        print("=====================================步骤1：", CreatUser.ApplyClinet资料提交().text)
-        time.sleep(30)
-        print("=====================================步骤2：", CreatUser.SubmitAudit提交审核().text)
-        time.sleep(40)
-        print("=====================================步骤3：", CreatUser.operatingWorkFlowFirst提交锁().text)
-        time.sleep(4)
-        print("=====================================步骤4：", CreatUser.saveRiskAssessment风控评估提交().text)
-        time.sleep(4)
-        print("=====================================步骤5：", CreatUser.operatingWorkFlow内部人员审核().text)
-        time.sleep(4)
-        print("=====================================步骤6：", CreatUser.operatingWorkFlowNo不用锁定审核通过().text)
-        time.sleep(4)
-        print("=====================================步骤7：", CreatUser.operatingWorkFlowAgain提交锁().text)
-        time.sleep(4)
-        print("=====================================步骤8：", CreatUser.batchOperatingWorkFlow批量生成账号确定().text)
-        time.sleep(4)
-        print("=====================================步骤9：", CreatUser.operatingWorkFlowThird提交锁().text)
-        time.sleep(4)
-        print("=====================================步骤10：", CreatUser.batchOperatingWorkFlowEnd批量确认().text)
-        time.sleep(4)
+        # print("=====================================步骤1：", CreatUser.ApplyClinet资料提交().text)
+        # time.sleep(30)
+        # print("=====================================步骤2：", CreatUser.SubmitAudit提交审核().text)
+        # time.sleep(40)
+        # print("=====================================步骤3：", CreatUser.operatingWorkFlowFirst提交锁().text)
+        # time.sleep(4)
+        # print("=====================================步骤4：", CreatUser.saveRiskAssessment风控评估提交().text)
+        # time.sleep(4)
+        # print("=====================================步骤5：", CreatUser.operatingWorkFlow内部人员审核().text)
+        # time.sleep(4)
+        # print("=====================================步骤6：", CreatUser.operatingWorkFlowNo不用锁定审核通过().text)
+        # time.sleep(4)
+        # print("=====================================步骤7：", CreatUser.operatingWorkFlowAgain提交锁().text)
+        # time.sleep(4)
+        # print("=====================================步骤8：", CreatUser.batchOperatingWorkFlow批量生成账号确定().text)
+        # time.sleep(4)
+        # print("=====================================步骤9：", CreatUser.operatingWorkFlowThird提交锁().text)
+        # time.sleep(4)
+        # print("=====================================步骤10：", CreatUser.batchOperatingWorkFlowEnd批量确认().text)
+        # time.sleep(4)
         print("=====================================步骤11：", CreatUser.addAccountTrading().text)
         time.sleep(4)
         print("=====================================步骤12：", CreatUser.auditAccountTradingno().text)
@@ -948,8 +959,8 @@ if __name__ == "__main__":
         time.sleep(4)
         print("=====================================步骤14：", CreatUser.auditAccountTradingth().text)
         time.sleep(4)
-        print("=====================================步骤15：", CreatUser.SQLCheckUser())
-        time.sleep(4)
+        # print("=====================================步骤15：", CreatUser.SQLCheckUser())
+        # time.sleep(4)
 
 # if __name__=="__main__":
 #     CreatUser = CreatUser()

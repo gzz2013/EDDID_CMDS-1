@@ -60,8 +60,6 @@ def post_Email(username):
     smtp.sendmail(from_addr=username_send, to_addrs=username_recv.split(','), msg=mail.as_string())
     smtp.quit()  # 发送完毕后退出smtp
     print('success')
-
-
 # tokenid为机器人的token，text为关键字
 # 阿里群
 # send2robot("fb8e9870d1a020b0e0b4c139b9455c399d39c80030545c7ced062afa5b5dac6a","CMDS自动化测试报告")
@@ -69,7 +67,6 @@ def post_Email(username):
 send2robot("38f7002387ae37a28bac18bd3b3fe6289de0703cf66994f65288a2b1fb9d35a1","CMDS自动化测试报告")
 # 添加收件邮箱用”,“隔开
 post_Email("王桂香<guixiang.wang@edsz9.com>,张小增<jenny.zhang@edsz9.com>,甘杰祥<zack.gan@edsz9.com>,孙加祯<jiazhen.sun@edsz9.com>,陈东平<dongping.chen@edsz9.com>")
-
 # if __name__ == "__main__":
 #     # result=send2robot(sys.argv[1], sys.argv[2])
 #     token='fb8e9870d1a020b0e0b4c139b9455c399d39c80030545c7ced062afa5b5dac6a'

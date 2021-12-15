@@ -16,7 +16,7 @@ class CloseAcct账号关闭():
         global clnt
         clnt = datahandle(data_read('F:\\python\\EDDID_CDMS\\Data\\unableAcct.txt'))
 
-        # print("步骤13执行完成，通过clnt='{}'查询cd_ac表的结果为{}".format(clnt[0]))
+        # print("步骤13执行完成，通过clnt='{}'查询cd_ac表的结果为{}".format(ac_id[0]))
         # 通过交易账户直接调用cd_ac表查询
         Check_ac_stat_front = cd_ac_id(clnt[0])
         print("步骤1查询账号当前状态执行完成，通过clnt='{}'查询cd_ac表的结果为{}".format(clnt[0], Check_ac_stat_front))

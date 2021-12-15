@@ -13,14 +13,14 @@ class enableAcct停用后开启():
 
     # 账号开启前确认账号的状态是否是已经关闭
     def SQLCheck_ac_stat_front(self):
-        global clnt
-        clnt = datahandle(data_read('F:\\python\\EDDID_CDMS\\Data\\unableAcct.txt'))
+        global ac_id
+        ac_id = datahandle(data_read('F:\\python\\EDDID_CDMS\\Data\\unableAcct.txt'))
 
-        # print("步骤13执行完成，通过clnt='{}'查询cd_ac表的结果为{}".format(clnt[0]))
+        # print("步骤13执行完成，通过clnt='{}'查询cd_ac表的结果为{}".format(ac_id[0]))
         # 通过交易账户直接调用cd_ac表查询
-        Check_ac_stat_front = cd_ac_id(clnt[0])
-        print("步骤1查询账号当前状态执行完成，通过clnt='{}'查询cd_ac表的结果为{}".format(clnt[0], Check_ac_stat_front))
-        logging.info("步骤1查询账号当前状态执行完成，通过clnt='{}'查询cd_ac表的结果为{}".format(clnt[0], Check_ac_stat_front))
+        Check_ac_stat_front = cd_ac_id(ac_id[0])
+        print("步骤1查询账号当前状态执行完成，通过clnt='{}'查询cd_ac表的结果为{}".format(ac_id[0], Check_ac_stat_front))
+        logging.info("步骤1查询账号当前状态执行完成，通过clnt='{}'查询cd_ac表的结果为{}".format(ac_id[0], Check_ac_stat_front))
         return Check_ac_stat_front
 
     # 账号停用发起
@@ -41,10 +41,10 @@ class enableAcct停用后开启():
         print("当前token为:{}".format(token))
         print("headers", headers)
         enableAccturl = eddidhost + "/api/acct/enableAcct"
-        logging.info("提交开启的交易账号为：{}".format(clnt))
-        print("提交开启的交易账号为：{}".format(clnt))
+        logging.info("提交开启的交易账号为：{}".format(ac_id))
+        print("提交开启的交易账号为：{}".format(ac_id))
         data = {
-            "accountId": clnt,
+            "accountId": ac_id,
             "suspendReason": "自动化测试账号开启"
         }
         print("data=", data)
@@ -56,9 +56,9 @@ class enableAcct停用后开启():
     # 账号开启后校验状态
     def SQLCheck_ac_stat_after(self):
         # 通过交易账户直接调用cd_ac表查询
-        Check_ac_stat_after = cd_ac_id(clnt[0])
-        print("步骤3执行完成，通过clnt='{}'查询cd_ac表的结果为{}".format(clnt, Check_ac_stat_after))
-        logging.info("步骤3执行完成，通过clnt='{}'查询cd_ac表的结果为{}".format(clnt, Check_ac_stat_after))
+        Check_ac_stat_after = cd_ac_id(ac_id[0])
+        print("步骤3执行完成，通过clnt='{}'查询cd_ac表的结果为{}".format(ac_id, Check_ac_stat_after))
+        logging.info("步骤3执行完成，通过clnt='{}'查询cd_ac表的结果为{}".format(ac_id, Check_ac_stat_after))
         return Check_ac_stat_after
 
 
