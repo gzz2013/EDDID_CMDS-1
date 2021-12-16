@@ -12,7 +12,7 @@ class CreateRanDom():
         random.seed(time.time())
         #随机选取数据
         sa=[]
-        for i in range(20):
+        for i in range(5):
             sa.append(random.choice(data))
         salt="gp_"+''.join(sa)
         # print(salt)
@@ -227,6 +227,7 @@ class Randoms():
               "Green", "Wood", "Well", "Brown", "White", "Longman", "Sharp", "Yonng", "Back", "Hand", "Finger", "Brain",
               "Bird", "Bull", "Cotton", "Fox", "Stock", "Cotton", "Reed", "George", "Henry", "David", "Clinton", "Macadam"]
         Number = "0123456789qbcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPWRSTUVWXYZ"
+        random.seed(time.time())
         FName = random.choice(EF)+ random.choice(Number)
         return FName
 
@@ -234,6 +235,7 @@ class Randoms():
     def creat_ELName(self):
         EL = ["Boyce", "Elvis", "Ziv", "Eudolf", "Steven", "Tyrone", "Owen", "Herman", "Andrew", "Vic", "Miles", "Eonald",
               "Wden", "Will", "Eock", "Owen", "Abbott", "Cornelius", "Dali", "Fallon", "Harsh", "Kirby", "Vvincent"]
+        random.seed(time.time())
         LName = random.choice(EL)
         return LName
 
@@ -243,6 +245,7 @@ class Randoms():
         CF=["李","王","张","刘","陈","杨","赵","冯","于","曹","袁","康","邱","秦","江","崔","白","郝","傅","曹","程","梁","胡","何","赵"]
         CL=["彩绘","浪花","米猪","一手","蜜蜂","菜花","西瓜","油条","大佬","细佬","大山","哦耶","一龙","奶油","大锤","悠悠","清水","白羽","百余","白云","黑土","源","渊","广厦","午后","铃","凰","承","辉"]
         Number = "0123456789qbcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPWRSTUVWXYZ"
+        random.seed(time.time())
         FName = random.choice(CF)
         LName = random.choice(CL) + random.choice(Number)
         CHName=FName + LName
@@ -251,32 +254,48 @@ class Randoms():
     #随机选择性别
     def choice_title(self):
         T=["miss","mr","mrs"]
+        random.seed(time.time())
         title = random.choice(T)
         return title
 
     #随机选择账户类型
     def choice_accts(self):
+
         T=["securitiesCash","securitiesMargin","futuresMargin","leveragedForeignExchangeAccountMargin","securitiesAyersCash",]
+        random.seed(time.time())
         accts = random.choice(T)
         return accts
 
     #随机选择账户类型
     def choice_accts_nofutures(self):
         T=["securitiesCash","securitiesMargin","leveragedForeignExchangeAccountMargin","securitiesAyersCash",]
+        random.seed(time.time())
         accts = random.choice(T)
         return accts
 
     #随机账户
     def choice_clientId(self):
         T=[11431,12071]
+        random.seed(time.time())
         accts = random.choice(T)
         return accts
 
     def choice_Language(self):
         #"zh-hant"=繁体；"zh-hans"=简体
         T=["zh-hans","zh-hant"]
+        random.seed(time.time())
         accts = random.choice(T)
         return accts
+
+    def choice_bankCode(self):
+        #"zh-hant"=繁体；"zh-hans"=简体
+        Code=["003","004","005","006","007","008","009","012","013","014","015","016","017","018","019","020"]
+        #用时间来做随机播种
+        random.seed(time.time())
+        bankCode=random.choice(Code)
+
+        return bankCode
+
 
 
 
@@ -285,7 +304,9 @@ if __name__ == '__main__':
     # Randoms().tax_code()
     # Randoms().code()
     # Randoms().tax_code_c()
-    # tel=Randoms().telephone()
+    c=CreateRanDom()
+    tel=c.r_string()
+    print("tel:::",tel)
     # print(tel)
     # print(Randoms().number())
 
@@ -296,5 +317,6 @@ if __name__ == '__main__':
     print(Randoms.RandomEmail())
     print(Randoms().creat_CHName())
     print(Randoms().randomlargeAmount())
+    print(Randoms().choice_bankCode())
 
 # 42 9004 19940327 117 5

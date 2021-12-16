@@ -15,9 +15,9 @@ class CreatUser():
     def ApplyClinet资料提交(self):
         global phone, token, eddidhost, s, cremail, rfirstName, rlastName, rchName, idCardNo, cookfront
         # 生成电话号
-        phone = Randoms().telephone()
+        # phone = Randoms().telephone()
         # print("phone数据类型************************************************",type(phone))
-        # phone = "18682252487"
+        phone = "18150356313"
         # 生成新邮箱
         cremail = Randoms.RandomEmail()
         # cremail="zack.gan@edsz9.com"

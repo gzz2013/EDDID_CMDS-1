@@ -105,6 +105,17 @@ def  cd_ac_trading_apply(clnt_id):
                                      sql="select * from cd_ac_trading_apply WHERE clnt_id={}".format(clnt_id))
     return cd_ac_trading_apply
 
+#添加银行卡申请审批单
+def  cd_clnt_bank_ac_apply(clnt_id):
+    cd_clnt_bank_ac_apply = SQL_Check.eddid_gfss_sit(database=sqldata,
+                                     sql="select * from cd_clnt_bank_ac_apply WHERE clnt_id={} ORDER BY init_time DESC LIMIT 1 ".format(clnt_id))
+    return cd_clnt_bank_ac_apply
+
+#记录添加银行卡记录
+def  cd_clnt_bank_ac(clnt_id):
+    cd_clnt_bank_ac = SQL_Check.eddid_gfss_sit(database=sqldata,
+                                     sql="select * from cd_clnt_bank_ac WHERE clnt_id={} ORDER BY init_time DESC LIMIT 1 ".format(clnt_id))
+    return cd_clnt_bank_ac
 
 if __name__=="__main__":
     # a=cd_ac('NORMAL','CASH','EQUITIES',11431)
@@ -122,9 +133,11 @@ if __name__=="__main__":
     # print("gs_wrkflw_log",gs_wrkflw_log(52154))
     # print("get_newrate",get_newrate())
     # print("cd_deposit++++++++++++++",cd_deposit(11431,46.41))
-    print("get_clnt_id:",get_clnt_id(13480701220)[0][1])
-    print("get_clnt_id:",get_clnt_id(13480701220))
-    print("cd_ac_id:",cd_ac_id(5007805216))
+    # print("get_clnt_id:",get_clnt_id(13480701220)[0][1])
+    # print("get_clnt_id:",get_clnt_id(13480701220))
+    # print("cd_ac_id:",cd_ac_id(5007805216))
     print("cd_ac_trading_apply:",cd_ac_trading_apply(88060))
+    print("cd_clnt_bank_ac_apply:", cd_clnt_bank_ac_apply(501015))
+    print("cd_clnt_bank_ac:", cd_clnt_bank_ac(501015))
 
 

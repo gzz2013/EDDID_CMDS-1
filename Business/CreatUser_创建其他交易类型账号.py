@@ -918,7 +918,6 @@ class CreatUser创建其他类型交易账号():
     def SQLCheckUser(self):
         time.sleep(10)
         # 通过直接调用cd_enty表查询
-
         CheckUsers = cd_enty(phone)
         print("步骤05通过phone='{}'查询cd_enty表的结果为{}".format(phone, CheckUsers))
         logging.info("步骤05通过'{}'查询cd_enty表的结果为{}".format(phone, CheckUsers))
